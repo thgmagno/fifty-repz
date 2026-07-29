@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PencilIcon, PlusIcon, Trash2Icon } from 'lucide-react'
+import { PencilIcon, PlayIcon, PlusIcon, Trash2Icon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
 import {
@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/card'
 import { DeleteTemplateDialog } from '@/components/workouts/delete-template-dialog'
 import { listWorkoutTemplates } from '@/lib/workout-templates'
+import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
+import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import { muscleGroupLabels } from '@/lib/exercise-labels'
 import { privateRoutes } from '@/lib/config'
 import { formatRepTarget } from '@/lib/utils'
@@ -22,7 +24,10 @@ export const metadata: Metadata = {
 }
 
 export default async function TreinosPage() {
-  const templates = await listWorkoutTemplates()
+  const [templates, inProgressSession] = await Promise.all([
+    listWorkoutTemplates(),
+    getInProgressWorkoutSession(),
+  ])
 
   return (
     <main className="flex flex-col gap-6 py-4">
@@ -41,6 +46,28 @@ export default async function TreinosPage() {
           Novo treino
         </Link>
       </div>
+
+      {inProgressSession && (
+        <Card className="border-primary/30 bg-primary/5">
+          <CardContent className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-medium">
+                Treino em andamento: {inProgressSession.templateName}
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Você tem uma sessão ativa. Continue de onde parou.
+              </p>
+            </div>
+            <Link
+              href={`${privateRoutes.sessions}/${inProgressSession.id}`}
+              className={buttonVariants()}
+            >
+              <PlayIcon />
+              Continuar treino
+            </Link>
+          </CardContent>
+        </Card>
+      )}
 
       {templates.length === 0 ? (
         <p className="rounded-md border border-dashed py-12 text-center text-muted-foreground">
@@ -102,6 +129,17 @@ export default async function TreinosPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="justify-end">
+                  <form action={startWorkoutSession}>
+                    <input
+                      type="hidden"
+                      name="templateId"
+                      value={template.id}
+                    />
+                    <Button type="submit" size="sm">
+                      <PlayIcon />
+                      Iniciar
+                    </Button>
+                  </form>
                   <Link
                     href={`${privateRoutes.workouts}/${template.id}/editar`}
                     className={buttonVariants({

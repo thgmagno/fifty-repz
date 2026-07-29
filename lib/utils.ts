@@ -15,3 +15,17 @@ export function formatRepTarget(
     ? `${sets}x${repsMin}-${repsMax}`
     : `${sets}x${repsMin}`
 }
+
+// segundos -> "MM:SS" (ou "H:MM:SS" acima de 1 hora)
+export function formatDuration(totalSeconds: number) {
+  const seconds = Math.max(0, Math.floor(totalSeconds))
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
+  const secs = seconds % 60
+
+  const pad = (value: number) => value.toString().padStart(2, '0')
+
+  return hours > 0
+    ? `${hours}:${pad(minutes)}:${pad(secs)}`
+    : `${minutes}:${pad(secs)}`
+}
