@@ -1,4 +1,5 @@
 import { buttonVariants } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export default async function Inicio({
   searchParams,
@@ -8,7 +9,8 @@ export default async function Inicio({
   const { error } = await searchParams
 
   return (
-    <main className="flex min-h-svh flex-col items-center justify-center gap-6 px-4">
+    <main className="relative flex min-h-svh flex-col items-center justify-center gap-6 px-4">
+      <ThemeToggle className="absolute top-4 right-4" />
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-3xl font-bold">Fifty Repz</h1>
         <p className="text-muted-foreground">
