@@ -50,3 +50,24 @@ export async function listExercises({
 }
 
 export type ExerciseListItem = Awaited<ReturnType<typeof listExercises>>[number]
+
+// lista enxuta (sem imagens) para pickers no client
+export async function listExerciseOptions() {
+  const { userId } = await verifySession()
+
+  return prisma.exercise.findMany({
+    where: { OR: [{ ownerId: null }, { ownerId: userId }] },
+    orderBy: { name: 'asc' },
+    select: {
+      id: true,
+      name: true,
+      muscleGroup: true,
+      equipment: true,
+      isCustom: true,
+    },
+  })
+}
+
+export type ExerciseOption = Awaited<
+  ReturnType<typeof listExerciseOptions>
+>[number]
