@@ -1,4 +1,4 @@
-import { getUser } from "@/lib/dal"
+import { getUser } from '@/lib/dal'
 
 export default async function Dashboard() {
   const user = await getUser()

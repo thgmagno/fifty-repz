@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from '@/components/ui/button'
 
 export default async function Inicio({
   searchParams,
@@ -16,7 +16,7 @@ export default async function Inicio({
         </p>
       </div>
 
-      {error === "oauth" && (
+      {error === 'oauth' && (
         <p className="text-sm text-destructive">
           Não foi possível entrar com o Google. Tente novamente.
         </p>
@@ -24,7 +24,7 @@ export default async function Inicio({
 
       <a
         href="/api/auth/google"
-        className={buttonVariants({ variant: "outline", size: "lg" })}
+        className={buttonVariants({ variant: 'outline', size: 'lg' })}
       >
         <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4">
           <path
