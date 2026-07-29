@@ -96,7 +96,9 @@ model WorkoutTemplateExercise {
   exerciseId String
   position Int
   targetSets Int
+  // faixa de reps alvo: targetReps é o mínimo; máximo opcional (ex.: 8-12)
   targetReps Int
+  targetRepsMax Int?
 
   @@index([templateId])
   @@index([exerciseId])

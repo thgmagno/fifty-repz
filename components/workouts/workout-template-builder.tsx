@@ -31,6 +31,7 @@ interface BuilderItem {
   muscleGroup: ExerciseOption['muscleGroup']
   targetSets: number
   targetReps: number
+  targetRepsMax: number | null
 }
 
 interface BuilderRow extends BuilderItem {
@@ -159,7 +160,8 @@ export function WorkoutTemplateBuilder({
         name: option.name,
         muscleGroup: option.muscleGroup,
         targetSets: 3,
-        targetReps: 10,
+        targetReps: 8,
+        targetRepsMax: 12,
       },
     ])
   }
@@ -180,8 +182,8 @@ export function WorkoutTemplateBuilder({
 
   const updateItem = (
     index: number,
-    field: 'targetSets' | 'targetReps',
-    value: number,
+    field: 'targetSets' | 'targetReps' | 'targetRepsMax',
+    value: number | null,
   ) => {
     setItems((prev) =>
       prev.map((item, i) => (i === index ? { ...item, [field]: value } : item)),
@@ -189,10 +191,11 @@ export function WorkoutTemplateBuilder({
   }
 
   const itemsPayload = JSON.stringify(
-    items.map(({ exerciseId, targetSets, targetReps }) => ({
+    items.map(({ exerciseId, targetSets, targetReps, targetRepsMax }) => ({
       exerciseId,
       targetSets,
       targetReps,
+      targetRepsMax,
     })),
   )
 
@@ -266,8 +269,27 @@ export function WorkoutTemplateBuilder({
                   onChange={(event) =>
                     updateItem(index, 'targetReps', Number(event.target.value))
                   }
-                  className="h-8 w-16"
-                  aria-label={`Repetições alvo de ${item.name}`}
+                  className="h-8 w-14"
+                  aria-label={`Repetições alvo (mínimo) de ${item.name}`}
+                />
+                a
+                <Input
+                  type="number"
+                  min={1}
+                  max={100}
+                  value={item.targetRepsMax ?? ''}
+                  placeholder="—"
+                  onChange={(event) =>
+                    updateItem(
+                      index,
+                      'targetRepsMax',
+                      event.target.value === ''
+                        ? null
+                        : Number(event.target.value),
+                    )
+                  }
+                  className="h-8 w-14"
+                  aria-label={`Repetições alvo (máximo, opcional) de ${item.name}`}
                 />
               </label>
               <div className="flex items-center">

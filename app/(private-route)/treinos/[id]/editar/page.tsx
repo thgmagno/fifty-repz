@@ -44,6 +44,7 @@ export default async function EditarTreinoPage({
             muscleGroup: item.exercise.muscleGroup,
             targetSets: item.targetSets,
             targetReps: item.targetReps,
+            targetRepsMax: item.targetRepsMax,
           })),
         }}
       />

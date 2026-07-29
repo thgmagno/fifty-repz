@@ -9,6 +9,7 @@ const templateExerciseInclude = {
       position: true,
       targetSets: true,
       targetReps: true,
+      targetRepsMax: true,
       exercise: {
         select: {
           id: true,
@@ -38,6 +39,7 @@ export async function listWorkoutTemplates() {
           id: true,
           targetSets: true,
           targetReps: true,
+          targetRepsMax: true,
           exercise: { select: { name: true, muscleGroup: true } },
         },
       },

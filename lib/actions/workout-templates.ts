@@ -15,11 +15,18 @@ export interface WorkoutTemplateFormState {
   }
 }
 
-const itemSchema = z.object({
-  exerciseId: z.uuid(),
-  targetSets: z.int().min(1, 'Mínimo de 1 série.').max(20),
-  targetReps: z.int().min(1, 'Mínimo de 1 repetição.').max(100),
-})
+const itemSchema = z
+  .object({
+    exerciseId: z.uuid(),
+    targetSets: z.int().min(1, 'Mínimo de 1 série.').max(20),
+    targetReps: z.int().min(1, 'Mínimo de 1 repetição.').max(100),
+    targetRepsMax: z.int().min(1).max(100).nullable(),
+  })
+  .refine(
+    (item) =>
+      item.targetRepsMax === null || item.targetRepsMax >= item.targetReps,
+    'O máximo de reps precisa ser maior ou igual ao mínimo.',
+  )
 
 const templateSchema = z.object({
   name: z
@@ -95,6 +102,7 @@ export async function createWorkoutTemplate(
           position: index,
           targetSets: item.targetSets,
           targetReps: item.targetReps,
+          targetRepsMax: item.targetRepsMax,
         })),
       },
     },
@@ -143,6 +151,7 @@ export async function updateWorkoutTemplate(
             position: index,
             targetSets: item.targetSets,
             targetReps: item.targetReps,
+            targetRepsMax: item.targetRepsMax,
           })),
         },
       },

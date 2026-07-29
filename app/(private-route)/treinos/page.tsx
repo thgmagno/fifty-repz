@@ -15,6 +15,7 @@ import { DeleteTemplateDialog } from '@/components/workouts/delete-template-dial
 import { listWorkoutTemplates } from '@/lib/workout-templates'
 import { muscleGroupLabels } from '@/lib/exercise-labels'
 import { privateRoutes } from '@/lib/config'
+import { formatRepTarget } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Treinos',
@@ -78,7 +79,11 @@ export default async function TreinosPage() {
                           {item.exercise.name}
                         </span>
                         <span className="shrink-0 text-xs text-muted-foreground">
-                          {item.targetSets}x{item.targetReps}
+                          {formatRepTarget(
+                            item.targetSets,
+                            item.targetReps,
+                            item.targetRepsMax,
+                          )}
                         </span>
                       </li>
                     ))}

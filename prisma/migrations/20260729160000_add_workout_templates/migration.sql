@@ -18,6 +18,7 @@ CREATE TABLE "WorkoutTemplateExercise" (
     "position" INTEGER NOT NULL,
     "targetSets" INTEGER NOT NULL,
     "targetReps" INTEGER NOT NULL,
+    "targetRepsMax" INTEGER,
 
     CONSTRAINT "WorkoutTemplateExercise_pkey" PRIMARY KEY ("id")
 );
