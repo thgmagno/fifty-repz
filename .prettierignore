@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+build
+lib/generated
+package-lock.json
+prisma/migrations
+.agents
+AGENTS.md
+CLAUDE.md
+skills-lock.json

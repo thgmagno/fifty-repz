@@ -1,5 +1,5 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+import { AppSidebar } from '@/components/app-sidebar'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -7,9 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <AppSidebar />
       <main className="flex flex-col flex-1">
         <SidebarTrigger />
-        <section className="px-2 pb-10 flex-1">
-            {children}
-        </section>
+        <section className="px-2 pb-10 flex-1">{children}</section>
       </main>
     </SidebarProvider>
   )
