@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { PlusIcon, SearchIcon } from 'lucide-react'
+import { Page } from '@/components/page'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { NativeSelect } from '@/components/ui/native-select'
@@ -27,7 +28,7 @@ export default async function ExerciciosPage({
   const exercises = await listExercises({ query: q, muscleGroup })
 
   return (
-    <main className="flex flex-col gap-6 py-4">
+    <Page>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold">Exercícios</h1>
@@ -95,6 +96,6 @@ export default async function ExerciciosPage({
           </div>
         </>
       )}
-    </main>
+    </Page>
   )
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Page } from '@/components/page'
 import { WorkoutTemplateBuilder } from '@/components/workouts/workout-template-builder'
 import { createWorkoutTemplate } from '@/lib/actions/workout-templates'
 import { listExerciseOptions } from '@/lib/exercises'
@@ -11,7 +12,7 @@ export default async function NovoTreinoPage() {
   const exerciseOptions = await listExerciseOptions()
 
   return (
-    <main className="flex flex-col gap-6 py-4">
+    <Page>
       <div>
         <h1 className="text-2xl font-bold">Novo treino</h1>
         <p className="text-sm text-muted-foreground">
@@ -22,6 +23,6 @@ export default async function NovoTreinoPage() {
         action={createWorkoutTemplate}
         exerciseOptions={exerciseOptions}
       />
-    </main>
+    </Page>
   )
 }

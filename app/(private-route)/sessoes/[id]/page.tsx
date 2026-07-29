@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CheckCircle2Icon } from 'lucide-react'
+import { Page } from '@/components/page'
 import { buttonVariants } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { WorkoutSessionRunner } from '@/components/sessions/workout-session-runner'
@@ -27,7 +28,7 @@ export default async function SessaoPage({
 
   if (session.status === 'COMPLETED') {
     return (
-      <main className="flex flex-col gap-6 py-4">
+      <Page>
         <div className="flex items-center gap-2">
           <CheckCircle2Icon className="text-primary" />
           <h1 className="text-2xl font-bold">{session.templateName}</h1>
@@ -64,14 +65,14 @@ export default async function SessaoPage({
         <Link href={privateRoutes.history} className={buttonVariants()}>
           Voltar ao histórico
         </Link>
-      </main>
+      </Page>
     )
   }
 
   return (
-    <main className="flex flex-col gap-6 py-4">
+    <Page>
       <h1 className="text-2xl font-bold">{session.templateName}</h1>
       <WorkoutSessionRunner session={session} />
-    </main>
+    </Page>
   )
 }

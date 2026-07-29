@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PencilIcon, PlayIcon, PlusIcon, Trash2Icon } from 'lucide-react'
+import { Page } from '@/components/page'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
 import {
@@ -30,7 +31,7 @@ export default async function TreinosPage() {
   ])
 
   return (
-    <main className="flex flex-col gap-6 py-4">
+    <Page>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold">Treinos</h1>
@@ -129,7 +130,7 @@ export default async function TreinosPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="justify-end">
-                  <form action={startWorkoutSession} className='mr-auto'>
+                  <form action={startWorkoutSession} className="mr-auto">
                     <input
                       type="hidden"
                       name="templateId"
@@ -166,6 +167,6 @@ export default async function TreinosPage() {
           })}
         </div>
       )}
-    </main>
+    </Page>
   )
 }
