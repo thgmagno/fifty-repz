@@ -20,6 +20,23 @@ model User {
   exercises Exercise[]
   workoutTemplates WorkoutTemplate[]
   workoutSessions WorkoutSession[]
+  // edges onde este usuário é o follower (quem ele segue)
+  following Follow[] @relation("UserFollows")
+  // edges onde este usuário é o seguido (quem o segue)
+  followers Follow[] @relation("UserFollowedBy")
+}
+
+model Follow {
+  id String @id @default(uuid())
+  follower User @relation("UserFollows", fields: [followerId], references: [id], onDelete: Cascade)
+  followerId String
+  following User @relation("UserFollowedBy", fields: [followingId], references: [id], onDelete: Cascade)
+  followingId String
+  createdAt DateTime @default(now())
+
+  @@unique([followerId, followingId])
+  @@index([followerId])
+  @@index([followingId])
 }
 
 enum MuscleGroup {

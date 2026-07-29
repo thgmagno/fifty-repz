@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
+import { getFollowStats } from '@/lib/follow'
 import { getLocalDateKey } from '@/lib/utils'
 
 // Janela do heatmap de frequência exibido no perfil
@@ -36,10 +37,13 @@ export async function getUserProfile(username: string) {
 
   if (!user) return null
 
-  const completedSessions = await prisma.workoutSession.findMany({
-    where: { userId: user.id, status: 'COMPLETED' },
-    select: { completedAt: true, durationSeconds: true },
-  })
+  const [completedSessions, followStats] = await Promise.all([
+    prisma.workoutSession.findMany({
+      where: { userId: user.id, status: 'COMPLETED' },
+      select: { completedAt: true, durationSeconds: true },
+    }),
+    getFollowStats(user.id),
+  ])
 
   const totalDurationSeconds = completedSessions.reduce(
     (sum, session) => sum + (session.durationSeconds ?? 0),
@@ -58,7 +62,10 @@ export async function getUserProfile(username: string) {
     stats: {
       completedSessionsCount: completedSessions.length,
       totalDurationSeconds,
+      followersCount: followStats.followersCount,
+      followingCount: followStats.followingCount,
     },
+    isFollowing: followStats.isFollowing,
     heatmap: buildHeatmap(frequencyByDay),
   }
 }

@@ -11,8 +11,11 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ProfileHeatmap } from '@/components/profile-heatmap'
+import { FollowListDialog } from '@/components/profile/follow-list-dialog'
 import { getUserProfile } from '@/lib/profile'
 import { getUser } from '@/lib/dal'
+import { listFollowers, listFollowing } from '@/lib/follow'
+import { followUser, unfollowUser } from '@/lib/actions/follow'
 import { formatDurationLong } from '@/lib/utils'
 import { privateRoutes } from '@/lib/config'
 
@@ -39,6 +42,10 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
   }
 
   const isOwnProfile = profile.id === currentUser.id
+  const [followers, following] = await Promise.all([
+    listFollowers(profile.id),
+    listFollowing(profile.id),
+  ])
 
   return (
     <Page>
@@ -61,7 +68,7 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
             </p>
           </div>
         </div>
-        {isOwnProfile && (
+        {isOwnProfile ? (
           <Button
             variant="outline"
             nativeButton={false}
@@ -70,10 +77,44 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
             <PencilIcon />
             Editar perfil
           </Button>
+        ) : (
+          <form action={profile.isFollowing ? unfollowUser : followUser}>
+            <input type="hidden" name="userId" value={profile.id} />
+            <input type="hidden" name="username" value={profile.username} />
+            <Button
+              type="submit"
+              variant={profile.isFollowing ? 'outline' : 'default'}
+            >
+              {profile.isFollowing ? 'Deixar de seguir' : 'Seguir'}
+            </Button>
+          </form>
         )}
       </div>
 
       {profile.bio && <p className="text-sm">{profile.bio}</p>}
+
+      <div className="flex items-center gap-4">
+        <FollowListDialog
+          title="Seguidores"
+          users={followers}
+          trigger={
+            <Button variant="ghost" size="sm" className="h-auto px-1">
+              <strong>{profile.stats.followersCount}</strong>
+              seguidores
+            </Button>
+          }
+        />
+        <FollowListDialog
+          title="Seguindo"
+          users={following}
+          trigger={
+            <Button variant="ghost" size="sm" className="h-auto px-1">
+              <strong>{profile.stats.followingCount}</strong>
+              seguindo
+            </Button>
+          }
+        />
+      </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>
