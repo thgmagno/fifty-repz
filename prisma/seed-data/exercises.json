@@ -1,0 +1,3697 @@
+[
+  {
+    "slug": "3-4-sit-up",
+    "name": "Abdominal 3/4",
+    "nameEn": "3/4 Sit-Up",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/3_4_Sit-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/3_4_Sit-Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "air-bike",
+    "name": "Abdominal bicicleta",
+    "nameEn": "Air Bike",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternate-hammer-curl",
+    "name": "Rosca martelo alternada",
+    "nameEn": "Alternate Hammer Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternate-incline-dumbbell-curl",
+    "name": "Rosca alternada no banco inclinado",
+    "nameEn": "Alternate Incline Dumbbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Incline_Dumbbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Incline_Dumbbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternating-cable-shoulder-press",
+    "name": "Desenvolvimento alternado no cabo",
+    "nameEn": "Alternating Cable Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Cable_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Cable_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternating-floor-press",
+    "name": "Supino no chão alternado com halteres",
+    "nameEn": "Alternating Floor Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Floor_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Floor_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternating-hang-clean",
+    "name": "Hang clean alternado com kettlebell",
+    "nameEn": "Alternating Hang Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "BICEPS",
+      "CALVES",
+      "FOREARMS",
+      "GLUTES",
+      "LOWER_BACK",
+      "TRAPS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Hang_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Hang_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternating-kettlebell-press",
+    "name": "Desenvolvimento alternado com kettlebell",
+    "nameEn": "Alternating Kettlebell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "alternating-kettlebell-row",
+    "name": "Remada alternada com kettlebell",
+    "nameEn": "Alternating Kettlebell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "anti-gravity-press",
+    "name": "Desenvolvimento antigravidade",
+    "nameEn": "Anti-Gravity Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["MIDDLE_BACK", "TRAPS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Anti-Gravity_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Anti-Gravity_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "arnold-dumbbell-press",
+    "name": "Desenvolvimento Arnold com halteres",
+    "nameEn": "Arnold Dumbbell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-ab-rollout",
+    "name": "Abdominal rollout com barra",
+    "nameEn": "Barbell Ab Rollout",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["LOWER_BACK", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-bench-press-medium-grip",
+    "name": "Supino reto com barra",
+    "nameEn": "Barbell Bench Press - Medium Grip",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-curl",
+    "name": "Rosca direta com barra",
+    "nameEn": "Barbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-curls-lying-against-an-incline",
+    "name": "Rosca spider com barra",
+    "nameEn": "Barbell Curls Lying Against An Incline",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curls_Lying_Against_An_Incline/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curls_Lying_Against_An_Incline/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-deadlift",
+    "name": "Levantamento terra com barra",
+    "nameEn": "Barbell Deadlift",
+    "muscleGroup": "LOWER_BACK",
+    "secondaryMuscles": [
+      "CALVES",
+      "FOREARMS",
+      "GLUTES",
+      "HAMSTRINGS",
+      "LATS",
+      "MIDDLE_BACK",
+      "QUADRICEPS",
+      "TRAPS"
+    ],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-full-squat",
+    "name": "Agachamento profundo com barra",
+    "nameEn": "Barbell Full Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-hack-squat",
+    "name": "Agachamento hack com barra",
+    "nameEn": "Barbell Hack Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "FOREARMS", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-incline-bench-press-medium-grip",
+    "name": "Supino inclinado com barra",
+    "nameEn": "Barbell Incline Bench Press - Medium Grip",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-incline-shoulder-raise",
+    "name": "Elevação de ombros no banco inclinado com barra",
+    "nameEn": "Barbell Incline Shoulder Raise",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["CHEST"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Shoulder_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Shoulder_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-lunge",
+    "name": "Afundo com barra",
+    "nameEn": "Barbell Lunge",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Lunge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Lunge/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-rear-delt-row",
+    "name": "Remada para deltoide posterior com barra",
+    "nameEn": "Barbell Rear Delt Row",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["BICEPS", "LATS", "MIDDLE_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rear_Delt_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rear_Delt_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-rollout-from-bench",
+    "name": "Rollout com barra a partir do banco",
+    "nameEn": "Barbell Rollout from Bench",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "LATS", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rollout_from_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rollout_from_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-seated-calf-raise",
+    "name": "Panturrilha sentado com barra",
+    "nameEn": "Barbell Seated Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Seated_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Seated_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-shoulder-press",
+    "name": "Desenvolvimento de ombros com barra",
+    "nameEn": "Barbell Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["CHEST", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-shrug",
+    "name": "Encolhimento de ombros com barra",
+    "nameEn": "Barbell Shrug",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-shrug-behind-the-back",
+    "name": "Encolhimento com barra por trás do corpo",
+    "nameEn": "Barbell Shrug Behind The Back",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["FOREARMS", "MIDDLE_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug_Behind_The_Back/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug_Behind_The_Back/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-side-split-squat",
+    "name": "Agachamento lateral com barra",
+    "nameEn": "Barbell Side Split Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-squat",
+    "name": "Agachamento livre com barra",
+    "nameEn": "Barbell Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-step-ups",
+    "name": "Subida no banco com barra",
+    "nameEn": "Barbell Step Ups",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "QUADRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/1.jpg"
+    ]
+  },
+  {
+    "slug": "barbell-walking-lunge",
+    "name": "Passada caminhando com barra",
+    "nameEn": "Barbell Walking Lunge",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/1.jpg"
+    ]
+  },
+  {
+    "slug": "bench-dips",
+    "name": "Mergulho no banco (tríceps)",
+    "nameEn": "Bench Dips",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-over-barbell-row",
+    "name": "Remada curvada com barra",
+    "nameEn": "Bent Over Barbell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-over-one-arm-long-bar-row",
+    "name": "Remada curvada unilateral na barra landmine",
+    "nameEn": "Bent Over One-Arm Long Bar Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "LOWER_BACK", "TRAPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_One-Arm_Long_Bar_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_One-Arm_Long_Bar_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-over-two-arm-long-bar-row",
+    "name": "Remada cavalinho (barra T)",
+    "nameEn": "Bent Over Two-Arm Long Bar Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Arm_Long_Bar_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Arm_Long_Bar_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-over-two-dumbbell-row",
+    "name": "Remada curvada com halteres",
+    "nameEn": "Bent Over Two-Dumbbell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-over-two-dumbbell-row-with-palms-in",
+    "name": "Remada curvada com halteres pegada neutra",
+    "nameEn": "Bent Over Two-Dumbbell Row With Palms In",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row_With_Palms_In/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row_With_Palms_In/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-arm-barbell-pullover",
+    "name": "Pullover com barra braços flexionados",
+    "nameEn": "Bent-Arm Barbell Pullover",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["CHEST", "LATS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Arm_Barbell_Pullover/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Arm_Barbell_Pullover/1.jpg"
+    ]
+  },
+  {
+    "slug": "bent-knee-hip-raise",
+    "name": "Elevação de quadril com joelhos flexionados",
+    "nameEn": "Bent-Knee Hip Raise",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Knee_Hip_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Knee_Hip_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "body-tricep-press",
+    "name": "Extensão de tríceps com peso corporal",
+    "nameEn": "Body Tricep Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Body_Tricep_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Body_Tricep_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "bodyweight-squat",
+    "name": "Agachamento com peso corporal",
+    "nameEn": "Bodyweight Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "bottoms-up",
+    "name": "Abdominal bottoms up",
+    "nameEn": "Bottoms Up",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms_Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms_Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "bottoms-up-clean-from-the-hang-position",
+    "name": "Clean bottoms-up com kettlebell",
+    "nameEn": "Bottoms-Up Clean From The Hang Position",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": ["BICEPS", "SHOULDERS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms-Up_Clean_From_The_Hang_Position/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms-Up_Clean_From_The_Hang_Position/1.jpg"
+    ]
+  },
+  {
+    "slug": "bradford-rocky-presses",
+    "name": "Desenvolvimento Bradford",
+    "nameEn": "Bradford/Rocky Presses",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bradford_Rocky_Presses/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bradford_Rocky_Presses/1.jpg"
+    ]
+  },
+  {
+    "slug": "butt-lift-bridge",
+    "name": "Ponte de glúteos",
+    "nameEn": "Butt Lift (Bridge)",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+    ]
+  },
+  {
+    "slug": "butt-ups",
+    "name": "Prancha com elevação de quadril (butt-ups)",
+    "nameEn": "Butt-Ups",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt-Ups/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt-Ups/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-chest-press",
+    "name": "Supino no cabo",
+    "nameEn": "Cable Chest Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-deadlifts",
+    "name": "Levantamento terra no cabo",
+    "nameEn": "Cable Deadlifts",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["FOREARMS", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Deadlifts/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Deadlifts/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-hammer-curls-rope-attachment",
+    "name": "Rosca martelo no cabo com corda",
+    "nameEn": "Cable Hammer Curls - Rope Attachment",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-incline-pushdown",
+    "name": "Pulldown inclinado no cabo",
+    "nameEn": "Cable Incline Pushdown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Pushdown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Pushdown/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-incline-triceps-extension",
+    "name": "Extensão de tríceps inclinada no cabo",
+    "nameEn": "Cable Incline Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-internal-rotation",
+    "name": "Rotação interna no cabo",
+    "nameEn": "Cable Internal Rotation",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Internal_Rotation/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Internal_Rotation/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-judo-flip",
+    "name": "Giro de judô no cabo",
+    "nameEn": "Cable Judo Flip",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Judo_Flip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Judo_Flip/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-lying-triceps-extension",
+    "name": "Tríceps testa deitado no cabo",
+    "nameEn": "Cable Lying Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Lying_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Lying_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-one-arm-tricep-extension",
+    "name": "Extensão de tríceps unilateral no cabo",
+    "nameEn": "Cable One Arm Tricep Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_One_Arm_Tricep_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_One_Arm_Tricep_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-preacher-curl",
+    "name": "Rosca scott no cabo",
+    "nameEn": "Cable Preacher Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-rope-overhead-triceps-extension",
+    "name": "Tríceps francês no cabo com corda",
+    "nameEn": "Cable Rope Overhead Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-rope-rear-delt-rows",
+    "name": "Remada com corda para deltoide posterior",
+    "nameEn": "Cable Rope Rear-Delt Rows",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Rear-Delt_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Rear-Delt_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-russian-twists",
+    "name": "Rotação russa no cabo",
+    "nameEn": "Cable Russian Twists",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-shoulder-press",
+    "name": "Desenvolvimento no cabo",
+    "nameEn": "Cable Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-shrugs",
+    "name": "Encolhimento no cabo",
+    "nameEn": "Cable Shrugs",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-wrist-curl",
+    "name": "Rosca de punho no cabo",
+    "nameEn": "Cable Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "calf-press",
+    "name": "Pressão de panturrilha na máquina",
+    "nameEn": "Calf Press",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "calf-press-on-the-leg-press-machine",
+    "name": "Panturrilha no leg press",
+    "nameEn": "Calf Press On The Leg Press Machine",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/1.jpg"
+    ]
+  },
+  {
+    "slug": "calf-raise-on-a-dumbbell",
+    "name": "Panturrilha em pé sobre halter",
+    "nameEn": "Calf Raise On A Dumbbell",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Raise_On_A_Dumbbell/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Raise_On_A_Dumbbell/1.jpg"
+    ]
+  },
+  {
+    "slug": "calf-machine-shoulder-shrug",
+    "name": "Encolhimento na máquina de panturrilha",
+    "nameEn": "Calf-Machine Shoulder Shrug",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf-Machine_Shoulder_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf-Machine_Shoulder_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "chair-squat",
+    "name": "Agachamento na cadeira",
+    "nameEn": "Chair Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "chin-up",
+    "name": "Barra fixa supinada (chin-up)",
+    "nameEn": "Chin-Up",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "FOREARMS", "MIDDLE_BACK"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "clean-and-press",
+    "name": "Clean and press",
+    "nameEn": "Clean and Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": [
+      "ABDOMINALS",
+      "CALVES",
+      "GLUTES",
+      "HAMSTRINGS",
+      "LOWER_BACK",
+      "MIDDLE_BACK",
+      "QUADRICEPS",
+      "SHOULDERS",
+      "TRAPS",
+      "TRICEPS"
+    ],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Clean_and_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Clean_and_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-barbell-bench-press",
+    "name": "Supino fechado com barra",
+    "nameEn": "Close-Grip Barbell Bench Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-dumbbell-press",
+    "name": "Supino fechado com halteres",
+    "nameEn": "Close-Grip Dumbbell Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-ez-bar-curl",
+    "name": "Rosca fechada com barra W",
+    "nameEn": "Close-Grip EZ Bar Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ_Bar_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ_Bar_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-ez-bar-curl-with-band",
+    "name": "Rosca fechada com barra W e elástico",
+    "nameEn": "Close-Grip EZ-Bar Curl with Band",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "EZ_BAR",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Curl_with_Band/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Curl_with_Band/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-ez-bar-press",
+    "name": "Supino fechado com barra W",
+    "nameEn": "Close-Grip EZ-Bar Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "EZ_BAR",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-front-lat-pulldown",
+    "name": "Puxada frontal pegada fechada",
+    "nameEn": "Close-Grip Front Lat Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-push-up-off-of-a-dumbbell",
+    "name": "Flexão fechada sobre halter",
+    "nameEn": "Close-Grip Push-Up off of a Dumbbell",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["ABDOMINALS", "CHEST", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Push-Up_off_of_a_Dumbbell/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Push-Up_off_of_a_Dumbbell/1.jpg"
+    ]
+  },
+  {
+    "slug": "close-grip-standing-barbell-curl",
+    "name": "Rosca direta pegada fechada",
+    "nameEn": "Close-Grip Standing Barbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Standing_Barbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Standing_Barbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "cocoons",
+    "name": "Abdominal casulo (cocoons)",
+    "nameEn": "Cocoons",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cocoons/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cocoons/1.jpg"
+    ]
+  },
+  {
+    "slug": "concentration-curls",
+    "name": "Rosca concentrada",
+    "nameEn": "Concentration Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "cross-body-hammer-curl",
+    "name": "Rosca martelo cruzada",
+    "nameEn": "Cross Body Hammer Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross_Body_Hammer_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross_Body_Hammer_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "cross-body-crunch",
+    "name": "Abdominal cruzado",
+    "nameEn": "Cross-Body Crunch",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross-Body_Crunch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross-Body_Crunch/1.jpg"
+    ]
+  },
+  {
+    "slug": "cuban-press",
+    "name": "Desenvolvimento cubano",
+    "nameEn": "Cuban Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRAPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cuban_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cuban_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "dead-bug",
+    "name": "Dead bug",
+    "nameEn": "Dead Bug",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-barbell-bench-press",
+    "name": "Supino declinado com barra",
+    "nameEn": "Decline Barbell Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-close-grip-bench-to-skull-crusher",
+    "name": "Tríceps testa declinado pegada fechada",
+    "nameEn": "Decline Close-Grip Bench To Skull Crusher",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Close-Grip_Bench_To_Skull_Crusher/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Close-Grip_Bench_To_Skull_Crusher/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-dumbbell-bench-press",
+    "name": "Supino declinado com halteres",
+    "nameEn": "Decline Dumbbell Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-dumbbell-flyes",
+    "name": "Crucifixo declinado com halteres",
+    "nameEn": "Decline Dumbbell Flyes",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Flyes/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Flyes/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-dumbbell-triceps-extension",
+    "name": "Extensão de tríceps declinada com halteres",
+    "nameEn": "Decline Dumbbell Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-ez-bar-triceps-extension",
+    "name": "Tríceps testa declinado com barra W",
+    "nameEn": "Decline EZ Bar Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_EZ_Bar_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_EZ_Bar_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-oblique-crunch",
+    "name": "Abdominal oblíquo no banco declinado",
+    "nameEn": "Decline Oblique Crunch",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Oblique_Crunch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Oblique_Crunch/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-reverse-crunch",
+    "name": "Abdominal inverso no banco declinado",
+    "nameEn": "Decline Reverse Crunch",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Reverse_Crunch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Reverse_Crunch/1.jpg"
+    ]
+  },
+  {
+    "slug": "decline-smith-press",
+    "name": "Supino declinado no smith",
+    "nameEn": "Decline Smith Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Smith_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Smith_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "dip-machine",
+    "name": "Mergulho na máquina",
+    "nameEn": "Dip Machine",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/1.jpg"
+    ]
+  },
+  {
+    "slug": "dips-triceps-version",
+    "name": "Paralelas (ênfase em tríceps)",
+    "nameEn": "Dips - Triceps Version",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/1.jpg"
+    ]
+  },
+  {
+    "slug": "double-kettlebell-alternating-hang-clean",
+    "name": "Hang clean alternado com dois kettlebells",
+    "nameEn": "Double Kettlebell Alternating Hang Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "BICEPS",
+      "CALVES",
+      "FOREARMS",
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "TRAPS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Alternating_Hang_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Alternating_Hang_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "double-kettlebell-jerk",
+    "name": "Jerk com dois kettlebells",
+    "nameEn": "Double Kettlebell Jerk",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["CALVES", "QUADRICEPS", "TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Jerk/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Jerk/1.jpg"
+    ]
+  },
+  {
+    "slug": "double-kettlebell-push-press",
+    "name": "Push press com dois kettlebells",
+    "nameEn": "Double Kettlebell Push Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["CALVES", "QUADRICEPS", "TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Push_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Push_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "drag-curl",
+    "name": "Rosca arrasto",
+    "nameEn": "Drag Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Drag_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Drag_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-alternate-bicep-curl",
+    "name": "Rosca alternada com halteres",
+    "nameEn": "Dumbbell Alternate Bicep Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-bench-press",
+    "name": "Supino reto com halteres",
+    "nameEn": "Dumbbell Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-bench-press-with-neutral-grip",
+    "name": "Supino com halteres pegada neutra",
+    "nameEn": "Dumbbell Bench Press with Neutral Grip",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-bicep-curl",
+    "name": "Rosca direta com halteres",
+    "nameEn": "Dumbbell Bicep Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-clean",
+    "name": "Clean com halteres",
+    "nameEn": "Dumbbell Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "CALVES",
+      "FOREARMS",
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "SHOULDERS",
+      "TRAPS"
+    ],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-incline-row",
+    "name": "Remada no banco inclinado com halteres",
+    "nameEn": "Dumbbell Incline Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "FOREARMS", "LATS", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-lunges",
+    "name": "Afundo com halteres",
+    "nameEn": "Dumbbell Lunges",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-lying-pronation",
+    "name": "Pronação deitado com halter",
+    "nameEn": "Dumbbell Lying Pronation",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Pronation/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Pronation/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-lying-supination",
+    "name": "Supinação deitado com halter",
+    "nameEn": "Dumbbell Lying Supination",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Supination/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Supination/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-raise",
+    "name": "Elevação com halteres",
+    "nameEn": "Dumbbell Raise",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["BICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-rear-lunge",
+    "name": "Afundo reverso com halteres",
+    "nameEn": "Dumbbell Rear Lunge",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-seated-one-leg-calf-raise",
+    "name": "Panturrilha sentado unilateral com halter",
+    "nameEn": "Dumbbell Seated One-Leg Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Seated_One-Leg_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Seated_One-Leg_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-shrug",
+    "name": "Encolhimento com halteres",
+    "nameEn": "Dumbbell Shrug",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-squat",
+    "name": "Agachamento com halteres",
+    "nameEn": "Dumbbell Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-squat-to-a-bench",
+    "name": "Agachamento no banco com halteres",
+    "nameEn": "Dumbbell Squat To A Bench",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-step-ups",
+    "name": "Subida no banco com halteres",
+    "nameEn": "Dumbbell Step Ups",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/1.jpg"
+    ]
+  },
+  {
+    "slug": "dumbbell-tricep-extension-pronated-grip",
+    "name": "Extensão de tríceps com halter pegada pronada",
+    "nameEn": "Dumbbell Tricep Extension -Pronated Grip",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Tricep_Extension_-Pronated_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Tricep_Extension_-Pronated_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "elbow-to-knee",
+    "name": "Abdominal cotovelo ao joelho",
+    "nameEn": "Elbow to Knee",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbow_to_Knee/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbow_to_Knee/1.jpg"
+    ]
+  },
+  {
+    "slug": "elevated-back-lunge",
+    "name": "Afundo reverso com apoio elevado",
+    "nameEn": "Elevated Back Lunge",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Back_Lunge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Back_Lunge/1.jpg"
+    ]
+  },
+  {
+    "slug": "elevated-cable-rows",
+    "name": "Remada elevada no cabo",
+    "nameEn": "Elevated Cable Rows",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["MIDDLE_BACK", "TRAPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "extended-range-one-arm-kettlebell-floor-press",
+    "name": "Floor press unilateral com kettlebell",
+    "nameEn": "Extended Range One-Arm Kettlebell Floor Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Extended_Range_One-Arm_Kettlebell_Floor_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Extended_Range_One-Arm_Kettlebell_Floor_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "ez-bar-curl",
+    "name": "Rosca com barra W",
+    "nameEn": "EZ-Bar Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "EZ_BAR",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "ez-bar-skullcrusher",
+    "name": "Tríceps testa com barra W",
+    "nameEn": "EZ-Bar Skullcrusher",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "EZ_BAR",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/1.jpg"
+    ]
+  },
+  {
+    "slug": "finger-curls",
+    "name": "Rosca de dedos",
+    "nameEn": "Finger Curls",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Finger_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Finger_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "flat-bench-leg-pull-in",
+    "name": "Elevação de joelhos no banco",
+    "nameEn": "Flat Bench Leg Pull-In",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Leg_Pull-In/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Leg_Pull-In/1.jpg"
+    ]
+  },
+  {
+    "slug": "flexor-incline-dumbbell-curls",
+    "name": "Rosca para antebraço no banco inclinado",
+    "nameEn": "Flexor Incline Dumbbell Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flexor_Incline_Dumbbell_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flexor_Incline_Dumbbell_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "flutter-kicks",
+    "name": "Flutter kicks (tesourinha)",
+    "nameEn": "Flutter Kicks",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flutter_Kicks/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flutter_Kicks/1.jpg"
+    ]
+  },
+  {
+    "slug": "freehand-jump-squat",
+    "name": "Agachamento com salto",
+    "nameEn": "Freehand Jump Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Freehand_Jump_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Freehand_Jump_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "front-raise-and-pullover",
+    "name": "Elevação frontal com pullover",
+    "nameEn": "Front Raise And Pullover",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["LATS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Raise_And_Pullover/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Raise_And_Pullover/1.jpg"
+    ]
+  },
+  {
+    "slug": "front-squat-clean-grip",
+    "name": "Agachamento frontal (pegada clean)",
+    "nameEn": "Front Squat (Clean Grip)",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["ABDOMINALS", "GLUTES", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "front-squats-with-two-kettlebells",
+    "name": "Agachamento frontal com dois kettlebells",
+    "nameEn": "Front Squats With Two Kettlebells",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squats_With_Two_Kettlebells/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squats_With_Two_Kettlebells/1.jpg"
+    ]
+  },
+  {
+    "slug": "full-range-of-motion-lat-pulldown",
+    "name": "Puxada com amplitude total",
+    "nameEn": "Full Range-Of-Motion Lat Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Full_Range-Of-Motion_Lat_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Full_Range-Of-Motion_Lat_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "glute-kickback",
+    "name": "Coice para glúteos (quatro apoios)",
+    "nameEn": "Glute Kickback",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/1.jpg"
+    ]
+  },
+  {
+    "slug": "goblet-squat",
+    "name": "Agachamento goblet",
+    "nameEn": "Goblet Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "SHOULDERS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "gorilla-chin-crunch",
+    "name": "Barra fixa com abdominal (gorilla chin)",
+    "nameEn": "Gorilla Chin/Crunch",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Gorilla_Chin_Crunch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Gorilla_Chin_Crunch/1.jpg"
+    ]
+  },
+  {
+    "slug": "hack-squat",
+    "name": "Agachamento hack na máquina",
+    "nameEn": "Hack Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "hammer-curls",
+    "name": "Rosca martelo",
+    "nameEn": "Hammer Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "hammer-grip-incline-db-bench-press",
+    "name": "Supino inclinado com halteres pegada martelo",
+    "nameEn": "Hammer Grip Incline DB Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Grip_Incline_DB_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Grip_Incline_DB_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "high-cable-curls",
+    "name": "Rosca no cabo alto",
+    "nameEn": "High Cable Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/High_Cable_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/High_Cable_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "hyperextensions-with-no-hyperextension-bench",
+    "name": "Hiperextensão lombar sem banco",
+    "nameEn": "Hyperextensions With No Hyperextension Bench",
+    "muscleGroup": "LOWER_BACK",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-bench-pull",
+    "name": "Remada com peito apoiado no banco inclinado",
+    "nameEn": "Incline Bench Pull",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["LATS", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Bench_Pull/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Bench_Pull/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-cable-chest-press",
+    "name": "Supino inclinado no cabo",
+    "nameEn": "Incline Cable Chest Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Cable_Chest_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Cable_Chest_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-bench-with-palms-facing-in",
+    "name": "Supino inclinado com halteres pegada neutra",
+    "nameEn": "Incline Dumbbell Bench With Palms Facing In",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Bench_With_Palms_Facing_In/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Bench_With_Palms_Facing_In/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-curl",
+    "name": "Rosca inclinada com halteres",
+    "nameEn": "Incline Dumbbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-flyes",
+    "name": "Crucifixo inclinado com halteres",
+    "nameEn": "Incline Dumbbell Flyes",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-flyes-with-a-twist",
+    "name": "Crucifixo inclinado com rotação",
+    "nameEn": "Incline Dumbbell Flyes - With A Twist",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes_-_With_A_Twist/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes_-_With_A_Twist/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-dumbbell-press",
+    "name": "Supino inclinado com halteres",
+    "nameEn": "Incline Dumbbell Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-hammer-curls",
+    "name": "Rosca martelo inclinada",
+    "nameEn": "Incline Hammer Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Hammer_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Hammer_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-inner-biceps-curl",
+    "name": "Rosca inclinada aberta",
+    "nameEn": "Incline Inner Biceps Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Inner_Biceps_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Inner_Biceps_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-push-up",
+    "name": "Flexão inclinada",
+    "nameEn": "Incline Push-Up",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-push-up-close-grip",
+    "name": "Flexão inclinada fechada",
+    "nameEn": "Incline Push-Up Close-Grip",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Close-Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Close-Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-push-up-medium",
+    "name": "Flexão inclinada pegada média",
+    "nameEn": "Incline Push-Up Medium",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Medium/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Medium/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-push-up-reverse-grip",
+    "name": "Flexão inclinada pegada invertida",
+    "nameEn": "Incline Push-Up Reverse Grip",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Reverse_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Reverse_Grip/1.jpg"
+    ]
+  },
+  {
+    "slug": "incline-push-up-wide",
+    "name": "Flexão inclinada aberta",
+    "nameEn": "Incline Push-Up Wide",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Wide/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Wide/1.jpg"
+    ]
+  },
+  {
+    "slug": "isometric-neck-exercise-front-and-back",
+    "name": "Isometria de pescoço (frente e trás)",
+    "nameEn": "Isometric Neck Exercise - Front And Back",
+    "muscleGroup": "NECK",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Front_And_Back/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Front_And_Back/1.jpg"
+    ]
+  },
+  {
+    "slug": "isometric-neck-exercise-sides",
+    "name": "Isometria de pescoço (lados)",
+    "nameEn": "Isometric Neck Exercise - Sides",
+    "muscleGroup": "NECK",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Sides/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Sides/1.jpg"
+    ]
+  },
+  {
+    "slug": "isometric-wipers",
+    "name": "Isometria limpador de para-brisa",
+    "nameEn": "Isometric Wipers",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Wipers/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Wipers/1.jpg"
+    ]
+  },
+  {
+    "slug": "jackknife-sit-up",
+    "name": "Abdominal canivete",
+    "nameEn": "Jackknife Sit-Up",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jackknife_Sit-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jackknife_Sit-Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "jefferson-squats",
+    "name": "Agachamento Jefferson",
+    "nameEn": "Jefferson Squats",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": [
+      "CALVES",
+      "GLUTES",
+      "HAMSTRINGS",
+      "LOWER_BACK",
+      "TRAPS"
+    ],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jefferson_Squats/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jefferson_Squats/1.jpg"
+    ]
+  },
+  {
+    "slug": "jm-press",
+    "name": "JM press",
+    "nameEn": "JM Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/JM_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/JM_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-dead-clean",
+    "name": "Dead clean com kettlebell",
+    "nameEn": "Kettlebell Dead Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "CALVES",
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "TRAPS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Dead_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Dead_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-hang-clean",
+    "name": "Hang clean com kettlebell",
+    "nameEn": "Kettlebell Hang Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "CALVES",
+      "GLUTES",
+      "LOWER_BACK",
+      "SHOULDERS",
+      "TRAPS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Hang_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Hang_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-one-legged-deadlift",
+    "name": "Levantamento terra unilateral com kettlebell",
+    "nameEn": "Kettlebell One-Legged Deadlift",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_One-Legged_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_One-Legged_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-pass-between-the-legs",
+    "name": "Passagem de kettlebell entre as pernas",
+    "nameEn": "Kettlebell Pass Between The Legs",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "SHOULDERS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pass_Between_The_Legs/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pass_Between_The_Legs/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-pirate-ships",
+    "name": "Pirate ships com kettlebell",
+    "nameEn": "Kettlebell Pirate Ships",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["ABDOMINALS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pirate_Ships/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pirate_Ships/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-sumo-high-pull",
+    "name": "Puxada alta sumô com kettlebell",
+    "nameEn": "Kettlebell Sumo High Pull",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": [
+      "ADDUCTORS",
+      "GLUTES",
+      "HAMSTRINGS",
+      "QUADRICEPS",
+      "SHOULDERS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Sumo_High_Pull/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Sumo_High_Pull/1.jpg"
+    ]
+  },
+  {
+    "slug": "kettlebell-windmill",
+    "name": "Moinho (windmill) com kettlebell",
+    "nameEn": "Kettlebell Windmill",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "SHOULDERS", "TRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Windmill/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Windmill/1.jpg"
+    ]
+  },
+  {
+    "slug": "kneeling-high-pulley-row",
+    "name": "Remada ajoelhado na polia alta",
+    "nameEn": "Kneeling High Pulley Row",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_High_Pulley_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_High_Pulley_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "kneeling-single-arm-high-pulley-row",
+    "name": "Remada unilateral ajoelhado na polia alta",
+    "nameEn": "Kneeling Single-Arm High Pulley Row",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Single-Arm_High_Pulley_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Single-Arm_High_Pulley_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "landmine-180s",
+    "name": "Landmine 180 (rotação)",
+    "nameEn": "Landmine 180's",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Landmine_180s/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Landmine_180s/1.jpg"
+    ]
+  },
+  {
+    "slug": "leg-lift",
+    "name": "Elevação de pernas",
+    "nameEn": "Leg Lift",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Lift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Lift/1.jpg"
+    ]
+  },
+  {
+    "slug": "leg-press",
+    "name": "Leg press",
+    "nameEn": "Leg Press",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "leg-pull-in",
+    "name": "Abdominal com recolhimento de joelhos",
+    "nameEn": "Leg Pull-In",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Pull-In/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Pull-In/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-chest-press",
+    "name": "Supino na máquina articulada",
+    "nameEn": "Leverage Chest Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-deadlift",
+    "name": "Levantamento terra na máquina articulada",
+    "nameEn": "Leverage Deadlift",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-decline-chest-press",
+    "name": "Supino declinado na máquina articulada",
+    "nameEn": "Leverage Decline Chest Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Decline_Chest_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Decline_Chest_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-high-row",
+    "name": "Remada alta na máquina articulada",
+    "nameEn": "Leverage High Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["LATS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-incline-chest-press",
+    "name": "Supino inclinado na máquina articulada",
+    "nameEn": "Leverage Incline Chest Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-iso-row",
+    "name": "Remada unilateral na máquina articulada",
+    "nameEn": "Leverage Iso Row",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-shoulder-press",
+    "name": "Desenvolvimento na máquina articulada",
+    "nameEn": "Leverage Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "leverage-shrug",
+    "name": "Encolhimento na máquina articulada",
+    "nameEn": "Leverage Shrug",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "low-cable-triceps-extension",
+    "name": "Extensão de tríceps no cabo baixo",
+    "nameEn": "Low Cable Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "low-pulley-row-to-neck",
+    "name": "Remada até o pescoço na polia baixa",
+    "nameEn": "Low Pulley Row To Neck",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "TRAPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Pulley_Row_To_Neck/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Pulley_Row_To_Neck/1.jpg"
+    ]
+  },
+  {
+    "slug": "lunge-pass-through",
+    "name": "Afundo com passagem de kettlebell",
+    "nameEn": "Lunge Pass Through",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "QUADRICEPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Pass_Through/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Pass_Through/1.jpg"
+    ]
+  },
+  {
+    "slug": "lunge-sprint",
+    "name": "Afundo com impulso (sprint)",
+    "nameEn": "Lunge Sprint",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Sprint/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Sprint/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-cambered-barbell-row",
+    "name": "Remada deitado com barra cambada",
+    "nameEn": "Lying Cambered Barbell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "TRAPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cambered_Barbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cambered_Barbell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-close-grip-bar-curl-on-high-pulley",
+    "name": "Rosca deitado na polia alta pegada fechada",
+    "nameEn": "Lying Close-Grip Bar Curl On High Pulley",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Close-Grip_Bar_Curl_On_High_Pulley/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Close-Grip_Bar_Curl_On_High_Pulley/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-leg-curls",
+    "name": "Mesa flexora",
+    "nameEn": "Lying Leg Curls",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-machine-squat",
+    "name": "Agachamento deitado na máquina",
+    "nameEn": "Lying Machine Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Machine_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Machine_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-supine-dumbbell-curl",
+    "name": "Rosca deitado com halteres",
+    "nameEn": "Lying Supine Dumbbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Supine_Dumbbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Supine_Dumbbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "lying-t-bar-row",
+    "name": "Remada cavalinho com peito apoiado",
+    "nameEn": "Lying T-Bar Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "machine-bench-press",
+    "name": "Supino na máquina",
+    "nameEn": "Machine Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "machine-bicep-curl",
+    "name": "Rosca na máquina",
+    "nameEn": "Machine Bicep Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "machine-preacher-curls",
+    "name": "Rosca scott na máquina",
+    "nameEn": "Machine Preacher Curls",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/1.jpg"
+    ]
+  },
+  {
+    "slug": "machine-shoulder-military-press",
+    "name": "Desenvolvimento militar na máquina",
+    "nameEn": "Machine Shoulder (Military) Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "machine-triceps-extension",
+    "name": "Extensão de tríceps na máquina",
+    "nameEn": "Machine Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "middle-back-shrug",
+    "name": "Encolhimento invertido (meio das costas)",
+    "nameEn": "Middle Back Shrug",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Middle_Back_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Middle_Back_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "natural-glute-ham-raise",
+    "name": "Glute ham raise com peso corporal",
+    "nameEn": "Natural Glute Ham Raise",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-dumbbell-bench-press",
+    "name": "Supino unilateral com halter",
+    "nameEn": "One Arm Dumbbell Bench Press",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-dumbbell-preacher-curl",
+    "name": "Rosca scott unilateral com halter",
+    "nameEn": "One Arm Dumbbell Preacher Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Preacher_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Preacher_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-floor-press",
+    "name": "Supino no chão unilateral com barra",
+    "nameEn": "One Arm Floor Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Floor_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Floor_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-lat-pulldown",
+    "name": "Puxada unilateral",
+    "nameEn": "One Arm Lat Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-pronated-dumbbell-triceps-extension",
+    "name": "Extensão de tríceps unilateral pronada com halter",
+    "nameEn": "One Arm Pronated Dumbbell Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Pronated_Dumbbell_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Pronated_Dumbbell_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-supinated-dumbbell-triceps-extension",
+    "name": "Extensão de tríceps unilateral supinada com halter",
+    "nameEn": "One Arm Supinated Dumbbell Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Supinated_Dumbbell_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Supinated_Dumbbell_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-dumbbell-row",
+    "name": "Remada unilateral com halter (serrote)",
+    "nameEn": "One-Arm Dumbbell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-kettlebell-clean",
+    "name": "Clean unilateral com kettlebell",
+    "nameEn": "One-Arm Kettlebell Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK", "SHOULDERS", "TRAPS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-kettlebell-row",
+    "name": "Remada unilateral com kettlebell",
+    "nameEn": "One-Arm Kettlebell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-kettlebell-swings",
+    "name": "Swing unilateral com kettlebell",
+    "nameEn": "One-Arm Kettlebell Swings",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK", "SHOULDERS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Swings/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Swings/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-long-bar-row",
+    "name": "Remada unilateral na barra landmine",
+    "nameEn": "One-Arm Long Bar Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Long_Bar_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Long_Bar_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-arm-open-palm-kettlebell-clean",
+    "name": "Clean com kettlebell pegada aberta",
+    "nameEn": "One-Arm Open Palm Kettlebell Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "FOREARMS",
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "SHOULDERS"
+    ],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Open_Palm_Kettlebell_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Open_Palm_Kettlebell_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "one-legged-cable-kickback",
+    "name": "Coice unilateral no cabo",
+    "nameEn": "One-Legged Cable Kickback",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/1.jpg"
+    ]
+  },
+  {
+    "slug": "pallof-press-with-rotation",
+    "name": "Pallof press com rotação",
+    "nameEn": "Pallof Press With Rotation",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS", "TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/1.jpg"
+    ]
+  },
+  {
+    "slug": "palms-down-dumbbell-wrist-curl-over-a-bench",
+    "name": "Rosca de punho invertida com halteres no banco",
+    "nameEn": "Palms-Down Dumbbell Wrist Curl Over A Bench",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "palms-down-wrist-curl-over-a-bench",
+    "name": "Rosca de punho invertida com barra no banco",
+    "nameEn": "Palms-Down Wrist Curl Over A Bench",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "palms-up-barbell-wrist-curl-over-a-bench",
+    "name": "Rosca de punho com barra no banco",
+    "nameEn": "Palms-Up Barbell Wrist Curl Over A Bench",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "palms-up-dumbbell-wrist-curl-over-a-bench",
+    "name": "Rosca de punho com halteres no banco",
+    "nameEn": "Palms-Up Dumbbell Wrist Curl Over A Bench",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench/1.jpg"
+    ]
+  },
+  {
+    "slug": "plie-dumbbell-squat",
+    "name": "Agachamento sumô (plié) com halter",
+    "nameEn": "Plie Dumbbell Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["ABDOMINALS", "CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plie_Dumbbell_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plie_Dumbbell_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "power-clean",
+    "name": "Power clean",
+    "nameEn": "Power Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "CALVES",
+      "FOREARMS",
+      "GLUTES",
+      "LOWER_BACK",
+      "MIDDLE_BACK",
+      "QUADRICEPS",
+      "SHOULDERS",
+      "TRAPS",
+      "TRICEPS"
+    ],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Power_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Power_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "preacher-curl",
+    "name": "Rosca scott com barra",
+    "nameEn": "Preacher Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "preacher-hammer-dumbbell-curl",
+    "name": "Rosca scott martelo com halteres",
+    "nameEn": "Preacher Hammer Dumbbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Hammer_Dumbbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Hammer_Dumbbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "pull-through",
+    "name": "Pull through no cabo",
+    "nameEn": "Pull Through",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/1.jpg"
+    ]
+  },
+  {
+    "slug": "pullups",
+    "name": "Barra fixa",
+    "nameEn": "Pullups",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/1.jpg"
+    ]
+  },
+  {
+    "slug": "push-up-to-side-plank",
+    "name": "Flexão com prancha lateral",
+    "nameEn": "Push Up to Side Plank",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push_Up_to_Side_Plank/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push_Up_to_Side_Plank/1.jpg"
+    ]
+  },
+  {
+    "slug": "push-up-wide",
+    "name": "Flexão aberta",
+    "nameEn": "Push-Up Wide",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Up_Wide/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Up_Wide/1.jpg"
+    ]
+  },
+  {
+    "slug": "push-ups-close-triceps-position",
+    "name": "Flexão fechada (tríceps)",
+    "nameEn": "Push-Ups - Close Triceps Position",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_-_Close_Triceps_Position/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_-_Close_Triceps_Position/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-barbell-curl",
+    "name": "Rosca invertida com barra",
+    "nameEn": "Reverse Barbell Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-cable-curl",
+    "name": "Rosca invertida no cabo",
+    "nameEn": "Reverse Cable Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": ["FOREARMS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Cable_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Cable_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-grip-bent-over-rows",
+    "name": "Remada curvada pegada supinada",
+    "nameEn": "Reverse Grip Bent-Over Rows",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-grip-triceps-pushdown",
+    "name": "Tríceps pulley pegada invertida",
+    "nameEn": "Reverse Grip Triceps Pushdown",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-hyperextension",
+    "name": "Hiperextensão reversa",
+    "nameEn": "Reverse Hyperextension",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["CALVES", "GLUTES"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/1.jpg"
+    ]
+  },
+  {
+    "slug": "reverse-triceps-bench-press",
+    "name": "Supino pegada invertida (tríceps)",
+    "nameEn": "Reverse Triceps Bench Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Triceps_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Triceps_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "rocking-standing-calf-raise",
+    "name": "Panturrilha em pé com balanço",
+    "nameEn": "Rocking Standing Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "romanian-deadlift",
+    "name": "Levantamento terra romeno",
+    "nameEn": "Romanian Deadlift",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "rope-straight-arm-pulldown",
+    "name": "Pulldown com corda braços estendidos",
+    "nameEn": "Rope Straight-Arm Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-bent-over-one-arm-dumbbell-triceps-extension",
+    "name": "Coice de tríceps unilateral sentado",
+    "nameEn": "Seated Bent-Over One-Arm Dumbbell Triceps Extension",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-cable-rows",
+    "name": "Remada baixa sentado no cabo",
+    "nameEn": "Seated Cable Rows",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-cable-shoulder-press",
+    "name": "Desenvolvimento sentado no cabo",
+    "nameEn": "Seated Cable Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-calf-raise",
+    "name": "Panturrilha sentado na máquina",
+    "nameEn": "Seated Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-dumbbell-palms-down-wrist-curl",
+    "name": "Rosca de punho invertida sentado com halteres",
+    "nameEn": "Seated Dumbbell Palms-Down Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Down_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Down_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-dumbbell-palms-up-wrist-curl",
+    "name": "Rosca de punho sentado com halteres",
+    "nameEn": "Seated Dumbbell Palms-Up Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-dumbbell-press",
+    "name": "Desenvolvimento sentado com halteres",
+    "nameEn": "Seated Dumbbell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-flat-bench-leg-pull-in",
+    "name": "Elevação de joelhos sentado no banco",
+    "nameEn": "Seated Flat Bench Leg Pull-In",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Flat_Bench_Leg_Pull-In/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Flat_Bench_Leg_Pull-In/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-leg-curl",
+    "name": "Cadeira flexora",
+    "nameEn": "Seated Leg Curl",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-one-arm-cable-pulley-rows",
+    "name": "Remada unilateral sentado no cabo",
+    "nameEn": "Seated One-arm Cable Pulley Rows",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "TRAPS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-one-arm-dumbbell-palms-down-wrist-curl",
+    "name": "Rosca de punho invertida unilateral sentado",
+    "nameEn": "Seated One-Arm Dumbbell Palms-Down Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-one-arm-dumbbell-palms-up-wrist-curl",
+    "name": "Rosca de punho unilateral sentado",
+    "nameEn": "Seated One-Arm Dumbbell Palms-Up Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-palm-up-barbell-wrist-curl",
+    "name": "Rosca de punho sentado com barra",
+    "nameEn": "Seated Palm-Up Barbell Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-palms-down-barbell-wrist-curl",
+    "name": "Rosca de punho invertida sentado com barra",
+    "nameEn": "Seated Palms-Down Barbell Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palms-Down_Barbell_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palms-Down_Barbell_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-triceps-press",
+    "name": "Tríceps francês sentado com halter",
+    "nameEn": "Seated Triceps Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "seated-two-arm-palms-up-low-pulley-wrist-curl",
+    "name": "Rosca de punho sentado na polia baixa",
+    "nameEn": "Seated Two-Arm Palms-Up Low-Pulley Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "shotgun-row",
+    "name": "Remada shotgun no cabo",
+    "nameEn": "Shotgun Row",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shotgun_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shotgun_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "side-jackknife",
+    "name": "Canivete lateral",
+    "nameEn": "Side Jackknife",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Jackknife/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Jackknife/1.jpg"
+    ]
+  },
+  {
+    "slug": "single-leg-glute-bridge",
+    "name": "Ponte de glúteos unilateral",
+    "nameEn": "Single Leg Glute Bridge",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-behind-the-back-shrug",
+    "name": "Encolhimento por trás do corpo no smith",
+    "nameEn": "Smith Machine Behind the Back Shrug",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Behind_the_Back_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Behind_the_Back_Shrug/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-bent-over-row",
+    "name": "Remada curvada no smith",
+    "nameEn": "Smith Machine Bent Over Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-calf-raise",
+    "name": "Panturrilha em pé no smith",
+    "nameEn": "Smith Machine Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-close-grip-bench-press",
+    "name": "Supino fechado no smith",
+    "nameEn": "Smith Machine Close-Grip Bench Press",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-hang-power-clean",
+    "name": "Hang power clean no smith",
+    "nameEn": "Smith Machine Hang Power Clean",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "SHOULDERS",
+      "TRAPS"
+    ],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Hang_Power_Clean/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Hang_Power_Clean/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-one-arm-upright-row",
+    "name": "Remada alta unilateral no smith",
+    "nameEn": "Smith Machine One-Arm Upright Row",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["BICEPS", "TRAPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_One-Arm_Upright_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_One-Arm_Upright_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-overhead-shoulder-press",
+    "name": "Desenvolvimento no smith",
+    "nameEn": "Smith Machine Overhead Shoulder Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-reverse-calf-raises",
+    "name": "Elevação de tibial no smith",
+    "nameEn": "Smith Machine Reverse Calf Raises",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Reverse_Calf_Raises/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Reverse_Calf_Raises/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-squat",
+    "name": "Agachamento no smith",
+    "nameEn": "Smith Machine Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-stiff-legged-deadlift",
+    "name": "Stiff no smith",
+    "nameEn": "Smith Machine Stiff-Legged Deadlift",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Stiff-Legged_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Stiff-Legged_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-machine-upright-row",
+    "name": "Remada alta no smith",
+    "nameEn": "Smith Machine Upright Row",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Upright_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Upright_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "smith-single-leg-split-squat",
+    "name": "Agachamento búlgaro no smith",
+    "nameEn": "Smith Single-Leg Split Squat",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/1.jpg"
+    ]
+  },
+  {
+    "slug": "snatch-pull",
+    "name": "Puxada de arranco (snatch pull)",
+    "nameEn": "Snatch Pull",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [
+      "CALVES",
+      "GLUTES",
+      "LOWER_BACK",
+      "QUADRICEPS",
+      "TRAPS"
+    ],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Snatch_Pull/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Snatch_Pull/1.jpg"
+    ]
+  },
+  {
+    "slug": "spell-caster",
+    "name": "Spell caster (rotação com halteres)",
+    "nameEn": "Spell Caster",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["GLUTES", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spell_Caster/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spell_Caster/1.jpg"
+    ]
+  },
+  {
+    "slug": "spider-crawl",
+    "name": "Caminhada de aranha (spider crawl)",
+    "nameEn": "Spider Crawl",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["CHEST", "SHOULDERS", "TRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Crawl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Crawl/1.jpg"
+    ]
+  },
+  {
+    "slug": "split-squat-with-dumbbells",
+    "name": "Agachamento split com halteres",
+    "nameEn": "Split Squat with Dumbbells",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-alternating-dumbbell-press",
+    "name": "Desenvolvimento alternado em pé com halteres",
+    "nameEn": "Standing Alternating Dumbbell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Alternating_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Alternating_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-barbell-calf-raise",
+    "name": "Panturrilha em pé com barra",
+    "nameEn": "Standing Barbell Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-bradford-press",
+    "name": "Desenvolvimento Bradford em pé",
+    "nameEn": "Standing Bradford Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Bradford_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Bradford_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-cable-lift",
+    "name": "Elevação diagonal no cabo (lift)",
+    "nameEn": "Standing Cable Lift",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Lift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Lift/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-cable-wood-chop",
+    "name": "Lenhador no cabo (wood chop)",
+    "nameEn": "Standing Cable Wood Chop",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-calf-raises",
+    "name": "Panturrilha em pé na máquina",
+    "nameEn": "Standing Calf Raises",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-dumbbell-calf-raise",
+    "name": "Panturrilha em pé com halteres",
+    "nameEn": "Standing Dumbbell Calf Raise",
+    "muscleGroup": "CALVES",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-dumbbell-press",
+    "name": "Desenvolvimento em pé com halteres",
+    "nameEn": "Standing Dumbbell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-dumbbell-upright-row",
+    "name": "Remada alta com halteres",
+    "nameEn": "Standing Dumbbell Upright Row",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["BICEPS", "SHOULDERS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-leg-curl",
+    "name": "Flexora em pé",
+    "nameEn": "Standing Leg Curl",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-military-press",
+    "name": "Desenvolvimento militar em pé",
+    "nameEn": "Standing Military Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-palm-in-one-arm-dumbbell-press",
+    "name": "Desenvolvimento unilateral pegada neutra",
+    "nameEn": "Standing Palm-In One-Arm Dumbbell Press",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRICEPS"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palm-In_One-Arm_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palm-In_One-Arm_Dumbbell_Press/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-palms-up-barbell-behind-the-back-wrist-curl",
+    "name": "Rosca de punho com barra por trás do corpo",
+    "nameEn": "Standing Palms-Up Barbell Behind The Back Wrist Curl",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/1.jpg"
+    ]
+  },
+  {
+    "slug": "step-up-with-knee-raise",
+    "name": "Subida no banco com elevação de joelho",
+    "nameEn": "Step-up with Knee Raise",
+    "muscleGroup": "GLUTES",
+    "secondaryMuscles": ["HAMSTRINGS", "QUADRICEPS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "stiff-leg-barbell-good-morning",
+    "name": "Bom-dia com pernas estendidas",
+    "nameEn": "Stiff Leg Barbell Good Morning",
+    "muscleGroup": "LOWER_BACK",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff_Leg_Barbell_Good_Morning/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff_Leg_Barbell_Good_Morning/1.jpg"
+    ]
+  },
+  {
+    "slug": "stiff-legged-barbell-deadlift",
+    "name": "Stiff com barra",
+    "nameEn": "Stiff-Legged Barbell Deadlift",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Barbell_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Barbell_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "stiff-legged-dumbbell-deadlift",
+    "name": "Stiff com halteres",
+    "nameEn": "Stiff-Legged Dumbbell Deadlift",
+    "muscleGroup": "HAMSTRINGS",
+    "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/1.jpg"
+    ]
+  },
+  {
+    "slug": "straight-bar-bench-mid-rows",
+    "name": "Remada média no banco com barra reta",
+    "nameEn": "Straight Bar Bench Mid Rows",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight_Bar_Bench_Mid_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight_Bar_Bench_Mid_Rows/1.jpg"
+    ]
+  },
+  {
+    "slug": "straight-arm-pulldown",
+    "name": "Pulldown com braços estendidos",
+    "nameEn": "Straight-Arm Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "t-bar-row-with-handle",
+    "name": "Remada cavalinho com triângulo",
+    "nameEn": "T-Bar Row with Handle",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/1.jpg"
+    ]
+  },
+  {
+    "slug": "thigh-abductor",
+    "name": "Cadeira abdutora",
+    "nameEn": "Thigh Abductor",
+    "muscleGroup": "ABDUCTORS",
+    "secondaryMuscles": ["GLUTES"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/1.jpg"
+    ]
+  },
+  {
+    "slug": "thigh-adductor",
+    "name": "Cadeira adutora",
+    "nameEn": "Thigh Adductor",
+    "muscleGroup": "ADDUCTORS",
+    "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/1.jpg"
+    ]
+  },
+  {
+    "slug": "two-arm-kettlebell-row",
+    "name": "Remada com dois kettlebells",
+    "nameEn": "Two-Arm Kettlebell Row",
+    "muscleGroup": "MIDDLE_BACK",
+    "secondaryMuscles": ["BICEPS", "LATS"],
+    "equipment": "KETTLEBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Two-Arm_Kettlebell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Two-Arm_Kettlebell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "underhand-cable-pulldowns",
+    "name": "Puxada supinada no cabo",
+    "nameEn": "Underhand Cable Pulldowns",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/1.jpg"
+    ]
+  },
+  {
+    "slug": "upright-barbell-row",
+    "name": "Remada alta com barra",
+    "nameEn": "Upright Barbell Row",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": ["TRAPS"],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "upright-cable-row",
+    "name": "Remada alta no cabo",
+    "nameEn": "Upright Cable Row",
+    "muscleGroup": "TRAPS",
+    "secondaryMuscles": ["SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Cable_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Cable_Row/1.jpg"
+    ]
+  },
+  {
+    "slug": "v-bar-pulldown",
+    "name": "Puxada com triângulo",
+    "nameEn": "V-Bar Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "v-bar-pullup",
+    "name": "Barra fixa com triângulo (pegada neutra)",
+    "nameEn": "V-Bar Pullup",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/1.jpg"
+    ]
+  },
+  {
+    "slug": "wide-grip-lat-pulldown",
+    "name": "Puxada aberta na polia",
+    "nameEn": "Wide-Grip Lat Pulldown",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/1.jpg"
+    ]
+  },
+  {
+    "slug": "wide-grip-pulldown-behind-the-neck",
+    "name": "Puxada por trás da nuca",
+    "nameEn": "Wide-Grip Pulldown Behind The Neck",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Pulldown_Behind_The_Neck/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Pulldown_Behind_The_Neck/1.jpg"
+    ]
+  },
+  {
+    "slug": "wide-grip-rear-pull-up",
+    "name": "Barra fixa aberta atrás da nuca",
+    "nameEn": "Wide-Grip Rear Pull-Up",
+    "muscleGroup": "LATS",
+    "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Rear_Pull-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Rear_Pull-Up/1.jpg"
+    ]
+  },
+  {
+    "slug": "wind-sprints",
+    "name": "Corrida no ar (wind sprints)",
+    "nameEn": "Wind Sprints",
+    "muscleGroup": "ABDOMINALS",
+    "secondaryMuscles": [],
+    "equipment": "BODYWEIGHT",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wind_Sprints/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wind_Sprints/1.jpg"
+    ]
+  },
+  {
+    "slug": "wrist-rotations-with-straight-bar",
+    "name": "Rotação de punho com barra",
+    "nameEn": "Wrist Rotations with Straight Bar",
+    "muscleGroup": "FOREARMS",
+    "secondaryMuscles": [],
+    "equipment": "BARBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/1.jpg"
+    ]
+  }
+]

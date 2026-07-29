@@ -15,4 +15,58 @@ model User {
   image String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  exercises Exercise[]
+}
+
+enum MuscleGroup {
+  ABDOMINALS
+  ABDUCTORS
+  ADDUCTORS
+  BICEPS
+  CALVES
+  CHEST
+  FOREARMS
+  GLUTES
+  HAMSTRINGS
+  LATS
+  LOWER_BACK
+  MIDDLE_BACK
+  NECK
+  QUADRICEPS
+  SHOULDERS
+  TRAPS
+  TRICEPS
+}
+
+enum Equipment {
+  BARBELL
+  DUMBBELL
+  MACHINE
+  CABLE
+  BODYWEIGHT
+  KETTLEBELL
+  EZ_BAR
+  BANDS
+  MEDICINE_BALL
+  EXERCISE_BALL
+  OTHER
+}
+
+model Exercise {
+  id String @id @default(uuid())
+  slug String @unique
+  name String
+  nameEn String?
+  muscleGroup MuscleGroup
+  secondaryMuscles MuscleGroup[]
+  equipment Equipment
+  imageUrls String[]
+  isCustom Boolean @default(false)
+  owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([muscleGroup])
+  @@index([ownerId])
 }
