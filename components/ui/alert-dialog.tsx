@@ -10,15 +10,15 @@ function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
 }
 
 function AlertDialogTrigger({ ...props }: AlertDialogPrimitive.Trigger.Props) {
-  return (
-    <AlertDialogPrimitive.Trigger data-slot="alert-dialog-trigger" {...props} />
-  )
+  // Sem data-slot aqui: quando compõe com render={<Button/>}, o Base UI
+  // acaba divergindo esse atributo entre SSR e hidratação (mismatch
+  // inofensivo, mas evitável). O Button já tem seu próprio data-slot.
+  return <AlertDialogPrimitive.Trigger {...props} />
 }
 
 function AlertDialogClose({ ...props }: AlertDialogPrimitive.Close.Props) {
-  return (
-    <AlertDialogPrimitive.Close data-slot="alert-dialog-close" {...props} />
-  )
+  // Mesmo motivo do AlertDialogTrigger acima.
+  return <AlertDialogPrimitive.Close {...props} />
 }
 
 function AlertDialogPortal({ ...props }: AlertDialogPrimitive.Portal.Props) {
