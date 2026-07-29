@@ -21,7 +21,14 @@ export const getUser = cache(async () => {
 
   const user = await prisma.user.findUnique({
     where: { id: userId },
-    select: { id: true, email: true, name: true, image: true },
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      image: true,
+      username: true,
+      bio: true,
+    },
   })
 
   if (!user) {
