@@ -71,7 +71,7 @@ const eslintConfig = defineConfig([
       'react/jsx-props-no-spreading': 'off',
       // defaultProps foi descontinuado no React 19; tipos TS já cobrem isso
       'react/require-default-props': 'off',
-      // Arquivos de configuração podem importar devDependencies
+      // Configs e scripts (seed) podem importar devDependencies
       'import-x/no-extraneous-dependencies': [
         'error',
         {
@@ -79,6 +79,7 @@ const eslintConfig = defineConfig([
             '**/*.config.{js,mjs,cjs,ts,mts}',
             '**/*.test.{js,ts,tsx}',
             '**/*.spec.{js,ts,tsx}',
+            'prisma/seed.ts',
           ],
         },
       ],

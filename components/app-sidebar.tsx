@@ -1,24 +1,51 @@
-import { LogOut } from 'lucide-react'
+import Link from 'next/link'
+import { DumbbellIcon, HomeIcon, LogOut } from 'lucide-react'
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
 } from '@/components/ui/sidebar'
 import { Button } from '@/components/ui/button'
 import { getUser } from '@/lib/dal'
 import { logout } from '@/lib/actions/auth'
+import { privateRoutes } from '@/lib/config'
+
+const navItems = [
+  { title: 'Dashboard', href: privateRoutes.dashboard, icon: HomeIcon },
+  { title: 'Exercícios', href: privateRoutes.exercises, icon: DumbbellIcon },
+]
 
 export async function AppSidebar() {
   const user = await getUser()
 
   return (
     <Sidebar>
-      <SidebarHeader />
+      <SidebarHeader>
+        <span className="px-2 py-1.5 font-bold">Fifty Repz</span>
+      </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup />
-        <SidebarGroup />
+        <SidebarGroup>
+          <SidebarGroupLabel>Treino</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navItems.map((item) => (
+                <SidebarMenuItem key={item.href}>
+                  <SidebarMenuButton render={<Link href={item.href} />}>
+                    <item.icon />
+                    <span>{item.title}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
         <div className="flex items-center gap-2 px-2 py-1.5">

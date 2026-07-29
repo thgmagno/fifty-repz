@@ -5,4 +5,5 @@ export const publicRoutes = {
 
 export const privateRoutes = {
   dashboard: '/',
+  exercises: '/exercicios',
 }
