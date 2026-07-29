@@ -54,7 +54,7 @@ export function ExerciseCard({ exercise }: { exercise: ExerciseListItem }) {
               equipment: exercise.equipment,
             }}
             trigger={
-              <Button variant="ghost" size="sm">
+              <Button variant="secondary" size="sm">
                 <PencilIcon />
                 Editar
               </Button>

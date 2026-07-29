@@ -78,7 +78,7 @@ export async function AppSidebar() {
           <Button
             type="submit"
             variant="ghost"
-            className="w-full justify-start"
+            className="w-full justify-start text-destructive/80 hover:text-destructive"
           >
             <LogOut />
             Sair

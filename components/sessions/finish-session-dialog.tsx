@@ -35,7 +35,7 @@ export function FinishSessionDialog({ sessionId }: { sessionId: string }) {
           </AlertDialogClose>
           <form action={finishSession}>
             <input type="hidden" name="sessionId" value={sessionId} />
-            <Button type="submit">
+            <Button type="submit" className="w-full">
               <CheckIcon />
               Finalizar
             </Button>

@@ -42,7 +42,7 @@ export function DeleteExerciseDialog({
           </AlertDialogClose>
           <form action={deleteExercise}>
             <input type="hidden" name="id" value={exerciseId} />
-            <Button type="submit" variant="destructive">
+            <Button type="submit" variant="destructive" className="w-full">
               Excluir
             </Button>
           </form>

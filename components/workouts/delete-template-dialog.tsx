@@ -42,7 +42,7 @@ export function DeleteTemplateDialog({
           </AlertDialogClose>
           <form action={deleteWorkoutTemplate}>
             <input type="hidden" name="id" value={templateId} />
-            <Button type="submit" variant="destructive">
+            <Button type="submit" variant="destructive" className="w-full">
               Excluir
             </Button>
           </form>

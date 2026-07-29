@@ -129,7 +129,7 @@ export default async function TreinosPage() {
                   </div>
                 </CardContent>
                 <CardFooter className="justify-end">
-                  <form action={startWorkoutSession}>
+                  <form action={startWorkoutSession} className='mr-auto'>
                     <input
                       type="hidden"
                       name="templateId"
@@ -143,7 +143,7 @@ export default async function TreinosPage() {
                   <Link
                     href={`${privateRoutes.workouts}/${template.id}/editar`}
                     className={buttonVariants({
-                      variant: 'ghost',
+                      variant: 'secondary',
                       size: 'sm',
                     })}
                   >
