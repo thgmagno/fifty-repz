@@ -67,20 +67,20 @@ Opções avaliadas:
 
 ## MVP em Fases
 
-### Fase 1 — Core de treino (semanas 1-3)
-- Auth (Google + email)
+### Fase 1 — Core de treino
+- Auth (Google)
 - Seed do catálogo de exercícios + CRUD de exercícios custom
 - Montagem de treinos (templates): nome, exercícios, séries/reps alvo
 - Execução de treino: registrar séries (peso, reps), timer de descanso, finalizar sessão
 - Histórico pessoal de sessões
 
-### Fase 2 — Social (semanas 4-6)
+### Fase 2 — Social
 - Perfil público (foto, bio, estatísticas básicas)
 - Seguir / deixar de seguir
 - Feed com sessões finalizadas dos seguidos (treino, duração, volume total)
 - Likes e comentários
 
-### Fase 3 — PWA e polish (semana 7+)
+### Fase 3 — PWA e polish
 - next-pwa: instalável, service worker, cache de assets e do catálogo
 - Offline: treino salvo em IndexedDB, sync ao voltar conexão
 - Gráficos de progressão (volume por grupo muscular, PRs)
