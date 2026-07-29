@@ -5,6 +5,7 @@ import {
   HistoryIcon,
   HomeIcon,
   LogOut,
+  PencilIcon,
 } from 'lucide-react'
 import {
   Sidebar,
@@ -60,7 +61,10 @@ export async function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <div className="flex items-center gap-2 px-2 py-1.5">
+        <Link
+          href={`${privateRoutes.profile}/${user.username}`}
+          className="flex items-center gap-2 rounded-md px-2 py-1.5 hover:bg-sidebar-accent"
+        >
           {user.image && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -74,10 +78,19 @@ export async function AppSidebar() {
               {user.name ?? user.email}
             </span>
             <span className="truncate text-xs text-muted-foreground">
-              {user.email}
+              @{user.username}
             </span>
           </div>
-        </div>
+        </Link>
+        <Button
+          variant="ghost"
+          className="w-full justify-start"
+          nativeButton={false}
+          render={<Link href={privateRoutes.editProfile} />}
+        >
+          <PencilIcon />
+          Editar perfil
+        </Button>
         <form action={logout}>
           <Button
             type="submit"

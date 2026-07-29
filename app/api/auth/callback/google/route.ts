@@ -4,6 +4,7 @@ import { decodeJwt } from 'jose'
 import { prisma } from '@/lib/prisma'
 import { createSession } from '@/lib/session'
 import { privateRoutes, publicRoutes } from '@/lib/config'
+import { generateUniqueUsername } from '@/lib/username'
 import {
   GOOGLE_TOKEN_URL,
   OAUTH_STATE_COOKIE,
@@ -79,20 +80,30 @@ export async function GET(req: NextRequest) {
     return loginErrorRedirect(req)
   }
 
-  const user = await prisma.user.upsert({
+  const existingUser = await prisma.user.findUnique({
     where: { googleId: claims.sub },
-    update: {
-      email: claims.email,
-      name: claims.name ?? null,
-      image: claims.picture ?? null,
-    },
-    create: {
-      googleId: claims.sub,
-      email: claims.email,
-      name: claims.name ?? null,
-      image: claims.picture ?? null,
-    },
   })
+
+  const user = existingUser
+    ? await prisma.user.update({
+        where: { id: existingUser.id },
+        data: {
+          email: claims.email,
+          name: claims.name ?? null,
+          image: claims.picture ?? null,
+        },
+      })
+    : await prisma.user.create({
+        data: {
+          googleId: claims.sub,
+          email: claims.email,
+          name: claims.name ?? null,
+          image: claims.picture ?? null,
+          username: await generateUniqueUsername(
+            claims.name ?? claims.email.split('@')[0],
+          ),
+        },
+      })
 
   await createSession(user.id)
 

@@ -54,3 +54,16 @@ const sessionDateFormatter = new Intl.DateTimeFormat('pt-BR', {
 export function formatSessionDate(date: Date) {
   return sessionDateFormatter.format(date)
 }
+
+// 'YYYY-MM-DD' no fuso America/Sao_Paulo — usado para agrupar sessões por
+// dia local (heatmap de frequência, etc.), evitando o UTC do servidor.
+const localDateKeyFormatter = new Intl.DateTimeFormat('en-CA', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  timeZone: 'America/Sao_Paulo',
+})
+
+export function getLocalDateKey(date: Date) {
+  return localDateKeyFormatter.format(date)
+}
