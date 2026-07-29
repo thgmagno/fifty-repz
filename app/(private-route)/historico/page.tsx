@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CalendarIcon, ClockIcon, DumbbellIcon } from 'lucide-react'
+import { Page } from '@/components/page'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { listCompletedWorkoutSessions } from '@/lib/workout-sessions'
 import { formatDurationLong, formatSessionDate } from '@/lib/utils'
@@ -14,7 +15,7 @@ export default async function HistoricoPage() {
   const sessions = await listCompletedWorkoutSessions()
 
   return (
-    <main className="flex flex-col gap-6 py-4">
+    <Page>
       <div>
         <h1 className="text-2xl font-bold">Histórico</h1>
         <p className="text-sm text-muted-foreground">
@@ -63,6 +64,6 @@ export default async function HistoricoPage() {
           ))}
         </ul>
       )}
-    </main>
+    </Page>
   )
 }
