@@ -11,4 +11,5 @@ export const privateRoutes = {
   history: '/historico',
   profile: '/perfil',
   editProfile: '/perfil/editar',
+  search: '/buscar',
 }
