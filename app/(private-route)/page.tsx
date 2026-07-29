@@ -5,10 +5,7 @@ export default async function Dashboard() {
 
   return (
     <main>
-      <h1 className="text-2xl font-bold">Dashboard</h1>
-      <p className="text-muted-foreground">
-        Bem-vindo, {user.name ?? user.email}!
-      </p>
+      <h1 className="text-2xl font-bold">Eaí, {user.name ?? user.email}!</h1>
     </main>
   )
 }
