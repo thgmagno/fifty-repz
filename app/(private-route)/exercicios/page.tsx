@@ -3,7 +3,13 @@ import { PlusIcon, SearchIcon } from 'lucide-react'
 import { Page } from '@/components/page'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { NativeSelect } from '@/components/ui/native-select'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { ExerciseCard } from '@/components/exercises/exercise-card'
 import { ExerciseFormDialog } from '@/components/exercises/exercise-form-dialog'
 import { listExercises } from '@/lib/exercises'
@@ -57,18 +63,19 @@ export default async function ExerciciosPage({
           />
         </div>
         <div className="w-56">
-          <NativeSelect
-            name="grupo"
-            defaultValue={muscleGroup ?? ''}
-            aria-label="Filtrar por grupo muscular"
-          >
-            <option value="">Todos os grupos</option>
-            {Object.values(MuscleGroup).map((group) => (
-              <option key={group} value={group}>
-                {muscleGroupLabels[group]}
-              </option>
-            ))}
-          </NativeSelect>
+          <Select name="grupo" defaultValue={muscleGroup ?? ''}>
+            <SelectTrigger aria-label="Filtrar por grupo muscular">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="">Todos os grupos</SelectItem>
+              {Object.values(MuscleGroup).map((group) => (
+                <SelectItem key={group} value={group}>
+                  {muscleGroupLabels[group]}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
         <Button type="submit" variant="outline">
           <SearchIcon />
