@@ -15,7 +15,13 @@ import {
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { NativeSelect } from '@/components/ui/native-select'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import {
   createExercise,
   updateExercise,
@@ -86,21 +92,22 @@ export function ExerciseFormDialog({
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="exercise-muscle-group">Grupo muscular</Label>
-            <NativeSelect
-              id="exercise-muscle-group"
+            <Select
               name="muscleGroup"
-              defaultValue={exercise?.muscleGroup ?? ''}
+              defaultValue={exercise?.muscleGroup}
               required
             >
-              <option value="" disabled>
-                Selecione…
-              </option>
-              {Object.values(MuscleGroup).map((group) => (
-                <option key={group} value={group}>
-                  {muscleGroupLabels[group]}
-                </option>
-              ))}
-            </NativeSelect>
+              <SelectTrigger id="exercise-muscle-group">
+                <SelectValue placeholder="Selecione…" />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.values(MuscleGroup).map((group) => (
+                  <SelectItem key={group} value={group}>
+                    {muscleGroupLabels[group]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             {state.errors?.muscleGroup && (
               <p className="text-sm text-destructive">
                 {state.errors.muscleGroup[0]}
@@ -109,21 +116,22 @@ export function ExerciseFormDialog({
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="exercise-equipment">Equipamento</Label>
-            <NativeSelect
-              id="exercise-equipment"
+            <Select
               name="equipment"
-              defaultValue={exercise?.equipment ?? ''}
+              defaultValue={exercise?.equipment}
               required
             >
-              <option value="" disabled>
-                Selecione…
-              </option>
-              {Object.values(Equipment).map((equipment) => (
-                <option key={equipment} value={equipment}>
-                  {equipmentLabels[equipment]}
-                </option>
-              ))}
-            </NativeSelect>
+              <SelectTrigger id="exercise-equipment">
+                <SelectValue placeholder="Selecione…" />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.values(Equipment).map((equipment) => (
+                  <SelectItem key={equipment} value={equipment}>
+                    {equipmentLabels[equipment]}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             {state.errors?.equipment && (
               <p className="text-sm text-destructive">
                 {state.errors.equipment[0]}
