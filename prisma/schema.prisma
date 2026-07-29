@@ -16,6 +16,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   exercises Exercise[]
+  workoutTemplates WorkoutTemplate[]
 }
 
 enum MuscleGroup {
@@ -66,7 +67,39 @@ model Exercise {
   ownerId String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  templateEntries WorkoutTemplateExercise[]
 
   @@index([muscleGroup])
   @@index([ownerId])
+}
+
+model WorkoutTemplate {
+  id String @id @default(uuid())
+  name String
+  // ownerId null = template oficial do plano Fifty Repz (seed futuro)
+  owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String?
+  // ordem na sequência do plano oficial; null para templates de usuário
+  planOrder Int?
+  exercises WorkoutTemplateExercise[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
+}
+
+model WorkoutTemplateExercise {
+  id String @id @default(uuid())
+  template WorkoutTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  templateId String
+  exercise Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  exerciseId String
+  position Int
+  targetSets Int
+  // faixa de reps alvo: targetReps é o mínimo; máximo opcional (ex.: 8-12)
+  targetReps Int
+  targetRepsMax Int?
+
+  @@index([templateId])
+  @@index([exerciseId])
 }

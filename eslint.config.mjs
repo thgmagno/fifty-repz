@@ -91,6 +91,11 @@ const eslintConfig = defineConfig([
         },
       ],
       'import-x/prefer-default-export': 'off',
+      // Reconhece os controles de formulário do projeto
+      'jsx-a11y/label-has-associated-control': [
+        'error',
+        { controlComponents: ['Input', 'NativeSelect'] },
+      ],
     },
   },
 ])
