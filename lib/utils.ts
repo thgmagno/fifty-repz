@@ -40,12 +40,15 @@ export function formatDurationLong(totalSeconds: number) {
   return minutes === 0 ? `${hours}h` : `${hours}h ${minutes}min`
 }
 
+// Fixo em America/Sao_Paulo: o runtime do servidor (ex.: Vercel) roda em
+// UTC, então sem timeZone explícito o horário exibido fica errado.
 const sessionDateFormatter = new Intl.DateTimeFormat('pt-BR', {
   day: '2-digit',
   month: '2-digit',
   year: 'numeric',
   hour: '2-digit',
   minute: '2-digit',
+  timeZone: 'America/Sao_Paulo',
 })
 
 export function formatSessionDate(date: Date) {
