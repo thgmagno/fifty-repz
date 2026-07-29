@@ -7,4 +7,5 @@ export const privateRoutes = {
   dashboard: '/',
   exercises: '/exercicios',
   workouts: '/treinos',
+  sessions: '/sessoes',
 }

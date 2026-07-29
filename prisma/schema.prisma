@@ -17,6 +17,7 @@ model User {
   updatedAt DateTime @updatedAt
   exercises Exercise[]
   workoutTemplates WorkoutTemplate[]
+  workoutSessions WorkoutSession[]
 }
 
 enum MuscleGroup {
@@ -68,6 +69,7 @@ model Exercise {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   templateEntries WorkoutTemplateExercise[]
+  sessionEntries WorkoutSessionExercise[]
 
   @@index([muscleGroup])
   @@index([ownerId])
@@ -82,10 +84,64 @@ model WorkoutTemplate {
   // ordem na sequência do plano oficial; null para templates de usuário
   planOrder Int?
   exercises WorkoutTemplateExercise[]
+  sessions WorkoutSession[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([ownerId])
+}
+
+enum WorkoutSessionStatus {
+  IN_PROGRESS
+  COMPLETED
+}
+
+model WorkoutSession {
+  id String @id @default(uuid())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  // template pode ser excluído/renomeado depois: a sessão guarda snapshot
+  template WorkoutTemplate? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  templateId String?
+  templateName String
+  status WorkoutSessionStatus @default(IN_PROGRESS)
+  startedAt DateTime @default(now())
+  completedAt DateTime?
+  durationSeconds Int?
+  exercises WorkoutSessionExercise[]
+
+  @@index([userId, status])
+  @@index([templateId])
+}
+
+model WorkoutSessionExercise {
+  id String @id @default(uuid())
+  session WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId String
+  // snapshot do exercício e das metas no momento em que a sessão começou
+  exercise Exercise? @relation(fields: [exerciseId], references: [id], onDelete: SetNull)
+  exerciseId String?
+  exerciseName String
+  position Int
+  targetSets Int
+  targetReps Int
+  targetRepsMax Int?
+  skipped Boolean @default(false)
+  sets SessionSet[]
+
+  @@index([sessionId])
+}
+
+model SessionSet {
+  id String @id @default(uuid())
+  sessionExercise WorkoutSessionExercise @relation(fields: [sessionExerciseId], references: [id], onDelete: Cascade)
+  sessionExerciseId String
+  setNumber Int
+  weightKg Float?
+  reps Int
+  completedAt DateTime @default(now())
+
+  @@index([sessionExerciseId])
 }
 
 model WorkoutTemplateExercise {
