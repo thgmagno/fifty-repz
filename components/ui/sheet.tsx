@@ -12,11 +12,15 @@ function Sheet({ ...props }: SheetPrimitive.Root.Props) {
 }
 
 function SheetTrigger({ ...props }: SheetPrimitive.Trigger.Props) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />
+  // Sem data-slot aqui: quando compõe com render={<Button/>}, o Base UI
+  // acaba divergindo esse atributo entre SSR e hidratação (mismatch
+  // inofensivo, mas evitável). O Button já tem seu próprio data-slot.
+  return <SheetPrimitive.Trigger {...props} />
 }
 
 function SheetClose({ ...props }: SheetPrimitive.Close.Props) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />
+  // Mesmo motivo do SheetTrigger acima.
+  return <SheetPrimitive.Close {...props} />
 }
 
 function SheetPortal({ ...props }: SheetPrimitive.Portal.Props) {
@@ -61,7 +65,6 @@ function SheetContent({
         {children}
         {showCloseButton && (
           <SheetPrimitive.Close
-            data-slot="sheet-close"
             render={
               <Button
                 variant="ghost"

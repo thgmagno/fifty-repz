@@ -12,11 +12,15 @@ function Dialog({ ...props }: DialogPrimitive.Root.Props) {
 }
 
 function DialogTrigger({ ...props }: DialogPrimitive.Trigger.Props) {
-  return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />
+  // Sem data-slot aqui: quando compõe com render={<Button/>}, o Base UI
+  // acaba divergindo esse atributo entre SSR e hidratação (mismatch
+  // inofensivo, mas evitável). O Button já tem seu próprio data-slot.
+  return <DialogPrimitive.Trigger {...props} />
 }
 
 function DialogClose({ ...props }: DialogPrimitive.Close.Props) {
-  return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
+  // Mesmo motivo do DialogTrigger acima.
+  return <DialogPrimitive.Close {...props} />
 }
 
 function DialogPortal({ ...props }: DialogPrimitive.Portal.Props) {
@@ -61,7 +65,6 @@ function DialogContent({
         {children}
         {showCloseButton && (
           <DialogPrimitive.Close
-            data-slot="dialog-close"
             render={
               <Button
                 variant="ghost"
