@@ -29,3 +29,25 @@ export function formatDuration(totalSeconds: number) {
     ? `${hours}:${pad(minutes)}:${pad(secs)}`
     : `${minutes}:${pad(secs)}`
 }
+
+// segundos -> "45 min" ou "1h 12min" (duração total de uma sessão concluída)
+export function formatDurationLong(totalSeconds: number) {
+  const totalMinutes = Math.round(Math.max(0, totalSeconds) / 60)
+  const hours = Math.floor(totalMinutes / 60)
+  const minutes = totalMinutes % 60
+
+  if (hours === 0) return `${minutes} min`
+  return minutes === 0 ? `${hours}h` : `${hours}h ${minutes}min`
+}
+
+const sessionDateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+})
+
+export function formatSessionDate(date: Date) {
+  return sessionDateFormatter.format(date)
+}

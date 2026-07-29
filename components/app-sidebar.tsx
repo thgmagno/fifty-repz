@@ -1,5 +1,11 @@
 import Link from 'next/link'
-import { ClipboardListIcon, DumbbellIcon, HomeIcon, LogOut } from 'lucide-react'
+import {
+  ClipboardListIcon,
+  DumbbellIcon,
+  HistoryIcon,
+  HomeIcon,
+  LogOut,
+} from 'lucide-react'
 import {
   Sidebar,
   SidebarContent,
@@ -21,6 +27,7 @@ const navItems = [
   { title: 'Dashboard', href: privateRoutes.dashboard, icon: HomeIcon },
   { title: 'Exercícios', href: privateRoutes.exercises, icon: DumbbellIcon },
   { title: 'Treinos', href: privateRoutes.workouts, icon: ClipboardListIcon },
+  { title: 'Histórico', href: privateRoutes.history, icon: HistoryIcon },
 ]
 
 export async function AppSidebar() {

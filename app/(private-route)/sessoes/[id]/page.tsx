@@ -6,7 +6,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { WorkoutSessionRunner } from '@/components/sessions/workout-session-runner'
 import { getWorkoutSession } from '@/lib/workout-sessions'
-import { formatDuration } from '@/lib/utils'
+import { formatDurationLong, formatSessionDate } from '@/lib/utils'
 import { privateRoutes } from '@/lib/config'
 
 export const metadata: Metadata = {
@@ -33,7 +33,10 @@ export default async function SessaoPage({
           <h1 className="text-2xl font-bold">{session.templateName}</h1>
         </div>
         <p className="text-muted-foreground">
-          Concluído em {formatDuration(session.durationSeconds ?? 0)} no total.
+          {session.completedAt && (
+            <>Concluído em {formatSessionDate(session.completedAt)} — </>
+          )}
+          {formatDurationLong(session.durationSeconds ?? 0)} no total.
         </p>
         <ol className="flex flex-col gap-3">
           {session.exercises.map((exercise, index) => (
@@ -58,8 +61,8 @@ export default async function SessaoPage({
             </li>
           ))}
         </ol>
-        <Link href={privateRoutes.workouts} className={buttonVariants()}>
-          Voltar aos treinos
+        <Link href={privateRoutes.history} className={buttonVariants()}>
+          Voltar ao histórico
         </Link>
       </main>
     )

@@ -48,9 +48,29 @@ export async function getInProgressWorkoutSession() {
   })
 }
 
+export async function listCompletedWorkoutSessions() {
+  const { userId } = await verifySession()
+
+  return prisma.workoutSession.findMany({
+    where: { userId, status: 'COMPLETED' },
+    orderBy: { completedAt: 'desc' },
+    select: {
+      id: true,
+      templateName: true,
+      completedAt: true,
+      durationSeconds: true,
+      exercises: { select: { id: true } },
+    },
+  })
+}
+
 export type WorkoutSessionDetail = NonNullable<
   Awaited<ReturnType<typeof getWorkoutSession>>
 >
 
 export type WorkoutSessionExerciseDetail =
   WorkoutSessionDetail['exercises'][number]
+
+export type WorkoutSessionListItem = Awaited<
+  ReturnType<typeof listCompletedWorkoutSessions>
+>[number]

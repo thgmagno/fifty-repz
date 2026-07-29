@@ -8,4 +8,5 @@ export const privateRoutes = {
   exercises: '/exercicios',
   workouts: '/treinos',
   sessions: '/sessoes',
+  history: '/historico',
 }
