@@ -1,18 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
-import { publicRoutes } from "./lib/config";
+import { privateRoutes, publicRoutes } from "./lib/config";
+import { decrypt, SESSION_COOKIE } from "./lib/session";
 
-export function proxy(req: NextRequest) {
+export async function proxy(req: NextRequest) {
     const pathname = req.nextUrl.pathname
 
-    // TODO: implementar lógica real de autenticação
-    // 1 - usuário autenticado não pode ver rotas públicas, assim como, 
-    //     usuário NÃO autenticado, obviamente, não pode ver rotas privadas.
-    // 2 - Existe uma rota "/sw.js" que é do NextJs, portanto esta rota deverá ser
-    //     acessível tanto para usuário autenticado quanto para Não autenticado
-    if (!Object.values(publicRoutes).includes(pathname)) {
+    // Rota do service worker do Next.js: acessível autenticado ou não
+    if (pathname === publicRoutes.nextSw) {
+        return NextResponse.next()
+    }
+
+    // Checagem otimista: apenas lê e valida o cookie de sessão (sem consultar o banco)
+    const session = await decrypt(req.cookies.get(SESSION_COOKIE)?.value)
+    const isAuthenticated = Boolean(session?.userId)
+    const isPublicRoute = Object.values(publicRoutes).includes(pathname)
+
+    if (!isAuthenticated && !isPublicRoute) {
         return NextResponse.redirect(new URL(publicRoutes.login, req.url))
     }
-    
+
+    if (isAuthenticated && isPublicRoute) {
+        return NextResponse.redirect(new URL(privateRoutes.dashboard, req.url))
+    }
+
     return NextResponse.next()
 }
 
