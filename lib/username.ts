@@ -13,6 +13,7 @@ const RESERVED_USERNAMES = new Set([
   'sessoes',
   'historico',
   'settings',
+  'progresso',
   'root',
   'usuario',
   'null',

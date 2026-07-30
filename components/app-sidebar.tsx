@@ -33,7 +33,6 @@ const navItems = [
   { title: 'Exercícios', href: privateRoutes.exercises, icon: DumbbellIcon },
   { title: 'Treinos', href: privateRoutes.workouts, icon: ClipboardListIcon },
   { title: 'Histórico', href: privateRoutes.history, icon: HistoryIcon },
-  { title: 'Progresso', href: privateRoutes.progress, icon: TrendingUpIcon },
 ]
 
 const socialNavItems = [
