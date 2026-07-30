@@ -107,6 +107,13 @@ export async function logSet(
     return { errors: { form: ['Exercício inválido.'] } }
   }
 
+  // id gerado no client ao registrar (inclusive offline): usado como o
+  // próprio id do SessionSet, tornando a sincronização idempotente —
+  // reenviar a mesma série (ex.: retry após reconectar) nunca duplica
+  const rawLocalId = formData.get('localId')
+  const localId =
+    typeof rawLocalId === 'string' && rawLocalId ? rawLocalId : undefined
+
   const rawWeight = String(formData.get('weightKg') ?? '').replace(',', '.')
   const rawReps = String(formData.get('reps') ?? '')
 
@@ -117,6 +124,16 @@ export async function logSet(
 
   if (!parsed.success) {
     return { errors: z.flattenError(parsed.error).fieldErrors }
+  }
+
+  if (localId) {
+    const alreadySynced = await prisma.sessionSet.findUnique({
+      where: { id: localId },
+      select: { id: true },
+    })
+    if (alreadySynced) {
+      return { success: true, loggedAt: Date.now() }
+    }
   }
 
   // ownership + sessão precisa estar em andamento
@@ -135,6 +152,7 @@ export async function logSet(
   await prisma.$transaction([
     prisma.sessionSet.create({
       data: {
+        ...(localId ? { id: localId } : {}),
         sessionExerciseId,
         setNumber: sessionExercise.sets.length + 1,
         weightKg: parsed.data.weightKg,
