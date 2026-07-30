@@ -6,7 +6,12 @@ import { Page } from '@/components/page'
 import { buttonVariants } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { WorkoutSessionRunner } from '@/components/sessions/workout-session-runner'
+import { LikeButton } from '@/components/likes/like-button'
+import { CommentForm } from '@/components/comments/comment-form'
+import { CommentList } from '@/components/comments/comment-list'
 import { getWorkoutSession } from '@/lib/workout-sessions'
+import { getLikeState } from '@/lib/likes'
+import { listComments } from '@/lib/comments'
 import { formatDurationLong, formatSessionDate } from '@/lib/utils'
 import { privateRoutes } from '@/lib/config'
 
@@ -31,6 +36,10 @@ export default async function SessaoPage({
       ? privateRoutes.history
       : privateRoutes.feed
     const backLabel = session.isOwner ? 'Voltar ao histórico' : 'Voltar ao feed'
+    const [likeState, comments] = await Promise.all([
+      getLikeState(session.id),
+      listComments(session.id),
+    ])
 
     return (
       <Page>
@@ -88,6 +97,19 @@ export default async function SessaoPage({
             </li>
           ))}
         </ol>
+
+        <LikeButton
+          sessionId={session.id}
+          likeCount={likeState.likeCount}
+          likedByMe={likeState.likedByMe}
+        />
+
+        <div id="comentarios" className="flex flex-col gap-3">
+          <h2 className="font-medium">Comentários</h2>
+          <CommentForm sessionId={session.id} />
+          <CommentList sessionId={session.id} comments={comments} />
+        </div>
+
         <Link href={backHref} className={buttonVariants()}>
           {backLabel}
         </Link>
