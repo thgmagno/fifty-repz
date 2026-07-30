@@ -8,7 +8,6 @@ import {
   PencilIcon,
   RssIcon,
   SearchIcon,
-  TrendingUpIcon,
 } from 'lucide-react'
 import {
   Sidebar,

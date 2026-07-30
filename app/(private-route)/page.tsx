@@ -22,9 +22,9 @@ export default async function Dashboard() {
     <Page>
       <h1 className="text-2xl font-bold">Olá, {user.name ?? user.email}!</h1>
 
-      <section className='flex flex-col gap-3'>
+      <section className="flex flex-col gap-3">
         <div>
-          <h1 className="text-xl font-bold">Progresso</h1>
+          <h2 className="text-xl font-bold">Progresso</h2>
           <p className="text-sm text-muted-foreground">
             Sua evolução ao longo do tempo, com base nos treinos concluídos.
           </p>
