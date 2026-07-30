@@ -1,9 +1,21 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CalendarIcon, ClockIcon, WeightIcon } from 'lucide-react'
+import {
+  CalendarIcon,
+  ClockIcon,
+  MessageCircleIcon,
+  WeightIcon,
+} from 'lucide-react'
 import { Page } from '@/components/page'
 import { buttonVariants } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { LikeButton } from '@/components/likes/like-button'
 import { listFeedSessions, hasAnyFollowing } from '@/lib/feed'
 import {
   formatDurationLong,
@@ -48,11 +60,11 @@ export default async function FeedPage({
           <ul className="flex flex-col gap-3">
             {items.map((session) => (
               <li key={session.id}>
-                <Link
-                  href={`${privateRoutes.sessions}/${session.id}`}
-                  className="block"
-                >
-                  <Card className="transition-colors hover:bg-muted/40">
+                <Card>
+                  <Link
+                    href={`${privateRoutes.sessions}/${session.id}`}
+                    className="block transition-colors hover:bg-muted/40"
+                  >
                     <CardHeader>
                       <div className="flex items-center gap-2">
                         {session.user.image && (
@@ -90,8 +102,22 @@ export default async function FeedPage({
                         {formatVolume(session.totalVolume)}
                       </span>
                     </CardContent>
-                  </Card>
-                </Link>
+                  </Link>
+                  <CardFooter className="gap-1 border-t pt-3">
+                    <LikeButton
+                      sessionId={session.id}
+                      likeCount={session.likeCount}
+                      likedByMe={session.likedByMe}
+                    />
+                    <Link
+                      href={`${privateRoutes.sessions}/${session.id}#comentarios`}
+                      className="flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-sm text-muted-foreground hover:bg-muted"
+                    >
+                      <MessageCircleIcon className="size-4" />
+                      {session.commentCount}
+                    </Link>
+                  </CardFooter>
+                </Card>
               </li>
             ))}
           </ul>

@@ -24,20 +24,28 @@ export async function listFeedSessions(cursor?: string) {
       exercises: {
         select: { sets: { select: { weightKg: true, reps: true } } },
       },
+      likes: { where: { userId }, select: { id: true } },
+      _count: { select: { likes: true, comments: true } },
     },
   })
 
   const hasMore = sessions.length > FEED_PAGE_SIZE
   const page = hasMore ? sessions.slice(0, FEED_PAGE_SIZE) : sessions
 
-  const items = page.map((session) => ({
-    id: session.id,
-    templateName: session.templateName,
-    completedAt: session.completedAt,
-    durationSeconds: session.durationSeconds,
-    user: session.user,
-    totalVolume: calculateSessionVolume(session.exercises),
-  }))
+  const items = page.map((session) => {
+    const { _count: counts } = session
+    return {
+      id: session.id,
+      templateName: session.templateName,
+      completedAt: session.completedAt,
+      durationSeconds: session.durationSeconds,
+      user: session.user,
+      totalVolume: calculateSessionVolume(session.exercises),
+      likeCount: counts.likes,
+      commentCount: counts.comments,
+      likedByMe: session.likes.length > 0,
+    }
+  })
 
   return {
     items,

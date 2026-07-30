@@ -24,6 +24,8 @@ model User {
   following Follow[] @relation("UserFollows")
   // edges onde este usuário é o seguido (quem o segue)
   followers Follow[] @relation("UserFollowedBy")
+  likes Like[]
+  comments Comment[]
 }
 
 model Follow {
@@ -128,9 +130,35 @@ model WorkoutSession {
   completedAt DateTime?
   durationSeconds Int?
   exercises WorkoutSessionExercise[]
+  likes Like[]
+  comments Comment[]
 
   @@index([userId, status])
   @@index([templateId])
+}
+
+model Like {
+  id String @id @default(uuid())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  session WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, sessionId])
+  @@index([sessionId])
+}
+
+model Comment {
+  id String @id @default(uuid())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  session WorkoutSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sessionId String
+  body String
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
 }
 
 model WorkoutSessionExercise {

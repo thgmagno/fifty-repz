@@ -17,6 +17,40 @@ export function calculateSessionVolume(
   )
 }
 
+// sessão em andamento é sempre restrita ao dono; concluída fica visível
+// também para quem segue o dono
+async function isSessionVisibleTo(
+  session: { userId: string; status: 'IN_PROGRESS' | 'COMPLETED' },
+  viewerId: string,
+) {
+  if (session.userId === viewerId) return true
+  if (session.status !== 'COMPLETED') return false
+
+  const follow = await prisma.follow.findUnique({
+    where: {
+      followerId_followingId: {
+        followerId: viewerId,
+        followingId: session.userId,
+      },
+    },
+  })
+  return Boolean(follow)
+}
+
+// checagem leve de visibilidade, para uso em ações (curtir/comentar) sem
+// precisar carregar exercícios/séries
+export async function canAccessSession(sessionId: string) {
+  const { userId } = await verifySession()
+
+  const session = await prisma.workoutSession.findUnique({
+    where: { id: sessionId },
+    select: { userId: true, status: true },
+  })
+
+  if (!session) return false
+  return isSessionVisibleTo(session, userId)
+}
+
 export async function getWorkoutSession(id: string) {
   const { userId } = await verifySession()
 
@@ -58,22 +92,7 @@ export async function getWorkoutSession(id: string) {
   if (!session) return null
 
   const isOwner = session.userId === userId
-  if (isOwner) return { ...session, isOwner }
-
-  // sessão em andamento é sempre restrita ao dono; concluída fica visível
-  // para quem segue o dono
-  if (session.status !== 'COMPLETED') return null
-
-  const isFollowing = await prisma.follow.findUnique({
-    where: {
-      followerId_followingId: {
-        followerId: userId,
-        followingId: session.userId,
-      },
-    },
-  })
-
-  if (!isFollowing) return null
+  if (!isOwner && !(await isSessionVisibleTo(session, userId))) return null
 
   return { ...session, isOwner }
 }
