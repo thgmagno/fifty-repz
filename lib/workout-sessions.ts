@@ -75,6 +75,7 @@ export async function getWorkoutSession(id: string) {
           targetReps: true,
           targetRepsMax: true,
           skipped: true,
+          exercise: { select: { imageUrls: true } },
           sets: {
             orderBy: { setNumber: 'asc' },
             select: {

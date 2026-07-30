@@ -15,6 +15,7 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
 import { deleteSet, toggleSkipExercise } from '@/lib/actions/workout-sessions'
+import { ExerciseImageGallery } from '@/components/sessions/exercise-image-gallery'
 import type { WorkoutSessionExerciseDetail } from '@/lib/workout-sessions'
 import type { PendingSetEntry } from '@/lib/offline-db'
 import { cn, formatRepTarget } from '@/lib/utils'
@@ -129,6 +130,12 @@ export function ExercisePanel({
             <Badge variant="outline">
               {setsDone}/{exercise.targetSets} séries
             </Badge>
+          )}
+          {exercise.exercise && exercise.exercise.imageUrls.length > 0 && (
+            <ExerciseImageGallery
+              exerciseName={exercise.exerciseName}
+              imageUrls={exercise.exercise.imageUrls}
+            />
           )}
           <form action={toggleSkipExercise}>
             <input type="hidden" name="sessionExerciseId" value={exercise.id} />
