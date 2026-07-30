@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 
 interface HeatmapDay {
@@ -29,7 +31,14 @@ export function ProfileHeatmap({ days }: { days: HeatmapDay[] }) {
   }
 
   return (
-    <div className="flex gap-1 overflow-x-auto pb-2">
+    <div
+      className="flex min-w-0 gap-1 overflow-x-auto pb-2"
+      // começa rolado para o fim (dias mais recentes), mais relevante no mobile
+      ref={(el) => {
+        // eslint-disable-next-line no-param-reassign
+        if (el) el.scrollLeft = el.scrollWidth
+      }}
+    >
       {weeks.map((week, weekIndex) => (
         <div
           // eslint-disable-next-line react/no-array-index-key
