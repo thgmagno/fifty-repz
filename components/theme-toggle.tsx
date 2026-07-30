@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
-const emptySubscribe = () => () => {}
+const emptySubscribe = () => () => { }
 
 export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme()
@@ -21,7 +21,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       <Button
         type="button"
         variant="ghost"
-        size="icon-sm"
+        size="icon-lg"
         disabled
         aria-label="Alternar tema"
         className={className}
@@ -37,7 +37,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     <Button
       type="button"
       variant="ghost"
-      size="icon-sm"
+      size="icon-lg"
       aria-label={isDark ? 'Mudar para tema claro' : 'Mudar para tema escuro'}
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className={className}

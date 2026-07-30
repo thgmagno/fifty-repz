@@ -22,7 +22,6 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar'
 import { Button } from '@/components/ui/button'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { getUser } from '@/lib/dal'
 import { logout } from '@/lib/actions/auth'
 import { privateRoutes } from '@/lib/config'
@@ -47,7 +46,6 @@ export async function AppSidebar() {
       <SidebarHeader>
         <div className="flex items-center justify-between px-2 py-1.5">
           <span className="font-bold">Fifty Repz</span>
-          <ThemeToggle />
         </div>
       </SidebarHeader>
       <SidebarContent>
