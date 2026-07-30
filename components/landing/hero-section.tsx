@@ -8,7 +8,7 @@ const HERO_IMAGE_SRC = '/hero-gym.jpg'
 
 export function HeroSection({ error }: { error?: string }) {
   return (
-    <section className="relative flex min-h-svh items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800">
+    <section className="relative flex min-h-svh items-center justify-center overflow-hidden from-neutral-950 via-neutral-900 to-neutral-800">
       <Image
         src={HERO_IMAGE_SRC}
         alt="Sala de musculação com equipamentos de ginástica"
@@ -17,7 +17,7 @@ export function HeroSection({ error }: { error?: string }) {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/65" />
 
       <ThemeToggle className="absolute top-4 right-4 z-10 text-white hover:bg-white/10 hover:text-white" />
 
