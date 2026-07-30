@@ -6,10 +6,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/3_4_Sit-Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/3_4_Sit-Up/1.jpg"
-    ]
+    "imageUrls": ["/exercises/3-4-sit-up/0.jpg", "/exercises/3-4-sit-up/1.jpg"]
   },
   {
     "slug": "air-bike",
@@ -18,10 +15,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Air_Bike/1.jpg"
-    ]
+    "imageUrls": ["/exercises/air-bike/0.jpg", "/exercises/air-bike/1.jpg"]
   },
   {
     "slug": "alternate-hammer-curl",
@@ -31,8 +25,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/1.jpg"
+      "/exercises/alternate-hammer-curl/0.jpg",
+      "/exercises/alternate-hammer-curl/1.jpg"
     ]
   },
   {
@@ -43,8 +37,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Incline_Dumbbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Incline_Dumbbell_Curl/1.jpg"
+      "/exercises/alternate-incline-dumbbell-curl/0.jpg",
+      "/exercises/alternate-incline-dumbbell-curl/1.jpg"
     ]
   },
   {
@@ -55,8 +49,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Cable_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Cable_Shoulder_Press/1.jpg"
+      "/exercises/alternating-cable-shoulder-press/0.jpg",
+      "/exercises/alternating-cable-shoulder-press/1.jpg"
     ]
   },
   {
@@ -67,8 +61,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Floor_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Floor_Press/1.jpg"
+      "/exercises/alternating-floor-press/0.jpg",
+      "/exercises/alternating-floor-press/1.jpg"
     ]
   },
   {
@@ -86,8 +80,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Hang_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Hang_Clean/1.jpg"
+      "/exercises/alternating-hang-clean/0.jpg",
+      "/exercises/alternating-hang-clean/1.jpg"
     ]
   },
   {
@@ -98,8 +92,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Press/1.jpg"
+      "/exercises/alternating-kettlebell-press/0.jpg",
+      "/exercises/alternating-kettlebell-press/1.jpg"
     ]
   },
   {
@@ -110,8 +104,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternating_Kettlebell_Row/1.jpg"
+      "/exercises/alternating-kettlebell-row/0.jpg",
+      "/exercises/alternating-kettlebell-row/1.jpg"
     ]
   },
   {
@@ -122,8 +116,8 @@
     "secondaryMuscles": ["MIDDLE_BACK", "TRAPS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Anti-Gravity_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Anti-Gravity_Press/1.jpg"
+      "/exercises/anti-gravity-press/0.jpg",
+      "/exercises/anti-gravity-press/1.jpg"
     ]
   },
   {
@@ -134,8 +128,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arnold_Dumbbell_Press/1.jpg"
+      "/exercises/arnold-dumbbell-press/0.jpg",
+      "/exercises/arnold-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -146,8 +140,8 @@
     "secondaryMuscles": ["LOWER_BACK", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout/1.jpg"
+      "/exercises/barbell-ab-rollout/0.jpg",
+      "/exercises/barbell-ab-rollout/1.jpg"
     ]
   },
   {
@@ -158,8 +152,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/1.jpg"
+      "/exercises/barbell-bench-press-medium-grip/0.jpg",
+      "/exercises/barbell-bench-press-medium-grip/1.jpg"
     ]
   },
   {
@@ -170,8 +164,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/1.jpg"
+      "/exercises/barbell-curl/0.jpg",
+      "/exercises/barbell-curl/1.jpg"
     ]
   },
   {
@@ -182,8 +176,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curls_Lying_Against_An_Incline/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curls_Lying_Against_An_Incline/1.jpg"
+      "/exercises/barbell-curls-lying-against-an-incline/0.jpg",
+      "/exercises/barbell-curls-lying-against-an-incline/1.jpg"
     ]
   },
   {
@@ -203,8 +197,8 @@
     ],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Deadlift/1.jpg"
+      "/exercises/barbell-deadlift/0.jpg",
+      "/exercises/barbell-deadlift/1.jpg"
     ]
   },
   {
@@ -215,8 +209,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Full_Squat/1.jpg"
+      "/exercises/barbell-full-squat/0.jpg",
+      "/exercises/barbell-full-squat/1.jpg"
     ]
   },
   {
@@ -227,8 +221,8 @@
     "secondaryMuscles": ["CALVES", "FOREARMS", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hack_Squat/1.jpg"
+      "/exercises/barbell-hack-squat/0.jpg",
+      "/exercises/barbell-hack-squat/1.jpg"
     ]
   },
   {
@@ -239,8 +233,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/1.jpg"
+      "/exercises/barbell-incline-bench-press-medium-grip/0.jpg",
+      "/exercises/barbell-incline-bench-press-medium-grip/1.jpg"
     ]
   },
   {
@@ -251,8 +245,8 @@
     "secondaryMuscles": ["CHEST"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Shoulder_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Shoulder_Raise/1.jpg"
+      "/exercises/barbell-incline-shoulder-raise/0.jpg",
+      "/exercises/barbell-incline-shoulder-raise/1.jpg"
     ]
   },
   {
@@ -263,8 +257,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Lunge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Lunge/1.jpg"
+      "/exercises/barbell-lunge/0.jpg",
+      "/exercises/barbell-lunge/1.jpg"
     ]
   },
   {
@@ -275,8 +269,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "MIDDLE_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rear_Delt_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rear_Delt_Row/1.jpg"
+      "/exercises/barbell-rear-delt-row/0.jpg",
+      "/exercises/barbell-rear-delt-row/1.jpg"
     ]
   },
   {
@@ -287,8 +281,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "LATS", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rollout_from_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Rollout_from_Bench/1.jpg"
+      "/exercises/barbell-rollout-from-bench/0.jpg",
+      "/exercises/barbell-rollout-from-bench/1.jpg"
     ]
   },
   {
@@ -299,8 +293,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Seated_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Seated_Calf_Raise/1.jpg"
+      "/exercises/barbell-seated-calf-raise/0.jpg",
+      "/exercises/barbell-seated-calf-raise/1.jpg"
     ]
   },
   {
@@ -311,8 +305,8 @@
     "secondaryMuscles": ["CHEST", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shoulder_Press/1.jpg"
+      "/exercises/barbell-shoulder-press/0.jpg",
+      "/exercises/barbell-shoulder-press/1.jpg"
     ]
   },
   {
@@ -323,8 +317,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/1.jpg"
+      "/exercises/barbell-shrug/0.jpg",
+      "/exercises/barbell-shrug/1.jpg"
     ]
   },
   {
@@ -335,8 +329,8 @@
     "secondaryMuscles": ["FOREARMS", "MIDDLE_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug_Behind_The_Back/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug_Behind_The_Back/1.jpg"
+      "/exercises/barbell-shrug-behind-the-back/0.jpg",
+      "/exercises/barbell-shrug-behind-the-back/1.jpg"
     ]
   },
   {
@@ -347,8 +341,8 @@
     "secondaryMuscles": ["CALVES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Side_Split_Squat/1.jpg"
+      "/exercises/barbell-side-split-squat/0.jpg",
+      "/exercises/barbell-side-split-squat/1.jpg"
     ]
   },
   {
@@ -359,8 +353,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/1.jpg"
+      "/exercises/barbell-squat/0.jpg",
+      "/exercises/barbell-squat/1.jpg"
     ]
   },
   {
@@ -371,8 +365,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "QUADRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Step_Ups/1.jpg"
+      "/exercises/barbell-step-ups/0.jpg",
+      "/exercises/barbell-step-ups/1.jpg"
     ]
   },
   {
@@ -383,8 +377,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Walking_Lunge/1.jpg"
+      "/exercises/barbell-walking-lunge/0.jpg",
+      "/exercises/barbell-walking-lunge/1.jpg"
     ]
   },
   {
@@ -394,10 +388,7 @@
     "muscleGroup": "TRICEPS",
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bench_Dips/1.jpg"
-    ]
+    "imageUrls": ["/exercises/bench-dips/0.jpg", "/exercises/bench-dips/1.jpg"]
   },
   {
     "slug": "bent-over-barbell-row",
@@ -407,8 +398,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/1.jpg"
+      "/exercises/bent-over-barbell-row/0.jpg",
+      "/exercises/bent-over-barbell-row/1.jpg"
     ]
   },
   {
@@ -419,8 +410,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "LOWER_BACK", "TRAPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_One-Arm_Long_Bar_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_One-Arm_Long_Bar_Row/1.jpg"
+      "/exercises/bent-over-one-arm-long-bar-row/0.jpg",
+      "/exercises/bent-over-one-arm-long-bar-row/1.jpg"
     ]
   },
   {
@@ -431,8 +422,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Arm_Long_Bar_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Arm_Long_Bar_Row/1.jpg"
+      "/exercises/bent-over-two-arm-long-bar-row/0.jpg",
+      "/exercises/bent-over-two-arm-long-bar-row/1.jpg"
     ]
   },
   {
@@ -443,8 +434,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row/1.jpg"
+      "/exercises/bent-over-two-dumbbell-row/0.jpg",
+      "/exercises/bent-over-two-dumbbell-row/1.jpg"
     ]
   },
   {
@@ -455,8 +446,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row_With_Palms_In/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Two-Dumbbell_Row_With_Palms_In/1.jpg"
+      "/exercises/bent-over-two-dumbbell-row-with-palms-in/0.jpg",
+      "/exercises/bent-over-two-dumbbell-row-with-palms-in/1.jpg"
     ]
   },
   {
@@ -467,8 +458,8 @@
     "secondaryMuscles": ["CHEST", "LATS", "SHOULDERS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Arm_Barbell_Pullover/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Arm_Barbell_Pullover/1.jpg"
+      "/exercises/bent-arm-barbell-pullover/0.jpg",
+      "/exercises/bent-arm-barbell-pullover/1.jpg"
     ]
   },
   {
@@ -479,8 +470,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Knee_Hip_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent-Knee_Hip_Raise/1.jpg"
+      "/exercises/bent-knee-hip-raise/0.jpg",
+      "/exercises/bent-knee-hip-raise/1.jpg"
     ]
   },
   {
@@ -491,8 +482,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Body_Tricep_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Body_Tricep_Press/1.jpg"
+      "/exercises/body-tricep-press/0.jpg",
+      "/exercises/body-tricep-press/1.jpg"
     ]
   },
   {
@@ -503,8 +494,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/1.jpg"
+      "/exercises/bodyweight-squat/0.jpg",
+      "/exercises/bodyweight-squat/1.jpg"
     ]
   },
   {
@@ -514,10 +505,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms_Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms_Up/1.jpg"
-    ]
+    "imageUrls": ["/exercises/bottoms-up/0.jpg", "/exercises/bottoms-up/1.jpg"]
   },
   {
     "slug": "bottoms-up-clean-from-the-hang-position",
@@ -527,8 +515,8 @@
     "secondaryMuscles": ["BICEPS", "SHOULDERS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms-Up_Clean_From_The_Hang_Position/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bottoms-Up_Clean_From_The_Hang_Position/1.jpg"
+      "/exercises/bottoms-up-clean-from-the-hang-position/0.jpg",
+      "/exercises/bottoms-up-clean-from-the-hang-position/1.jpg"
     ]
   },
   {
@@ -539,8 +527,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bradford_Rocky_Presses/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bradford_Rocky_Presses/1.jpg"
+      "/exercises/bradford-rocky-presses/0.jpg",
+      "/exercises/bradford-rocky-presses/1.jpg"
     ]
   },
   {
@@ -551,8 +539,8 @@
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+      "/exercises/butt-lift-bridge/0.jpg",
+      "/exercises/butt-lift-bridge/1.jpg"
     ]
   },
   {
@@ -562,10 +550,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt-Ups/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt-Ups/1.jpg"
-    ]
+    "imageUrls": ["/exercises/butt-ups/0.jpg", "/exercises/butt-ups/1.jpg"]
   },
   {
     "slug": "cable-chest-press",
@@ -575,8 +560,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Chest_Press/1.jpg"
+      "/exercises/cable-chest-press/0.jpg",
+      "/exercises/cable-chest-press/1.jpg"
     ]
   },
   {
@@ -587,8 +572,8 @@
     "secondaryMuscles": ["FOREARMS", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Deadlifts/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Deadlifts/1.jpg"
+      "/exercises/cable-deadlifts/0.jpg",
+      "/exercises/cable-deadlifts/1.jpg"
     ]
   },
   {
@@ -599,8 +584,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Hammer_Curls_-_Rope_Attachment/1.jpg"
+      "/exercises/cable-hammer-curls-rope-attachment/0.jpg",
+      "/exercises/cable-hammer-curls-rope-attachment/1.jpg"
     ]
   },
   {
@@ -611,8 +596,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Pushdown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Pushdown/1.jpg"
+      "/exercises/cable-incline-pushdown/0.jpg",
+      "/exercises/cable-incline-pushdown/1.jpg"
     ]
   },
   {
@@ -623,8 +608,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Incline_Triceps_Extension/1.jpg"
+      "/exercises/cable-incline-triceps-extension/0.jpg",
+      "/exercises/cable-incline-triceps-extension/1.jpg"
     ]
   },
   {
@@ -635,8 +620,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Internal_Rotation/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Internal_Rotation/1.jpg"
+      "/exercises/cable-internal-rotation/0.jpg",
+      "/exercises/cable-internal-rotation/1.jpg"
     ]
   },
   {
@@ -647,8 +632,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Judo_Flip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Judo_Flip/1.jpg"
+      "/exercises/cable-judo-flip/0.jpg",
+      "/exercises/cable-judo-flip/1.jpg"
     ]
   },
   {
@@ -659,8 +644,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Lying_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Lying_Triceps_Extension/1.jpg"
+      "/exercises/cable-lying-triceps-extension/0.jpg",
+      "/exercises/cable-lying-triceps-extension/1.jpg"
     ]
   },
   {
@@ -671,8 +656,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_One_Arm_Tricep_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_One_Arm_Tricep_Extension/1.jpg"
+      "/exercises/cable-one-arm-tricep-extension/0.jpg",
+      "/exercises/cable-one-arm-tricep-extension/1.jpg"
     ]
   },
   {
@@ -683,8 +668,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Preacher_Curl/1.jpg"
+      "/exercises/cable-preacher-curl/0.jpg",
+      "/exercises/cable-preacher-curl/1.jpg"
     ]
   },
   {
@@ -695,8 +680,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/1.jpg"
+      "/exercises/cable-rope-overhead-triceps-extension/0.jpg",
+      "/exercises/cable-rope-overhead-triceps-extension/1.jpg"
     ]
   },
   {
@@ -707,8 +692,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Rear-Delt_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Rear-Delt_Rows/1.jpg"
+      "/exercises/cable-rope-rear-delt-rows/0.jpg",
+      "/exercises/cable-rope-rear-delt-rows/1.jpg"
     ]
   },
   {
@@ -719,8 +704,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Russian_Twists/1.jpg"
+      "/exercises/cable-russian-twists/0.jpg",
+      "/exercises/cable-russian-twists/1.jpg"
     ]
   },
   {
@@ -731,8 +716,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shoulder_Press/1.jpg"
+      "/exercises/cable-shoulder-press/0.jpg",
+      "/exercises/cable-shoulder-press/1.jpg"
     ]
   },
   {
@@ -743,8 +728,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Shrugs/1.jpg"
+      "/exercises/cable-shrugs/0.jpg",
+      "/exercises/cable-shrugs/1.jpg"
     ]
   },
   {
@@ -755,8 +740,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/1.jpg"
+      "/exercises/cable-wrist-curl/0.jpg",
+      "/exercises/cable-wrist-curl/1.jpg"
     ]
   },
   {
@@ -766,10 +751,7 @@
     "muscleGroup": "CALVES",
     "secondaryMuscles": [],
     "equipment": "MACHINE",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press/1.jpg"
-    ]
+    "imageUrls": ["/exercises/calf-press/0.jpg", "/exercises/calf-press/1.jpg"]
   },
   {
     "slug": "calf-press-on-the-leg-press-machine",
@@ -779,8 +761,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/1.jpg"
+      "/exercises/calf-press-on-the-leg-press-machine/0.jpg",
+      "/exercises/calf-press-on-the-leg-press-machine/1.jpg"
     ]
   },
   {
@@ -791,8 +773,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Raise_On_A_Dumbbell/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Raise_On_A_Dumbbell/1.jpg"
+      "/exercises/calf-raise-on-a-dumbbell/0.jpg",
+      "/exercises/calf-raise-on-a-dumbbell/1.jpg"
     ]
   },
   {
@@ -803,8 +785,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf-Machine_Shoulder_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf-Machine_Shoulder_Shrug/1.jpg"
+      "/exercises/calf-machine-shoulder-shrug/0.jpg",
+      "/exercises/calf-machine-shoulder-shrug/1.jpg"
     ]
   },
   {
@@ -815,8 +797,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Squat/1.jpg"
+      "/exercises/chair-squat/0.jpg",
+      "/exercises/chair-squat/1.jpg"
     ]
   },
   {
@@ -826,10 +808,7 @@
     "muscleGroup": "LATS",
     "secondaryMuscles": ["BICEPS", "FOREARMS", "MIDDLE_BACK"],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin-Up/1.jpg"
-    ]
+    "imageUrls": ["/exercises/chin-up/0.jpg", "/exercises/chin-up/1.jpg"]
   },
   {
     "slug": "clean-and-press",
@@ -850,8 +829,8 @@
     ],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Clean_and_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Clean_and_Press/1.jpg"
+      "/exercises/clean-and-press/0.jpg",
+      "/exercises/clean-and-press/1.jpg"
     ]
   },
   {
@@ -862,8 +841,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Barbell_Bench_Press/1.jpg"
+      "/exercises/close-grip-barbell-bench-press/0.jpg",
+      "/exercises/close-grip-barbell-bench-press/1.jpg"
     ]
   },
   {
@@ -874,8 +853,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Dumbbell_Press/1.jpg"
+      "/exercises/close-grip-dumbbell-press/0.jpg",
+      "/exercises/close-grip-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -886,8 +865,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ_Bar_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ_Bar_Curl/1.jpg"
+      "/exercises/close-grip-ez-bar-curl/0.jpg",
+      "/exercises/close-grip-ez-bar-curl/1.jpg"
     ]
   },
   {
@@ -898,8 +877,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "EZ_BAR",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Curl_with_Band/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Curl_with_Band/1.jpg"
+      "/exercises/close-grip-ez-bar-curl-with-band/0.jpg",
+      "/exercises/close-grip-ez-bar-curl-with-band/1.jpg"
     ]
   },
   {
@@ -910,8 +889,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "EZ_BAR",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_EZ-Bar_Press/1.jpg"
+      "/exercises/close-grip-ez-bar-press/0.jpg",
+      "/exercises/close-grip-ez-bar-press/1.jpg"
     ]
   },
   {
@@ -922,8 +901,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/1.jpg"
+      "/exercises/close-grip-front-lat-pulldown/0.jpg",
+      "/exercises/close-grip-front-lat-pulldown/1.jpg"
     ]
   },
   {
@@ -934,8 +913,8 @@
     "secondaryMuscles": ["ABDOMINALS", "CHEST", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Push-Up_off_of_a_Dumbbell/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Push-Up_off_of_a_Dumbbell/1.jpg"
+      "/exercises/close-grip-push-up-off-of-a-dumbbell/0.jpg",
+      "/exercises/close-grip-push-up-off-of-a-dumbbell/1.jpg"
     ]
   },
   {
@@ -946,8 +925,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Standing_Barbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Standing_Barbell_Curl/1.jpg"
+      "/exercises/close-grip-standing-barbell-curl/0.jpg",
+      "/exercises/close-grip-standing-barbell-curl/1.jpg"
     ]
   },
   {
@@ -957,10 +936,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cocoons/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cocoons/1.jpg"
-    ]
+    "imageUrls": ["/exercises/cocoons/0.jpg", "/exercises/cocoons/1.jpg"]
   },
   {
     "slug": "concentration-curls",
@@ -970,8 +946,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Concentration_Curls/1.jpg"
+      "/exercises/concentration-curls/0.jpg",
+      "/exercises/concentration-curls/1.jpg"
     ]
   },
   {
@@ -982,8 +958,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross_Body_Hammer_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross_Body_Hammer_Curl/1.jpg"
+      "/exercises/cross-body-hammer-curl/0.jpg",
+      "/exercises/cross-body-hammer-curl/1.jpg"
     ]
   },
   {
@@ -994,8 +970,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross-Body_Crunch/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cross-Body_Crunch/1.jpg"
+      "/exercises/cross-body-crunch/0.jpg",
+      "/exercises/cross-body-crunch/1.jpg"
     ]
   },
   {
@@ -1006,8 +982,8 @@
     "secondaryMuscles": ["TRAPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cuban_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cuban_Press/1.jpg"
+      "/exercises/cuban-press/0.jpg",
+      "/exercises/cuban-press/1.jpg"
     ]
   },
   {
@@ -1017,10 +993,7 @@
     "muscleGroup": "ABDOMINALS",
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/1.jpg"
-    ]
+    "imageUrls": ["/exercises/dead-bug/0.jpg", "/exercises/dead-bug/1.jpg"]
   },
   {
     "slug": "decline-barbell-bench-press",
@@ -1030,8 +1003,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Barbell_Bench_Press/1.jpg"
+      "/exercises/decline-barbell-bench-press/0.jpg",
+      "/exercises/decline-barbell-bench-press/1.jpg"
     ]
   },
   {
@@ -1042,8 +1015,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Close-Grip_Bench_To_Skull_Crusher/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Close-Grip_Bench_To_Skull_Crusher/1.jpg"
+      "/exercises/decline-close-grip-bench-to-skull-crusher/0.jpg",
+      "/exercises/decline-close-grip-bench-to-skull-crusher/1.jpg"
     ]
   },
   {
@@ -1054,8 +1027,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Bench_Press/1.jpg"
+      "/exercises/decline-dumbbell-bench-press/0.jpg",
+      "/exercises/decline-dumbbell-bench-press/1.jpg"
     ]
   },
   {
@@ -1066,8 +1039,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Flyes/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Flyes/1.jpg"
+      "/exercises/decline-dumbbell-flyes/0.jpg",
+      "/exercises/decline-dumbbell-flyes/1.jpg"
     ]
   },
   {
@@ -1078,8 +1051,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Dumbbell_Triceps_Extension/1.jpg"
+      "/exercises/decline-dumbbell-triceps-extension/0.jpg",
+      "/exercises/decline-dumbbell-triceps-extension/1.jpg"
     ]
   },
   {
@@ -1090,8 +1063,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_EZ_Bar_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_EZ_Bar_Triceps_Extension/1.jpg"
+      "/exercises/decline-ez-bar-triceps-extension/0.jpg",
+      "/exercises/decline-ez-bar-triceps-extension/1.jpg"
     ]
   },
   {
@@ -1102,8 +1075,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Oblique_Crunch/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Oblique_Crunch/1.jpg"
+      "/exercises/decline-oblique-crunch/0.jpg",
+      "/exercises/decline-oblique-crunch/1.jpg"
     ]
   },
   {
@@ -1114,8 +1087,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Reverse_Crunch/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Reverse_Crunch/1.jpg"
+      "/exercises/decline-reverse-crunch/0.jpg",
+      "/exercises/decline-reverse-crunch/1.jpg"
     ]
   },
   {
@@ -1126,8 +1099,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Smith_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Decline_Smith_Press/1.jpg"
+      "/exercises/decline-smith-press/0.jpg",
+      "/exercises/decline-smith-press/1.jpg"
     ]
   },
   {
@@ -1138,8 +1111,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dip_Machine/1.jpg"
+      "/exercises/dip-machine/0.jpg",
+      "/exercises/dip-machine/1.jpg"
     ]
   },
   {
@@ -1150,8 +1123,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Triceps_Version/1.jpg"
+      "/exercises/dips-triceps-version/0.jpg",
+      "/exercises/dips-triceps-version/1.jpg"
     ]
   },
   {
@@ -1170,8 +1143,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Alternating_Hang_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Alternating_Hang_Clean/1.jpg"
+      "/exercises/double-kettlebell-alternating-hang-clean/0.jpg",
+      "/exercises/double-kettlebell-alternating-hang-clean/1.jpg"
     ]
   },
   {
@@ -1182,8 +1155,8 @@
     "secondaryMuscles": ["CALVES", "QUADRICEPS", "TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Jerk/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Jerk/1.jpg"
+      "/exercises/double-kettlebell-jerk/0.jpg",
+      "/exercises/double-kettlebell-jerk/1.jpg"
     ]
   },
   {
@@ -1194,8 +1167,8 @@
     "secondaryMuscles": ["CALVES", "QUADRICEPS", "TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Push_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Double_Kettlebell_Push_Press/1.jpg"
+      "/exercises/double-kettlebell-push-press/0.jpg",
+      "/exercises/double-kettlebell-push-press/1.jpg"
     ]
   },
   {
@@ -1205,10 +1178,7 @@
     "muscleGroup": "BICEPS",
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "BARBELL",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Drag_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Drag_Curl/1.jpg"
-    ]
+    "imageUrls": ["/exercises/drag-curl/0.jpg", "/exercises/drag-curl/1.jpg"]
   },
   {
     "slug": "dumbbell-alternate-bicep-curl",
@@ -1218,8 +1188,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Alternate_Bicep_Curl/1.jpg"
+      "/exercises/dumbbell-alternate-bicep-curl/0.jpg",
+      "/exercises/dumbbell-alternate-bicep-curl/1.jpg"
     ]
   },
   {
@@ -1230,8 +1200,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/1.jpg"
+      "/exercises/dumbbell-bench-press/0.jpg",
+      "/exercises/dumbbell-bench-press/1.jpg"
     ]
   },
   {
@@ -1242,8 +1212,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press_with_Neutral_Grip/1.jpg"
+      "/exercises/dumbbell-bench-press-with-neutral-grip/0.jpg",
+      "/exercises/dumbbell-bench-press-with-neutral-grip/1.jpg"
     ]
   },
   {
@@ -1254,8 +1224,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/1.jpg"
+      "/exercises/dumbbell-bicep-curl/0.jpg",
+      "/exercises/dumbbell-bicep-curl/1.jpg"
     ]
   },
   {
@@ -1274,8 +1244,8 @@
     ],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Clean/1.jpg"
+      "/exercises/dumbbell-clean/0.jpg",
+      "/exercises/dumbbell-clean/1.jpg"
     ]
   },
   {
@@ -1286,8 +1256,8 @@
     "secondaryMuscles": ["BICEPS", "FOREARMS", "LATS", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/1.jpg"
+      "/exercises/dumbbell-incline-row/0.jpg",
+      "/exercises/dumbbell-incline-row/1.jpg"
     ]
   },
   {
@@ -1298,8 +1268,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lunges/1.jpg"
+      "/exercises/dumbbell-lunges/0.jpg",
+      "/exercises/dumbbell-lunges/1.jpg"
     ]
   },
   {
@@ -1310,8 +1280,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Pronation/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Pronation/1.jpg"
+      "/exercises/dumbbell-lying-pronation/0.jpg",
+      "/exercises/dumbbell-lying-pronation/1.jpg"
     ]
   },
   {
@@ -1322,8 +1292,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Supination/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Lying_Supination/1.jpg"
+      "/exercises/dumbbell-lying-supination/0.jpg",
+      "/exercises/dumbbell-lying-supination/1.jpg"
     ]
   },
   {
@@ -1334,8 +1304,8 @@
     "secondaryMuscles": ["BICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Raise/1.jpg"
+      "/exercises/dumbbell-raise/0.jpg",
+      "/exercises/dumbbell-raise/1.jpg"
     ]
   },
   {
@@ -1346,8 +1316,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Rear_Lunge/1.jpg"
+      "/exercises/dumbbell-rear-lunge/0.jpg",
+      "/exercises/dumbbell-rear-lunge/1.jpg"
     ]
   },
   {
@@ -1358,8 +1328,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Seated_One-Leg_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Seated_One-Leg_Calf_Raise/1.jpg"
+      "/exercises/dumbbell-seated-one-leg-calf-raise/0.jpg",
+      "/exercises/dumbbell-seated-one-leg-calf-raise/1.jpg"
     ]
   },
   {
@@ -1370,8 +1340,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/1.jpg"
+      "/exercises/dumbbell-shrug/0.jpg",
+      "/exercises/dumbbell-shrug/1.jpg"
     ]
   },
   {
@@ -1382,8 +1352,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat/1.jpg"
+      "/exercises/dumbbell-squat/0.jpg",
+      "/exercises/dumbbell-squat/1.jpg"
     ]
   },
   {
@@ -1394,8 +1364,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/1.jpg"
+      "/exercises/dumbbell-squat-to-a-bench/0.jpg",
+      "/exercises/dumbbell-squat-to-a-bench/1.jpg"
     ]
   },
   {
@@ -1406,8 +1376,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/1.jpg"
+      "/exercises/dumbbell-step-ups/0.jpg",
+      "/exercises/dumbbell-step-ups/1.jpg"
     ]
   },
   {
@@ -1418,8 +1388,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Tricep_Extension_-Pronated_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Tricep_Extension_-Pronated_Grip/1.jpg"
+      "/exercises/dumbbell-tricep-extension-pronated-grip/0.jpg",
+      "/exercises/dumbbell-tricep-extension-pronated-grip/1.jpg"
     ]
   },
   {
@@ -1430,8 +1400,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbow_to_Knee/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbow_to_Knee/1.jpg"
+      "/exercises/elbow-to-knee/0.jpg",
+      "/exercises/elbow-to-knee/1.jpg"
     ]
   },
   {
@@ -1442,8 +1412,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Back_Lunge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Back_Lunge/1.jpg"
+      "/exercises/elevated-back-lunge/0.jpg",
+      "/exercises/elevated-back-lunge/1.jpg"
     ]
   },
   {
@@ -1454,8 +1424,8 @@
     "secondaryMuscles": ["MIDDLE_BACK", "TRAPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elevated_Cable_Rows/1.jpg"
+      "/exercises/elevated-cable-rows/0.jpg",
+      "/exercises/elevated-cable-rows/1.jpg"
     ]
   },
   {
@@ -1466,8 +1436,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Extended_Range_One-Arm_Kettlebell_Floor_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Extended_Range_One-Arm_Kettlebell_Floor_Press/1.jpg"
+      "/exercises/extended-range-one-arm-kettlebell-floor-press/0.jpg",
+      "/exercises/extended-range-one-arm-kettlebell-floor-press/1.jpg"
     ]
   },
   {
@@ -1478,8 +1448,8 @@
     "secondaryMuscles": [],
     "equipment": "EZ_BAR",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Curl/1.jpg"
+      "/exercises/ez-bar-curl/0.jpg",
+      "/exercises/ez-bar-curl/1.jpg"
     ]
   },
   {
@@ -1490,8 +1460,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "EZ_BAR",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/EZ-Bar_Skullcrusher/1.jpg"
+      "/exercises/ez-bar-skullcrusher/0.jpg",
+      "/exercises/ez-bar-skullcrusher/1.jpg"
     ]
   },
   {
@@ -1502,8 +1472,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Finger_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Finger_Curls/1.jpg"
+      "/exercises/finger-curls/0.jpg",
+      "/exercises/finger-curls/1.jpg"
     ]
   },
   {
@@ -1514,8 +1484,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Leg_Pull-In/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Leg_Pull-In/1.jpg"
+      "/exercises/flat-bench-leg-pull-in/0.jpg",
+      "/exercises/flat-bench-leg-pull-in/1.jpg"
     ]
   },
   {
@@ -1526,8 +1496,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flexor_Incline_Dumbbell_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flexor_Incline_Dumbbell_Curls/1.jpg"
+      "/exercises/flexor-incline-dumbbell-curls/0.jpg",
+      "/exercises/flexor-incline-dumbbell-curls/1.jpg"
     ]
   },
   {
@@ -1538,8 +1508,8 @@
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flutter_Kicks/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flutter_Kicks/1.jpg"
+      "/exercises/flutter-kicks/0.jpg",
+      "/exercises/flutter-kicks/1.jpg"
     ]
   },
   {
@@ -1550,8 +1520,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Freehand_Jump_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Freehand_Jump_Squat/1.jpg"
+      "/exercises/freehand-jump-squat/0.jpg",
+      "/exercises/freehand-jump-squat/1.jpg"
     ]
   },
   {
@@ -1562,8 +1532,8 @@
     "secondaryMuscles": ["LATS", "SHOULDERS", "TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Raise_And_Pullover/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Raise_And_Pullover/1.jpg"
+      "/exercises/front-raise-and-pullover/0.jpg",
+      "/exercises/front-raise-and-pullover/1.jpg"
     ]
   },
   {
@@ -1574,8 +1544,8 @@
     "secondaryMuscles": ["ABDOMINALS", "GLUTES", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squat_Clean_Grip/1.jpg"
+      "/exercises/front-squat-clean-grip/0.jpg",
+      "/exercises/front-squat-clean-grip/1.jpg"
     ]
   },
   {
@@ -1586,8 +1556,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squats_With_Two_Kettlebells/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Squats_With_Two_Kettlebells/1.jpg"
+      "/exercises/front-squats-with-two-kettlebells/0.jpg",
+      "/exercises/front-squats-with-two-kettlebells/1.jpg"
     ]
   },
   {
@@ -1598,8 +1568,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Full_Range-Of-Motion_Lat_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Full_Range-Of-Motion_Lat_Pulldown/1.jpg"
+      "/exercises/full-range-of-motion-lat-pulldown/0.jpg",
+      "/exercises/full-range-of-motion-lat-pulldown/1.jpg"
     ]
   },
   {
@@ -1610,8 +1580,8 @@
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Glute_Kickback/1.jpg"
+      "/exercises/glute-kickback/0.jpg",
+      "/exercises/glute-kickback/1.jpg"
     ]
   },
   {
@@ -1622,8 +1592,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "SHOULDERS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/1.jpg"
+      "/exercises/goblet-squat/0.jpg",
+      "/exercises/goblet-squat/1.jpg"
     ]
   },
   {
@@ -1634,8 +1604,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Gorilla_Chin_Crunch/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Gorilla_Chin_Crunch/1.jpg"
+      "/exercises/gorilla-chin-crunch/0.jpg",
+      "/exercises/gorilla-chin-crunch/1.jpg"
     ]
   },
   {
@@ -1645,10 +1615,7 @@
     "muscleGroup": "QUADRICEPS",
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/1.jpg"
-    ]
+    "imageUrls": ["/exercises/hack-squat/0.jpg", "/exercises/hack-squat/1.jpg"]
   },
   {
     "slug": "hammer-curls",
@@ -1658,8 +1625,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/1.jpg"
+      "/exercises/hammer-curls/0.jpg",
+      "/exercises/hammer-curls/1.jpg"
     ]
   },
   {
@@ -1670,8 +1637,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Grip_Incline_DB_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Grip_Incline_DB_Bench_Press/1.jpg"
+      "/exercises/hammer-grip-incline-db-bench-press/0.jpg",
+      "/exercises/hammer-grip-incline-db-bench-press/1.jpg"
     ]
   },
   {
@@ -1682,8 +1649,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/High_Cable_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/High_Cable_Curls/1.jpg"
+      "/exercises/high-cable-curls/0.jpg",
+      "/exercises/high-cable-curls/1.jpg"
     ]
   },
   {
@@ -1694,8 +1661,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_With_No_Hyperextension_Bench/1.jpg"
+      "/exercises/hyperextensions-with-no-hyperextension-bench/0.jpg",
+      "/exercises/hyperextensions-with-no-hyperextension-bench/1.jpg"
     ]
   },
   {
@@ -1706,8 +1673,8 @@
     "secondaryMuscles": ["LATS", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Bench_Pull/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Bench_Pull/1.jpg"
+      "/exercises/incline-bench-pull/0.jpg",
+      "/exercises/incline-bench-pull/1.jpg"
     ]
   },
   {
@@ -1718,8 +1685,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Cable_Chest_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Cable_Chest_Press/1.jpg"
+      "/exercises/incline-cable-chest-press/0.jpg",
+      "/exercises/incline-cable-chest-press/1.jpg"
     ]
   },
   {
@@ -1730,8 +1697,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Bench_With_Palms_Facing_In/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Bench_With_Palms_Facing_In/1.jpg"
+      "/exercises/incline-dumbbell-bench-with-palms-facing-in/0.jpg",
+      "/exercises/incline-dumbbell-bench-with-palms-facing-in/1.jpg"
     ]
   },
   {
@@ -1742,8 +1709,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/1.jpg"
+      "/exercises/incline-dumbbell-curl/0.jpg",
+      "/exercises/incline-dumbbell-curl/1.jpg"
     ]
   },
   {
@@ -1754,8 +1721,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/1.jpg"
+      "/exercises/incline-dumbbell-flyes/0.jpg",
+      "/exercises/incline-dumbbell-flyes/1.jpg"
     ]
   },
   {
@@ -1766,8 +1733,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes_-_With_A_Twist/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes_-_With_A_Twist/1.jpg"
+      "/exercises/incline-dumbbell-flyes-with-a-twist/0.jpg",
+      "/exercises/incline-dumbbell-flyes-with-a-twist/1.jpg"
     ]
   },
   {
@@ -1778,8 +1745,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/1.jpg"
+      "/exercises/incline-dumbbell-press/0.jpg",
+      "/exercises/incline-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -1790,8 +1757,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Hammer_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Hammer_Curls/1.jpg"
+      "/exercises/incline-hammer-curls/0.jpg",
+      "/exercises/incline-hammer-curls/1.jpg"
     ]
   },
   {
@@ -1802,8 +1769,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Inner_Biceps_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Inner_Biceps_Curl/1.jpg"
+      "/exercises/incline-inner-biceps-curl/0.jpg",
+      "/exercises/incline-inner-biceps-curl/1.jpg"
     ]
   },
   {
@@ -1814,8 +1781,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/1.jpg"
+      "/exercises/incline-push-up/0.jpg",
+      "/exercises/incline-push-up/1.jpg"
     ]
   },
   {
@@ -1826,8 +1793,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Close-Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Close-Grip/1.jpg"
+      "/exercises/incline-push-up-close-grip/0.jpg",
+      "/exercises/incline-push-up-close-grip/1.jpg"
     ]
   },
   {
@@ -1838,8 +1805,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Medium/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Medium/1.jpg"
+      "/exercises/incline-push-up-medium/0.jpg",
+      "/exercises/incline-push-up-medium/1.jpg"
     ]
   },
   {
@@ -1850,8 +1817,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Reverse_Grip/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Reverse_Grip/1.jpg"
+      "/exercises/incline-push-up-reverse-grip/0.jpg",
+      "/exercises/incline-push-up-reverse-grip/1.jpg"
     ]
   },
   {
@@ -1862,8 +1829,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Wide/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up_Wide/1.jpg"
+      "/exercises/incline-push-up-wide/0.jpg",
+      "/exercises/incline-push-up-wide/1.jpg"
     ]
   },
   {
@@ -1874,8 +1841,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Front_And_Back/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Front_And_Back/1.jpg"
+      "/exercises/isometric-neck-exercise-front-and-back/0.jpg",
+      "/exercises/isometric-neck-exercise-front-and-back/1.jpg"
     ]
   },
   {
@@ -1886,8 +1853,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Sides/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Neck_Exercise_-_Sides/1.jpg"
+      "/exercises/isometric-neck-exercise-sides/0.jpg",
+      "/exercises/isometric-neck-exercise-sides/1.jpg"
     ]
   },
   {
@@ -1898,8 +1865,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Wipers/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Isometric_Wipers/1.jpg"
+      "/exercises/isometric-wipers/0.jpg",
+      "/exercises/isometric-wipers/1.jpg"
     ]
   },
   {
@@ -1910,8 +1877,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jackknife_Sit-Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jackknife_Sit-Up/1.jpg"
+      "/exercises/jackknife-sit-up/0.jpg",
+      "/exercises/jackknife-sit-up/1.jpg"
     ]
   },
   {
@@ -1928,8 +1895,8 @@
     ],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jefferson_Squats/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Jefferson_Squats/1.jpg"
+      "/exercises/jefferson-squats/0.jpg",
+      "/exercises/jefferson-squats/1.jpg"
     ]
   },
   {
@@ -1939,10 +1906,7 @@
     "muscleGroup": "TRICEPS",
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BARBELL",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/JM_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/JM_Press/1.jpg"
-    ]
+    "imageUrls": ["/exercises/jm-press/0.jpg", "/exercises/jm-press/1.jpg"]
   },
   {
     "slug": "kettlebell-dead-clean",
@@ -1958,8 +1922,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Dead_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Dead_Clean/1.jpg"
+      "/exercises/kettlebell-dead-clean/0.jpg",
+      "/exercises/kettlebell-dead-clean/1.jpg"
     ]
   },
   {
@@ -1976,8 +1940,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Hang_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Hang_Clean/1.jpg"
+      "/exercises/kettlebell-hang-clean/0.jpg",
+      "/exercises/kettlebell-hang-clean/1.jpg"
     ]
   },
   {
@@ -1988,8 +1952,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_One-Legged_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_One-Legged_Deadlift/1.jpg"
+      "/exercises/kettlebell-one-legged-deadlift/0.jpg",
+      "/exercises/kettlebell-one-legged-deadlift/1.jpg"
     ]
   },
   {
@@ -2000,8 +1964,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "SHOULDERS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pass_Between_The_Legs/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pass_Between_The_Legs/1.jpg"
+      "/exercises/kettlebell-pass-between-the-legs/0.jpg",
+      "/exercises/kettlebell-pass-between-the-legs/1.jpg"
     ]
   },
   {
@@ -2012,8 +1976,8 @@
     "secondaryMuscles": ["ABDOMINALS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pirate_Ships/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Pirate_Ships/1.jpg"
+      "/exercises/kettlebell-pirate-ships/0.jpg",
+      "/exercises/kettlebell-pirate-ships/1.jpg"
     ]
   },
   {
@@ -2030,8 +1994,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Sumo_High_Pull/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Sumo_High_Pull/1.jpg"
+      "/exercises/kettlebell-sumo-high-pull/0.jpg",
+      "/exercises/kettlebell-sumo-high-pull/1.jpg"
     ]
   },
   {
@@ -2042,8 +2006,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS", "SHOULDERS", "TRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Windmill/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kettlebell_Windmill/1.jpg"
+      "/exercises/kettlebell-windmill/0.jpg",
+      "/exercises/kettlebell-windmill/1.jpg"
     ]
   },
   {
@@ -2054,8 +2018,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_High_Pulley_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_High_Pulley_Row/1.jpg"
+      "/exercises/kneeling-high-pulley-row/0.jpg",
+      "/exercises/kneeling-high-pulley-row/1.jpg"
     ]
   },
   {
@@ -2066,8 +2030,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Single-Arm_High_Pulley_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Single-Arm_High_Pulley_Row/1.jpg"
+      "/exercises/kneeling-single-arm-high-pulley-row/0.jpg",
+      "/exercises/kneeling-single-arm-high-pulley-row/1.jpg"
     ]
   },
   {
@@ -2078,8 +2042,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Landmine_180s/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Landmine_180s/1.jpg"
+      "/exercises/landmine-180s/0.jpg",
+      "/exercises/landmine-180s/1.jpg"
     ]
   },
   {
@@ -2089,10 +2053,7 @@
     "muscleGroup": "GLUTES",
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Lift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Lift/1.jpg"
-    ]
+    "imageUrls": ["/exercises/leg-lift/0.jpg", "/exercises/leg-lift/1.jpg"]
   },
   {
     "slug": "leg-press",
@@ -2101,10 +2062,7 @@
     "muscleGroup": "QUADRICEPS",
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/1.jpg"
-    ]
+    "imageUrls": ["/exercises/leg-press/0.jpg", "/exercises/leg-press/1.jpg"]
   },
   {
     "slug": "leg-pull-in",
@@ -2114,8 +2072,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Pull-In/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Pull-In/1.jpg"
+      "/exercises/leg-pull-in/0.jpg",
+      "/exercises/leg-pull-in/1.jpg"
     ]
   },
   {
@@ -2126,8 +2084,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/1.jpg"
+      "/exercises/leverage-chest-press/0.jpg",
+      "/exercises/leverage-chest-press/1.jpg"
     ]
   },
   {
@@ -2138,8 +2096,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Deadlift/1.jpg"
+      "/exercises/leverage-deadlift/0.jpg",
+      "/exercises/leverage-deadlift/1.jpg"
     ]
   },
   {
@@ -2150,8 +2108,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Decline_Chest_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Decline_Chest_Press/1.jpg"
+      "/exercises/leverage-decline-chest-press/0.jpg",
+      "/exercises/leverage-decline-chest-press/1.jpg"
     ]
   },
   {
@@ -2162,8 +2120,8 @@
     "secondaryMuscles": ["LATS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_High_Row/1.jpg"
+      "/exercises/leverage-high-row/0.jpg",
+      "/exercises/leverage-high-row/1.jpg"
     ]
   },
   {
@@ -2174,8 +2132,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/1.jpg"
+      "/exercises/leverage-incline-chest-press/0.jpg",
+      "/exercises/leverage-incline-chest-press/1.jpg"
     ]
   },
   {
@@ -2186,8 +2144,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/1.jpg"
+      "/exercises/leverage-iso-row/0.jpg",
+      "/exercises/leverage-iso-row/1.jpg"
     ]
   },
   {
@@ -2198,8 +2156,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/1.jpg"
+      "/exercises/leverage-shoulder-press/0.jpg",
+      "/exercises/leverage-shoulder-press/1.jpg"
     ]
   },
   {
@@ -2210,8 +2168,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shrug/1.jpg"
+      "/exercises/leverage-shrug/0.jpg",
+      "/exercises/leverage-shrug/1.jpg"
     ]
   },
   {
@@ -2222,8 +2180,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Triceps_Extension/1.jpg"
+      "/exercises/low-cable-triceps-extension/0.jpg",
+      "/exercises/low-cable-triceps-extension/1.jpg"
     ]
   },
   {
@@ -2234,8 +2192,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "TRAPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Pulley_Row_To_Neck/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Pulley_Row_To_Neck/1.jpg"
+      "/exercises/low-pulley-row-to-neck/0.jpg",
+      "/exercises/low-pulley-row-to-neck/1.jpg"
     ]
   },
   {
@@ -2246,8 +2204,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "QUADRICEPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Pass_Through/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Pass_Through/1.jpg"
+      "/exercises/lunge-pass-through/0.jpg",
+      "/exercises/lunge-pass-through/1.jpg"
     ]
   },
   {
@@ -2258,8 +2216,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Sprint/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lunge_Sprint/1.jpg"
+      "/exercises/lunge-sprint/0.jpg",
+      "/exercises/lunge-sprint/1.jpg"
     ]
   },
   {
@@ -2270,8 +2228,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "TRAPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cambered_Barbell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Cambered_Barbell_Row/1.jpg"
+      "/exercises/lying-cambered-barbell-row/0.jpg",
+      "/exercises/lying-cambered-barbell-row/1.jpg"
     ]
   },
   {
@@ -2282,8 +2240,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Close-Grip_Bar_Curl_On_High_Pulley/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Close-Grip_Bar_Curl_On_High_Pulley/1.jpg"
+      "/exercises/lying-close-grip-bar-curl-on-high-pulley/0.jpg",
+      "/exercises/lying-close-grip-bar-curl-on-high-pulley/1.jpg"
     ]
   },
   {
@@ -2294,8 +2252,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/1.jpg"
+      "/exercises/lying-leg-curls/0.jpg",
+      "/exercises/lying-leg-curls/1.jpg"
     ]
   },
   {
@@ -2306,8 +2264,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Machine_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Machine_Squat/1.jpg"
+      "/exercises/lying-machine-squat/0.jpg",
+      "/exercises/lying-machine-squat/1.jpg"
     ]
   },
   {
@@ -2318,8 +2276,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Supine_Dumbbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Supine_Dumbbell_Curl/1.jpg"
+      "/exercises/lying-supine-dumbbell-curl/0.jpg",
+      "/exercises/lying-supine-dumbbell-curl/1.jpg"
     ]
   },
   {
@@ -2330,8 +2288,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/1.jpg"
+      "/exercises/lying-t-bar-row/0.jpg",
+      "/exercises/lying-t-bar-row/1.jpg"
     ]
   },
   {
@@ -2342,8 +2300,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/1.jpg"
+      "/exercises/machine-bench-press/0.jpg",
+      "/exercises/machine-bench-press/1.jpg"
     ]
   },
   {
@@ -2354,8 +2312,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bicep_Curl/1.jpg"
+      "/exercises/machine-bicep-curl/0.jpg",
+      "/exercises/machine-bicep-curl/1.jpg"
     ]
   },
   {
@@ -2366,8 +2324,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/1.jpg"
+      "/exercises/machine-preacher-curls/0.jpg",
+      "/exercises/machine-preacher-curls/1.jpg"
     ]
   },
   {
@@ -2378,8 +2336,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/1.jpg"
+      "/exercises/machine-shoulder-military-press/0.jpg",
+      "/exercises/machine-shoulder-military-press/1.jpg"
     ]
   },
   {
@@ -2390,8 +2348,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/1.jpg"
+      "/exercises/machine-triceps-extension/0.jpg",
+      "/exercises/machine-triceps-extension/1.jpg"
     ]
   },
   {
@@ -2402,8 +2360,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Middle_Back_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Middle_Back_Shrug/1.jpg"
+      "/exercises/middle-back-shrug/0.jpg",
+      "/exercises/middle-back-shrug/1.jpg"
     ]
   },
   {
@@ -2414,8 +2372,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Natural_Glute_Ham_Raise/1.jpg"
+      "/exercises/natural-glute-ham-raise/0.jpg",
+      "/exercises/natural-glute-ham-raise/1.jpg"
     ]
   },
   {
@@ -2426,8 +2384,8 @@
     "secondaryMuscles": ["SHOULDERS", "TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Bench_Press/1.jpg"
+      "/exercises/one-arm-dumbbell-bench-press/0.jpg",
+      "/exercises/one-arm-dumbbell-bench-press/1.jpg"
     ]
   },
   {
@@ -2438,8 +2396,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Preacher_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Dumbbell_Preacher_Curl/1.jpg"
+      "/exercises/one-arm-dumbbell-preacher-curl/0.jpg",
+      "/exercises/one-arm-dumbbell-preacher-curl/1.jpg"
     ]
   },
   {
@@ -2450,8 +2408,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Floor_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Floor_Press/1.jpg"
+      "/exercises/one-arm-floor-press/0.jpg",
+      "/exercises/one-arm-floor-press/1.jpg"
     ]
   },
   {
@@ -2462,8 +2420,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Lat_Pulldown/1.jpg"
+      "/exercises/one-arm-lat-pulldown/0.jpg",
+      "/exercises/one-arm-lat-pulldown/1.jpg"
     ]
   },
   {
@@ -2474,8 +2432,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Pronated_Dumbbell_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Pronated_Dumbbell_Triceps_Extension/1.jpg"
+      "/exercises/one-arm-pronated-dumbbell-triceps-extension/0.jpg",
+      "/exercises/one-arm-pronated-dumbbell-triceps-extension/1.jpg"
     ]
   },
   {
@@ -2486,8 +2444,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Supinated_Dumbbell_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Supinated_Dumbbell_Triceps_Extension/1.jpg"
+      "/exercises/one-arm-supinated-dumbbell-triceps-extension/0.jpg",
+      "/exercises/one-arm-supinated-dumbbell-triceps-extension/1.jpg"
     ]
   },
   {
@@ -2498,8 +2456,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/1.jpg"
+      "/exercises/one-arm-dumbbell-row/0.jpg",
+      "/exercises/one-arm-dumbbell-row/1.jpg"
     ]
   },
   {
@@ -2510,8 +2468,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK", "SHOULDERS", "TRAPS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Clean/1.jpg"
+      "/exercises/one-arm-kettlebell-clean/0.jpg",
+      "/exercises/one-arm-kettlebell-clean/1.jpg"
     ]
   },
   {
@@ -2522,8 +2480,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Row/1.jpg"
+      "/exercises/one-arm-kettlebell-row/0.jpg",
+      "/exercises/one-arm-kettlebell-row/1.jpg"
     ]
   },
   {
@@ -2534,8 +2492,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK", "SHOULDERS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Swings/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Kettlebell_Swings/1.jpg"
+      "/exercises/one-arm-kettlebell-swings/0.jpg",
+      "/exercises/one-arm-kettlebell-swings/1.jpg"
     ]
   },
   {
@@ -2546,8 +2504,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Long_Bar_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Long_Bar_Row/1.jpg"
+      "/exercises/one-arm-long-bar-row/0.jpg",
+      "/exercises/one-arm-long-bar-row/1.jpg"
     ]
   },
   {
@@ -2564,8 +2522,8 @@
     ],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Open_Palm_Kettlebell_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Open_Palm_Kettlebell_Clean/1.jpg"
+      "/exercises/one-arm-open-palm-kettlebell-clean/0.jpg",
+      "/exercises/one-arm-open-palm-kettlebell-clean/1.jpg"
     ]
   },
   {
@@ -2576,8 +2534,8 @@
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/1.jpg"
+      "/exercises/one-legged-cable-kickback/0.jpg",
+      "/exercises/one-legged-cable-kickback/1.jpg"
     ]
   },
   {
@@ -2588,8 +2546,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS", "TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press_With_Rotation/1.jpg"
+      "/exercises/pallof-press-with-rotation/0.jpg",
+      "/exercises/pallof-press-with-rotation/1.jpg"
     ]
   },
   {
@@ -2600,8 +2558,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench/1.jpg"
+      "/exercises/palms-down-dumbbell-wrist-curl-over-a-bench/0.jpg",
+      "/exercises/palms-down-dumbbell-wrist-curl-over-a-bench/1.jpg"
     ]
   },
   {
@@ -2612,8 +2570,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Down_Wrist_Curl_Over_A_Bench/1.jpg"
+      "/exercises/palms-down-wrist-curl-over-a-bench/0.jpg",
+      "/exercises/palms-down-wrist-curl-over-a-bench/1.jpg"
     ]
   },
   {
@@ -2624,8 +2582,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Barbell_Wrist_Curl_Over_A_Bench/1.jpg"
+      "/exercises/palms-up-barbell-wrist-curl-over-a-bench/0.jpg",
+      "/exercises/palms-up-barbell-wrist-curl-over-a-bench/1.jpg"
     ]
   },
   {
@@ -2636,8 +2594,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench/1.jpg"
+      "/exercises/palms-up-dumbbell-wrist-curl-over-a-bench/0.jpg",
+      "/exercises/palms-up-dumbbell-wrist-curl-over-a-bench/1.jpg"
     ]
   },
   {
@@ -2648,8 +2606,8 @@
     "secondaryMuscles": ["ABDOMINALS", "CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plie_Dumbbell_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plie_Dumbbell_Squat/1.jpg"
+      "/exercises/plie-dumbbell-squat/0.jpg",
+      "/exercises/plie-dumbbell-squat/1.jpg"
     ]
   },
   {
@@ -2670,8 +2628,8 @@
     ],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Power_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Power_Clean/1.jpg"
+      "/exercises/power-clean/0.jpg",
+      "/exercises/power-clean/1.jpg"
     ]
   },
   {
@@ -2682,8 +2640,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/1.jpg"
+      "/exercises/preacher-curl/0.jpg",
+      "/exercises/preacher-curl/1.jpg"
     ]
   },
   {
@@ -2694,8 +2652,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Hammer_Dumbbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Hammer_Dumbbell_Curl/1.jpg"
+      "/exercises/preacher-hammer-dumbbell-curl/0.jpg",
+      "/exercises/preacher-hammer-dumbbell-curl/1.jpg"
     ]
   },
   {
@@ -2706,8 +2664,8 @@
     "secondaryMuscles": ["HAMSTRINGS", "LOWER_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/1.jpg"
+      "/exercises/pull-through/0.jpg",
+      "/exercises/pull-through/1.jpg"
     ]
   },
   {
@@ -2717,10 +2675,7 @@
     "muscleGroup": "LATS",
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "BODYWEIGHT",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pullups/1.jpg"
-    ]
+    "imageUrls": ["/exercises/pullups/0.jpg", "/exercises/pullups/1.jpg"]
   },
   {
     "slug": "push-up-to-side-plank",
@@ -2730,8 +2685,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push_Up_to_Side_Plank/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push_Up_to_Side_Plank/1.jpg"
+      "/exercises/push-up-to-side-plank/0.jpg",
+      "/exercises/push-up-to-side-plank/1.jpg"
     ]
   },
   {
@@ -2742,8 +2697,8 @@
     "secondaryMuscles": ["ABDOMINALS", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Up_Wide/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Up_Wide/1.jpg"
+      "/exercises/push-up-wide/0.jpg",
+      "/exercises/push-up-wide/1.jpg"
     ]
   },
   {
@@ -2754,8 +2709,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_-_Close_Triceps_Position/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Push-Ups_-_Close_Triceps_Position/1.jpg"
+      "/exercises/push-ups-close-triceps-position/0.jpg",
+      "/exercises/push-ups-close-triceps-position/1.jpg"
     ]
   },
   {
@@ -2766,8 +2721,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Barbell_Curl/1.jpg"
+      "/exercises/reverse-barbell-curl/0.jpg",
+      "/exercises/reverse-barbell-curl/1.jpg"
     ]
   },
   {
@@ -2778,8 +2733,8 @@
     "secondaryMuscles": ["FOREARMS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Cable_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Cable_Curl/1.jpg"
+      "/exercises/reverse-cable-curl/0.jpg",
+      "/exercises/reverse-cable-curl/1.jpg"
     ]
   },
   {
@@ -2790,8 +2745,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Bent-Over_Rows/1.jpg"
+      "/exercises/reverse-grip-bent-over-rows/0.jpg",
+      "/exercises/reverse-grip-bent-over-rows/1.jpg"
     ]
   },
   {
@@ -2802,8 +2757,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Grip_Triceps_Pushdown/1.jpg"
+      "/exercises/reverse-grip-triceps-pushdown/0.jpg",
+      "/exercises/reverse-grip-triceps-pushdown/1.jpg"
     ]
   },
   {
@@ -2814,8 +2769,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Hyperextension/1.jpg"
+      "/exercises/reverse-hyperextension/0.jpg",
+      "/exercises/reverse-hyperextension/1.jpg"
     ]
   },
   {
@@ -2826,8 +2781,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Triceps_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Triceps_Bench_Press/1.jpg"
+      "/exercises/reverse-triceps-bench-press/0.jpg",
+      "/exercises/reverse-triceps-bench-press/1.jpg"
     ]
   },
   {
@@ -2838,8 +2793,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/1.jpg"
+      "/exercises/rocking-standing-calf-raise/0.jpg",
+      "/exercises/rocking-standing-calf-raise/1.jpg"
     ]
   },
   {
@@ -2850,8 +2805,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "LOWER_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/1.jpg"
+      "/exercises/romanian-deadlift/0.jpg",
+      "/exercises/romanian-deadlift/1.jpg"
     ]
   },
   {
@@ -2862,8 +2817,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rope_Straight-Arm_Pulldown/1.jpg"
+      "/exercises/rope-straight-arm-pulldown/0.jpg",
+      "/exercises/rope-straight-arm-pulldown/1.jpg"
     ]
   },
   {
@@ -2874,8 +2829,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension/1.jpg"
+      "/exercises/seated-bent-over-one-arm-dumbbell-triceps-extension/0.jpg",
+      "/exercises/seated-bent-over-one-arm-dumbbell-triceps-extension/1.jpg"
     ]
   },
   {
@@ -2886,8 +2841,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"
+      "/exercises/seated-cable-rows/0.jpg",
+      "/exercises/seated-cable-rows/1.jpg"
     ]
   },
   {
@@ -2898,8 +2853,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Shoulder_Press/1.jpg"
+      "/exercises/seated-cable-shoulder-press/0.jpg",
+      "/exercises/seated-cable-shoulder-press/1.jpg"
     ]
   },
   {
@@ -2910,8 +2865,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/1.jpg"
+      "/exercises/seated-calf-raise/0.jpg",
+      "/exercises/seated-calf-raise/1.jpg"
     ]
   },
   {
@@ -2922,8 +2877,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Down_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Down_Wrist_Curl/1.jpg"
+      "/exercises/seated-dumbbell-palms-down-wrist-curl/0.jpg",
+      "/exercises/seated-dumbbell-palms-down-wrist-curl/1.jpg"
     ]
   },
   {
@@ -2934,8 +2889,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/1.jpg"
+      "/exercises/seated-dumbbell-palms-up-wrist-curl/0.jpg",
+      "/exercises/seated-dumbbell-palms-up-wrist-curl/1.jpg"
     ]
   },
   {
@@ -2946,8 +2901,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/1.jpg"
+      "/exercises/seated-dumbbell-press/0.jpg",
+      "/exercises/seated-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -2958,8 +2913,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Flat_Bench_Leg_Pull-In/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Flat_Bench_Leg_Pull-In/1.jpg"
+      "/exercises/seated-flat-bench-leg-pull-in/0.jpg",
+      "/exercises/seated-flat-bench-leg-pull-in/1.jpg"
     ]
   },
   {
@@ -2970,8 +2925,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/1.jpg"
+      "/exercises/seated-leg-curl/0.jpg",
+      "/exercises/seated-leg-curl/1.jpg"
     ]
   },
   {
@@ -2982,8 +2937,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "TRAPS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-arm_Cable_Pulley_Rows/1.jpg"
+      "/exercises/seated-one-arm-cable-pulley-rows/0.jpg",
+      "/exercises/seated-one-arm-cable-pulley-rows/1.jpg"
     ]
   },
   {
@@ -2994,8 +2949,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl/1.jpg"
+      "/exercises/seated-one-arm-dumbbell-palms-down-wrist-curl/0.jpg",
+      "/exercises/seated-one-arm-dumbbell-palms-down-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3006,8 +2961,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl/1.jpg"
+      "/exercises/seated-one-arm-dumbbell-palms-up-wrist-curl/0.jpg",
+      "/exercises/seated-one-arm-dumbbell-palms-up-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3018,8 +2973,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palm-Up_Barbell_Wrist_Curl/1.jpg"
+      "/exercises/seated-palm-up-barbell-wrist-curl/0.jpg",
+      "/exercises/seated-palm-up-barbell-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3030,8 +2985,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palms-Down_Barbell_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Palms-Down_Barbell_Wrist_Curl/1.jpg"
+      "/exercises/seated-palms-down-barbell-wrist-curl/0.jpg",
+      "/exercises/seated-palms-down-barbell-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3042,8 +2997,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/1.jpg"
+      "/exercises/seated-triceps-press/0.jpg",
+      "/exercises/seated-triceps-press/1.jpg"
     ]
   },
   {
@@ -3054,8 +3009,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl/1.jpg"
+      "/exercises/seated-two-arm-palms-up-low-pulley-wrist-curl/0.jpg",
+      "/exercises/seated-two-arm-palms-up-low-pulley-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3066,8 +3021,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shotgun_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shotgun_Row/1.jpg"
+      "/exercises/shotgun-row/0.jpg",
+      "/exercises/shotgun-row/1.jpg"
     ]
   },
   {
@@ -3078,8 +3033,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Jackknife/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Jackknife/1.jpg"
+      "/exercises/side-jackknife/0.jpg",
+      "/exercises/side-jackknife/1.jpg"
     ]
   },
   {
@@ -3090,8 +3045,8 @@
     "secondaryMuscles": ["HAMSTRINGS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Single_Leg_Glute_Bridge/1.jpg"
+      "/exercises/single-leg-glute-bridge/0.jpg",
+      "/exercises/single-leg-glute-bridge/1.jpg"
     ]
   },
   {
@@ -3102,8 +3057,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Behind_the_Back_Shrug/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Behind_the_Back_Shrug/1.jpg"
+      "/exercises/smith-machine-behind-the-back-shrug/0.jpg",
+      "/exercises/smith-machine-behind-the-back-shrug/1.jpg"
     ]
   },
   {
@@ -3114,8 +3069,8 @@
     "secondaryMuscles": ["BICEPS", "LATS", "SHOULDERS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/1.jpg"
+      "/exercises/smith-machine-bent-over-row/0.jpg",
+      "/exercises/smith-machine-bent-over-row/1.jpg"
     ]
   },
   {
@@ -3126,8 +3081,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/1.jpg"
+      "/exercises/smith-machine-calf-raise/0.jpg",
+      "/exercises/smith-machine-calf-raise/1.jpg"
     ]
   },
   {
@@ -3138,8 +3093,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/1.jpg"
+      "/exercises/smith-machine-close-grip-bench-press/0.jpg",
+      "/exercises/smith-machine-close-grip-bench-press/1.jpg"
     ]
   },
   {
@@ -3156,8 +3111,8 @@
     ],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Hang_Power_Clean/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Hang_Power_Clean/1.jpg"
+      "/exercises/smith-machine-hang-power-clean/0.jpg",
+      "/exercises/smith-machine-hang-power-clean/1.jpg"
     ]
   },
   {
@@ -3168,8 +3123,8 @@
     "secondaryMuscles": ["BICEPS", "TRAPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_One-Arm_Upright_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_One-Arm_Upright_Row/1.jpg"
+      "/exercises/smith-machine-one-arm-upright-row/0.jpg",
+      "/exercises/smith-machine-one-arm-upright-row/1.jpg"
     ]
   },
   {
@@ -3180,8 +3135,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/1.jpg"
+      "/exercises/smith-machine-overhead-shoulder-press/0.jpg",
+      "/exercises/smith-machine-overhead-shoulder-press/1.jpg"
     ]
   },
   {
@@ -3192,8 +3147,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Reverse_Calf_Raises/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Reverse_Calf_Raises/1.jpg"
+      "/exercises/smith-machine-reverse-calf-raises/0.jpg",
+      "/exercises/smith-machine-reverse-calf-raises/1.jpg"
     ]
   },
   {
@@ -3204,8 +3159,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS", "LOWER_BACK"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/1.jpg"
+      "/exercises/smith-machine-squat/0.jpg",
+      "/exercises/smith-machine-squat/1.jpg"
     ]
   },
   {
@@ -3216,8 +3171,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Stiff-Legged_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Stiff-Legged_Deadlift/1.jpg"
+      "/exercises/smith-machine-stiff-legged-deadlift/0.jpg",
+      "/exercises/smith-machine-stiff-legged-deadlift/1.jpg"
     ]
   },
   {
@@ -3228,8 +3183,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Upright_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Upright_Row/1.jpg"
+      "/exercises/smith-machine-upright-row/0.jpg",
+      "/exercises/smith-machine-upright-row/1.jpg"
     ]
   },
   {
@@ -3240,8 +3195,8 @@
     "secondaryMuscles": ["CALVES", "GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Single-Leg_Split_Squat/1.jpg"
+      "/exercises/smith-single-leg-split-squat/0.jpg",
+      "/exercises/smith-single-leg-split-squat/1.jpg"
     ]
   },
   {
@@ -3258,8 +3213,8 @@
     ],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Snatch_Pull/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Snatch_Pull/1.jpg"
+      "/exercises/snatch-pull/0.jpg",
+      "/exercises/snatch-pull/1.jpg"
     ]
   },
   {
@@ -3270,8 +3225,8 @@
     "secondaryMuscles": ["GLUTES", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spell_Caster/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spell_Caster/1.jpg"
+      "/exercises/spell-caster/0.jpg",
+      "/exercises/spell-caster/1.jpg"
     ]
   },
   {
@@ -3282,8 +3237,8 @@
     "secondaryMuscles": ["CHEST", "SHOULDERS", "TRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Crawl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spider_Crawl/1.jpg"
+      "/exercises/spider-crawl/0.jpg",
+      "/exercises/spider-crawl/1.jpg"
     ]
   },
   {
@@ -3294,8 +3249,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/1.jpg"
+      "/exercises/split-squat-with-dumbbells/0.jpg",
+      "/exercises/split-squat-with-dumbbells/1.jpg"
     ]
   },
   {
@@ -3306,8 +3261,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Alternating_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Alternating_Dumbbell_Press/1.jpg"
+      "/exercises/standing-alternating-dumbbell-press/0.jpg",
+      "/exercises/standing-alternating-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -3318,8 +3273,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Barbell_Calf_Raise/1.jpg"
+      "/exercises/standing-barbell-calf-raise/0.jpg",
+      "/exercises/standing-barbell-calf-raise/1.jpg"
     ]
   },
   {
@@ -3330,8 +3285,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Bradford_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Bradford_Press/1.jpg"
+      "/exercises/standing-bradford-press/0.jpg",
+      "/exercises/standing-bradford-press/1.jpg"
     ]
   },
   {
@@ -3342,8 +3297,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Lift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Lift/1.jpg"
+      "/exercises/standing-cable-lift/0.jpg",
+      "/exercises/standing-cable-lift/1.jpg"
     ]
   },
   {
@@ -3354,8 +3309,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/1.jpg"
+      "/exercises/standing-cable-wood-chop/0.jpg",
+      "/exercises/standing-cable-wood-chop/1.jpg"
     ]
   },
   {
@@ -3366,8 +3321,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/1.jpg"
+      "/exercises/standing-calf-raises/0.jpg",
+      "/exercises/standing-calf-raises/1.jpg"
     ]
   },
   {
@@ -3378,8 +3333,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/1.jpg"
+      "/exercises/standing-dumbbell-calf-raise/0.jpg",
+      "/exercises/standing-dumbbell-calf-raise/1.jpg"
     ]
   },
   {
@@ -3390,8 +3345,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Press/1.jpg"
+      "/exercises/standing-dumbbell-press/0.jpg",
+      "/exercises/standing-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -3402,8 +3357,8 @@
     "secondaryMuscles": ["BICEPS", "SHOULDERS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Upright_Row/1.jpg"
+      "/exercises/standing-dumbbell-upright-row/0.jpg",
+      "/exercises/standing-dumbbell-upright-row/1.jpg"
     ]
   },
   {
@@ -3414,8 +3369,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Leg_Curl/1.jpg"
+      "/exercises/standing-leg-curl/0.jpg",
+      "/exercises/standing-leg-curl/1.jpg"
     ]
   },
   {
@@ -3426,8 +3381,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Military_Press/1.jpg"
+      "/exercises/standing-military-press/0.jpg",
+      "/exercises/standing-military-press/1.jpg"
     ]
   },
   {
@@ -3438,8 +3393,8 @@
     "secondaryMuscles": ["TRICEPS"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palm-In_One-Arm_Dumbbell_Press/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palm-In_One-Arm_Dumbbell_Press/1.jpg"
+      "/exercises/standing-palm-in-one-arm-dumbbell-press/0.jpg",
+      "/exercises/standing-palm-in-one-arm-dumbbell-press/1.jpg"
     ]
   },
   {
@@ -3450,8 +3405,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl/1.jpg"
+      "/exercises/standing-palms-up-barbell-behind-the-back-wrist-curl/0.jpg",
+      "/exercises/standing-palms-up-barbell-behind-the-back-wrist-curl/1.jpg"
     ]
   },
   {
@@ -3462,8 +3417,8 @@
     "secondaryMuscles": ["HAMSTRINGS", "QUADRICEPS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Step-up_with_Knee_Raise/1.jpg"
+      "/exercises/step-up-with-knee-raise/0.jpg",
+      "/exercises/step-up-with-knee-raise/1.jpg"
     ]
   },
   {
@@ -3474,8 +3429,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff_Leg_Barbell_Good_Morning/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff_Leg_Barbell_Good_Morning/1.jpg"
+      "/exercises/stiff-leg-barbell-good-morning/0.jpg",
+      "/exercises/stiff-leg-barbell-good-morning/1.jpg"
     ]
   },
   {
@@ -3486,8 +3441,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Barbell_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Barbell_Deadlift/1.jpg"
+      "/exercises/stiff-legged-barbell-deadlift/0.jpg",
+      "/exercises/stiff-legged-barbell-deadlift/1.jpg"
     ]
   },
   {
@@ -3498,8 +3453,8 @@
     "secondaryMuscles": ["GLUTES", "LOWER_BACK"],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/1.jpg"
+      "/exercises/stiff-legged-dumbbell-deadlift/0.jpg",
+      "/exercises/stiff-legged-dumbbell-deadlift/1.jpg"
     ]
   },
   {
@@ -3510,8 +3465,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight_Bar_Bench_Mid_Rows/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight_Bar_Bench_Mid_Rows/1.jpg"
+      "/exercises/straight-bar-bench-mid-rows/0.jpg",
+      "/exercises/straight-bar-bench-mid-rows/1.jpg"
     ]
   },
   {
@@ -3522,8 +3477,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/1.jpg"
+      "/exercises/straight-arm-pulldown/0.jpg",
+      "/exercises/straight-arm-pulldown/1.jpg"
     ]
   },
   {
@@ -3534,8 +3489,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/1.jpg"
+      "/exercises/t-bar-row-with-handle/0.jpg",
+      "/exercises/t-bar-row-with-handle/1.jpg"
     ]
   },
   {
@@ -3546,8 +3501,8 @@
     "secondaryMuscles": ["GLUTES"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/1.jpg"
+      "/exercises/thigh-abductor/0.jpg",
+      "/exercises/thigh-abductor/1.jpg"
     ]
   },
   {
@@ -3558,8 +3513,8 @@
     "secondaryMuscles": ["GLUTES", "HAMSTRINGS"],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/1.jpg"
+      "/exercises/thigh-adductor/0.jpg",
+      "/exercises/thigh-adductor/1.jpg"
     ]
   },
   {
@@ -3570,8 +3525,8 @@
     "secondaryMuscles": ["BICEPS", "LATS"],
     "equipment": "KETTLEBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Two-Arm_Kettlebell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Two-Arm_Kettlebell_Row/1.jpg"
+      "/exercises/two-arm-kettlebell-row/0.jpg",
+      "/exercises/two-arm-kettlebell-row/1.jpg"
     ]
   },
   {
@@ -3582,8 +3537,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/1.jpg"
+      "/exercises/underhand-cable-pulldowns/0.jpg",
+      "/exercises/underhand-cable-pulldowns/1.jpg"
     ]
   },
   {
@@ -3594,8 +3549,8 @@
     "secondaryMuscles": ["TRAPS"],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Barbell_Row/1.jpg"
+      "/exercises/upright-barbell-row/0.jpg",
+      "/exercises/upright-barbell-row/1.jpg"
     ]
   },
   {
@@ -3606,8 +3561,8 @@
     "secondaryMuscles": ["SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Cable_Row/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upright_Cable_Row/1.jpg"
+      "/exercises/upright-cable-row/0.jpg",
+      "/exercises/upright-cable-row/1.jpg"
     ]
   },
   {
@@ -3618,8 +3573,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/1.jpg"
+      "/exercises/v-bar-pulldown/0.jpg",
+      "/exercises/v-bar-pulldown/1.jpg"
     ]
   },
   {
@@ -3630,8 +3585,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pullup/1.jpg"
+      "/exercises/v-bar-pullup/0.jpg",
+      "/exercises/v-bar-pullup/1.jpg"
     ]
   },
   {
@@ -3642,8 +3597,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/1.jpg"
+      "/exercises/wide-grip-lat-pulldown/0.jpg",
+      "/exercises/wide-grip-lat-pulldown/1.jpg"
     ]
   },
   {
@@ -3654,8 +3609,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Pulldown_Behind_The_Neck/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Pulldown_Behind_The_Neck/1.jpg"
+      "/exercises/wide-grip-pulldown-behind-the-neck/0.jpg",
+      "/exercises/wide-grip-pulldown-behind-the-neck/1.jpg"
     ]
   },
   {
@@ -3666,8 +3621,8 @@
     "secondaryMuscles": ["BICEPS", "MIDDLE_BACK", "SHOULDERS"],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Rear_Pull-Up/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Rear_Pull-Up/1.jpg"
+      "/exercises/wide-grip-rear-pull-up/0.jpg",
+      "/exercises/wide-grip-rear-pull-up/1.jpg"
     ]
   },
   {
@@ -3678,8 +3633,8 @@
     "secondaryMuscles": [],
     "equipment": "BODYWEIGHT",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wind_Sprints/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wind_Sprints/1.jpg"
+      "/exercises/wind-sprints/0.jpg",
+      "/exercises/wind-sprints/1.jpg"
     ]
   },
   {
@@ -3690,8 +3645,8 @@
     "secondaryMuscles": [],
     "equipment": "BARBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/1.jpg"
+      "/exercises/wrist-rotations-with-straight-bar/0.jpg",
+      "/exercises/wrist-rotations-with-straight-bar/1.jpg"
     ]
   },
   {
@@ -3702,8 +3657,8 @@
     "secondaryMuscles": [],
     "equipment": "MACHINE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/1.jpg"
+      "/exercises/leg-extensions/0.jpg",
+      "/exercises/leg-extensions/1.jpg"
     ]
   },
   {
@@ -3714,8 +3669,8 @@
     "secondaryMuscles": [],
     "equipment": "DUMBBELL",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/1.jpg"
+      "/exercises/side-lateral-raise/0.jpg",
+      "/exercises/side-lateral-raise/1.jpg"
     ]
   },
   {
@@ -3725,10 +3680,7 @@
     "muscleGroup": "CHEST",
     "secondaryMuscles": [],
     "equipment": "MACHINE",
-    "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/1.jpg"
-    ]
+    "imageUrls": ["/exercises/butterfly/0.jpg", "/exercises/butterfly/1.jpg"]
   },
   {
     "slug": "cable-rear-delt-fly",
@@ -3738,8 +3690,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/1.jpg"
+      "/exercises/cable-rear-delt-fly/0.jpg",
+      "/exercises/cable-rear-delt-fly/1.jpg"
     ]
   },
   {
@@ -3750,8 +3702,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/1.jpg"
+      "/exercises/triceps-pushdown/0.jpg",
+      "/exercises/triceps-pushdown/1.jpg"
     ]
   },
   {
@@ -3762,8 +3714,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/1.jpg"
+      "/exercises/triceps-pushdown-rope-attachment/0.jpg",
+      "/exercises/triceps-pushdown-rope-attachment/1.jpg"
     ]
   },
   {
@@ -3774,8 +3726,8 @@
     "secondaryMuscles": [],
     "equipment": "CABLE",
     "imageUrls": [
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/0.jpg",
-      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/1.jpg"
+      "/exercises/standing-biceps-cable-curl/0.jpg",
+      "/exercises/standing-biceps-cable-curl/1.jpg"
     ]
   }
 ]
