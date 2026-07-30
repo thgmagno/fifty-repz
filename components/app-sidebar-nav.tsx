@@ -97,11 +97,7 @@ export function AppSidebarNav({
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <Link
-          href={`${privateRoutes.profile}/${user.username}`}
-          onClick={closeMobileSidebar}
-          className="flex items-center gap-2 rounded-md px-2 py-1.5 hover:bg-sidebar-accent"
-        >
+        <div className="flex items-center gap-2 rounded-md px-2 py-1.5">
           {user.image && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -118,7 +114,7 @@ export function AppSidebarNav({
               @{user.username}
             </span>
           </div>
-        </Link>
+        </div>
         <Button
           variant="ghost"
           className="w-full justify-start"

@@ -1,10 +1,13 @@
+import { notFound } from 'next/navigation'
 import { Page } from '@/components/page'
-import { getUser } from '@/lib/dal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ProfileOverview } from '@/components/profile/profile-overview'
 import { MuscleGroupChart } from '@/components/progress/muscle-group-chart'
 import { VolumeTrendChart } from '@/components/progress/volume-trend-chart'
 import { PersonalRecordsList } from '@/components/progress/personal-records-list'
-
+import { getUser } from '@/lib/dal'
+import { getUserProfile } from '@/lib/profile'
+import { listFollowers, listFollowing } from '@/lib/follow'
 import {
   getMuscleGroupVolume,
   getWeeklyVolumeTrend,
@@ -14,13 +17,30 @@ import {
 export default async function Dashboard() {
   const user = await getUser()
 
-  const [muscleGroupVolume, weeklyTrend, personalRecords] = await Promise.all(
-    [getMuscleGroupVolume(), getWeeklyVolumeTrend(), getPersonalRecords()],
-  )
+  const [profile, muscleGroupVolume, weeklyTrend, personalRecords] =
+    await Promise.all([
+      getUserProfile(user.username),
+      getMuscleGroupVolume(),
+      getWeeklyVolumeTrend(),
+      getPersonalRecords(),
+    ])
+
+  if (!profile) {
+    notFound()
+  }
+
+  const [followers, following] = await Promise.all([
+    listFollowers(profile.id),
+    listFollowing(profile.id),
+  ])
 
   return (
     <Page>
-      <h1 className="text-2xl font-bold">Olá, {user.name ?? user.email}!</h1>
+      <ProfileOverview
+        profile={profile}
+        followers={followers}
+        following={following}
+      />
 
       <section className="flex flex-col gap-3">
         <div>
