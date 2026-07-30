@@ -1,6 +1,7 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { cn, formatDateKeyLabel } from '@/lib/utils'
+import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 
 interface HeatmapDay {
   date: string
@@ -45,11 +46,14 @@ export function ProfileHeatmap({ days }: { days: HeatmapDay[] }) {
         >
           {week.map((day, dayIndex) =>
             day ? (
-              <div
-                key={day.date}
-                title={new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short' }).format(new Date(day.date))}
-                className={cn('size-3 rounded-sm', bucketColor(day.count))}
-              />
+              <Tooltip key={day.date}>
+                <TooltipTrigger>
+                  <div className={cn('size-3 rounded-sm', bucketColor(day.count))} />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{formatDateKeyLabel(day.date)}</p>
+                </TooltipContent>
+              </Tooltip>
             ) : (
               // eslint-disable-next-line react/no-array-index-key
               <div key={dayIndex} className="size-3" />

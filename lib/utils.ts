@@ -90,3 +90,10 @@ export function formatWeekLabel(weekStartKey: string) {
   const [, month, day] = weekStartKey.split('-')
   return `${day}/${month}`
 }
+
+// 'YYYY-MM-DD' -> "28/07/2026" — reformata a string direto (sem Date/Intl)
+// para não reintroduzir o bug de fuso horário (UTC vs. local) do heatmap.
+export function formatDateKeyLabel(dateKey: string) {
+  const [year, month, day] = dateKey.split('-')
+  return `${day}/${month}/${year}`
+}
