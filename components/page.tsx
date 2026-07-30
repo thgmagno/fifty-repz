@@ -6,6 +6,6 @@ import { cn } from '@/lib/utils'
 // (app/(private-route)/layout.tsx); Page é só o container de conteúdo.
 export function Page({ className, ...props }: ComponentProps<'section'>) {
   return (
-    <section className={cn('flex flex-col gap-6 py-4', className)} {...props} />
+    <section className={cn('flex flex-col gap-6 py-4 lg:px-2', className)} {...props} />
   )
 }
