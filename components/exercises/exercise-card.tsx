@@ -17,7 +17,7 @@ import type { ExerciseListItem } from '@/lib/exercises'
 export function ExerciseCard({ exercise }: { exercise: ExerciseListItem }) {
   return (
     <Card className="gap-3 overflow-hidden pt-0">
-      <div className="relative aspect-[3/2] w-full bg-muted">
+      <div className="relative aspect-3/2 w-full bg-muted">
         {exercise.imageUrls[0] ? (
           <Image
             src={exercise.imageUrls[0]}

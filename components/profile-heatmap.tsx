@@ -9,9 +9,7 @@ interface HeatmapDay {
 
 function bucketColor(count: number) {
   if (count === 0) return 'bg-muted'
-  if (count === 1) return 'bg-primary/30'
-  if (count === 2) return 'bg-primary/60'
-  return 'bg-primary'
+  return 'bg-emerald-600'
 }
 
 export function ProfileHeatmap({ days }: { days: HeatmapDay[] }) {
@@ -49,7 +47,7 @@ export function ProfileHeatmap({ days }: { days: HeatmapDay[] }) {
             day ? (
               <div
                 key={day.date}
-                title={`${day.date}: ${day.count} treino${day.count === 1 ? '' : 's'}`}
+                title={new Intl.DateTimeFormat('pt-BR', { dateStyle: 'short' }).format(new Date(day.date))}
                 className={cn('size-3 rounded-sm', bucketColor(day.count))}
               />
             ) : (
