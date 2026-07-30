@@ -60,8 +60,8 @@ export function ExerciseImageGallery({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
           </Carousel>
         ) : (
           <div className="relative aspect-square w-full overflow-hidden rounded-md bg-muted sm:aspect-video">
