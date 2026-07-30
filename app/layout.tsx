@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import { RegisterServiceWorker } from '@/components/register-service-worker'
 import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
@@ -43,6 +44,18 @@ export const metadata: Metadata = {
     title: 'Fifty Repz',
     description: 'Treine, evolua e acompanhe seus amigos na academia.',
   },
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#171717',
 }
 
 export default function RootLayout({
@@ -72,6 +85,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <RegisterServiceWorker />
       </body>
     </html>
   )

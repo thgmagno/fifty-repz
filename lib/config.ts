@@ -1,6 +1,8 @@
 export const publicRoutes = {
   login: '/inicio',
   nextSw: '/sw.js',
+  manifest: '/manifest.json',
+  offline: '/offline.html',
 }
 
 export const privateRoutes = {

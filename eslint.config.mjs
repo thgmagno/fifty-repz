@@ -10,6 +10,9 @@ const eslintConfig = defineConfig([
     'build/**',
     'next-env.d.ts',
     'lib/generated/**',
+    // Service worker: escopo global de ServiceWorkerGlobalScope (self),
+    // não de window — regras de browser globals do Airbnb não se aplicam
+    'public/sw.js',
   ]),
 
   // Airbnb Style: base + React + Next.js + TypeScript
