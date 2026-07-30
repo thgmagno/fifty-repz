@@ -5,8 +5,15 @@ import { decrypt, SESSION_COOKIE } from './lib/session'
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl
 
-  // Rota do service worker do Next.js: acessível autenticado ou não
-  if (pathname === publicRoutes.nextSw) {
+  // Assets do PWA (service worker, manifest, fallback offline): sempre
+  // acessíveis, autenticado ou não — o navegador/service worker busca
+  // essas rotas independente de haver sessão
+  const alwaysPublicAssets: string[] = [
+    publicRoutes.nextSw,
+    publicRoutes.manifest,
+    publicRoutes.offline,
+  ]
+  if (alwaysPublicAssets.includes(pathname)) {
     return NextResponse.next()
   }
 
