@@ -72,3 +72,21 @@ export function getLocalDateKey(date: Date) {
 export function formatVolume(kg: number) {
   return `${Math.round(kg).toLocaleString('pt-BR')} kg`
 }
+
+// segunda-feira da semana local (America/Sao_Paulo) como 'YYYY-MM-DD' —
+// usado para agrupar volume de treino por semana. Parte do dia local já
+// resolvido (getLocalDateKey) e só faz aritmética de calendário a partir
+// daí, sem reintroduzir conversão de fuso.
+export function getWeekStartKey(date: Date) {
+  const [year, month, day] = getLocalDateKey(date).split('-').map(Number)
+  const local = new Date(Date.UTC(year, month - 1, day))
+  const daysSinceMonday = (local.getUTCDay() + 6) % 7
+  local.setUTCDate(local.getUTCDate() - daysSinceMonday)
+  return local.toISOString().slice(0, 10)
+}
+
+// 'YYYY-MM-DD' -> "28/07" (rótulo curto para eixo de gráfico semanal)
+export function formatWeekLabel(weekStartKey: string) {
+  const [, month, day] = weekStartKey.split('-')
+  return `${day}/${month}`
+}

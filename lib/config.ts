@@ -11,6 +11,7 @@ export const privateRoutes = {
   workouts: '/treinos',
   sessions: '/sessoes',
   history: '/historico',
+  progress: '/progresso',
   profile: '/perfil',
   editProfile: '/perfil/editar',
   search: '/buscar',
