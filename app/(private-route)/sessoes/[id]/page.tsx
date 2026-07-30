@@ -27,8 +27,34 @@ export default async function SessaoPage({
   }
 
   if (session.status === 'COMPLETED') {
+    const backHref = session.isOwner
+      ? privateRoutes.history
+      : privateRoutes.feed
+    const backLabel = session.isOwner ? 'Voltar ao histórico' : 'Voltar ao feed'
+
     return (
       <Page>
+        {!session.isOwner && (
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            {session.user.image && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={session.user.image}
+                alt={session.user.name ?? session.user.username}
+                className="size-6 rounded-full"
+              />
+            )}
+            <span>
+              Treino de{' '}
+              <Link
+                href={`${privateRoutes.profile}/${session.user.username}`}
+                className="font-medium text-foreground hover:underline"
+              >
+                {session.user.name ?? `@${session.user.username}`}
+              </Link>
+            </span>
+          </div>
+        )}
         <div className="flex items-center gap-2">
           <CheckCircle2Icon className="text-primary" />
           <h1 className="text-2xl font-bold">{session.templateName}</h1>
@@ -62,8 +88,8 @@ export default async function SessaoPage({
             </li>
           ))}
         </ol>
-        <Link href={privateRoutes.history} className={buttonVariants()}>
-          Voltar ao histórico
+        <Link href={backHref} className={buttonVariants()}>
+          {backLabel}
         </Link>
       </Page>
     )

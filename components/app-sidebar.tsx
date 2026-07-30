@@ -6,6 +6,7 @@ import {
   HomeIcon,
   LogOut,
   PencilIcon,
+  RssIcon,
   SearchIcon,
 } from 'lucide-react'
 import {
@@ -34,6 +35,7 @@ const navItems = [
 ]
 
 const socialNavItems = [
+  { title: 'Feed', href: privateRoutes.feed, icon: RssIcon },
   { title: 'Buscar pessoas', href: privateRoutes.search, icon: SearchIcon },
 ]
 

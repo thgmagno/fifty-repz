@@ -12,4 +12,5 @@ export const privateRoutes = {
   profile: '/perfil',
   editProfile: '/perfil/editar',
   search: '/buscar',
+  feed: '/feed',
 }
