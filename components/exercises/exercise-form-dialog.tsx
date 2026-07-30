@@ -47,6 +47,13 @@ export function ExerciseFormDialog({
   exercise,
 }: ExerciseFormDialogProps) {
   const [open, setOpen] = React.useState(false)
+  const [name, setName] = React.useState(exercise?.name ?? '')
+  const [muscleGroup, setMuscleGroup] = React.useState<MuscleGroup | null>(
+    exercise?.muscleGroup ?? null,
+  )
+  const [equipment, setEquipment] = React.useState<Equipment | null>(
+    exercise?.equipment ?? null,
+  )
   const isEditing = Boolean(exercise)
   const action = isEditing ? updateExercise : createExercise
   const [state, formAction, pending] = useActionState(
@@ -54,6 +61,11 @@ export function ExerciseFormDialog({
       const result = await action(prevState, formData)
       if (result.success) {
         setOpen(false)
+        if (!isEditing) {
+          setName('')
+          setMuscleGroup(null)
+          setEquipment(null)
+        }
       }
       return result
     },
@@ -81,9 +93,9 @@ export function ExerciseFormDialog({
             <Input
               id="exercise-name"
               name="name"
-              defaultValue={exercise?.name}
+              value={name}
+              onChange={(event) => setName(event.target.value)}
               placeholder="Ex.: Supino com pegada invertida"
-              required
               maxLength={80}
             />
             {state.errors?.name && (
@@ -94,8 +106,8 @@ export function ExerciseFormDialog({
             <Label htmlFor="exercise-muscle-group">Grupo muscular</Label>
             <Select
               name="muscleGroup"
-              defaultValue={exercise?.muscleGroup}
-              required
+              value={muscleGroup}
+              onValueChange={(value) => setMuscleGroup(value)}
             >
               <SelectTrigger id="exercise-muscle-group">
                 <SelectValue placeholder="Selecione…" />
@@ -118,16 +130,16 @@ export function ExerciseFormDialog({
             <Label htmlFor="exercise-equipment">Equipamento</Label>
             <Select
               name="equipment"
-              defaultValue={exercise?.equipment}
-              required
+              value={equipment}
+              onValueChange={(value) => setEquipment(value)}
             >
               <SelectTrigger id="exercise-equipment">
                 <SelectValue placeholder="Selecione…" />
               </SelectTrigger>
               <SelectContent>
-                {Object.values(Equipment).map((equipment) => (
-                  <SelectItem key={equipment} value={equipment}>
-                    {equipmentLabels[equipment]}
+                {Object.values(Equipment).map((equipmentOption) => (
+                  <SelectItem key={equipmentOption} value={equipmentOption}>
+                    {equipmentLabels[equipmentOption]}
                   </SelectItem>
                 ))}
               </SelectContent>

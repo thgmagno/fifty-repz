@@ -143,6 +143,7 @@ export function WorkoutTemplateBuilder({
   exerciseOptions,
   template,
 }: WorkoutTemplateBuilderProps) {
+  const [name, setName] = React.useState(template?.name ?? '')
   const [items, setItems] = React.useState<BuilderRow[]>(() =>
     (template?.items ?? []).map((item) => ({
       ...item,
@@ -209,9 +210,9 @@ export function WorkoutTemplateBuilder({
         <Input
           id="template-name"
           name="name"
-          defaultValue={template?.name}
+          value={name}
+          onChange={(event) => setName(event.target.value)}
           placeholder="Ex.: Treino A — Peito e tríceps"
-          required
           maxLength={80}
         />
         {state.errors?.name && (

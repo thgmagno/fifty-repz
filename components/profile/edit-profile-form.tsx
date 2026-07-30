@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -18,6 +18,8 @@ const initialState: ProfileFormState = {}
 
 export function EditProfileForm({ username, bio }: EditProfileFormProps) {
   const router = useRouter()
+  const [usernameValue, setUsernameValue] = useState(username)
+  const [bioValue, setBioValue] = useState(bio ?? '')
   const [state, formAction, pending] = useActionState(
     async (prevState: ProfileFormState, formData: FormData) => {
       const result = await updateProfile(prevState, formData)
@@ -37,15 +39,13 @@ export function EditProfileForm({ username, bio }: EditProfileFormProps) {
         <Input
           id="profile-username"
           name="username"
-          defaultValue={username}
+          value={usernameValue}
+          onChange={(event) => setUsernameValue(event.target.value)}
           placeholder="Ex.: joao-silva"
-          required
           maxLength={30}
         />
         {state.errors?.username && (
-          <p className="text-sm text-destructive">
-            {state.errors.username[0]}
-          </p>
+          <p className="text-sm text-destructive">{state.errors.username[0]}</p>
         )}
       </div>
       <div className="flex flex-col gap-2">
@@ -53,7 +53,8 @@ export function EditProfileForm({ username, bio }: EditProfileFormProps) {
         <Textarea
           id="profile-bio"
           name="bio"
-          defaultValue={bio ?? ''}
+          value={bioValue}
+          onChange={(event) => setBioValue(event.target.value)}
           placeholder="Conte um pouco sobre seus treinos…"
           maxLength={280}
           rows={4}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState, useRef } from 'react'
+import { useActionState, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { createComment, type CommentFormState } from '@/lib/actions/comments'
@@ -12,25 +12,26 @@ interface CommentFormProps {
 const initialState: CommentFormState = {}
 
 export function CommentForm({ sessionId }: CommentFormProps) {
-  const formRef = useRef<HTMLFormElement>(null)
+  const [body, setBody] = useState('')
   const [state, formAction, pending] = useActionState(
     async (prevState: CommentFormState, formData: FormData) => {
       const result = await createComment(prevState, formData)
-      if (result.success) formRef.current?.reset()
+      if (result.success) setBody('')
       return result
     },
     initialState,
   )
 
   return (
-    <form ref={formRef} action={formAction} className="flex flex-col gap-2">
+    <form action={formAction} className="flex flex-col gap-2">
       <input type="hidden" name="sessionId" value={sessionId} />
       <Textarea
         name="body"
+        value={body}
+        onChange={(event) => setBody(event.target.value)}
         placeholder="Deixe um comentário…"
         maxLength={500}
         rows={2}
-        required
       />
       {state.errors?.body && (
         <p className="text-sm text-destructive">{state.errors.body[0]}</p>

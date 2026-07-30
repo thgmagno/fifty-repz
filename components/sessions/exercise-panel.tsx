@@ -224,7 +224,6 @@ export function ExercisePanel({
             min="1"
             max="200"
             defaultValue={exercise.targetReps}
-            required
             className="h-8 w-16"
           />
         </div>
