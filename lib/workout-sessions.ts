@@ -1,13 +1,31 @@
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
 
+// peso nulo (exercício de peso corporal) conta como 0 no volume, nunca quebra
+// a soma
+export function calculateSessionVolume(
+  exercises: { sets: { weightKg: number | null; reps: number }[] }[],
+) {
+  return exercises.reduce(
+    (total, exercise) =>
+      total +
+      exercise.sets.reduce(
+        (sum, set) => sum + (set.weightKg ?? 0) * set.reps,
+        0,
+      ),
+    0,
+  )
+}
+
 export async function getWorkoutSession(id: string) {
   const { userId } = await verifySession()
 
-  return prisma.workoutSession.findFirst({
-    where: { id, userId },
+  const session = await prisma.workoutSession.findUnique({
+    where: { id },
     select: {
       id: true,
+      userId: true,
+      user: { select: { username: true, name: true, image: true } },
       templateName: true,
       status: true,
       startedAt: true,
@@ -36,6 +54,28 @@ export async function getWorkoutSession(id: string) {
       },
     },
   })
+
+  if (!session) return null
+
+  const isOwner = session.userId === userId
+  if (isOwner) return { ...session, isOwner }
+
+  // sessão em andamento é sempre restrita ao dono; concluída fica visível
+  // para quem segue o dono
+  if (session.status !== 'COMPLETED') return null
+
+  const isFollowing = await prisma.follow.findUnique({
+    where: {
+      followerId_followingId: {
+        followerId: userId,
+        followingId: session.userId,
+      },
+    },
+  })
+
+  if (!isFollowing) return null
+
+  return { ...session, isOwner }
 }
 
 export async function getInProgressWorkoutSession() {

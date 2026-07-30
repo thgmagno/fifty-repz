@@ -67,3 +67,8 @@ const localDateKeyFormatter = new Intl.DateTimeFormat('en-CA', {
 export function getLocalDateKey(date: Date) {
   return localDateKeyFormatter.format(date)
 }
+
+// kg -> "1.240 kg" (volume total de uma sessão: soma de peso × reps)
+export function formatVolume(kg: number) {
+  return `${Math.round(kg).toLocaleString('pt-BR')} kg`
+}
