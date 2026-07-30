@@ -18,7 +18,7 @@ import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
 import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import { muscleGroupLabels } from '@/lib/exercise-labels'
 import { privateRoutes } from '@/lib/config'
-import { formatRepTarget } from '@/lib/utils'
+import { cn, formatRepTarget } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Treinos',
@@ -86,7 +86,7 @@ export default async function TreinosPage() {
             ]
 
             return (
-              <Card key={template.id}>
+              <Card key={template.id} className="@container">
                 <CardHeader>
                   <CardTitle>{template.name}</CardTitle>
                   <CardDescription>
@@ -129,24 +129,24 @@ export default async function TreinosPage() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="justify-end">
-                  <form action={startWorkoutSession} className="mr-auto">
+                <CardFooter className="flex-col items-stretch gap-2 @sm:flex-row @sm:items-center @sm:justify-end">
+                  <form action={startWorkoutSession} className="@sm:mr-auto">
                     <input
                       type="hidden"
                       name="templateId"
                       value={template.id}
                     />
-                    <Button type="submit" size="sm">
+                    <Button type="submit" size="sm" className="w-full @sm:w-auto">
                       <PlayIcon />
                       Iniciar
                     </Button>
                   </form>
                   <Link
                     href={`${privateRoutes.workouts}/${template.id}/editar`}
-                    className={buttonVariants({
-                      variant: 'secondary',
-                      size: 'sm',
-                    })}
+                    className={cn(
+                      buttonVariants({ variant: 'secondary', size: 'sm' }),
+                      'w-full @sm:w-auto',
+                    )}
                   >
                     <PencilIcon />
                     Editar
@@ -155,7 +155,11 @@ export default async function TreinosPage() {
                     templateId={template.id}
                     templateName={template.name}
                     trigger={
-                      <Button variant="destructive" size="sm">
+                      <Button
+                        variant="destructive"
+                        size="sm"
+                        className="w-full @sm:w-auto"
+                      >
                         <Trash2Icon />
                         Excluir
                       </Button>
