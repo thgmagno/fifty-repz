@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { DeleteTemplateDialog } from '@/components/workouts/delete-template-dialog'
+import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
 import { listWorkoutTemplates } from '@/lib/workout-templates'
 import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
 import { startWorkoutSession } from '@/lib/actions/workout-sessions'
@@ -49,25 +50,7 @@ export default async function TreinosPage() {
       </div>
 
       {inProgressSession && (
-        <Card className="border-primary/30 bg-primary/5">
-          <CardContent className="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <p className="font-medium">
-                Treino em andamento: {inProgressSession.templateName}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Você tem uma sessão ativa. Continue de onde parou.
-              </p>
-            </div>
-            <Link
-              href={`${privateRoutes.sessions}/${inProgressSession.id}`}
-              className={buttonVariants()}
-            >
-              <PlayIcon />
-              Continuar treino
-            </Link>
-          </CardContent>
-        </Card>
+        <InProgressSessionBanner session={inProgressSession} />
       )}
 
       {templates.length === 0 ? (
@@ -136,7 +119,11 @@ export default async function TreinosPage() {
                       name="templateId"
                       value={template.id}
                     />
-                    <Button type="submit" size="sm" className="w-full @sm:w-auto">
+                    <Button
+                      type="submit"
+                      size="sm"
+                      className="w-full @sm:w-auto"
+                    >
                       <PlayIcon />
                       Iniciar
                     </Button>

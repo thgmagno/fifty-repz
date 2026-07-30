@@ -6,6 +6,7 @@ import {
   DumbbellIcon,
   HistoryIcon,
   HomeIcon,
+  LayersIcon,
   LogOut,
   PencilIcon,
   RssIcon,
@@ -33,6 +34,7 @@ const navItems = [
   { title: 'Dashboard', href: privateRoutes.dashboard, icon: HomeIcon },
   { title: 'Exercícios', href: privateRoutes.exercises, icon: DumbbellIcon },
   { title: 'Treinos', href: privateRoutes.workouts, icon: ClipboardListIcon },
+  { title: 'Programas', href: privateRoutes.programs, icon: LayersIcon },
   { title: 'Histórico', href: privateRoutes.history, icon: HistoryIcon },
 ]
 

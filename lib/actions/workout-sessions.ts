@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
 import { privateRoutes } from '@/lib/config'
+import { countLevelCompletions } from '@/lib/workout-programs'
 
 export interface LogSetFormState {
   success?: boolean
@@ -38,11 +39,13 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
     redirect(sessionPath(inProgress.id))
   }
 
+  // dono do template (custom) ou treino oficial de um programa
   const template = await prisma.workoutTemplate.findFirst({
-    where: { id: templateId, ownerId: userId },
+    where: { id: templateId, OR: [{ ownerId: userId }, { ownerId: null }] },
     select: {
       id: true,
       name: true,
+      programLevel: { select: { level: true, programId: true } },
       exercises: {
         orderBy: { position: 'asc' },
         select: {
@@ -59,6 +62,28 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
 
   if (!template || template.exercises.length === 0) {
     return
+  }
+
+  // treino de programa oficial: nível precisa estar desbloqueado (defesa
+  // além da UI, que já esconde o botão de iniciar nos níveis bloqueados)
+  if (template.programLevel && template.programLevel.level > 1) {
+    const previousLevel = await prisma.workoutProgramLevel.findUnique({
+      where: {
+        programId_level: {
+          programId: template.programLevel.programId,
+          level: template.programLevel.level - 1,
+        },
+      },
+      select: { id: true, unlockThreshold: true },
+    })
+
+    const completions = previousLevel
+      ? await countLevelCompletions(userId, previousLevel.id)
+      : 0
+
+    if (!previousLevel || completions < previousLevel.unlockThreshold) {
+      return
+    }
   }
 
   // snapshot do template no momento do início

@@ -99,10 +99,13 @@ model Exercise {
 model WorkoutTemplate {
   id String @id @default(uuid())
   name String
-  // ownerId null = template oficial do plano Fifty Repz (seed futuro)
+  // ownerId null = treino oficial de um WorkoutProgramLevel
   owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String?
-  // ordem na sequência do plano oficial; null para templates de usuário
+  // treino oficial pertence a um nível de programa; null para templates de usuário
+  programLevel WorkoutProgramLevel? @relation(fields: [programLevelId], references: [id], onDelete: Cascade)
+  programLevelId String?
+  // ordem do treino dentro do nível (A=0, B=1, ...); null para templates de usuário
   planOrder Int?
   exercises WorkoutTemplateExercise[]
   sessions WorkoutSession[]
@@ -110,6 +113,33 @@ model WorkoutTemplate {
   updatedAt DateTime @updatedAt
 
   @@index([ownerId])
+  @@index([programLevelId])
+}
+
+model WorkoutProgram {
+  id String @id @default(uuid())
+  slug String @unique
+  name String
+  description String?
+  levels WorkoutProgramLevel[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model WorkoutProgramLevel {
+  id String @id @default(uuid())
+  program WorkoutProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
+  programId String
+  // 1..N, sequência de desbloqueio dentro do programa
+  level Int
+  name String
+  description String?
+  // quantas conclusões (de qualquer treino deste nível) liberam o próximo nível
+  unlockThreshold Int @default(50)
+  templates WorkoutTemplate[]
+
+  @@unique([programId, level])
+  @@index([programId])
 }
 
 enum WorkoutSessionStatus {
