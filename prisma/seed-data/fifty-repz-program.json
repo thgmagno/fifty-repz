@@ -1,0 +1,802 @@
+{
+  "slug": "fifty-repz",
+  "name": "Fifty Repz",
+  "description": "Jornada oficial de treino em 5 níveis progressivos. Complete 50 vezes um nível para liberar o próximo.",
+  "levels": [
+    {
+      "level": 1,
+      "name": "Nível 1 — Divisão ABC",
+      "description": "Versão mais simples da divisão ABCD do nível 2: peito/ombro/tríceps, costas/bíceps e pernas. Volume moderado para aprender os movimentos com uma rotina mais variada que o treino de corpo todo.",
+      "unlockThreshold": 50,
+      "templates": [
+        {
+          "name": "Treino A — Peito, ombro e tríceps",
+          "exercises": [
+            {
+              "slug": "machine-bench-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leverage-shoulder-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "butterfly",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "machine-triceps-extension",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "3-4-sit-up",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino B — Costas e bíceps",
+          "exercises": [
+            {
+              "slug": "wide-grip-lat-pulldown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "seated-cable-rows",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "dumbbell-bicep-curl",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Pernas",
+          "exercises": [
+            {
+              "slug": "dumbbell-squat",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leg-press",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "leg-extensions",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "lying-leg-curls",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Nível 2 — Divisão ABCD",
+      "description": "Divisão em 4 treinos: peito/ombro, costas/panturrilha, pernas e braços/antebraço.",
+      "unlockThreshold": 50,
+      "templates": [
+        {
+          "name": "Treino A — Peito e ombros",
+          "exercises": [
+            {
+              "slug": "machine-bench-press",
+              "targetSets": 3,
+              "targetReps": 8,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leverage-incline-chest-press",
+              "targetSets": 3,
+              "targetReps": 8,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "butterfly",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "side-lateral-raise",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "leverage-shoulder-press",
+              "targetSets": 3,
+              "targetReps": 8,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "front-raise-and-pullover",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            }
+          ]
+        },
+        {
+          "name": "Treino B — Costas e panturrilha",
+          "exercises": [
+            {
+              "slug": "wide-grip-lat-pulldown",
+              "targetSets": 3,
+              "targetReps": 8,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "v-bar-pulldown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "seated-cable-rows",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "bent-over-two-dumbbell-row-with-palms-in",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "cable-rear-delt-fly",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 4,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Pernas",
+          "exercises": [
+            {
+              "slug": "hack-squat",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leg-extensions",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "lying-leg-curls",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-leg-curl",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "thigh-abductor",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": null
+            },
+            {
+              "slug": "thigh-adductor",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": null
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 4,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino D — Braços e antebraço",
+          "exercises": [
+            {
+              "slug": "cable-hammer-curls-rope-attachment",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "triceps-pushdown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "standing-biceps-cable-curl",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "triceps-pushdown-rope-attachment",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "dumbbell-alternate-bicep-curl",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "one-arm-supinated-dumbbell-triceps-extension",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "palms-up-barbell-wrist-curl-over-a-bench",
+              "targetSets": 2,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            },
+            {
+              "slug": "palms-down-wrist-curl-over-a-bench",
+              "targetSets": 2,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Nível 3 — Upper/Lower",
+      "description": "4 treinos por semana alternando membros superiores e inferiores, com mais volume.",
+      "unlockThreshold": 50,
+      "templates": [
+        {
+          "name": "Treino A — Superior 1",
+          "exercises": [
+            {
+              "slug": "barbell-bench-press-medium-grip",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "bent-over-barbell-row",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "standing-dumbbell-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "v-bar-pulldown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "barbell-curl",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "reverse-grip-triceps-pushdown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            }
+          ]
+        },
+        {
+          "name": "Treino B — Inferior 1",
+          "exercises": [
+            {
+              "slug": "barbell-squat",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "romanian-deadlift",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "leg-extensions",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "lying-leg-curls",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "standing-barbell-calf-raise",
+              "targetSets": 4,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "air-bike",
+              "targetSets": 3,
+              "targetReps": 20,
+              "targetRepsMax": null
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Superior 2",
+          "exercises": [
+            {
+              "slug": "incline-dumbbell-press",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "wide-grip-lat-pulldown",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "side-lateral-raise",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-cable-rows",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "hammer-curls",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "ez-bar-skullcrusher",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            }
+          ]
+        },
+        {
+          "name": "Treino D — Inferior 2",
+          "exercises": [
+            {
+              "slug": "leg-press",
+              "targetSets": 4,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "dumbbell-lunges",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "seated-leg-curl",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "thigh-abductor",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": null
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 4,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            },
+            {
+              "slug": "butt-ups",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Nível 4 — Push/Pull/Legs",
+      "description": "3 treinos de maior intensidade, separando empurrar, puxar e pernas.",
+      "unlockThreshold": 50,
+      "templates": [
+        {
+          "name": "Treino A — Push",
+          "exercises": [
+            {
+              "slug": "barbell-bench-press-medium-grip",
+              "targetSets": 5,
+              "targetReps": 6,
+              "targetRepsMax": 8
+            },
+            {
+              "slug": "standing-military-press",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "incline-dumbbell-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "side-lateral-raise",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "triceps-pushdown",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "triceps-pushdown-rope-attachment",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            }
+          ]
+        },
+        {
+          "name": "Treino B — Pull",
+          "exercises": [
+            {
+              "slug": "barbell-deadlift",
+              "targetSets": 4,
+              "targetReps": 5,
+              "targetRepsMax": 6
+            },
+            {
+              "slug": "pullups",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "bent-over-barbell-row",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "cable-rear-delt-fly",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "standing-biceps-cable-curl",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "alternate-hammer-curl",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Legs",
+          "exercises": [
+            {
+              "slug": "barbell-squat",
+              "targetSets": 5,
+              "targetReps": 6,
+              "targetRepsMax": 8
+            },
+            {
+              "slug": "romanian-deadlift",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "leg-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leg-extensions",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "lying-leg-curls",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "standing-barbell-calf-raise",
+              "targetSets": 5,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "name": "Nível 5 — Elite",
+      "description": "Divisão avançada por grupo muscular, 5 treinos, volume alto para especialização.",
+      "unlockThreshold": 50,
+      "templates": [
+        {
+          "name": "Treino A — Peito",
+          "exercises": [
+            {
+              "slug": "barbell-bench-press-medium-grip",
+              "targetSets": 5,
+              "targetReps": 6,
+              "targetRepsMax": 8
+            },
+            {
+              "slug": "incline-dumbbell-press",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "incline-dumbbell-flyes",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "butterfly",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "push-up-wide",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": null
+            }
+          ]
+        },
+        {
+          "name": "Treino B — Costas",
+          "exercises": [
+            {
+              "slug": "barbell-deadlift",
+              "targetSets": 4,
+              "targetReps": 5,
+              "targetRepsMax": 6
+            },
+            {
+              "slug": "pullups",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "bent-over-barbell-row",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "seated-cable-rows",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "straight-arm-pulldown",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Pernas",
+          "exercises": [
+            {
+              "slug": "barbell-squat",
+              "targetSets": 5,
+              "targetReps": 6,
+              "targetRepsMax": 8
+            },
+            {
+              "slug": "hack-squat",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "romanian-deadlift",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "leg-extensions",
+              "targetSets": 4,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-leg-curl",
+              "targetSets": 4,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 5,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino D — Ombros",
+          "exercises": [
+            {
+              "slug": "standing-military-press",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "arnold-dumbbell-press",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "side-lateral-raise",
+              "targetSets": 4,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "cable-rear-delt-fly",
+              "targetSets": 4,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "barbell-shrug",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            }
+          ]
+        },
+        {
+          "name": "Treino E — Braços",
+          "exercises": [
+            {
+              "slug": "barbell-curl",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "ez-bar-skullcrusher",
+              "targetSets": 4,
+              "targetReps": 8,
+              "targetRepsMax": 10
+            },
+            {
+              "slug": "hammer-curls",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "triceps-pushdown-rope-attachment",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "standing-biceps-cable-curl",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "triceps-pushdown",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3693,5 +3693,89 @@
       "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/0.jpg",
       "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Rotations_with_Straight_Bar/1.jpg"
     ]
+  },
+  {
+    "slug": "leg-extensions",
+    "name": "Cadeira extensora",
+    "nameEn": "Leg Extensions",
+    "muscleGroup": "QUADRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/1.jpg"
+    ]
+  },
+  {
+    "slug": "side-lateral-raise",
+    "name": "Elevação lateral",
+    "nameEn": "Side Lateral Raise",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": [],
+    "equipment": "DUMBBELL",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/1.jpg"
+    ]
+  },
+  {
+    "slug": "butterfly",
+    "name": "Crucifixo na máquina",
+    "nameEn": "Butterfly",
+    "muscleGroup": "CHEST",
+    "secondaryMuscles": [],
+    "equipment": "MACHINE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/1.jpg"
+    ]
+  },
+  {
+    "slug": "cable-rear-delt-fly",
+    "name": "Crucifixo inverso no cabo",
+    "nameEn": "Cable Rear Delt Fly",
+    "muscleGroup": "SHOULDERS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/1.jpg"
+    ]
+  },
+  {
+    "slug": "triceps-pushdown",
+    "name": "Tríceps na polia (barra reta)",
+    "nameEn": "Triceps Pushdown",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/1.jpg"
+    ]
+  },
+  {
+    "slug": "triceps-pushdown-rope-attachment",
+    "name": "Tríceps na polia (corda)",
+    "nameEn": "Triceps Pushdown - Rope Attachment",
+    "muscleGroup": "TRICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/1.jpg"
+    ]
+  },
+  {
+    "slug": "standing-biceps-cable-curl",
+    "name": "Rosca direta na polia",
+    "nameEn": "Standing Biceps Cable Curl",
+    "muscleGroup": "BICEPS",
+    "secondaryMuscles": [],
+    "equipment": "CABLE",
+    "imageUrls": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/1.jpg"
+    ]
   }
 ]
