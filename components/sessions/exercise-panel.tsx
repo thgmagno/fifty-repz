@@ -5,10 +5,19 @@ import { SkipForwardIcon, Trash2Icon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import {
+  AlertDialog,
+  AlertDialogClose,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog'
 import { deleteSet, toggleSkipExercise } from '@/lib/actions/workout-sessions'
 import type { WorkoutSessionExerciseDetail } from '@/lib/workout-sessions'
 import type { PendingSetEntry } from '@/lib/offline-db'
-import { formatRepTarget } from '@/lib/utils'
+import { cn, formatRepTarget } from '@/lib/utils'
 
 interface ExercisePanelProps {
   exercise: WorkoutSessionExerciseDetail
@@ -31,9 +40,19 @@ export function ExercisePanel({
 }: ExercisePanelProps) {
   const formRef = React.useRef<HTMLFormElement>(null)
   const [formError, setFormError] = React.useState<string | null>(null)
+  const [pendingExtraSet, setPendingExtraSet] = React.useState<{
+    weightKg: number | null
+    reps: number
+  } | null>(null)
 
   const setsDone = exercise.sets.length + pendingSets.length
   const isComplete = setsDone >= exercise.targetSets
+
+  function logSet(input: { weightKg: number | null; reps: number }) {
+    onLogSet({ sessionExerciseId: exercise.id, ...input })
+    onSetLogged()
+    formRef.current?.reset()
+  }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -57,14 +76,30 @@ export function ExercisePanel({
       }
     }
 
-    onLogSet({ sessionExerciseId: exercise.id, weightKg, reps })
-    onSetLogged()
-    formRef.current?.reset()
+    if (isComplete) {
+      setPendingExtraSet({ weightKg, reps })
+      return
+    }
+
+    logSet({ weightKg, reps })
+  }
+
+  const confirmExtraSet = () => {
+    if (!pendingExtraSet) return
+    logSet(pendingExtraSet)
+    setPendingExtraSet(null)
+  }
+
+  const handleExtraSetDialogOpenChange = (open: boolean) => {
+    if (!open) setPendingExtraSet(null)
   }
 
   return (
     <li
-      className="flex flex-col gap-3 rounded-md border p-3"
+      className={cn(
+        'flex flex-col gap-3 rounded-md border p-3',
+        !exercise.skipped && isComplete && 'border-primary/30 bg-primary/5',
+      )}
       data-skipped={exercise.skipped}
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -189,6 +224,27 @@ export function ExercisePanel({
         </Button>
       </form>
       {formError && <p className="text-sm text-destructive">{formError}</p>}
+
+      <AlertDialog
+        open={pendingExtraSet !== null}
+        onOpenChange={handleExtraSetDialogOpenChange}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Meta já atingida</AlertDialogTitle>
+            <AlertDialogDescription>
+              Você já registrou {setsDone} de {exercise.targetSets} séries deste
+              exercício. Quer registrar essa série extra mesmo assim?
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogClose render={<Button variant="outline" />}>
+              Cancelar
+            </AlertDialogClose>
+            <Button onClick={confirmExtraSet}>Registrar mesmo assim</Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </li>
   )
 }
