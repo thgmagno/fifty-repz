@@ -5,12 +5,12 @@
   "levels": [
     {
       "level": 1,
-      "name": "Nível 1 — Fundamentos",
-      "description": "Corpo todo, 2 treinos alternados. Foco em aprender os movimentos básicos com volume moderado.",
+      "name": "Nível 1 — Divisão ABC",
+      "description": "Versão mais simples da divisão ABCD do nível 2: peito/ombro/tríceps, costas/bíceps e pernas. Volume moderado para aprender os movimentos com uma rotina mais variada que o treino de corpo todo.",
       "unlockThreshold": 50,
       "templates": [
         {
-          "name": "Treino A — Corpo todo 1",
+          "name": "Treino A — Peito, ombro e tríceps",
           "exercises": [
             {
               "slug": "machine-bench-press",
@@ -19,26 +19,20 @@
               "targetRepsMax": 12
             },
             {
-              "slug": "wide-grip-lat-pulldown",
-              "targetSets": 3,
-              "targetReps": 10,
-              "targetRepsMax": 12
-            },
-            {
-              "slug": "leg-press",
-              "targetSets": 3,
-              "targetReps": 12,
-              "targetRepsMax": 15
-            },
-            {
               "slug": "leverage-shoulder-press",
               "targetSets": 3,
               "targetReps": 10,
               "targetRepsMax": 12
             },
             {
-              "slug": "dumbbell-bicep-curl",
-              "targetSets": 2,
+              "slug": "butterfly",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "machine-triceps-extension",
+              "targetSets": 3,
               "targetReps": 12,
               "targetRepsMax": 15
             },
@@ -51,10 +45,10 @@
           ]
         },
         {
-          "name": "Treino B — Corpo todo 2",
+          "name": "Treino B — Costas e bíceps",
           "exercises": [
             {
-              "slug": "dumbbell-squat",
+              "slug": "wide-grip-lat-pulldown",
               "targetSets": 3,
               "targetReps": 10,
               "targetRepsMax": 12
@@ -66,6 +60,35 @@
               "targetRepsMax": 12
             },
             {
+              "slug": "dumbbell-bicep-curl",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
+              "slug": "seated-calf-raise",
+              "targetSets": 3,
+              "targetReps": 15,
+              "targetRepsMax": 20
+            }
+          ]
+        },
+        {
+          "name": "Treino C — Pernas",
+          "exercises": [
+            {
+              "slug": "dumbbell-squat",
+              "targetSets": 3,
+              "targetReps": 10,
+              "targetRepsMax": 12
+            },
+            {
+              "slug": "leg-press",
+              "targetSets": 3,
+              "targetReps": 12,
+              "targetRepsMax": 15
+            },
+            {
               "slug": "leg-extensions",
               "targetSets": 3,
               "targetReps": 12,
@@ -74,12 +97,6 @@
             {
               "slug": "lying-leg-curls",
               "targetSets": 3,
-              "targetReps": 12,
-              "targetRepsMax": 15
-            },
-            {
-              "slug": "machine-triceps-extension",
-              "targetSets": 2,
               "targetReps": 12,
               "targetRepsMax": 15
             },
