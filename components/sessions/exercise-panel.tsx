@@ -1,50 +1,66 @@
 'use client'
 
 import * as React from 'react'
-import { useActionState } from 'react'
 import { SkipForwardIcon, Trash2Icon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import {
-  logSet,
-  deleteSet,
-  toggleSkipExercise,
-  type LogSetFormState,
-} from '@/lib/actions/workout-sessions'
+import { deleteSet, toggleSkipExercise } from '@/lib/actions/workout-sessions'
 import type { WorkoutSessionExerciseDetail } from '@/lib/workout-sessions'
+import type { PendingSetEntry } from '@/lib/offline-db'
 import { formatRepTarget } from '@/lib/utils'
 
 interface ExercisePanelProps {
   exercise: WorkoutSessionExerciseDetail
   index: number
   onSetLogged: () => void
+  pendingSets: PendingSetEntry[]
+  onLogSet: (input: {
+    sessionExerciseId: string
+    weightKg: number | null
+    reps: number
+  }) => void
 }
-
-const logSetInitialState: LogSetFormState = {}
 
 export function ExercisePanel({
   exercise,
   index,
   onSetLogged,
+  pendingSets,
+  onLogSet,
 }: ExercisePanelProps) {
   const formRef = React.useRef<HTMLFormElement>(null)
-  const [state, formAction, pending] = useActionState(
-    logSet,
-    logSetInitialState,
-  )
+  const [formError, setFormError] = React.useState<string | null>(null)
 
-  React.useEffect(() => {
-    if (state.success) {
-      formRef.current?.reset()
-      onSetLogged()
-    }
-    // onSetLogged é estável o suficiente aqui: só precisa disparar por novo log
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.loggedAt])
-
-  const setsDone = exercise.sets.length
+  const setsDone = exercise.sets.length + pendingSets.length
   const isComplete = setsDone >= exercise.targetSets
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setFormError(null)
+
+    const formData = new FormData(event.currentTarget)
+    const rawReps = String(formData.get('reps') ?? '')
+    const reps = Number(rawReps)
+    if (!Number.isInteger(reps) || reps < 1 || reps > 200) {
+      setFormError('Informe repetições entre 1 e 200.')
+      return
+    }
+
+    const rawWeight = String(formData.get('weightKg') ?? '').replace(',', '.')
+    let weightKg: number | null = null
+    if (rawWeight !== '') {
+      weightKg = Number(rawWeight)
+      if (Number.isNaN(weightKg) || weightKg < 0 || weightKg > 1000) {
+        setFormError('Peso precisa estar entre 0 e 1000 kg.')
+        return
+      }
+    }
+
+    onLogSet({ sessionExerciseId: exercise.id, weightKg, reps })
+    onSetLogged()
+    formRef.current?.reset()
+  }
 
   return (
     <li
@@ -87,7 +103,7 @@ export function ExercisePanel({
         </div>
       </div>
 
-      {exercise.sets.length > 0 && (
+      {(exercise.sets.length > 0 || pendingSets.length > 0) && (
         <ul className="flex flex-col gap-1">
           {exercise.sets.map((set) => (
             <li
@@ -112,15 +128,27 @@ export function ExercisePanel({
               </form>
             </li>
           ))}
+          {pendingSets.map((entry, pendingIndex) => (
+            <li
+              key={entry.localId}
+              className="flex items-center justify-between gap-2 text-sm text-muted-foreground"
+            >
+              <span>
+                Série {exercise.sets.length + pendingIndex + 1}:{' '}
+                {entry.weightKg ? `${entry.weightKg}kg × ` : ''}
+                {entry.reps} reps
+              </span>
+              <Badge variant="outline">Sincronizando…</Badge>
+            </li>
+          ))}
         </ul>
       )}
 
       <form
         ref={formRef}
-        action={formAction}
+        onSubmit={handleSubmit}
         className="flex flex-wrap items-end gap-2"
       >
-        <input type="hidden" name="sessionExerciseId" value={exercise.id} />
         <div className="flex flex-col gap-1">
           <label
             htmlFor={`weight-${exercise.id}`}
@@ -156,19 +184,11 @@ export function ExercisePanel({
             className="h-8 w-16"
           />
         </div>
-        <Button type="submit" size="sm" disabled={pending}>
-          {pending ? 'Registrando…' : 'Registrar série'}
+        <Button type="submit" size="sm">
+          Registrar série
         </Button>
       </form>
-      {state.errors?.weightKg && (
-        <p className="text-sm text-destructive">{state.errors.weightKg[0]}</p>
-      )}
-      {state.errors?.reps && (
-        <p className="text-sm text-destructive">{state.errors.reps[0]}</p>
-      )}
-      {state.errors?.form && (
-        <p className="text-sm text-destructive">{state.errors.form[0]}</p>
-      )}
+      {formError && <p className="text-sm text-destructive">{formError}</p>}
     </li>
   )
 }
