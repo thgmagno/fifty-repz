@@ -83,7 +83,6 @@ export function ExerciseFormDialog({
               name="name"
               defaultValue={exercise?.name}
               placeholder="Ex.: Supino com pegada invertida"
-              required
               maxLength={80}
             />
             {state.errors?.name && (
@@ -92,11 +91,7 @@ export function ExerciseFormDialog({
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="exercise-muscle-group">Grupo muscular</Label>
-            <Select
-              name="muscleGroup"
-              defaultValue={exercise?.muscleGroup}
-              required
-            >
+            <Select name="muscleGroup" defaultValue={exercise?.muscleGroup}>
               <SelectTrigger id="exercise-muscle-group">
                 <SelectValue placeholder="Selecione…" />
               </SelectTrigger>
@@ -116,11 +111,7 @@ export function ExerciseFormDialog({
           </div>
           <div className="flex flex-col gap-2">
             <Label htmlFor="exercise-equipment">Equipamento</Label>
-            <Select
-              name="equipment"
-              defaultValue={exercise?.equipment}
-              required
-            >
+            <Select name="equipment" defaultValue={exercise?.equipment}>
               <SelectTrigger id="exercise-equipment">
                 <SelectValue placeholder="Selecione…" />
               </SelectTrigger>

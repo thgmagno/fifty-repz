@@ -211,7 +211,6 @@ export function WorkoutTemplateBuilder({
           name="name"
           defaultValue={template?.name}
           placeholder="Ex.: Treino A — Peito e tríceps"
-          required
           maxLength={80}
         />
         {state.errors?.name && (

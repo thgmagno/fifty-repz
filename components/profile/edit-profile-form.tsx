@@ -39,13 +39,10 @@ export function EditProfileForm({ username, bio }: EditProfileFormProps) {
           name="username"
           defaultValue={username}
           placeholder="Ex.: joao-silva"
-          required
           maxLength={30}
         />
         {state.errors?.username && (
-          <p className="text-sm text-destructive">
-            {state.errors.username[0]}
-          </p>
+          <p className="text-sm text-destructive">{state.errors.username[0]}</p>
         )}
       </div>
       <div className="flex flex-col gap-2">

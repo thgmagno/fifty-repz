@@ -30,7 +30,6 @@ export function CommentForm({ sessionId }: CommentFormProps) {
         placeholder="Deixe um comentário…"
         maxLength={500}
         rows={2}
-        required
       />
       {state.errors?.body && (
         <p className="text-sm text-destructive">{state.errors.body[0]}</p>
