@@ -108,6 +108,7 @@ export function ExerciseFormDialog({
               name="muscleGroup"
               value={muscleGroup}
               onValueChange={(value) => setMuscleGroup(value)}
+              items={muscleGroupLabels}
             >
               <SelectTrigger id="exercise-muscle-group">
                 <SelectValue placeholder="Selecione…" />
@@ -132,6 +133,7 @@ export function ExerciseFormDialog({
               name="equipment"
               value={equipment}
               onValueChange={(value) => setEquipment(value)}
+              items={equipmentLabels}
             >
               <SelectTrigger id="exercise-equipment">
                 <SelectValue placeholder="Selecione…" />
