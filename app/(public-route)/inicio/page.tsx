@@ -9,10 +9,11 @@ export default async function Inicio({
   searchParams: Promise<{ error?: string }>
 }) {
   const { error } = await searchParams
+  const showPreviewLogin = process.env.VERCEL_ENV === 'preview'
 
   return (
     <main className="flex min-h-svh flex-col">
-      <HeroSection error={error} />
+      <HeroSection error={error} showPreviewLogin={showPreviewLogin} />
       <FeatureCards />
       <OpenSourceSection />
       <LandingFooter />
