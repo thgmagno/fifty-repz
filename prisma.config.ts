@@ -3,6 +3,20 @@
 import 'dotenv/config'
 import { defineConfig } from 'prisma/config'
 
+// As migrações rodam pela conexão direta do banco, nunca pela pooled.
+// O pooler do Neon (PgBouncer em transaction mode) não preserva o advisory
+// lock que o Prisma Migrate usa, então dois deploys simultâneos ficam se
+// esperando até estourar o timeout de conexão (P1002 "database server was
+// reached but timed out"). Em runtime seguimos na pooled (lib/prisma.ts),
+// que é o certo para serverless.
+// DATABASE_URL_UNPOOLED é a variável que a integração Neon↔Vercel já cria;
+// DIRECT_DATABASE_URL fica como override manual. Sem nenhuma das duas
+// (ex.: Postgres local), cai no DATABASE_URL mesmo.
+const migrationsUrl =
+  process.env.DIRECT_DATABASE_URL ??
+  process.env.DATABASE_URL_UNPOOLED ??
+  process.env.DATABASE_URL
+
 export default defineConfig({
   schema: 'prisma/schema.prisma',
   migrations: {
@@ -10,6 +24,6 @@ export default defineConfig({
     seed: 'tsx prisma/seed.ts',
   },
   datasource: {
-    url: process.env.DATABASE_URL,
+    url: migrationsUrl,
   },
 })
