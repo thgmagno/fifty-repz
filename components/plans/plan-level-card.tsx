@@ -11,17 +11,17 @@ import {
 import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import type { ProgramWithProgress } from '@/lib/workout-programs'
 
-interface ProgramLevelCardProps {
+interface PlanLevelCardProps {
   level: ProgramWithProgress['levels'][number]
   // conclusões necessárias no nível anterior para desbloquear este; null
   // para o primeiro nível, que já vem sempre desbloqueado
   unlockRequirement: number | null
 }
 
-export function ProgramLevelCard({
+export function PlanLevelCard({
   level,
   unlockRequirement,
-}: ProgramLevelCardProps) {
+}: PlanLevelCardProps) {
   return (
     <Card className={!level.unlocked ? 'opacity-60' : undefined}>
       <CardHeader>

@@ -4,6 +4,7 @@ import { Page } from '@/components/page'
 import { WorkoutTemplateBuilder } from '@/components/workouts/workout-template-builder'
 import { updateWorkoutTemplate } from '@/lib/actions/workout-templates'
 import { listExerciseOptions } from '@/lib/exercises'
+import { listUserPlanOptions } from '@/lib/workout-plans'
 import { getWorkoutTemplate } from '@/lib/workout-templates'
 
 export const metadata: Metadata = {
@@ -16,12 +17,13 @@ export default async function EditarTreinoPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const [template, exerciseOptions] = await Promise.all([
+  const [template, exerciseOptions, plans] = await Promise.all([
     getWorkoutTemplate(id),
     listExerciseOptions(),
+    listUserPlanOptions(),
   ])
 
-  if (!template) {
+  if (!template || plans.length === 0) {
     notFound()
   }
 
@@ -36,6 +38,11 @@ export default async function EditarTreinoPage({
       <WorkoutTemplateBuilder
         action={updateWorkoutTemplate}
         exerciseOptions={exerciseOptions}
+        plans={plans}
+        defaultPlanId={
+          plans.find((plan) => plan.id === template.programId)?.id ??
+          plans[0].id
+        }
         template={{
           id: template.id,
           name: template.name,

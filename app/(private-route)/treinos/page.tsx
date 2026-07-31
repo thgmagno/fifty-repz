@@ -1,51 +1,48 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PencilIcon, PlayIcon, PlusIcon, Trash2Icon } from 'lucide-react'
+import { LayersIcon, PlayIcon, PlusIcon } from 'lucide-react'
 import { Page } from '@/components/page'
-import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { DeleteTemplateDialog } from '@/components/workouts/delete-template-dialog'
 import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
-import { listWorkoutTemplates } from '@/lib/workout-templates'
+import { WorkoutTemplateCard } from '@/components/workouts/workout-template-card'
+import { listUserPlans } from '@/lib/workout-plans'
+import { listProgramsWithProgress } from '@/lib/workout-programs'
 import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
 import { startWorkoutSession } from '@/lib/actions/workout-sessions'
-import { muscleGroupLabels } from '@/lib/exercise-labels'
 import { privateRoutes } from '@/lib/config'
-import { cn, formatRepTarget } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Treinos',
 }
 
 export default async function TreinosPage() {
-  const [templates, inProgressSession] = await Promise.all([
-    listWorkoutTemplates(),
+  const [userPlans, officialPlans, inProgressSession] = await Promise.all([
+    listUserPlans(),
+    listProgramsWithProgress(),
     getInProgressWorkoutSession(),
   ])
 
+  const userPlansWithTemplates = userPlans.filter(
+    (plan) => plan.templates.length > 0,
+  )
+
   return (
     <Page>
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold">Treinos</h1>
           <p className="text-sm text-muted-foreground">
-            Seus templates de treino, prontos para iniciar uma sessão.
+            Seus treinos, agrupados pelo plano a que pertencem. Escolha um e
+            comece.
           </p>
         </div>
+        {/* treino nasce dentro de um plano, então o atalho leva para lá */}
         <Link
-          href={`${privateRoutes.workouts}/novo`}
-          className={buttonVariants()}
+          href={privateRoutes.plans}
+          className={buttonVariants({ variant: 'secondary' })}
         >
-          <PlusIcon />
-          Novo treino
+          <LayersIcon />
+          Planos de treino
         </Link>
       </div>
 
@@ -53,109 +50,89 @@ export default async function TreinosPage() {
         <InProgressSessionBanner session={inProgressSession} />
       )}
 
-      {templates.length === 0 ? (
-        <p className="rounded-md border border-dashed py-12 text-center text-muted-foreground">
-          Você ainda não tem treinos. Monte o primeiro!
-        </p>
-      ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {templates.map((template) => {
-            const muscleGroups = [
-              ...new Set(
-                template.exercises.map(
-                  (item) => muscleGroupLabels[item.exercise.muscleGroup],
-                ),
-              ),
-            ]
-
-            return (
-              <Card key={template.id} className="@container">
-                <CardHeader>
-                  <CardTitle>{template.name}</CardTitle>
-                  <CardDescription>
-                    {template.exercises.length}{' '}
-                    {template.exercises.length === 1
-                      ? 'exercício'
-                      : 'exercícios'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col gap-3">
-                  <ol className="flex flex-col gap-1 text-sm">
-                    {template.exercises.slice(0, 5).map((item) => (
-                      <li
-                        key={item.id}
-                        className="flex items-baseline justify-between gap-2"
-                      >
-                        <span className="min-w-0 truncate">
-                          {item.exercise.name}
-                        </span>
-                        <span className="shrink-0 text-xs text-muted-foreground">
-                          {formatRepTarget(
-                            item.targetSets,
-                            item.targetReps,
-                            item.targetRepsMax,
-                          )}
-                        </span>
-                      </li>
-                    ))}
-                    {template.exercises.length > 5 && (
-                      <li className="text-xs text-muted-foreground">
-                        + {template.exercises.length - 5} exercícios
-                      </li>
-                    )}
-                  </ol>
-                  <div className="flex flex-wrap gap-1">
-                    {muscleGroups.slice(0, 4).map((group) => (
-                      <Badge key={group} variant="secondary">
-                        {group}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="flex-col items-stretch gap-2 @sm:flex-row @sm:items-center @sm:justify-end">
-                  <form action={startWorkoutSession} className="@sm:mr-auto">
-                    <input
-                      type="hidden"
-                      name="templateId"
-                      value={template.id}
-                    />
-                    <Button
-                      type="submit"
-                      size="sm"
-                      className="w-full @sm:w-auto"
-                    >
-                      <PlayIcon />
-                      Iniciar
-                    </Button>
-                  </form>
-                  <Link
-                    href={`${privateRoutes.workouts}/${template.id}/editar`}
-                    className={cn(
-                      buttonVariants({ variant: 'secondary', size: 'sm' }),
-                      'w-full @sm:w-auto',
-                    )}
-                  >
-                    <PencilIcon />
-                    Editar
+      {officialPlans.map((plan) =>
+        plan.levels
+          .filter((level) => level.unlocked && level.templates.length > 0)
+          .map((level) => (
+            <section key={level.id} className="flex flex-col gap-3">
+              <div>
+                <h2 className="text-xl font-bold">
+                  {plan.name} · {level.name}
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  Treinos do plano oficial. Para ver os níveis e o progresso,
+                  abra{' '}
+                  <Link href={privateRoutes.plans} className="underline">
+                    Planos de treino
                   </Link>
-                  <DeleteTemplateDialog
-                    templateId={template.id}
-                    templateName={template.name}
-                    trigger={
-                      <Button
-                        variant="destructive"
-                        size="sm"
-                        className="w-full @sm:w-auto"
-                      >
-                        <Trash2Icon />
-                        Excluir
+                  .
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                {level.templates.map((template) => (
+                  <div
+                    key={template.id}
+                    className="flex items-center justify-between gap-2 rounded-md border p-2.5 text-sm"
+                  >
+                    <div>
+                      <p className="font-medium">{template.name}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {template.exercises.length}{' '}
+                        {template.exercises.length === 1
+                          ? 'exercício'
+                          : 'exercícios'}
+                      </p>
+                    </div>
+                    <form action={startWorkoutSession}>
+                      <input
+                        type="hidden"
+                        name="templateId"
+                        value={template.id}
+                      />
+                      <Button type="submit" size="sm">
+                        <PlayIcon />
+                        Iniciar
                       </Button>
-                    }
-                  />
-                </CardFooter>
-              </Card>
-            )
-          })}
+                    </form>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )),
+      )}
+
+      {userPlansWithTemplates.map((plan) => (
+        <section key={plan.id} className="flex flex-col gap-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-xl font-bold">{plan.name}</h2>
+            <Link
+              href={`${privateRoutes.plans}/${plan.id}`}
+              className={buttonVariants({ variant: 'ghost', size: 'sm' })}
+            >
+              Abrir plano
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {plan.templates.map((template) => (
+              <WorkoutTemplateCard key={template.id} template={template} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {userPlansWithTemplates.length === 0 && (
+        <div className="flex flex-col items-center gap-3 rounded-md border border-dashed py-10 text-center">
+          <p className="max-w-sm text-sm text-muted-foreground">
+            Você ainda não montou treinos próprios. Todo treino pertence a um
+            plano — comece criando um.
+          </p>
+          <Link
+            href={`${privateRoutes.plans}/novo?next=treino`}
+            className={buttonVariants()}
+          >
+            <PlusIcon />
+            Criar plano e montar treino
+          </Link>
         </div>
       )}
     </Page>

@@ -10,6 +10,7 @@ const RESERVED_USERNAMES = new Set([
   'inicio',
   'exercicios',
   'treinos',
+  'planos',
   'programas',
   'sessoes',
   'historico',

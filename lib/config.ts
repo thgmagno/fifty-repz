@@ -17,7 +17,9 @@ export const privateRoutes = {
   dashboard: '/',
   exercises: '/exercicios',
   workouts: '/treinos',
-  programs: '/programas',
+  // "Programas" virou "Planos de treino": um plano reúne treinos, que reúnem
+  // exercícios
+  plans: '/planos',
   sessions: '/sessoes',
   history: '/historico',
   profile: '/perfil',

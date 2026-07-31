@@ -21,8 +21,16 @@ import {
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import type { WorkoutTemplateFormState } from '@/lib/actions/workout-templates'
 import type { ExerciseOption } from '@/lib/exercises'
+import type { UserPlanOption } from '@/lib/workout-plans'
 import { muscleGroupLabels } from '@/lib/exercise-labels'
 
 interface BuilderItem {
@@ -44,6 +52,10 @@ interface WorkoutTemplateBuilderProps {
     formData: FormData,
   ) => Promise<WorkoutTemplateFormState>
   exerciseOptions: ExerciseOption[]
+  // todo treino pertence a um plano do usuário; a lista nunca chega vazia
+  // aqui (as páginas mandam criar um plano antes)
+  plans: UserPlanOption[]
+  defaultPlanId: string
   template?: {
     id: string
     name: string
@@ -141,9 +153,16 @@ function ExercisePicker({
 export function WorkoutTemplateBuilder({
   action,
   exerciseOptions,
+  plans,
+  defaultPlanId,
   template,
 }: WorkoutTemplateBuilderProps) {
   const [name, setName] = React.useState(template?.name ?? '')
+  const [planId, setPlanId] = React.useState(defaultPlanId)
+  const planItems = React.useMemo(
+    () => Object.fromEntries(plans.map((plan) => [plan.id, plan.name])),
+    [plans],
+  )
   const [items, setItems] = React.useState<BuilderRow[]>(() =>
     (template?.items ?? []).map((item) => ({
       ...item,
@@ -217,6 +236,33 @@ export function WorkoutTemplateBuilder({
         />
         {state.errors?.name && (
           <p className="text-sm text-destructive">{state.errors.name[0]}</p>
+        )}
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <Label htmlFor="template-plan">Plano de treino</Label>
+        <Select
+          name="planId"
+          value={planId}
+          onValueChange={(value) => setPlanId(value ?? defaultPlanId)}
+          items={planItems}
+        >
+          <SelectTrigger id="template-plan">
+            <SelectValue placeholder="Selecione…" />
+          </SelectTrigger>
+          <SelectContent>
+            {plans.map((plan) => (
+              <SelectItem key={plan.id} value={plan.id}>
+                {plan.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        <p className="text-xs text-muted-foreground">
+          Todo treino pertence a um plano.
+        </p>
+        {state.errors?.planId && (
+          <p className="text-sm text-destructive">{state.errors.planId[0]}</p>
         )}
       </div>
 
