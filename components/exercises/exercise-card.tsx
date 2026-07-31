@@ -11,39 +11,53 @@ import {
 } from '@/components/ui/card'
 import { ExerciseFormDialog } from '@/components/exercises/exercise-form-dialog'
 import { DeleteExerciseDialog } from '@/components/exercises/delete-exercise-dialog'
+import { ExerciseDetailDialog } from '@/components/exercises/exercise-detail-dialog'
 import { equipmentLabels, muscleGroupLabels } from '@/lib/exercise-labels'
 import type { ExerciseListItem } from '@/lib/exercises'
 
 export function ExerciseCard({ exercise }: { exercise: ExerciseListItem }) {
   return (
     <Card className="gap-3 overflow-hidden pt-0">
-      <div className="relative aspect-3/2 w-full bg-muted">
-        {exercise.imageUrls[0] ? (
-          <Image
-            src={exercise.imageUrls[0]}
-            alt={exercise.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
-          />
-        ) : (
-          <div className="flex h-full items-center justify-center text-4xl text-muted-foreground">
-            🏋️
+      <ExerciseDetailDialog
+        exercise={exercise}
+        trigger={
+          <div
+            role="button"
+            tabIndex={0}
+            className="flex cursor-pointer flex-col gap-3 text-left focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+          >
+            <div className="relative aspect-3/2 w-full bg-muted">
+              {exercise.imageUrls[0] ? (
+                <Image
+                  src={exercise.imageUrls[0]}
+                  alt={exercise.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="flex h-full items-center justify-center text-4xl text-muted-foreground">
+                  🏋️
+                </div>
+              )}
+            </div>
+            <CardHeader>
+              <CardTitle title={exercise.nameEn ?? undefined}>
+                {exercise.name}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-1.5">
+              <Badge variant="secondary">
+                {muscleGroupLabels[exercise.muscleGroup]}
+              </Badge>
+              <Badge variant="outline">
+                {equipmentLabels[exercise.equipment]}
+              </Badge>
+              {exercise.isCustom && <Badge>Custom</Badge>}
+            </CardContent>
           </div>
-        )}
-      </div>
-      <CardHeader>
-        <CardTitle title={exercise.nameEn ?? undefined}>
-          {exercise.name}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-wrap gap-1.5">
-        <Badge variant="secondary">
-          {muscleGroupLabels[exercise.muscleGroup]}
-        </Badge>
-        <Badge variant="outline">{equipmentLabels[exercise.equipment]}</Badge>
-        {exercise.isCustom && <Badge>Custom</Badge>}
-      </CardContent>
+        }
+      />
       {exercise.isCustom && (
         <CardFooter className="justify-end">
           <ExerciseFormDialog

@@ -43,6 +43,7 @@ export async function listExercises({
       secondaryMuscles: true,
       equipment: true,
       imageUrls: true,
+      instructions: true,
       isCustom: true,
       ownerId: true,
     },
