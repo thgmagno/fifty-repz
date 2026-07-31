@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { RegisterServiceWorker } from '@/components/register-service-worker'
+import { SplashScreen } from '@/components/splash-screen'
 import { cn } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#171717',
+  themeColor: '#14120f',
 }
 
 export default function RootLayout({
@@ -78,15 +79,14 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <SplashScreen />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider>
-            {children}
-          </TooltipProvider>
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
         <RegisterServiceWorker />
       </body>
