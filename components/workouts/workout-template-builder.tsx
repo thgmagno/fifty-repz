@@ -101,7 +101,7 @@ function ExercisePicker({
         <DialogHeader>
           <DialogTitle>Adicionar exercício</DialogTitle>
           <DialogDescription>
-            Busque no catálogo e nos seus exercícios custom.
+            Busque no catálogo do app e nos exercícios que você criou.
           </DialogDescription>
         </DialogHeader>
         <div className="relative">
@@ -135,7 +135,7 @@ function ExercisePicker({
                 <span className="min-w-0 truncate">
                   {option.name}
                   {option.isCustom && (
-                    <Badge className="ml-1.5 align-middle">Custom</Badge>
+                    <Badge className="ml-1.5 align-middle">Meu</Badge>
                   )}
                 </span>
                 <span className="shrink-0 text-xs text-muted-foreground">
@@ -307,7 +307,7 @@ export function WorkoutTemplateBuilder({
                 />
               </label>
               <label className="flex items-center gap-1 text-xs text-muted-foreground">
-                Reps
+                Repetições
                 <Input
                   type="number"
                   min={1}

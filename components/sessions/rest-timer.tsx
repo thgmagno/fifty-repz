@@ -130,7 +130,7 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
           )}
           <div className="flex items-center gap-1.5">
             <Label htmlFor="rest-duration" className="text-xs">
-              Duração (s)
+              Descanso (segundos)
             </Label>
             <Input
               id="rest-duration"

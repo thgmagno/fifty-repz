@@ -82,8 +82,8 @@ export function ExerciseFormDialog({
           </DialogTitle>
           <DialogDescription>
             {isEditing
-              ? 'Altere os dados do seu exercício custom.'
-              : 'Crie um exercício custom quando não encontrar no catálogo.'}
+              ? 'Altere os dados do exercício que você criou.'
+              : 'Crie o seu quando não encontrar o exercício no catálogo.'}
           </DialogDescription>
         </DialogHeader>
         <form action={formAction} className="flex flex-col gap-4">
