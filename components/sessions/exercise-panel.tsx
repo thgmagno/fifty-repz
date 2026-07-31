@@ -215,7 +215,7 @@ export function ExercisePanel({
             htmlFor={`reps-${exercise.id}`}
             className="text-xs text-muted-foreground"
           >
-            Reps
+            Repetições
           </label>
           <Input
             id={`reps-${exercise.id}`}

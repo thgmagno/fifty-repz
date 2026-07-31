@@ -53,7 +53,7 @@ export function ExerciseCard({ exercise }: { exercise: ExerciseListItem }) {
               <Badge variant="outline">
                 {equipmentLabels[exercise.equipment]}
               </Badge>
-              {exercise.isCustom && <Badge>Custom</Badge>}
+              {exercise.isCustom && <Badge>Criado por você</Badge>}
             </CardContent>
           </div>
         }

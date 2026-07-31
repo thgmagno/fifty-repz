@@ -33,7 +33,7 @@ import type { getUser } from '@/lib/dal'
 // A ordem segue a hierarquia do app: um plano reúne treinos, e um treino
 // reúne exercícios.
 const navItems = [
-  { title: 'Dashboard', href: privateRoutes.dashboard, icon: HomeIcon },
+  { title: 'Início', href: privateRoutes.dashboard, icon: HomeIcon },
   { title: 'Planos de treino', href: privateRoutes.plans, icon: LayersIcon },
   { title: 'Treinos', href: privateRoutes.workouts, icon: ClipboardListIcon },
   { title: 'Exercícios', href: privateRoutes.exercises, icon: DumbbellIcon },

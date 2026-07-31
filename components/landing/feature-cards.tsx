@@ -13,7 +13,7 @@ const features = [
     icon: ClipboardListIcon,
     title: 'Treinos sob medida',
     description:
-      'Monte seus próprios templates com exercícios, séries e faixas de repetição.',
+      'Monte seus próprios treinos com exercícios, séries e faixas de repetição.',
   },
   {
     icon: DumbbellIcon,

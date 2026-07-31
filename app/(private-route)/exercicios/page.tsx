@@ -39,7 +39,7 @@ export default async function ExerciciosPage({
         <div>
           <h1 className="text-2xl font-bold">Exercícios</h1>
           <p className="text-sm text-muted-foreground">
-            Catálogo padronizado + seus exercícios custom.
+            O catálogo do app mais os exercícios que você criou.
           </p>
         </div>
         <ExerciseFormDialog
@@ -89,8 +89,7 @@ export default async function ExerciciosPage({
 
       {exercises.length === 0 ? (
         <p className="py-10 text-center text-muted-foreground">
-          Nenhum exercício encontrado. Ajuste a busca ou crie um exercício
-          custom.
+          Nenhum exercício encontrado. Ajuste a busca ou crie o seu.
         </p>
       ) : (
         <>
