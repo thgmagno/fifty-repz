@@ -30,6 +30,7 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   exercises Exercise[]
+  workoutPrograms WorkoutProgram[]
   workoutTemplates WorkoutTemplate[]
   workoutSessions WorkoutSession[]
   // edges onde este usuário é o follower (quem ele segue)
@@ -109,12 +110,18 @@ model Exercise {
   @@index([ownerId])
 }
 
+// Todo treino pertence a um plano: os oficiais pelo nível do plano oficial
+// (programLevelId), os do usuário direto pelo plano dele (programId).
 model WorkoutTemplate {
   id String @id @default(uuid())
   name String
   // ownerId null = treino oficial de um WorkoutProgramLevel
   owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String?
+  // plano do usuário ao qual o treino pertence; null nos treinos oficiais,
+  // que chegam ao plano pelo nível
+  program WorkoutProgram? @relation(fields: [programId], references: [id], onDelete: Cascade)
+  programId String?
   // treino oficial pertence a um nível de programa; null para templates de usuário
   programLevel WorkoutProgramLevel? @relation(fields: [programLevelId], references: [id], onDelete: Cascade)
   programLevelId String?
@@ -126,17 +133,26 @@ model WorkoutTemplate {
   updatedAt DateTime @updatedAt
 
   @@index([ownerId])
+  @@index([programId])
   @@index([programLevelId])
 }
 
+// Plano de treino: oficial (ownerId null, com níveis e slug do seed) ou
+// criado pelo usuário (ownerId preenchido, com treinos diretos)
 model WorkoutProgram {
   id String @id @default(uuid())
-  slug String @unique
+  // só os planos oficiais têm slug (chave estável do seed)
+  slug String? @unique
   name String
   description String?
+  owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId String?
   levels WorkoutProgramLevel[]
+  templates WorkoutTemplate[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@index([ownerId])
 }
 
 model WorkoutProgramLevel {

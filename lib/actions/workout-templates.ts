@@ -10,6 +10,7 @@ import { privateRoutes } from '@/lib/config'
 export interface WorkoutTemplateFormState {
   errors?: {
     name?: string[]
+    planId?: string[]
     items?: string[]
     form?: string[]
   }
@@ -34,6 +35,8 @@ const templateSchema = z.object({
     .trim()
     .min(2, 'O nome precisa ter pelo menos 2 caracteres.')
     .max(80, 'O nome pode ter no máximo 80 caracteres.'),
+  // todo treino pertence a um plano: não existe treino avulso
+  planId: z.uuid('Escolha um plano de treino.'),
   items: z
     .array(itemSchema)
     .min(1, 'Adicione pelo menos um exercício ao treino.')
@@ -50,6 +53,7 @@ async function parseTemplateForm(userId: string, formData: FormData) {
 
   const parsed = templateSchema.safeParse({
     name: formData.get('name'),
+    planId: formData.get('planId'),
     items: rawItems,
   })
 
@@ -57,7 +61,24 @@ async function parseTemplateForm(userId: string, formData: FormData) {
     const { fieldErrors } = z.flattenError(parsed.error)
     return {
       ok: false as const,
-      errors: { name: fieldErrors.name, items: fieldErrors.items },
+      errors: {
+        name: fieldErrors.name,
+        planId: fieldErrors.planId,
+        items: fieldErrors.items,
+      },
+    }
+  }
+
+  // o plano precisa ser do próprio usuário
+  const plan = await prisma.workoutProgram.findFirst({
+    where: { id: parsed.data.planId, ownerId: userId },
+    select: { id: true },
+  })
+
+  if (!plan) {
+    return {
+      ok: false as const,
+      errors: { planId: ['Escolha um plano de treino seu.'] },
     }
   }
 
@@ -96,6 +117,7 @@ export async function createWorkoutTemplate(
     data: {
       name: parsed.data.name,
       ownerId: userId,
+      programId: parsed.data.planId,
       exercises: {
         create: parsed.data.items.map((item, index) => ({
           exerciseId: item.exerciseId,
@@ -109,7 +131,9 @@ export async function createWorkoutTemplate(
   })
 
   revalidatePath(privateRoutes.workouts)
-  return redirect(privateRoutes.workouts)
+  revalidatePath(`${privateRoutes.plans}/${parsed.data.planId}`)
+  // o treino vive dentro do plano, então é para lá que o fluxo volta
+  return redirect(`${privateRoutes.plans}/${parsed.data.planId}`)
 }
 
 export async function updateWorkoutTemplate(
@@ -145,6 +169,8 @@ export async function updateWorkoutTemplate(
       where: { id },
       data: {
         name: parsed.data.name,
+        // o treino pode ser movido para outro plano do usuário
+        programId: parsed.data.planId,
         exercises: {
           create: parsed.data.items.map((item, index) => ({
             exerciseId: item.exerciseId,
@@ -159,7 +185,9 @@ export async function updateWorkoutTemplate(
   ])
 
   revalidatePath(privateRoutes.workouts)
-  return redirect(privateRoutes.workouts)
+  revalidatePath(`${privateRoutes.plans}/${parsed.data.planId}`)
+  // o treino vive dentro do plano, então é para lá que o fluxo volta
+  return redirect(`${privateRoutes.plans}/${parsed.data.planId}`)
 }
 
 export async function deleteWorkoutTemplate(formData: FormData): Promise<void> {
@@ -171,9 +199,19 @@ export async function deleteWorkoutTemplate(formData: FormData): Promise<void> {
   }
 
   // ownership garantido na própria query
-  await prisma.workoutTemplate.deleteMany({
+  const template = await prisma.workoutTemplate.findFirst({
     where: { id, ownerId: userId },
+    select: { programId: true },
   })
 
+  if (!template) {
+    return
+  }
+
+  await prisma.workoutTemplate.delete({ where: { id } })
+
   revalidatePath(privateRoutes.workouts)
+  if (template.programId) {
+    revalidatePath(`${privateRoutes.plans}/${template.programId}`)
+  }
 }

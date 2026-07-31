@@ -14,10 +14,13 @@ export async function countLevelCompletions(userId: string, levelId: string) {
   })
 }
 
+// Planos oficiais do app: sem dono, organizados em níveis com progressão.
+// Os planos criados por usuários ficam em lib/workout-plans.ts.
 export async function listProgramsWithProgress() {
   const { userId } = await verifySession()
 
   const programs = await prisma.workoutProgram.findMany({
+    where: { ownerId: null },
     orderBy: { createdAt: 'asc' },
     select: {
       id: true,

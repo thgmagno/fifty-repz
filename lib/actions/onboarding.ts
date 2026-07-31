@@ -13,8 +13,9 @@ import { TrainingMode } from '@/lib/generated/prisma/enums'
 const choiceSchema = z.enum([TrainingMode.PROGRAM, TrainingMode.SOLO, 'later'])
 
 const destinationByChoice = {
-  [TrainingMode.PROGRAM]: privateRoutes.programs,
-  [TrainingMode.SOLO]: `${privateRoutes.workouts}/novo`,
+  [TrainingMode.PROGRAM]: privateRoutes.plans,
+  // montar treino começa pelo plano: não existe treino avulso
+  [TrainingMode.SOLO]: `${privateRoutes.plans}/novo?next=treino`,
   later: privateRoutes.dashboard,
 }
 
