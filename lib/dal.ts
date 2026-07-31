@@ -28,6 +28,8 @@ export const getUser = cache(async () => {
       image: true,
       username: true,
       bio: true,
+      trainingMode: true,
+      onboardedAt: true,
     },
   })
 

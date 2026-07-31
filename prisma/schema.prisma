@@ -7,6 +7,13 @@ datasource db {
   provider = "postgresql"
 }
 
+enum TrainingMode {
+  // seguir o plano oficial Fifty Repz
+  PROGRAM
+  // montar os próprios treinos
+  SOLO
+}
+
 model User {
   id String @id @default(uuid())
   googleId String @unique
@@ -15,6 +22,11 @@ model User {
   image String?
   username String @unique
   bio String?
+  // preenchidos no onboarding do primeiro acesso; onboardedAt null = o
+  // usuário ainda não passou pela tela de boas-vindas. trainingMode fica
+  // null quando ele escolhe decidir depois.
+  trainingMode TrainingMode?
+  onboardedAt DateTime?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   exercises Exercise[]
