@@ -1,17 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { privateRoutes, publicRoutes } from './lib/config'
+import { legalRoutes, privateRoutes, publicRoutes } from './lib/config'
 import { decrypt, SESSION_COOKIE } from './lib/session'
 
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl
 
-  // Assets do PWA (service worker, manifest, fallback offline): sempre
-  // acessíveis, autenticado ou não — o navegador/service worker busca
-  // essas rotas independente de haver sessão
+  // Assets do PWA (service worker, manifest, fallback offline) + páginas
+  // legais (termos/privacidade): sempre acessíveis, autenticado ou não —
+  // os assets porque o navegador/service worker busca essas rotas
+  // independente de haver sessão, e as páginas legais porque, diferente do
+  // login, fazem sentido também para quem já está logado
   const alwaysPublicAssets: string[] = [
     publicRoutes.nextSw,
     publicRoutes.manifest,
     publicRoutes.offline,
+    legalRoutes.privacy,
+    legalRoutes.terms,
   ]
   if (alwaysPublicAssets.includes(pathname)) {
     return NextResponse.next()
