@@ -16,6 +16,7 @@ interface SeedExercise {
   secondaryMuscles: MuscleGroup[]
   equipment: Equipment
   imageUrls: string[]
+  instructions: string[]
 }
 
 interface SeedProgramExercise {
@@ -66,6 +67,7 @@ async function main() {
           secondaryMuscles: exercise.secondaryMuscles,
           equipment: exercise.equipment,
           imageUrls: exercise.imageUrls,
+          instructions: exercise.instructions,
         },
         create: {
           slug: exercise.slug,
@@ -75,6 +77,7 @@ async function main() {
           secondaryMuscles: exercise.secondaryMuscles,
           equipment: exercise.equipment,
           imageUrls: exercise.imageUrls,
+          instructions: exercise.instructions,
           isCustom: false,
         },
       }),

@@ -84,6 +84,7 @@ model Exercise {
   secondaryMuscles MuscleGroup[]
   equipment Equipment
   imageUrls String[]
+  instructions String[] @default([])
   isCustom Boolean @default(false)
   owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String?
