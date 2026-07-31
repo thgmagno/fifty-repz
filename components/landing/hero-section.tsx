@@ -1,12 +1,18 @@
 import Image from 'next/image'
 import { buttonVariants } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { cn } from '@/lib/utils'
 
 // Foto de capa (Unsplash, ver crédito no rodapé) — auto-hospedada em
 // public/hero-gym.jpg. Se o arquivo ainda não existir, cai no gradiente.
 const HERO_IMAGE_SRC = '/hero-gym.jpg'
 
-export function HeroSection({ error }: { error?: string }) {
+interface HeroSectionProps {
+  error?: string
+  showPreviewLogin?: boolean
+}
+
+export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-svh items-center justify-center overflow-hidden from-neutral-950 via-neutral-900 to-neutral-800">
       <Image
@@ -56,6 +62,18 @@ export function HeroSection({ error }: { error?: string }) {
           </svg>
           Entrar com Google
         </a>
+
+        {showPreviewLogin && (
+          <a
+            href="/api/auth/preview"
+            className={cn(
+              buttonVariants({ variant: 'outline', size: 'sm' }),
+              'border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white',
+            )}
+          >
+            Entrar como usuário de teste (Preview)
+          </a>
+        )}
       </div>
     </section>
   )
