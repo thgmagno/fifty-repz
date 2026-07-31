@@ -63,7 +63,11 @@ export default async function ExerciciosPage({
           />
         </div>
         <div className="w-56">
-          <Select name="grupo" defaultValue={muscleGroup ?? ''}>
+          <Select
+            name="grupo"
+            defaultValue={muscleGroup ?? ''}
+            items={{ '': 'Todos os grupos', ...muscleGroupLabels }}
+          >
             <SelectTrigger aria-label="Filtrar por grupo muscular">
               <SelectValue />
             </SelectTrigger>
