@@ -8,9 +8,9 @@ import {
   HomeIcon,
   LayersIcon,
   LogOut,
-  PencilIcon,
   RssIcon,
   SearchIcon,
+  UserIcon,
 } from 'lucide-react'
 import {
   Sidebar,
@@ -38,11 +38,6 @@ const navItems = [
   { title: 'Histórico', href: privateRoutes.history, icon: HistoryIcon },
 ]
 
-const socialNavItems = [
-  { title: 'Feed', href: privateRoutes.feed, icon: RssIcon },
-  { title: 'Buscar pessoas', href: privateRoutes.search, icon: SearchIcon },
-]
-
 export function AppSidebarNav({
   user,
 }: {
@@ -52,6 +47,18 @@ export function AppSidebarNav({
   const closeMobileSidebar = () => {
     if (isMobile) setOpenMobile(false)
   }
+
+  // "Perfil" aponta para o perfil público do próprio usuário, que é onde
+  // também fica a edição do perfil
+  const socialNavItems = [
+    {
+      title: 'Perfil',
+      href: `${privateRoutes.profile}/${user.username}`,
+      icon: UserIcon,
+    },
+    { title: 'Feed', href: privateRoutes.feed, icon: RssIcon },
+    { title: 'Buscar pessoas', href: privateRoutes.search, icon: SearchIcon },
+  ]
 
   return (
     <Sidebar>
@@ -117,16 +124,6 @@ export function AppSidebarNav({
             </span>
           </div>
         </div>
-        <Button
-          variant="ghost"
-          className="w-full justify-start"
-          nativeButton={false}
-          onClick={closeMobileSidebar}
-          render={<Link href={privateRoutes.editProfile} />}
-        >
-          <PencilIcon />
-          Editar perfil
-        </Button>
         <form action={logout}>
           <Button
             type="submit"

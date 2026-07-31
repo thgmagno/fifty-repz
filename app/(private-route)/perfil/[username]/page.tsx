@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { PencilIcon } from 'lucide-react'
 import { Page } from '@/components/page'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { ProfileOverview } from '@/components/profile/profile-overview'
 import { getUserProfile } from '@/lib/profile'
 import { getUser } from '@/lib/dal'
@@ -31,10 +33,7 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
     notFound()
   }
 
-  // O perfil do próprio usuário só é acessível pelo dashboard.
-  if (profile.id === currentUser.id) {
-    redirect(privateRoutes.dashboard)
-  }
+  const isOwnProfile = profile.id === currentUser.id
 
   const [followers, following] = await Promise.all([
     listFollowers(profile.id),
@@ -48,16 +47,28 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
         followers={followers}
         following={following}
         actions={
-          <form action={profile.isFollowing ? unfollowUser : followUser}>
-            <input type="hidden" name="userId" value={profile.id} />
-            <input type="hidden" name="username" value={profile.username} />
-            <Button
-              type="submit"
-              variant={profile.isFollowing ? 'outline' : 'default'}
+          // no próprio perfil não há o que seguir: o lugar da ação é a edição,
+          // visível só para o dono
+          isOwnProfile ? (
+            <Link
+              href={privateRoutes.editProfile}
+              className={buttonVariants({ variant: 'secondary' })}
             >
-              {profile.isFollowing ? 'Deixar de seguir' : 'Seguir'}
-            </Button>
-          </form>
+              <PencilIcon />
+              Editar perfil
+            </Link>
+          ) : (
+            <form action={profile.isFollowing ? unfollowUser : followUser}>
+              <input type="hidden" name="userId" value={profile.id} />
+              <input type="hidden" name="username" value={profile.username} />
+              <Button
+                type="submit"
+                variant={profile.isFollowing ? 'outline' : 'default'}
+              >
+                {profile.isFollowing ? 'Deixar de seguir' : 'Seguir'}
+              </Button>
+            </form>
+          )
         }
       />
     </Page>
