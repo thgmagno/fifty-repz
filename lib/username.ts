@@ -8,6 +8,7 @@ const RESERVED_USERNAMES = new Set([
   'login',
   'logout',
   'inicio',
+  'boas-vindas',
   'exercicios',
   'treinos',
   'programas',
