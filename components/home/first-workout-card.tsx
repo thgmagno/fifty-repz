@@ -30,7 +30,7 @@ export function FirstWorkoutCard({
 
   const programLink = (
     <Link
-      href={privateRoutes.programs}
+      href={privateRoutes.plans}
       className={cn(
         buttonVariants({ variant: isSolo ? 'secondary' : 'default' }),
         'w-full sm:w-auto',
@@ -43,7 +43,7 @@ export function FirstWorkoutCard({
 
   const builderLink = (
     <Link
-      href={`${privateRoutes.workouts}/novo`}
+      href={`${privateRoutes.plans}/novo?next=treino`}
       className={cn(
         buttonVariants({ variant: isSolo ? 'default' : 'secondary' }),
         'w-full sm:w-auto',

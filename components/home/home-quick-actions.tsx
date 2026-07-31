@@ -33,7 +33,7 @@ export function HomeQuickActions({
       </CardHeader>
       <CardFooter className="flex-col items-stretch gap-2 sm:flex-row sm:items-center">
         <Link
-          href={isSolo ? privateRoutes.workouts : privateRoutes.programs}
+          href={isSolo ? privateRoutes.workouts : privateRoutes.plans}
           className={cn(buttonVariants(), 'w-full sm:w-auto')}
         >
           <PlayIcon />
@@ -41,7 +41,9 @@ export function HomeQuickActions({
         </Link>
         <Link
           href={
-            isSolo ? privateRoutes.programs : `${privateRoutes.workouts}/novo`
+            isSolo
+              ? privateRoutes.plans
+              : `${privateRoutes.plans}/novo?next=treino`
           }
           className={cn(
             buttonVariants({ variant: 'secondary' }),
@@ -49,7 +51,7 @@ export function HomeQuickActions({
           )}
         >
           {isSolo ? <LayersIcon /> : <PlusIcon />}
-          {isSolo ? 'Ver o plano Fifty Repz' : 'Montar meu próprio treino'}
+          {isSolo ? 'Ver os planos de treino' : 'Montar meu próprio treino'}
         </Link>
       </CardFooter>
     </Card>
