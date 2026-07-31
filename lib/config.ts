@@ -15,6 +15,7 @@ export const legalRoutes = {
 
 export const privateRoutes = {
   dashboard: '/',
+  onboarding: '/boas-vindas',
   exercises: '/exercicios',
   workouts: '/treinos',
   // "Programas" virou "Planos de treino": um plano reúne treinos, que reúnem
