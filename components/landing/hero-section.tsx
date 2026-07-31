@@ -35,6 +35,12 @@ export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
             ? 'Ambiente de preview: entre com o usuário de teste.'
             : 'Entre com sua conta Google para começar a treinar.'}
         </p>
+        {!showPreviewLogin && (
+          <p className="max-w-sm text-sm text-white/60">
+            Não tem conta? Sem problema: no primeiro acesso nós criamos uma
+            automaticamente com seu nome, e-mail e foto do Google.
+          </p>
+        )}
 
         {error === 'oauth' && (
           <p className="text-sm text-red-400">
