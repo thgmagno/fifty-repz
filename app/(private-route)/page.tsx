@@ -1,6 +1,12 @@
 import { notFound, redirect } from 'next/navigation'
 import { Page } from '@/components/page'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { ProfileOverview } from '@/components/profile/profile-overview'
 import { FirstWorkoutCard } from '@/components/home/first-workout-card'
 import { HomeQuickActions } from '@/components/home/home-quick-actions'
@@ -79,6 +85,11 @@ export default async function Dashboard() {
             <Card>
               <CardHeader>
                 <CardTitle>Volume total por semana</CardTitle>
+                {/* "volume" não é explicado em lugar nenhum do app */}
+                <CardDescription>
+                  Volume = peso × repetições, somado. Toque numa barra para ver
+                  a semana.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <VolumeTrendChart data={weeklyTrend} />
@@ -90,6 +101,9 @@ export default async function Dashboard() {
                 <CardTitle>
                   Volume por grupo muscular (últimos 90 dias)
                 </CardTitle>
+                <CardDescription>
+                  Volume = peso × repetições, somado.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <MuscleGroupChart data={muscleGroupVolume} />
@@ -99,6 +113,9 @@ export default async function Dashboard() {
             <Card>
               <CardHeader>
                 <CardTitle>Recordes pessoais</CardTitle>
+                <CardDescription>
+                  O maior peso que você já levantou em cada exercício.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <PersonalRecordsList records={personalRecords} />

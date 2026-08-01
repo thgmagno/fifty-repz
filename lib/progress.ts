@@ -16,6 +16,25 @@ function calculateSetsVolume(
   return sets.reduce((sum, set) => sum + (set.weightKg ?? 0) * set.reps, 0)
 }
 
+// Série sem carga (abdominal, flexão) tem volume zero e sumiria dos
+// gráficos. As repetições dela são contadas à parte, para o grupo muscular
+// pelo menos aparecer.
+function summarizeSets(sets: { weightKg: number | null; reps: number }[]) {
+  return sets.reduce(
+    (totals, set) =>
+      set.weightKg
+        ? {
+            volume: totals.volume + set.weightKg * set.reps,
+            bodyweightReps: totals.bodyweightReps,
+          }
+        : {
+            volume: totals.volume,
+            bodyweightReps: totals.bodyweightReps + set.reps,
+          },
+    { volume: 0, bodyweightReps: 0 },
+  )
+}
+
 // Volume por grupo muscular nos últimos 90 dias. Agregado aqui (em memória
 // no servidor, nunca enviado bruto ao client) a partir de uma consulta já
 // filtrada por usuário/período — evita o groupBy do Prisma, que não
@@ -38,23 +57,37 @@ export async function getMuscleGroupVolume() {
     },
   })
 
-  const totals = new Map<MuscleGroup, number>()
+  const totals = new Map<
+    MuscleGroup,
+    { volume: number; bodyweightReps: number }
+  >()
   sessionExercises.forEach((item) => {
     if (!item.exercise) return
-    const volume = calculateSetsVolume(item.sets)
-    totals.set(
-      item.exercise.muscleGroup,
-      (totals.get(item.exercise.muscleGroup) ?? 0) + volume,
-    )
+    const current = totals.get(item.exercise.muscleGroup) ?? {
+      volume: 0,
+      bodyweightReps: 0,
+    }
+    const { volume, bodyweightReps } = summarizeSets(item.sets)
+    totals.set(item.exercise.muscleGroup, {
+      volume: current.volume + volume,
+      bodyweightReps: current.bodyweightReps + bodyweightReps,
+    })
   })
 
-  return Object.values(MuscleGroup)
-    .map((muscleGroup) => ({
-      muscleGroup,
-      volume: totals.get(muscleGroup) ?? 0,
-    }))
-    .filter((entry) => entry.volume > 0)
-    .sort((a, b) => b.volume - a.volume)
+  return (
+    Object.values(MuscleGroup)
+      .map((muscleGroup) => ({
+        muscleGroup,
+        volume: totals.get(muscleGroup)?.volume ?? 0,
+        bodyweightReps: totals.get(muscleGroup)?.bodyweightReps ?? 0,
+      }))
+      // grupo treinado só com peso corporal entra pelas repetições, em vez de
+      // desaparecer do gráfico
+      .filter((entry) => entry.volume > 0 || entry.bodyweightReps > 0)
+      .sort(
+        (a, b) => b.volume - a.volume || b.bodyweightReps - a.bodyweightReps,
+      )
+  )
 }
 
 export type MuscleGroupVolume = Awaited<
