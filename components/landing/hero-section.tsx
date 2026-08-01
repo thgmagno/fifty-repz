@@ -13,7 +13,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
   return (
-    <section className="relative flex min-h-svh items-center justify-center overflow-hidden from-neutral-950 via-neutral-900 to-neutral-800">
+    <section className="relative flex flex-col min-h-svh items-center justify-center overflow-hidden from-neutral-950 via-neutral-900 to-neutral-800 p-4">
       <Image
         src={HERO_IMAGE_SRC}
         alt="Sala de musculação com equipamentos de ginástica"
@@ -22,11 +22,11 @@ export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/65" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <ThemeToggle className="absolute top-4 right-4 z-10 text-white hover:bg-white/10 hover:text-white" />
 
-      <div className="relative z-10 flex flex-col items-center gap-4 px-4 text-center text-white">
+      <div className="relative z-10 flex flex-col items-center gap-4 px-4 py-8 text-center text-white bg-black/60 backdrop-blur-sm rounded-lg max-w-110">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
           Fifty Repz
         </h1>
@@ -35,12 +35,6 @@ export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
             ? 'Ambiente de preview: entre com o usuário de teste.'
             : 'Entre com sua conta Google para começar a treinar.'}
         </p>
-        {!showPreviewLogin && (
-          <p className="max-w-sm text-sm text-white/60">
-            Não tem conta? Sem problema: no primeiro acesso nós criamos uma
-            automaticamente com seu nome, e-mail e foto do Google.
-          </p>
-        )}
 
         {error === 'oauth' && (
           <p className="text-sm text-red-400">
@@ -77,6 +71,12 @@ export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
             </svg>
             Entrar com Google
           </a>
+        )}
+
+        {!showPreviewLogin && (
+          <p className="text-xs text-white/60">
+            No seu primeiro acesso com o Google, criaremos uma conta automaticamente utilizando seu nome, e-mail e foto de perfil.
+          </p>
         )}
       </div>
     </section>
