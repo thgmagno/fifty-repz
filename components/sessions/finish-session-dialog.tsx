@@ -14,7 +14,13 @@ import {
 } from '@/components/ui/alert-dialog'
 import { finishSession } from '@/lib/actions/workout-sessions'
 
-export function FinishSessionDialog({ sessionId }: { sessionId: string }) {
+export function FinishSessionDialog({
+  sessionId,
+  hasLoggedSets,
+}: {
+  sessionId: string
+  hasLoggedSets: boolean
+}) {
   return (
     <AlertDialog>
       <AlertDialogTrigger render={<Button size="lg" />}>
@@ -25,8 +31,9 @@ export function FinishSessionDialog({ sessionId }: { sessionId: string }) {
         <AlertDialogHeader>
           <AlertDialogTitle>Finalizar treino</AlertDialogTitle>
           <AlertDialogDescription>
-            A sessão será salva com as séries registradas até agora. Depois de
-            finalizada, não é possível registrar novas séries.
+            {hasLoggedSets
+              ? 'A sessão será salva com as séries registradas até agora. Depois de finalizada, não é possível registrar novas séries.'
+              : 'Você não registrou nenhuma série, então este treino não vai contar para o nível.'}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

@@ -28,15 +28,20 @@ export function PlanLevelCard({
         <div className="flex items-center justify-between gap-2">
           <CardTitle>{level.name}</CardTitle>
           {level.unlocked ? (
-            <Badge
-              variant={
-                level.completions >= level.unlockThreshold
-                  ? 'default'
-                  : 'outline'
-              }
-            >
-              {level.completions}/{level.unlockThreshold}
-            </Badge>
+            <div className="flex shrink-0 flex-col items-end gap-1">
+              <Badge
+                variant={
+                  level.completions >= level.unlockThreshold
+                    ? 'default'
+                    : 'outline'
+                }
+              >
+                {level.completions}/{level.unlockThreshold}
+              </Badge>
+              <span className="text-xs text-muted-foreground">
+                Treinos concluídos
+              </span>
+            </div>
           ) : (
             <Badge variant="secondary">
               <LockIcon />
@@ -51,8 +56,8 @@ export function PlanLevelCard({
       <CardContent className="flex flex-col gap-2">
         {!level.unlocked ? (
           <p className="text-sm text-muted-foreground">
-            Complete o nível anterior {unlockRequirement} vezes para
-            desbloquear.
+            Conclua {unlockRequirement} treinos do nível anterior para
+            desbloquear (qualquer treino conta).
           </p>
         ) : (
           level.templates.map((template) => (

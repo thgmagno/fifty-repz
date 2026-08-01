@@ -114,6 +114,12 @@ export function WorkoutSessionRunner({
     [syncEntry],
   )
 
+  // séries da fila offline ainda não estão em session.exercises, mas já
+  // contam: elas serão sincronizadas
+  const hasLoggedSets =
+    pendingSets.length > 0 ||
+    session.exercises.some((exercise) => exercise.sets.length > 0)
+
   const completedExercises = session.exercises.filter(
     (exercise) =>
       exercise.skipped || exercise.sets.length >= exercise.targetSets,
@@ -131,7 +137,10 @@ export function WorkoutSessionRunner({
             {completedExercises}/{session.exercises.length} exercícios
           </span>
         </div>
-        <FinishSessionDialog sessionId={session.id} />
+        <FinishSessionDialog
+          sessionId={session.id}
+          hasLoggedSets={hasLoggedSets}
+        />
       </div>
 
       {(!isOnline || pendingSets.length > 0) && (
@@ -147,7 +156,8 @@ export function WorkoutSessionRunner({
           ) : (
             <span>
               Sincronizando {pendingSets.length}{' '}
-              {pendingSets.length === 1 ? 'série pendente' : 'séries pendentes'}…
+              {pendingSets.length === 1 ? 'série pendente' : 'séries pendentes'}
+              …
             </span>
           )}
         </div>
