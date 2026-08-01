@@ -9,7 +9,12 @@ import { WorkoutSessionRunner } from '@/components/sessions/workout-session-runn
 import { LikeButton } from '@/components/likes/like-button'
 import { CommentForm } from '@/components/comments/comment-form'
 import { CommentList } from '@/components/comments/comment-list'
-import { getWorkoutSession } from '@/lib/workout-sessions'
+import { SessionSummary } from '@/components/sessions/session-summary'
+import {
+  getCompletedSessionSummary,
+  getInProgressWorkoutSession,
+  getWorkoutSession,
+} from '@/lib/workout-sessions'
 import { getLikeState } from '@/lib/likes'
 import { listComments } from '@/lib/comments'
 import { formatDurationLong, formatSessionDate } from '@/lib/utils'
@@ -36,10 +41,16 @@ export default async function SessaoPage({
       ? privateRoutes.history
       : privateRoutes.feed
     const backLabel = session.isOwner ? 'Voltar ao histórico' : 'Voltar ao feed'
-    const [likeState, comments] = await Promise.all([
-      getLikeState(session.id),
-      listComments(session.id),
-    ])
+    // o resumo é o fecho do treino de quem o fez: quem só está vendo o
+    // treino de outra pessoa segue com o registro
+    const [likeState, comments, summary, inProgressSession] = await Promise.all(
+      [
+        getLikeState(session.id),
+        listComments(session.id),
+        session.isOwner ? getCompletedSessionSummary(session.id) : null,
+        session.isOwner ? getInProgressWorkoutSession() : null,
+      ],
+    )
 
     return (
       <Page>
@@ -74,6 +85,11 @@ export default async function SessaoPage({
           )}
           {formatDurationLong(session.durationSeconds ?? 0)} no total.
         </p>
+
+        {summary && (
+          <SessionSummary summary={summary} inProgress={inProgressSession} />
+        )}
+
         <ol className="flex flex-col gap-3">
           {session.exercises.map((exercise, index) => (
             <li key={exercise.id} className="rounded-md border p-3">
