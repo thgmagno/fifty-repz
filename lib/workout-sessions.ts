@@ -109,7 +109,7 @@ export async function getWorkoutSession(id: string) {
           targetRepsMax: true,
           skipped: true,
           exerciseId: true,
-          exercise: { select: { imageUrls: true } },
+          exercise: { select: { imageUrls: true, instructions: true } },
           sets: {
             orderBy: { setNumber: 'asc' },
             select: {
