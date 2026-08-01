@@ -4,10 +4,31 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 
 const REEL_LENGTH = 51 // 0..50
-const ROLL_DURATION_MS = 3100
-const HOLD_MS = 700
-const FADE_MS = 500
-const SESSION_KEY = 'fifty-repz-splash-shown'
+// A animação inteira cabe em ~1,5s: bonita na primeira vez, mas ninguém
+// deve esperar por ela de pé na academia.
+const ROLL_DURATION_MS = 1000
+const HOLD_MS = 200
+const FADE_MS = 250
+// localStorage, não sessionStorage: o splash é a apresentação da marca, e
+// isso se faz uma vez por aparelho — não a cada aba aberta.
+const SHOWN_KEY = 'fifty-repz-splash-shown'
+
+function alreadyShown() {
+  try {
+    return window.localStorage.getItem(SHOWN_KEY) !== null
+  } catch {
+    // navegador em modo restrito: mostra o splash e segue a vida
+    return false
+  }
+}
+
+function markAsShown() {
+  try {
+    window.localStorage.setItem(SHOWN_KEY, '1')
+  } catch {
+    // idem: não poder lembrar não pode quebrar a abertura
+  }
+}
 
 type Phase = 'spinning' | 'landed' | 'exiting' | 'done'
 
@@ -15,14 +36,13 @@ export function SplashScreen() {
   const [phase, setPhase] = React.useState<Phase>('spinning')
 
   React.useLayoutEffect(() => {
-    if (sessionStorage.getItem(SESSION_KEY)) {
-      // sincroniza antes do primeiro paint pra não piscar em navegações
-      // dentro da mesma aba (já mostrou o splash nesta sessão)
+    if (alreadyShown()) {
+      // sincroniza antes do primeiro paint pra não piscar em quem já viu
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setPhase('done')
       return undefined
     }
-    sessionStorage.setItem(SESSION_KEY, '1')
+    markAsShown()
 
     const reduced = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
@@ -54,10 +74,11 @@ export function SplashScreen() {
     <div
       aria-hidden="true"
       className={cn(
-        'fixed inset-0 z-100 flex items-center justify-center transition-opacity duration-500',
+        'fixed inset-0 z-100 flex items-center justify-center transition-opacity',
         phase === 'exiting' && 'pointer-events-none opacity-0',
       )}
       style={{
+        transitionDuration: `${FADE_MS}ms`,
         background:
           'radial-gradient(ellipse 120% 90% at 50% 38%, #1b1712 0%, #14120f 62%)',
       }}
@@ -109,7 +130,7 @@ export function SplashScreen() {
           transform: translateY(-0.5px);
           background: #7a5a30;
           opacity: 0.55;
-          transition: opacity 0.4s ease;
+          transition: opacity 0.2s ease;
         }
         .splash-witness--hit {
           opacity: 1;
@@ -119,7 +140,8 @@ export function SplashScreen() {
           display: flex;
           flex-direction: column;
           will-change: transform;
-          animation: splash-roll 3.1s cubic-bezier(0.74, 0, 0.88, 0.14) forwards;
+          animation: splash-roll ${ROLL_DURATION_MS}ms
+            cubic-bezier(0.74, 0, 0.88, 0.14) forwards;
         }
         @keyframes splash-roll {
           from {
@@ -156,7 +178,7 @@ export function SplashScreen() {
           color: #c98a3d;
         }
         .splash-icon--show {
-          animation: splash-land 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+          animation: splash-land 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
         }
         @keyframes splash-land {
           0% {
