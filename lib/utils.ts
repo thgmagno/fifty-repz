@@ -16,6 +16,22 @@ export function formatRepTarget(
     : `${sets}x${repsMin}`
 }
 
+// "3 séries de 10 a 12 repetições" — a mesma meta de formatRepTarget, escrita
+// por extenso para as telas em que ela precisa ser lida, não decifrada.
+export function formatRepTargetLong(
+  sets: number,
+  repsMin: number,
+  repsMax?: number | null,
+) {
+  const setsLabel = sets === 1 ? '1 série' : `${sets} séries`
+
+  if (repsMax && repsMax !== repsMin) {
+    return `${setsLabel} de ${repsMin} a ${repsMax} repetições`
+  }
+
+  return `${setsLabel} de ${repsMin} ${repsMin === 1 ? 'repetição' : 'repetições'}`
+}
+
 // segundos -> "MM:SS" (ou "H:MM:SS" acima de 1 hora)
 export function formatDuration(totalSeconds: number) {
   const seconds = Math.max(0, Math.floor(totalSeconds))

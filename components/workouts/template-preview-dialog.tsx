@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { StartWorkoutButton } from '@/components/workouts/start-workout-button'
 import { equipmentLabels, muscleGroupLabels } from '@/lib/exercise-labels'
-import { formatRepTarget } from '@/lib/utils'
+import { formatRepTargetLong } from '@/lib/utils'
 import type { ProgramTemplate } from '@/lib/workout-programs'
 import type { InProgressSession } from '@/lib/workout-sessions'
 
@@ -43,8 +43,7 @@ export function TemplatePreviewDialog({
           <DialogTitle>{template.name}</DialogTitle>
           <DialogDescription>
             {template.exercises.length}{' '}
-            {template.exercises.length === 1 ? 'exercício' : 'exercícios'} ·
-            séries x repetições
+            {template.exercises.length === 1 ? 'exercício' : 'exercícios'}
           </DialogDescription>
         </DialogHeader>
 
@@ -62,16 +61,14 @@ export function TemplatePreviewDialog({
           {template.exercises.map((item) => (
             <li
               key={item.id}
-              className="flex items-baseline justify-between gap-3 border-b pb-2 last:border-b-0 last:pb-0"
+              className="border-b pb-2 last:border-b-0 last:pb-0"
             >
-              <span className="min-w-0">
-                <span className="block">{item.exercise.name}</span>
-                <span className="block text-xs text-muted-foreground">
-                  {equipmentLabels[item.exercise.equipment]}
-                </span>
-              </span>
-              <span className="shrink-0 tabular-nums text-muted-foreground">
-                {formatRepTarget(
+              <span className="block">{item.exercise.name}</span>
+              {/* a meta por extenso, e não "3x10-12": é a instrução do que
+                  fazer, não uma anotação de caderno de academia */}
+              <span className="block text-xs text-muted-foreground">
+                {equipmentLabels[item.exercise.equipment]} ·{' '}
+                {formatRepTargetLong(
                   item.targetSets,
                   item.targetReps,
                   item.targetRepsMax,

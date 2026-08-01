@@ -18,7 +18,7 @@ import { deleteSet, toggleSkipExercise } from '@/lib/actions/workout-sessions'
 import { ExerciseImageGallery } from '@/components/sessions/exercise-image-gallery'
 import type { WorkoutSessionExerciseDetail } from '@/lib/workout-sessions'
 import type { PendingSetEntry } from '@/lib/offline-db'
-import { cn, formatRepTarget } from '@/lib/utils'
+import { cn, formatRepTargetLong } from '@/lib/utils'
 
 interface ExercisePanelProps {
   exercise: WorkoutSessionExerciseDetail
@@ -111,8 +111,8 @@ export function ExercisePanel({
             {index + 1}. {exercise.exerciseName}
           </h3>
           <p className="text-xs text-muted-foreground">
-            Alvo:{' '}
-            {formatRepTarget(
+            Meta:{' '}
+            {formatRepTargetLong(
               exercise.targetSets,
               exercise.targetReps,
               exercise.targetRepsMax,
@@ -121,13 +121,10 @@ export function ExercisePanel({
         </div>
         <div className="flex items-center gap-2">
           {exercise.skipped && <Badge variant="secondary">Pulado</Badge>}
-          {!exercise.skipped && isComplete && (
-            <Badge>
-              {setsDone}/{exercise.targetSets} séries
-            </Badge>
-          )}
-          {!exercise.skipped && !isComplete && setsDone > 0 && (
-            <Badge variant="outline">
+          {/* aparece desde 0/3: antes da primeira série também é preciso
+              saber quantas faltam */}
+          {!exercise.skipped && (
+            <Badge variant={isComplete ? 'default' : 'outline'}>
               {setsDone}/{exercise.targetSets} séries
             </Badge>
           )}
@@ -157,7 +154,7 @@ export function ExercisePanel({
               <span>
                 Série {set.setNumber}:{' '}
                 {set.weightKg ? `${set.weightKg}kg × ` : ''}
-                {set.reps} reps
+                {set.reps} {set.reps === 1 ? 'repetição' : 'repetições'}
               </span>
               <form action={deleteSet}>
                 <input type="hidden" name="setId" value={set.id} />
@@ -180,7 +177,7 @@ export function ExercisePanel({
               <span>
                 Série {exercise.sets.length + pendingIndex + 1}:{' '}
                 {entry.weightKg ? `${entry.weightKg}kg × ` : ''}
-                {entry.reps} reps
+                {entry.reps} {entry.reps === 1 ? 'repetição' : 'repetições'}
               </span>
               <Badge variant="outline">Sincronizando…</Badge>
             </li>

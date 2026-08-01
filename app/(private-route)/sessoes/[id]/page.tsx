@@ -89,7 +89,7 @@ export default async function SessaoPage({
                     <li key={set.id}>
                       Série {set.setNumber}:{' '}
                       {set.weightKg ? `${set.weightKg}kg × ` : ''}
-                      {set.reps} reps
+                      {set.reps} {set.reps === 1 ? 'repetição' : 'repetições'}
                     </li>
                   ))}
                 </ul>
