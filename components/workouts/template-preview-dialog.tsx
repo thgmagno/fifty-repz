@@ -1,8 +1,6 @@
 'use client'
 
-import { PlayIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -12,18 +10,21 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { StartWorkoutButton } from '@/components/workouts/start-workout-button'
 import { equipmentLabels, muscleGroupLabels } from '@/lib/exercise-labels'
-import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import { formatRepTarget } from '@/lib/utils'
 import type { ProgramTemplate } from '@/lib/workout-programs'
+import type { InProgressSession } from '@/lib/workout-sessions'
 
 // Prévia do treino antes de iniciar: sem isso, o único jeito de saber o que
 // tem dentro é criar a sessão — que não dá para cancelar.
 export function TemplatePreviewDialog({
   template,
+  inProgress,
   trigger,
 }: {
   template: ProgramTemplate
+  inProgress: InProgressSession | null
   trigger: React.ReactElement
 }) {
   const muscleGroups = [
@@ -81,13 +82,11 @@ export function TemplatePreviewDialog({
         </ol>
 
         <DialogFooter>
-          <form action={startWorkoutSession} className="w-full sm:w-auto">
-            <input type="hidden" name="templateId" value={template.id} />
-            <Button type="submit" className="w-full">
-              <PlayIcon />
-              Iniciar treino
-            </Button>
-          </form>
+          <StartWorkoutButton
+            templateId={template.id}
+            inProgress={inProgress}
+            className="w-full sm:w-auto"
+          />
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -104,7 +104,9 @@ export async function getInProgressWorkoutSession() {
   const session = await prisma.workoutSession.findFirst({
     where: { userId, status: 'IN_PROGRESS' },
     orderBy: { startedAt: 'desc' },
-    select: { id: true, templateName: true, startedAt: true },
+    // templateId identifica de qual treino é a sessão: os botões "Iniciar"
+    // desse treino viram "Continuar", e os dos outros avisam antes de trocar
+    select: { id: true, templateId: true, templateName: true, startedAt: true },
   })
 
   if (!session) return null
@@ -132,6 +134,10 @@ export async function listCompletedWorkoutSessions() {
     },
   })
 }
+
+export type InProgressSession = NonNullable<
+  Awaited<ReturnType<typeof getInProgressWorkoutSession>>
+>
 
 export type WorkoutSessionDetail = NonNullable<
   Awaited<ReturnType<typeof getWorkoutSession>>

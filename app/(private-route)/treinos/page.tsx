@@ -73,6 +73,7 @@ export default async function TreinosPage() {
                   <ProgramTemplateRow
                     key={template.id}
                     template={template}
+                    inProgress={inProgressSession}
                     suggested={template.id === level.suggestedTemplateId}
                   />
                 ))}
@@ -94,7 +95,11 @@ export default async function TreinosPage() {
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {plan.templates.map((template) => (
-              <WorkoutTemplateCard key={template.id} template={template} />
+              <WorkoutTemplateCard
+                key={template.id}
+                template={template}
+                inProgress={inProgressSession}
+              />
             ))}
           </div>
         </section>

@@ -9,9 +9,11 @@ import {
 } from '@/components/ui/card'
 import { ProgramTemplateRow } from '@/components/workouts/program-template-row'
 import type { ProgramLevel } from '@/lib/workout-programs'
+import type { InProgressSession } from '@/lib/workout-sessions'
 
 interface PlanLevelCardProps {
   level: ProgramLevel
+  inProgress: InProgressSession | null
   // conclusões necessárias no nível anterior para desbloquear este; null
   // para o primeiro nível, que já vem sempre desbloqueado
   unlockRequirement: number | null
@@ -19,6 +21,7 @@ interface PlanLevelCardProps {
 
 export function PlanLevelCard({
   level,
+  inProgress,
   unlockRequirement,
 }: PlanLevelCardProps) {
   return (
@@ -63,6 +66,7 @@ export function PlanLevelCard({
             <ProgramTemplateRow
               key={template.id}
               template={template}
+              inProgress={inProgress}
               suggested={template.id === level.suggestedTemplateId}
             />
           ))
