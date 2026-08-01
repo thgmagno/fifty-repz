@@ -97,3 +97,28 @@ export function formatDateKeyLabel(dateKey: string) {
   const [year, month, day] = dateKey.split('-')
   return `${day}/${month}/${year}`
 }
+
+// dias de calendário entre duas chaves 'YYYY-MM-DD'. Constrói as datas em
+// UTC só para fazer a subtração: as chaves já vêm do fuso local, então não
+// há conversão em jogo e o horário de verão não interfere.
+function diffInLocalDays(fromKey: string, toKey: string) {
+  const toUTC = (key: string) => {
+    const [year, month, day] = key.split('-').map(Number)
+    return Date.UTC(year, month - 1, day)
+  }
+  return Math.round((toUTC(toKey) - toUTC(fromKey)) / 86_400_000)
+}
+
+// "hoje", "ontem", "há 3 dias" ou "28/07/2026" — quando um treino foi feito
+// pela última vez. A diferença é contada em dias do calendário local
+// (America/Sao_Paulo), não em intervalos de 24h: treinar às 23h de ontem e
+// às 8h de hoje são dias diferentes, ainda que separados por 9 horas.
+export function formatLastDoneLabel(date: Date, now = new Date()) {
+  const dateKey = getLocalDateKey(date)
+  const days = diffInLocalDays(dateKey, getLocalDateKey(now))
+
+  if (days <= 0) return 'hoje'
+  if (days === 1) return 'ontem'
+  if (days < 7) return `há ${days} dias`
+  return formatDateKeyLabel(dateKey)
+}

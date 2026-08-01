@@ -16,6 +16,52 @@ export async function countLevelCompletions(userId: string, levelId: string) {
   })
 }
 
+// Última vez que o usuário concluiu cada treino, numa consulta só: a mais
+// recente de cada template. Mesma regra da contagem do nível — sessão sem
+// série registrada não vale.
+async function getLastDoneByTemplate(userId: string, templateIds: string[]) {
+  if (templateIds.length === 0) return new Map<string, Date>()
+
+  const sessions = await prisma.workoutSession.findMany({
+    where: {
+      userId,
+      status: 'COMPLETED',
+      templateId: { in: templateIds },
+      exercises: { some: { sets: { some: {} } } },
+    },
+    orderBy: { completedAt: 'desc' },
+    distinct: ['templateId'],
+    select: { templateId: true, completedAt: true },
+  })
+
+  return new Map(
+    sessions.flatMap((session) =>
+      session.templateId && session.completedAt
+        ? [[session.templateId, session.completedAt] as const]
+        : [],
+    ),
+  )
+}
+
+// O treino sugerido é o seguinte ao último concluído, em ciclo (A -> B ->
+// C -> A). Quem nunca treinou no nível começa pelo primeiro.
+function suggestNextTemplateId(
+  templates: { id: string; lastCompletedAt: Date | null }[],
+) {
+  if (templates.length === 0) return null
+
+  let lastIndex = -1
+  templates.forEach((template, index) => {
+    const current = template.lastCompletedAt
+    if (!current) return
+    const latest = templates[lastIndex]?.lastCompletedAt
+    if (!latest || current > latest) lastIndex = index
+  })
+
+  if (lastIndex === -1) return templates[0].id
+  return templates[(lastIndex + 1) % templates.length].id
+}
+
 // Planos oficiais do app: sem dono, organizados em níveis com progressão.
 // Os planos criados por usuários ficam em lib/workout-plans.ts.
 export async function listProgramsWithProgress() {
@@ -67,6 +113,15 @@ export async function listProgramsWithProgress() {
     },
   })
 
+  const lastDoneByTemplate = await getLastDoneByTemplate(
+    userId,
+    programs.flatMap((program) =>
+      program.levels.flatMap((level) =>
+        level.templates.map((template) => template.id),
+      ),
+    ),
+  )
+
   return Promise.all(
     programs.map(async (program) => {
       // as contagens de conclusão de cada nível são independentes entre si,
@@ -82,7 +137,19 @@ export async function listProgramsWithProgress() {
         const completions = completionsByLevel[index]
         const unlocked = previousUnlocked
         previousUnlocked = unlocked && completions >= level.unlockThreshold
-        return { ...level, completions, unlocked }
+
+        const templates = level.templates.map((template) => ({
+          ...template,
+          lastCompletedAt: lastDoneByTemplate.get(template.id) ?? null,
+        }))
+
+        return {
+          ...level,
+          templates,
+          completions,
+          unlocked,
+          suggestedTemplateId: suggestNextTemplateId(templates),
+        }
       })
 
       return { ...program, levels }

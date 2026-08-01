@@ -60,7 +60,11 @@ export function PlanLevelCard({
           </p>
         ) : (
           level.templates.map((template) => (
-            <ProgramTemplateRow key={template.id} template={template} />
+            <ProgramTemplateRow
+              key={template.id}
+              template={template}
+              suggested={template.id === level.suggestedTemplateId}
+            />
           ))
         )}
       </CardContent>
