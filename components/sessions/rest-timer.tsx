@@ -5,9 +5,38 @@ import { BellIcon, TimerIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { formatDuration } from '@/lib/utils'
+import { cn, formatDuration } from '@/lib/utils'
 
 const DEFAULT_REST_SECONDS = 90
+const MIN_REST_SECONDS = 10
+const MAX_REST_SECONDS = 600
+const REST_DURATION_KEY = 'fifty-repz:rest-duration'
+
+function clampDuration(seconds: number) {
+  if (!Number.isFinite(seconds)) return DEFAULT_REST_SECONDS
+  return Math.min(MAX_REST_SECONDS, Math.max(MIN_REST_SECONDS, seconds))
+}
+
+// A duração escolhida vale para o treino inteiro e para os próximos: quem
+// prefere 60s não deve reconfigurar a cada recarga da página.
+function readStoredDuration() {
+  try {
+    const stored = Number(window.localStorage.getItem(REST_DURATION_KEY))
+    if (!Number.isFinite(stored) || stored === 0) return null
+    return clampDuration(stored)
+  } catch {
+    // navegador sem localStorage (ou modo restrito): segue com o padrão
+    return null
+  }
+}
+
+function storeDuration(seconds: number) {
+  try {
+    window.localStorage.setItem(REST_DURATION_KEY, String(seconds))
+  } catch {
+    // idem: não poder lembrar a preferência não pode quebrar o cronômetro
+  }
+}
 
 export interface RestTimerHandle {
   start: () => void
@@ -66,9 +95,22 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
   const [justFinished, setJustFinished] = React.useState(false)
   const audioContextRef = React.useRef<AudioContext | null>(null)
 
+  // a leitura do localStorage fica no efeito: no servidor ela não existe, e
+  // ler no initializer do useState divergiria entre render e hidratação
+  React.useEffect(() => {
+    const stored = readStoredDuration()
+    if (stored !== null) setDuration(stored)
+  }, [])
+
+  const handleDurationChange = (value: number) => {
+    const next = value || DEFAULT_REST_SECONDS
+    setDuration(next)
+    if (next === clampDuration(next)) storeDuration(next)
+  }
+
   React.useImperativeHandle(ref, () => ({
     start: () => {
-      setSecondsLeft(duration)
+      setSecondsLeft(clampDuration(duration))
       setRunning(true)
       setJustFinished(false)
     },
@@ -98,8 +140,17 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
     return () => clearTimeout(timeout)
   }, [justFinished])
 
+  // enquanto conta (e no aviso de fim), o cartão gruda no topo: nos últimos
+  // exercícios a página já está rolada e o contador saía de vista
+  const pinned = running || justFinished
+
   return (
-    <div className="flex flex-wrap items-center gap-3 rounded-md border bg-muted/40 p-3">
+    <div
+      className={cn(
+        'flex flex-wrap items-center gap-3 rounded-md border bg-muted/40 p-3',
+        pinned && 'sticky top-0 z-10 bg-background shadow-sm',
+      )}
+    >
       <TimerIcon className="text-muted-foreground" />
       {running ? (
         <>
@@ -140,7 +191,7 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
               step={5}
               value={duration}
               onChange={(event) =>
-                setDuration(Number(event.target.value) || DEFAULT_REST_SECONDS)
+                handleDurationChange(Number(event.target.value))
               }
               className="h-8 w-20"
             />
