@@ -1,19 +1,18 @@
 import type { Metadata } from 'next'
-import { PlusIcon, SearchIcon } from 'lucide-react'
-import { Page } from '@/components/page'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import Link from 'next/link'
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
+  ArrowUpIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  PlusIcon,
+} from 'lucide-react'
+import { Page } from '@/components/page'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { ExerciseCard } from '@/components/exercises/exercise-card'
+import { ExerciseFilters } from '@/components/exercises/exercise-filters'
 import { ExerciseFormDialog } from '@/components/exercises/exercise-form-dialog'
-import { listExercises } from '@/lib/exercises'
-import { muscleGroupLabels } from '@/lib/exercise-labels'
+import { EXERCISES_PAGE_SIZE, listExercises } from '@/lib/exercises'
+import { privateRoutes } from '@/lib/config'
 import { MuscleGroup } from '@/lib/generated/prisma/enums'
 
 export const metadata: Metadata = {
@@ -27,17 +26,37 @@ function parseMuscleGroup(value: string | undefined) {
 export default async function ExerciciosPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; grupo?: string }>
+  searchParams: Promise<{ q?: string; grupo?: string; p?: string }>
 }) {
-  const { q, grupo } = await searchParams
+  const { q, grupo, p } = await searchParams
   const muscleGroup = parseMuscleGroup(grupo)
-  const exercises = await listExercises({ query: q, muscleGroup })
+  const { exercises, total, page, pageCount } = await listExercises({
+    query: q,
+    muscleGroup,
+    page: Number(p) || 1,
+  })
+
+  function pageHref(target: number) {
+    const params = new URLSearchParams()
+    if (q) params.set('q', q)
+    if (muscleGroup) params.set('grupo', muscleGroup)
+    if (target > 1) params.set('p', String(target))
+    const search = params.toString()
+    return search
+      ? `${privateRoutes.exercises}?${search}`
+      : privateRoutes.exercises
+  }
+
+  const firstShown = (page - 1) * EXERCISES_PAGE_SIZE + 1
+  const lastShown = firstShown + exercises.length - 1
 
   return (
     <Page>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Exercícios</h1>
+          <h1 id="topo" className="text-2xl font-bold">
+            Exercícios
+          </h1>
           <p className="text-sm text-muted-foreground">
             O catálogo do app mais os exercícios que você criou.
           </p>
@@ -52,40 +71,7 @@ export default async function ExerciciosPage({
         />
       </div>
 
-      <form className="flex flex-wrap gap-2" action="/exercicios">
-        <div className="min-w-48 flex-1">
-          <Input
-            type="search"
-            name="q"
-            defaultValue={q}
-            placeholder="Buscar exercício…"
-            aria-label="Buscar exercício"
-          />
-        </div>
-        <div className="w-56">
-          <Select
-            name="grupo"
-            defaultValue={muscleGroup ?? ''}
-            items={{ '': 'Todos os grupos', ...muscleGroupLabels }}
-          >
-            <SelectTrigger aria-label="Filtrar por grupo muscular">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="">Todos os grupos</SelectItem>
-              {Object.values(MuscleGroup).map((group) => (
-                <SelectItem key={group} value={group}>
-                  {muscleGroupLabels[group]}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-        <Button type="submit" variant="outline">
-          <SearchIcon />
-          Buscar
-        </Button>
-      </form>
+      <ExerciseFilters query={q} muscleGroup={muscleGroup} />
 
       {exercises.length === 0 ? (
         <p className="py-10 text-center text-muted-foreground">
@@ -94,16 +80,68 @@ export default async function ExerciciosPage({
       ) : (
         <>
           <p className="text-sm text-muted-foreground">
-            {exercises.length}{' '}
-            {exercises.length === 1
-              ? 'exercício encontrado'
-              : 'exercícios encontrados'}
+            {total === 1
+              ? '1 exercício encontrado'
+              : `${total} exercícios encontrados`}
+            {pageCount > 1 && ` · mostrando ${firstShown} a ${lastShown}`}
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {exercises.map((exercise) => (
               <ExerciseCard key={exercise.id} exercise={exercise} />
             ))}
           </div>
+
+          {pageCount > 1 && (
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {page > 1 ? (
+                /* scroll={false}: os controles ficam no fim da lista, e subir
+                   ao topo a cada página tiraria o próximo clique do lugar */
+                <Link
+                  href={pageHref(page - 1)}
+                  scroll={false}
+                  className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                >
+                  <ChevronLeftIcon />
+                  Anterior
+                </Link>
+              ) : (
+                <Button variant="outline" size="sm" disabled>
+                  <ChevronLeftIcon />
+                  Anterior
+                </Button>
+              )}
+
+              <span className="text-sm text-muted-foreground">
+                Página {page} de {pageCount}
+              </span>
+
+              {page < pageCount ? (
+                <Link
+                  href={pageHref(page + 1)}
+                  scroll={false}
+                  className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                >
+                  Próxima
+                  <ChevronRightIcon />
+                </Link>
+              ) : (
+                <Button variant="outline" size="sm" disabled>
+                  Próxima
+                  <ChevronRightIcon />
+                </Button>
+              )}
+
+              {/* rolar 30 cards e ter que subir na mão era o outro lado do
+                  problema da lista sem fim */}
+              <a
+                href="#topo"
+                className={buttonVariants({ variant: 'ghost', size: 'sm' })}
+              >
+                <ArrowUpIcon />
+                Voltar ao topo
+              </a>
+            </div>
+          )}
         </>
       )}
     </Page>
