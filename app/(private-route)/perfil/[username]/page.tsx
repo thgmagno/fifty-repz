@@ -51,7 +51,7 @@ export default async function PerfilPage({ params }: PerfilPageProps) {
           // visível só para o dono
           isOwnProfile ? (
             <Link
-              href={privateRoutes.editProfile}
+              href={`${privateRoutes.editProfile}?de=${encodeURIComponent(`${privateRoutes.profile}/${profile.username}`)}`}
               className={buttonVariants({ variant: 'secondary' })}
             >
               <PencilIcon />

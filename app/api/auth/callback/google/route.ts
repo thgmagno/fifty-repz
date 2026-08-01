@@ -89,7 +89,9 @@ export async function GET(req: NextRequest) {
         where: { id: existingUser.id },
         data: {
           email: claims.email,
-          name: claims.name ?? null,
+          // o nome exibido é editável no app: sobrescrever a cada login
+          // desfaria a edição do usuário sem aviso. O do Google segue
+          // valendo como valor inicial, no create abaixo.
           image: claims.picture ?? null,
         },
       })
