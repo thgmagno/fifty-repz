@@ -101,11 +101,20 @@ export async function getWorkoutSession(id: string) {
 export async function getInProgressWorkoutSession() {
   const { userId } = await verifySession()
 
-  return prisma.workoutSession.findFirst({
+  const session = await prisma.workoutSession.findFirst({
     where: { userId, status: 'IN_PROGRESS' },
     orderBy: { startedAt: 'desc' },
     select: { id: true, templateName: true, startedAt: true },
   })
+
+  if (!session) return null
+
+  // quantas séries o descarte apagaria — o banner avisa antes de confirmar
+  const loggedSets = await prisma.sessionSet.count({
+    where: { sessionExercise: { sessionId: session.id } },
+  })
+
+  return { ...session, loggedSets }
 }
 
 export async function listCompletedWorkoutSessions() {

@@ -1,13 +1,14 @@
 import Link from 'next/link'
-import { PlayIcon } from 'lucide-react'
+import { PlayIcon, Trash2Icon } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { buttonVariants } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
+import { DiscardSessionDialog } from '@/components/sessions/discard-session-dialog'
 import { privateRoutes } from '@/lib/config'
 
 export function InProgressSessionBanner({
   session,
 }: {
-  session: { id: string; templateName: string }
+  session: { id: string; templateName: string; loggedSets: number }
 }) {
   return (
     <Card className="border-primary/30 bg-primary/5">
@@ -20,13 +21,27 @@ export function InProgressSessionBanner({
             Você tem uma sessão ativa. Continue de onde parou.
           </p>
         </div>
-        <Link
-          href={`${privateRoutes.sessions}/${session.id}`}
-          className={buttonVariants()}
-        >
-          <PlayIcon />
-          Continuar treino
-        </Link>
+        <div className="flex flex-wrap items-center gap-2">
+          {/* sem o descarte aqui, a sessão aberta por engano continua
+              bloqueando o início de qualquer outro treino */}
+          <DiscardSessionDialog
+            sessionId={session.id}
+            loggedSets={session.loggedSets}
+            trigger={
+              <Button variant="ghost" className="text-destructive">
+                <Trash2Icon />
+                Descartar
+              </Button>
+            }
+          />
+          <Link
+            href={`${privateRoutes.sessions}/${session.id}`}
+            className={buttonVariants()}
+          >
+            <PlayIcon />
+            Continuar treino
+          </Link>
+        </div>
       </CardContent>
     </Card>
   )
