@@ -1,7 +1,12 @@
 'use client'
 
 import * as React from 'react'
-import { ClockIcon, Trash2Icon, WifiOffIcon } from 'lucide-react'
+import {
+  AlertTriangleIcon,
+  ClockIcon,
+  Trash2Icon,
+  WifiOffIcon,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ExercisePanel } from '@/components/sessions/exercise-panel'
 import {
@@ -49,38 +54,67 @@ export function WorkoutSessionRunner({
   const restTimerRef = React.useRef<RestTimerHandle>(null)
   const isOnline = useOnlineStatus()
   const [pendingSets, setPendingSets] = React.useState<PendingSetEntry[]>([])
+  const [syncError, setSyncError] = React.useState<string | null>(null)
   const syncingIds = React.useRef(new Set<string>())
 
-  const syncEntry = React.useCallback(async (entry: PendingSetEntry) => {
-    if (syncingIds.current.has(entry.localId)) return
-    syncingIds.current.add(entry.localId)
-
+  // A falha ao apagar do IndexedDB não pode segurar o estado da tela: a série
+  // já foi resolvida pelo servidor e precisa sair da fila em memória de
+  // qualquer jeito. Como finalizar agora espera a fila esvaziar, deixar a
+  // entrada presa aqui travaria o treino esperando um dreno que nunca vem.
+  const dropEntry = React.useCallback(async (localId: string) => {
     try {
-      const formData = new FormData()
-      formData.set('sessionExerciseId', entry.sessionExerciseId)
-      formData.set('localId', entry.localId)
-      formData.set(
-        'weightKg',
-        entry.weightKg === null ? '' : String(entry.weightKg),
-      )
-      formData.set('reps', String(entry.reps))
-
-      const result = await logSet({}, formData)
-
-      // sucesso ou rejeição definitiva do servidor: não faz sentido reter
-      // na fila (retry infinito só ajuda em falha de rede, coberta pelo catch)
-      if (result.success || result.errors) {
-        await removePendingSet(entry.localId)
-        setPendingSets((current) =>
-          current.filter((item) => item.localId !== entry.localId),
-        )
-      }
+      await removePendingSet(localId)
     } catch {
-      // falha de rede: mantém na fila, tenta de novo quando reconectar
-    } finally {
-      syncingIds.current.delete(entry.localId)
+      // armazenamento indisponível: o estado abaixo é o que governa a UI
     }
+    setPendingSets((current) =>
+      current.filter((item) => item.localId !== localId),
+    )
   }, [])
+
+  const syncEntry = React.useCallback(
+    async (entry: PendingSetEntry) => {
+      if (syncingIds.current.has(entry.localId)) return
+      syncingIds.current.add(entry.localId)
+
+      try {
+        const formData = new FormData()
+        formData.set('sessionExerciseId', entry.sessionExerciseId)
+        formData.set('localId', entry.localId)
+        formData.set(
+          'weightKg',
+          entry.weightKg === null ? '' : String(entry.weightKg),
+        )
+        formData.set('reps', String(entry.reps))
+
+        const result = await logSet({}, formData)
+
+        if (result.success) {
+          await dropEntry(entry.localId)
+          return
+        }
+
+        // Rejeição definitiva do servidor: retry não resolve, então a série
+        // sai da fila. Mas nunca em silêncio — ela representa um esforço que
+        // o usuário já viu registrado na tela, e sumir sem aviso é pior do
+        // que a falha em si.
+        if (result.errors) {
+          await dropEntry(entry.localId)
+          setSyncError(
+            result.errors.form?.[0] ??
+              result.errors.reps?.[0] ??
+              result.errors.weightKg?.[0] ??
+              'Uma série não pôde ser salva e foi descartada.',
+          )
+        }
+      } catch {
+        // falha de rede: mantém na fila, tenta de novo quando reconectar
+      } finally {
+        syncingIds.current.delete(entry.localId)
+      }
+    },
+    [dropEntry],
+  )
 
   // hidrata a fila do IndexedDB ao montar: sobrevive a reload com
   // sincronização pendente
@@ -97,6 +131,21 @@ export function WorkoutSessionRunner({
       syncEntry(entry)
     })
   }, [isOnline, pendingSets, syncEntry])
+
+  // Saída manual: uma falha de rede mantém a série na fila, mas o efeito
+  // acima só roda de novo quando `isOnline` muda ou quando outra série é
+  // registrada. Sem este botão, uma conexão que cai sem o navegador marcar
+  // `offline` deixaria a sincronização parada — e, como finalizar agora
+  // espera a fila esvaziar, o treino ficaria travado até recarregar a página.
+  const retrySync = React.useCallback(() => {
+    setSyncError(null)
+    listPendingSets()
+      .then((entries) => {
+        setPendingSets(entries)
+        entries.forEach((entry) => syncEntry(entry))
+      })
+      .catch(() => {})
+  }, [syncEntry])
 
   const handleLogSet = React.useCallback(
     (input: {
@@ -116,10 +165,21 @@ export function WorkoutSessionRunner({
     [syncEntry],
   )
 
+  // A fila do IndexedDB é global, não por sessão: pode sobrar nela série de
+  // uma sessão anterior (descartada ou trocada) ainda não sincronizada. Só
+  // as desta sessão entram nas contas daqui — senão uma sobra de outro
+  // treino inflaria o contador e, pior, seguraria o "Finalizar" deste.
+  const sessionExerciseIds = new Set(
+    session.exercises.map((exercise) => exercise.id),
+  )
+  const sessionPendingSets = pendingSets.filter((entry) =>
+    sessionExerciseIds.has(entry.sessionExerciseId),
+  )
+
   // séries da fila offline ainda não estão em session.exercises, mas já
   // contam: elas serão sincronizadas
   const loggedSets =
-    pendingSets.length +
+    sessionPendingSets.length +
     session.exercises.reduce(
       (total, exercise) => total + exercise.sets.length,
       0,
@@ -127,7 +187,7 @@ export function WorkoutSessionRunner({
 
   // as séries da fila também contam aqui: offline, o exercício não pode
   // aparecer como pendente só porque a sincronização não aconteceu ainda
-  const pendingByExercise = pendingSets.reduce((total, entry) => {
+  const pendingByExercise = sessionPendingSets.reduce((total, entry) => {
     total.set(
       entry.sessionExerciseId,
       (total.get(entry.sessionExerciseId) ?? 0) + 1,
@@ -157,7 +217,16 @@ export function WorkoutSessionRunner({
       ? `${doneExercises} ${doneExercises === 1 ? 'feito' : 'feitos'} e ${skippedExercises} não ${skippedExercises === 1 ? 'feito' : 'feitos'}, de ${session.exercises.length}`
       : `${completedExercises}/${session.exercises.length} exercícios`
 
+  const pendingSyncCount = sessionPendingSets.length
+
   function finishHint() {
+    // a sincronização vem antes de qualquer outra leitura do estado: enquanto
+    // ela não termina, "completo" ainda não é verdade no servidor
+    if (pendingSyncCount > 0) {
+      return pendingSyncCount === 1
+        ? '1 série ainda está sendo salva. Dá para finalizar assim que ela terminar.'
+        : `${pendingSyncCount} séries ainda estão sendo salvas. Dá para finalizar assim que elas terminarem.`
+    }
     if (!allDone) return 'Dá para finalizar mesmo com exercícios pendentes.'
     if (skippedExercises === 0) {
       return 'Todos os exercícios têm as séries registradas.'
@@ -193,27 +262,53 @@ export function WorkoutSessionRunner({
             loggedSets={loggedSets}
             totalExercises={session.exercises.length}
             pendingExercises={pendingExercises}
+            pendingSyncCount={pendingSyncCount}
           />
         </div>
       </div>
 
-      {(!isOnline || pendingSets.length > 0) && (
-        <div className="flex items-center gap-2 rounded-md border border-dashed p-2 text-sm text-muted-foreground">
+      {(!isOnline || pendingSyncCount > 0) && (
+        <div className="flex flex-wrap items-center gap-2 rounded-md border border-dashed p-2 text-sm text-muted-foreground">
           <WifiOffIcon className="size-4 shrink-0" />
           {!isOnline ? (
             <span>
               Você está offline. As séries continuam sendo registradas e
-              {pendingSets.length > 0
-                ? ` ${pendingSets.length} serão sincronizadas quando a conexão voltar.`
+              {pendingSyncCount > 0
+                ? ` ${pendingSyncCount} serão sincronizadas quando a conexão voltar.`
                 : ' serão sincronizadas quando a conexão voltar.'}
             </span>
           ) : (
-            <span>
-              Sincronizando {pendingSets.length}{' '}
-              {pendingSets.length === 1 ? 'série pendente' : 'séries pendentes'}
-              …
-            </span>
+            <>
+              <span>
+                Sincronizando {pendingSyncCount}{' '}
+                {pendingSyncCount === 1 ? 'série pendente' : 'séries pendentes'}
+                …
+              </span>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={retrySync}
+              >
+                Tentar agora
+              </Button>
+            </>
           )}
+        </div>
+      )}
+
+      {syncError && (
+        <div className="flex flex-wrap items-center gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-2 text-sm text-destructive">
+          <AlertTriangleIcon className="size-4 shrink-0" />
+          <span>{syncError} Registre-a de novo antes de finalizar.</span>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => setSyncError(null)}
+          >
+            Entendi
+          </Button>
         </div>
       )}
 
@@ -253,6 +348,7 @@ export function WorkoutSessionRunner({
           loggedSets={loggedSets}
           totalExercises={session.exercises.length}
           pendingExercises={pendingExercises}
+          pendingSyncCount={pendingSyncCount}
         />
       </div>
     </div>
