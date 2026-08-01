@@ -42,6 +42,8 @@ export function WorkoutTemplateCard({
         <CardDescription>
           {template.exercises.length}{' '}
           {template.exercises.length === 1 ? 'exercício' : 'exercícios'}
+          {/* legenda do "3x10-12" da lista abaixo */}
+          {template.exercises.length > 0 && ' · séries x repetições'}
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">

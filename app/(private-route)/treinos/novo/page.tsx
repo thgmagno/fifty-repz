@@ -35,8 +35,8 @@ export default async function NovoTreinoPage({
       <div>
         <h1 className="text-2xl font-bold">Novo treino</h1>
         <p className="text-sm text-muted-foreground">
-          Escolha o plano, dê um nome, adicione exercícios e defina séries e
-          reps alvo.
+          Escolha o plano, dê um nome, adicione exercícios e defina as séries e
+          repetições de cada um.
         </p>
       </div>
       <WorkoutTemplateBuilder
