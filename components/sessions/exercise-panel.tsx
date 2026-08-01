@@ -114,8 +114,8 @@ export function ExercisePanel({
       className={cn(
         'flex flex-col gap-3 rounded-md border p-3',
         !exercise.skipped &&
-          isComplete &&
-          'border-green-500/60 bg-green-500/10 dark:border-green-400/50 dark:bg-green-400/10',
+        isComplete &&
+        'border-green-500/60 bg-green-500/10 dark:border-green-400/50 dark:bg-green-400/10',
       )}
       data-skipped={exercise.skipped}
     >

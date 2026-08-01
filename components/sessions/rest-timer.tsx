@@ -89,6 +89,7 @@ function playRestEndChime(
 }
 
 export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
+  const [durationInput, setDurationInput] = React.useState(DEFAULT_REST_SECONDS.toString())
   const [duration, setDuration] = React.useState(DEFAULT_REST_SECONDS)
   const [secondsLeft, setSecondsLeft] = React.useState(0)
   const [running, setRunning] = React.useState(false)
@@ -102,10 +103,15 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
     if (stored !== null) setDuration(stored)
   }, [])
 
-  const handleDurationChange = (value: number) => {
-    const next = value || DEFAULT_REST_SECONDS
-    setDuration(next)
-    if (next === clampDuration(next)) storeDuration(next)
+  const handleDurationChange = (value: string) => {
+    setDurationInput(value)
+
+    const parsed = Number(value)
+    if (value !== '' && Number.isFinite(parsed)) {
+      const next = clampDuration(parsed)
+      setDuration(next)
+      storeDuration(next)
+    }
   }
 
   React.useImperativeHandle(ref, () => ({
@@ -189,11 +195,19 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
               min={10}
               max={600}
               step={5}
-              value={duration}
-              onChange={(event) =>
-                handleDurationChange(Number(event.target.value))
-              }
-              className="h-8 w-20"
+              value={durationInput}
+              onChange={(e) => handleDurationChange(e.target.value)}
+              onBlur={() => {
+                if (durationInput === '') {
+                  setDuration(DEFAULT_REST_SECONDS)
+                  setDurationInput(String(DEFAULT_REST_SECONDS))
+                } else {
+                  const next = clampDuration(Number(durationInput))
+                  setDuration(next)
+                  setDurationInput(String(next))
+                  storeDuration(next)
+                }
+              }}
             />
           </div>
         </>
