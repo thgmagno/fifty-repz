@@ -7,6 +7,13 @@ datasource db {
   provider = "postgresql"
 }
 
+// O plano oficial tem uma versão para cada público: mesma marca e mesma
+// estrutura de níveis, seleção de exercícios diferente.
+enum ProgramAudience {
+  MALE
+  FEMALE
+}
+
 enum TrainingMode {
   // seguir o plano oficial Fifty Repz
   PROGRAM
@@ -27,6 +34,9 @@ model User {
   // null quando ele escolhe decidir depois.
   trainingMode TrainingMode?
   onboardedAt DateTime?
+  // versão do plano oficial em que o usuário se matriculou; null = ainda não
+  // escolheu, e é por isso que a pergunta aparece ao entrar no plano
+  programAudience ProgramAudience?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   exercises Exercise[]
@@ -145,6 +155,8 @@ model WorkoutProgram {
   slug String? @unique
   name String
   description String?
+  // preenchido só nos planos oficiais, um por público
+  audience ProgramAudience?
   owner User? @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId String?
   levels WorkoutProgramLevel[]

@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { verifySession } from '@/lib/dal'
+import { getUser } from '@/lib/dal'
 
 // Conta os treinos concluídos do nível: qualquer treino dele conta, e só
 // entram as sessões com pelo menos uma série registrada — sessão em branco
@@ -65,16 +65,21 @@ function suggestNextTemplateId(
 // Planos oficiais do app: sem dono, organizados em níveis com progressão.
 // Os planos criados por usuários ficam em lib/workout-plans.ts.
 export async function listProgramsWithProgress() {
-  const { userId } = await verifySession()
+  const { id: userId, programAudience } = await getUser()
+
+  // sem matrícula não há plano oficial para listar: a tela de planos
+  // pergunta a versão antes de mostrar nível nenhum
+  if (!programAudience) return []
 
   const programs = await prisma.workoutProgram.findMany({
-    where: { ownerId: null },
+    where: { ownerId: null, audience: programAudience },
     orderBy: { createdAt: 'asc' },
     select: {
       id: true,
       slug: true,
       name: true,
       description: true,
+      audience: true,
       levels: {
         orderBy: { level: 'asc' },
         select: {

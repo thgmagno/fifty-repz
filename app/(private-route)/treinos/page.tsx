@@ -6,6 +6,7 @@ import { buttonVariants } from '@/components/ui/button'
 import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
 import { ProgramTemplateRow } from '@/components/workouts/program-template-row'
 import { WorkoutTemplateCard } from '@/components/workouts/workout-template-card'
+import { getUser } from '@/lib/dal'
 import { listUserPlans } from '@/lib/workout-plans'
 import { listProgramsWithProgress } from '@/lib/workout-programs'
 import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
@@ -16,11 +17,14 @@ export const metadata: Metadata = {
 }
 
 export default async function TreinosPage() {
-  const [userPlans, officialPlans, inProgressSession] = await Promise.all([
-    listUserPlans(),
-    listProgramsWithProgress(),
-    getInProgressWorkoutSession(),
-  ])
+  const [user, userPlans, officialPlans, inProgressSession] = await Promise.all(
+    [
+      getUser(),
+      listUserPlans(),
+      listProgramsWithProgress(),
+      getInProgressWorkoutSession(),
+    ],
+  )
 
   const userPlansWithTemplates = userPlans.filter(
     (plan) => plan.templates.length > 0,
@@ -48,6 +52,21 @@ export default async function TreinosPage() {
 
       {inProgressSession && (
         <InProgressSessionBanner session={inProgressSession} />
+      )}
+
+      {/* quem chegou aqui pelo menu ou pelo botão flutuante não sabe que
+          precisa escolher a versão do plano antes */}
+      {!user.programAudience && (
+        <div className="flex flex-col items-center gap-3 rounded-md border border-dashed py-8 text-center">
+          <p className="max-w-sm text-sm text-muted-foreground">
+            O plano oficial tem duas versões. Escolha a sua em Planos de treino
+            para liberar o Nível 1.
+          </p>
+          <Link href={privateRoutes.plans} className={buttonVariants()}>
+            <LayersIcon />
+            Escolher a minha versão
+          </Link>
+        </div>
       )}
 
       {officialPlans.map((plan) =>

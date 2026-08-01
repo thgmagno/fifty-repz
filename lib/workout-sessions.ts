@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import { prisma } from '@/lib/prisma'
-import { verifySession } from '@/lib/dal'
+import { getUser, verifySession } from '@/lib/dal'
+import type { ProgramAudience } from '@/lib/generated/prisma/enums'
 import { countLevelCompletions } from '@/lib/workout-programs'
 
 // peso nulo (exercício de peso corporal) conta como 0 no volume, nunca quebra
@@ -159,6 +160,7 @@ export async function getWorkoutSession(id: string) {
 // pelo usuário) e o treino seguinte na rotação.
 async function getLevelProgress(
   userId: string,
+  programAudience: ProgramAudience | null,
   template: {
     id: string
     programLevel: {
@@ -167,12 +169,17 @@ async function getLevelProgress(
       level: number
       programId: string
       unlockThreshold: number
+      program: { audience: ProgramAudience | null }
       templates: { id: string; name: string }[]
     } | null
   } | null,
 ) {
   const programLevel = template?.programLevel
   if (!template || !programLevel) return null
+
+  // sessão de outra versão do plano (matrícula trocada no banco): o próximo
+  // treino sugerido seria um que o usuário não pode mais iniciar
+  if (programAudience !== programLevel.program.audience) return null
 
   const [completions, nextLevel] = await Promise.all([
     countLevelCompletions(userId, programLevel.id),
@@ -212,7 +219,7 @@ async function getLevelProgress(
 // Fecho do treino: o que foi feito agora, onde isso deixa a progressão do
 // nível e qual é o próximo treino. Só para o dono, e só de sessão concluída.
 export async function getCompletedSessionSummary(sessionId: string) {
-  const { userId } = await verifySession()
+  const { id: userId, programAudience } = await getUser()
 
   const session = await prisma.workoutSession.findFirst({
     where: { id: sessionId, userId, status: 'COMPLETED' },
@@ -228,6 +235,7 @@ export async function getCompletedSessionSummary(sessionId: string) {
               level: true,
               programId: true,
               unlockThreshold: true,
+              program: { select: { audience: true } },
               templates: {
                 orderBy: { planOrder: 'asc' },
                 select: { id: true, name: true },
@@ -274,7 +282,7 @@ export async function getCompletedSessionSummary(sessionId: string) {
     completedExercises,
     volumeKg: calculateSessionVolume(session.exercises),
     isFirstWorkout: totalSets > 0 && completedSessions === 1,
-    level: await getLevelProgress(userId, session.template),
+    level: await getLevelProgress(userId, programAudience, session.template),
   }
 }
 
