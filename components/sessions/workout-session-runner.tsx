@@ -1,12 +1,14 @@
 'use client'
 
 import * as React from 'react'
-import { ClockIcon, WifiOffIcon } from 'lucide-react'
+import { ClockIcon, Trash2Icon, WifiOffIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { ExercisePanel } from '@/components/sessions/exercise-panel'
 import {
   RestTimer,
   type RestTimerHandle,
 } from '@/components/sessions/rest-timer'
+import { DiscardSessionDialog } from '@/components/sessions/discard-session-dialog'
 import { FinishSessionDialog } from '@/components/sessions/finish-session-dialog'
 import { useOnlineStatus } from '@/hooks/use-online-status'
 import {
@@ -116,9 +118,12 @@ export function WorkoutSessionRunner({
 
   // séries da fila offline ainda não estão em session.exercises, mas já
   // contam: elas serão sincronizadas
-  const hasLoggedSets =
-    pendingSets.length > 0 ||
-    session.exercises.some((exercise) => exercise.sets.length > 0)
+  const loggedSets =
+    pendingSets.length +
+    session.exercises.reduce(
+      (total, exercise) => total + exercise.sets.length,
+      0,
+    )
 
   const completedExercises = session.exercises.filter(
     (exercise) =>
@@ -137,10 +142,22 @@ export function WorkoutSessionRunner({
             {completedExercises}/{session.exercises.length} exercícios
           </span>
         </div>
-        <FinishSessionDialog
-          sessionId={session.id}
-          hasLoggedSets={hasLoggedSets}
-        />
+        <div className="flex items-center gap-2">
+          <DiscardSessionDialog
+            sessionId={session.id}
+            loggedSets={loggedSets}
+            trigger={
+              <Button variant="ghost" size="lg" className="text-destructive">
+                <Trash2Icon />
+                Descartar
+              </Button>
+            }
+          />
+          <FinishSessionDialog
+            sessionId={session.id}
+            hasLoggedSets={loggedSets > 0}
+          />
+        </div>
       </div>
 
       {(!isOnline || pendingSets.length > 0) && (

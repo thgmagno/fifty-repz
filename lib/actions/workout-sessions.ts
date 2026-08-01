@@ -262,6 +262,37 @@ export async function toggleSkipExercise(formData: FormData): Promise<void> {
   revalidatePath(sessionPath(sessionExercise.sessionId))
 }
 
+// Descartar apaga a sessão inteira (as séries vão junto, por cascata): quem
+// iniciou por engano não deve ficar preso entre gravar um treino que não
+// aconteceu e abandonar uma sessão que bloqueia todas as outras.
+export async function discardWorkoutSession(formData: FormData): Promise<void> {
+  const { userId } = await verifySession()
+
+  const sessionId = formData.get('sessionId')
+  if (typeof sessionId !== 'string' || !sessionId) {
+    return
+  }
+
+  // só sessão em andamento e do próprio usuário: histórico não se apaga por
+  // aqui
+  const session = await prisma.workoutSession.findFirst({
+    where: { id: sessionId, userId, status: 'IN_PROGRESS' },
+    select: { id: true },
+  })
+
+  if (!session) {
+    return
+  }
+
+  await prisma.workoutSession.delete({ where: { id: session.id } })
+
+  // o banner "Treino em andamento" aparece na Home, nos planos, no plano e
+  // nos treinos: revalida o layout inteiro para não sobrar banner apontando
+  // para uma sessão que não existe mais
+  revalidatePath(privateRoutes.dashboard, 'layout')
+  redirect(privateRoutes.workouts)
+}
+
 export async function finishSession(formData: FormData): Promise<void> {
   const { userId } = await verifySession()
 
