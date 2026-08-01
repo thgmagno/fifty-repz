@@ -138,3 +138,7 @@ export function formatLastDoneLabel(date: Date, now = new Date()) {
   if (days < 7) return `há ${days} dias`
   return formatDateKeyLabel(dateKey)
 }
+
+export function getFirstName(name: string | null) {
+  return name?.split(' ')[0] || ''
+}

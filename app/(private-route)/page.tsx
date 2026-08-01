@@ -54,7 +54,7 @@ export default async function Dashboard() {
       {inProgressSession ? (
         <InProgressSessionBanner session={inProgressSession} />
       ) : (
-        <HomeQuickActions trainingMode={user.trainingMode} />
+        <HomeQuickActions name={user.name} trainingMode={user.trainingMode} />
       )}
 
       <section className="flex flex-col gap-3">

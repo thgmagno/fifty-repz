@@ -9,14 +9,16 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { privateRoutes } from '@/lib/config'
-import { cn } from '@/lib/utils'
+import { cn, getFirstName } from '@/lib/utils'
 import { TrainingMode } from '@/lib/generated/prisma/enums'
 
 // Ação rápida fixa da Home: garante que sempre existe um caminho visível para
 // começar a treinar, sem depender do menu lateral.
 export function HomeQuickActions({
+  name,
   trainingMode,
 }: {
+  name: string | null,
   trainingMode: TrainingMode | null
 }) {
   const isSolo = trainingMode === TrainingMode.SOLO
@@ -24,7 +26,7 @@ export function HomeQuickActions({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Pronto para treinar?</CardTitle>
+        <CardTitle>{name && `Eaí, ${getFirstName(name)}. `} Pronto para treinar?</CardTitle>
         <CardDescription>
           {isSolo
             ? 'Escolha um dos seus treinos e comece agora.'
