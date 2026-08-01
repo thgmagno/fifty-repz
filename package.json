@@ -12,6 +12,7 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",
     "db:seed": "prisma db seed",
+    "check:seed": "tsx scripts/check-program-seed.ts",
     "format:check": "prettier --check ."
   },
   "dependencies": {

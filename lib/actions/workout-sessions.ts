@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
-import { verifySession } from '@/lib/dal'
+import { getUser, verifySession } from '@/lib/dal'
 import { privateRoutes } from '@/lib/config'
 import { countLevelCompletions } from '@/lib/workout-programs'
 
@@ -40,7 +40,13 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
     select: {
       id: true,
       name: true,
-      programLevel: { select: { level: true, programId: true } },
+      programLevel: {
+        select: {
+          level: true,
+          programId: true,
+          program: { select: { audience: true } },
+        },
+      },
       exercises: {
         orderBy: { position: 'asc' },
         select: {
@@ -57,6 +63,18 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
 
   if (!template || template.exercises.length === 0) {
     return
+  }
+
+  // treino de plano oficial: só a versão em que o usuário se matriculou
+  // (defesa além da UI, que só lista os treinos da versão dele)
+  if (template.programLevel) {
+    const { programAudience } = await getUser()
+    if (
+      !programAudience ||
+      programAudience !== template.programLevel.program.audience
+    ) {
+      return
+    }
   }
 
   // treino de programa oficial: nível precisa estar desbloqueado (defesa

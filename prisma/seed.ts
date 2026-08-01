@@ -6,6 +6,7 @@ import {
   PrismaClient,
   type Equipment,
   type MuscleGroup,
+  type ProgramAudience,
 } from '../lib/generated/prisma/client'
 
 interface SeedExercise {
@@ -43,73 +44,38 @@ interface SeedProgram {
   slug: string
   name: string
   description: string
+  // uma versão do plano oficial por público
+  audience: ProgramAudience
   levels: SeedProgramLevel[]
 }
+
+// Cada arquivo é uma versão do plano oficial. Mesma marca, mesma estrutura de
+// níveis, seleção de exercícios própria.
+const PROGRAM_FILES = [
+  'fifty-repz-program.json',
+  'fifty-repz-feminino-program.json',
+]
 
 const prisma = new PrismaClient({
   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }),
 })
 
-async function main() {
-  const exercises: SeedExercise[] = JSON.parse(
-    readFileSync(join(__dirname, 'seed-data', 'exercises.json'), 'utf-8'),
-  )
-
-  // upsert por slug: o seed é idempotente e pode rodar quantas vezes precisar
-  await Promise.all(
-    exercises.map((exercise) =>
-      prisma.exercise.upsert({
-        where: { slug: exercise.slug },
-        update: {
-          name: exercise.name,
-          nameEn: exercise.nameEn,
-          muscleGroup: exercise.muscleGroup,
-          secondaryMuscles: exercise.secondaryMuscles,
-          equipment: exercise.equipment,
-          imageUrls: exercise.imageUrls,
-          instructions: exercise.instructions,
-        },
-        create: {
-          slug: exercise.slug,
-          name: exercise.name,
-          nameEn: exercise.nameEn,
-          muscleGroup: exercise.muscleGroup,
-          secondaryMuscles: exercise.secondaryMuscles,
-          equipment: exercise.equipment,
-          imageUrls: exercise.imageUrls,
-          instructions: exercise.instructions,
-          isCustom: false,
-        },
-      }),
-    ),
-  )
-
-  // eslint-disable-next-line no-console
-  console.log(`Seed concluído: ${exercises.length} exercícios no catálogo.`)
-
-  const program: SeedProgram = JSON.parse(
-    readFileSync(
-      join(__dirname, 'seed-data', 'fifty-repz-program.json'),
-      'utf-8',
-    ),
-  )
-
-  const exerciseIdBySlug = new Map(
-    (
-      await prisma.exercise.findMany({
-        where: { slug: { in: exercises.map((e) => e.slug) } },
-        select: { id: true, slug: true },
-      })
-    ).map((e) => [e.slug, e.id]),
-  )
-
+async function seedProgram(
+  program: SeedProgram,
+  exerciseIdBySlug: Map<string, string>,
+) {
   const programRow = await prisma.workoutProgram.upsert({
     where: { slug: program.slug },
-    update: { name: program.name, description: program.description },
+    update: {
+      name: program.name,
+      description: program.description,
+      audience: program.audience,
+    },
     create: {
       slug: program.slug,
       name: program.name,
       description: program.description,
+      audience: program.audience,
     },
   })
 
@@ -183,11 +149,72 @@ async function main() {
       )
     }),
   )
+}
+
+async function main() {
+  const exercises: SeedExercise[] = JSON.parse(
+    readFileSync(join(__dirname, 'seed-data', 'exercises.json'), 'utf-8'),
+  )
+
+  // upsert por slug: o seed é idempotente e pode rodar quantas vezes precisar
+  await Promise.all(
+    exercises.map((exercise) =>
+      prisma.exercise.upsert({
+        where: { slug: exercise.slug },
+        update: {
+          name: exercise.name,
+          nameEn: exercise.nameEn,
+          muscleGroup: exercise.muscleGroup,
+          secondaryMuscles: exercise.secondaryMuscles,
+          equipment: exercise.equipment,
+          imageUrls: exercise.imageUrls,
+          instructions: exercise.instructions,
+        },
+        create: {
+          slug: exercise.slug,
+          name: exercise.name,
+          nameEn: exercise.nameEn,
+          muscleGroup: exercise.muscleGroup,
+          secondaryMuscles: exercise.secondaryMuscles,
+          equipment: exercise.equipment,
+          imageUrls: exercise.imageUrls,
+          instructions: exercise.instructions,
+          isCustom: false,
+        },
+      }),
+    ),
+  )
 
   // eslint-disable-next-line no-console
-  console.log(
-    `Programa "${program.name}" com ${program.levels.length} níveis seedado.`,
+  console.log(`Seed concluído: ${exercises.length} exercícios no catálogo.`)
+
+  const exerciseIdBySlug = new Map(
+    (
+      await prisma.exercise.findMany({
+        where: { slug: { in: exercises.map((e) => e.slug) } },
+        select: { id: true, slug: true },
+      })
+    ).map((e) => [e.slug, e.id]),
   )
+
+  // sequencial de propósito: as duas versões dividem o mesmo catálogo e a
+  // mesma lógica de upsert, e dobrar a concorrência no passo mais pesado do
+  // build não compensa. O encadeamento por reduce é o jeito de esperar uma
+  // depois da outra sem laço.
+  await PROGRAM_FILES.reduce(async (previous, file) => {
+    await previous
+
+    const program: SeedProgram = JSON.parse(
+      readFileSync(join(__dirname, 'seed-data', file), 'utf-8'),
+    )
+
+    await seedProgram(program, exerciseIdBySlug)
+
+    // eslint-disable-next-line no-console
+    console.log(
+      `Programa "${program.name}" (${program.audience}) com ${program.levels.length} níveis seedado.`,
+    )
+  }, Promise.resolve())
 }
 
 main()

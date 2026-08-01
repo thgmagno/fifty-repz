@@ -2,6 +2,7 @@
   "slug": "fifty-repz",
   "name": "Fifty Repz",
   "description": "Jornada oficial em 5 níveis. Conclua 50 treinos de um nível para liberar o próximo (qualquer treino conta).",
+  "audience": "MALE",
   "levels": [
     {
       "level": 1,

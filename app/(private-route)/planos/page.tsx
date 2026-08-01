@@ -2,10 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PlusIcon } from 'lucide-react'
 import { Page } from '@/components/page'
+import { Badge } from '@/components/ui/badge'
 import { buttonVariants } from '@/components/ui/button'
 import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
 import { PlanLevelCard } from '@/components/plans/plan-level-card'
+import { ProgramAudienceChoice } from '@/components/plans/program-audience-choice'
 import { UserPlanCard } from '@/components/plans/user-plan-card'
+import { getUser } from '@/lib/dal'
+import { programAudienceLabels } from '@/lib/program-labels'
 import { listProgramsWithProgress } from '@/lib/workout-programs'
 import { listUserPlans } from '@/lib/workout-plans'
 import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
@@ -16,11 +20,14 @@ export const metadata: Metadata = {
 }
 
 export default async function PlanosPage() {
-  const [officialPlans, userPlans, inProgressSession] = await Promise.all([
-    listProgramsWithProgress(),
-    listUserPlans(),
-    getInProgressWorkoutSession(),
-  ])
+  const [user, officialPlans, userPlans, inProgressSession] = await Promise.all(
+    [
+      getUser(),
+      listProgramsWithProgress(),
+      listUserPlans(),
+      getInProgressWorkoutSession(),
+    ],
+  )
 
   return (
     <Page>
@@ -71,10 +78,21 @@ export default async function PlanosPage() {
         )}
       </section>
 
+      {/* sem matrícula não há nível para mostrar: a escolha da versão vem
+          antes do plano */}
+      {!user.programAudience && <ProgramAudienceChoice />}
+
       {officialPlans.map((plan) => (
         <section key={plan.id} className="flex flex-col gap-3">
           <div>
-            <h2 className="text-xl font-bold">{plan.name}</h2>
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="text-xl font-bold">{plan.name}</h2>
+              {plan.audience && (
+                <Badge variant="secondary">
+                  {programAudienceLabels[plan.audience]}
+                </Badge>
+              )}
+            </div>
             {/* a descrição do plano oficial já enuncia a regra de
                 desbloqueio; a linha genérica é só fallback */}
             <p className="text-sm text-muted-foreground">

@@ -30,6 +30,7 @@ export const getUser = cache(async () => {
       bio: true,
       trainingMode: true,
       onboardedAt: true,
+      programAudience: true,
     },
   })
 

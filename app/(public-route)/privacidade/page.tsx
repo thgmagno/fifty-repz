@@ -9,7 +9,7 @@ const REPO_URL = 'https://github.com/thgmagno/fifty-repz'
 
 export default function PrivacidadePage() {
   return (
-    <LegalPage title="Política de privacidade" updatedAt="31/07/2026">
+    <LegalPage title="Política de privacidade" updatedAt="01/08/2026">
       <p>
         Fifty Repz é um projeto pessoal, feito para portfólio e aberto no GitHub
         — não é uma empresa nem tem fins comerciais. Esta página explica, de
@@ -33,7 +33,8 @@ export default function PrivacidadePage() {
       <p>
         Além disso, ficam guardados os dados que você mesmo cadastra no app:
         nome de usuário, bio, exercícios, treinos, sessões registradas,
-        comentários e curtidas.
+        comentários, curtidas e a versão do plano oficial que você escolheu
+        seguir.
       </p>
 
       <h2>Cookies</h2>
