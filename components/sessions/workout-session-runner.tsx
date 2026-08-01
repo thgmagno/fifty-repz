@@ -18,7 +18,7 @@ import {
   type PendingSetEntry,
 } from '@/lib/offline-db'
 import { logSet } from '@/lib/actions/workout-sessions'
-import { formatDuration } from '@/lib/utils'
+import { cn, formatDuration } from '@/lib/utils'
 import type { WorkoutSessionDetail } from '@/lib/workout-sessions'
 
 function useElapsedSeconds(startedAt: Date) {
@@ -125,10 +125,25 @@ export function WorkoutSessionRunner({
       0,
     )
 
+  // as séries da fila também contam aqui: offline, o exercício não pode
+  // aparecer como pendente só porque a sincronização não aconteceu ainda
+  const pendingByExercise = pendingSets.reduce((total, entry) => {
+    total.set(
+      entry.sessionExerciseId,
+      (total.get(entry.sessionExerciseId) ?? 0) + 1,
+    )
+    return total
+  }, new Map<string, number>())
+
   const completedExercises = session.exercises.filter(
     (exercise) =>
-      exercise.skipped || exercise.sets.length >= exercise.targetSets,
+      exercise.skipped ||
+      exercise.sets.length + (pendingByExercise.get(exercise.id) ?? 0) >=
+        exercise.targetSets,
   ).length
+
+  const pendingExercises = session.exercises.length - completedExercises
+  const allDone = pendingExercises === 0 && session.exercises.length > 0
 
   return (
     <div className="flex flex-col gap-6">
@@ -155,7 +170,9 @@ export function WorkoutSessionRunner({
           />
           <FinishSessionDialog
             sessionId={session.id}
-            hasLoggedSets={loggedSets > 0}
+            loggedSets={loggedSets}
+            totalExercises={session.exercises.length}
+            pendingExercises={pendingExercises}
           />
         </div>
       </div>
@@ -196,6 +213,32 @@ export function WorkoutSessionRunner({
           />
         ))}
       </ol>
+
+      {/* o "Finalizar" de cima fica longe depois de rolar cinco exercícios:
+          quem termina a última série encontra o encerramento ali mesmo */}
+      <div
+        className={cn(
+          'flex flex-col items-center gap-2 rounded-md border p-4 text-center',
+          allDone && 'border-primary/40 bg-primary/5',
+        )}
+      >
+        <p className="font-medium">
+          {allDone
+            ? 'Treino completo!'
+            : `${completedExercises} de ${session.exercises.length} exercícios concluídos`}
+        </p>
+        <p className="text-sm text-muted-foreground">
+          {allDone
+            ? 'Todos os exercícios têm as séries registradas.'
+            : 'Dá para finalizar mesmo com exercícios pendentes.'}
+        </p>
+        <FinishSessionDialog
+          sessionId={session.id}
+          loggedSets={loggedSets}
+          totalExercises={session.exercises.length}
+          pendingExercises={pendingExercises}
+        />
+      </div>
     </div>
   )
 }
