@@ -1,7 +1,7 @@
 {
   "slug": "fifty-repz",
   "name": "Fifty Repz",
-  "description": "Jornada oficial de treino em 5 níveis progressivos. Complete 50 vezes um nível para liberar o próximo.",
+  "description": "Jornada oficial de treino em 5 níveis progressivos. Conclua 50 treinos de um nível para liberar o próximo — vale qualquer treino do nível, não é preciso repetir a sequência inteira.",
   "levels": [
     {
       "level": 1,

@@ -75,14 +75,10 @@ export default async function PlanosPage() {
         <section key={plan.id} className="flex flex-col gap-3">
           <div>
             <h2 className="text-xl font-bold">{plan.name}</h2>
+            {/* a descrição do seed já explica a regra de desbloqueio */}
             <p className="text-sm text-muted-foreground">
-              Plano oficial, organizado em níveis.
+              {plan.description ?? 'Plano oficial, organizado em níveis.'}
             </p>
-            {plan.description && (
-              <p className="text-sm text-muted-foreground">
-                {plan.description}
-              </p>
-            )}
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">

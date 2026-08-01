@@ -1,8 +1,10 @@
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
 
-// Um nível é "concluído" quando o usuário finaliza uma sessão de qualquer
-// treino que pertença a ele — a contagem soma todos os treinos do nível.
+// A contagem do nível soma as sessões concluídas de qualquer treino que
+// pertença a ele — não é preciso repetir a sequência (A, B, C) inteira.
+// Só entram sessões com pelo menos uma série registrada: finalizar um treino
+// sem registrar nada não é treino e não deve empurrar a progressão.
 // Exportado para reuso na checagem de bloqueio em startWorkoutSession.
 export async function countLevelCompletions(userId: string, levelId: string) {
   return prisma.workoutSession.count({
@@ -10,6 +12,7 @@ export async function countLevelCompletions(userId: string, levelId: string) {
       userId,
       status: 'COMPLETED',
       template: { programLevelId: levelId },
+      exercises: { some: { sets: { some: {} } } },
     },
   })
 }
