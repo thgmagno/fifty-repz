@@ -30,14 +30,9 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
     return
   }
 
-  // já existe treino em andamento? retoma em vez de abrir outro
-  const inProgress = await prisma.workoutSession.findFirst({
-    where: { userId, status: 'IN_PROGRESS' },
-    select: { id: true },
-  })
-  if (inProgress) {
-    redirect(sessionPath(inProgress.id))
-  }
+  // o usuário confirmou no diálogo que quer trocar o treino em andamento
+  // por este
+  const replaceInProgress = formData.get('replaceInProgress') === 'true'
 
   // dono do template (custom) ou treino oficial de um programa
   const template = await prisma.workoutTemplate.findFirst({
@@ -86,25 +81,45 @@ export async function startWorkoutSession(formData: FormData): Promise<void> {
     }
   }
 
-  // snapshot do template no momento do início
-  const session = await prisma.workoutSession.create({
-    data: {
-      userId,
-      templateId: template.id,
-      templateName: template.name,
-      exercises: {
-        create: template.exercises.map((item) => ({
-          exerciseId: item.exerciseId,
-          exerciseName: item.exercise.name,
-          position: item.position,
-          targetSets: item.targetSets,
-          targetReps: item.targetReps,
-          targetRepsMax: item.targetRepsMax,
-        })),
-      },
-    },
+  // Só depois de validar o treino pedido é que o em andamento entra na
+  // conversa: sem confirmação, retoma o que já estava aberto; com ela,
+  // descarta o antigo (as séries dele vão junto, por cascata).
+  const inProgress = await prisma.workoutSession.findFirst({
+    where: { userId, status: 'IN_PROGRESS' },
     select: { id: true },
   })
+
+  if (inProgress && !replaceInProgress) {
+    redirect(sessionPath(inProgress.id))
+  }
+
+  // snapshot do template no momento do início
+  const data = {
+    userId,
+    templateId: template.id,
+    templateName: template.name,
+    exercises: {
+      create: template.exercises.map((item) => ({
+        exerciseId: item.exerciseId,
+        exerciseName: item.exercise.name,
+        position: item.position,
+        targetSets: item.targetSets,
+        targetReps: item.targetReps,
+        targetRepsMax: item.targetRepsMax,
+      })),
+    },
+  }
+
+  // a troca é atômica: ou o treino antigo sai e o novo entra, ou nada muda —
+  // ninguém fica sem sessão nenhuma por uma falha no meio do caminho
+  const session = inProgress
+    ? (
+        await prisma.$transaction([
+          prisma.workoutSession.delete({ where: { id: inProgress.id } }),
+          prisma.workoutSession.create({ data, select: { id: true } }),
+        ])
+      )[1]
+    : await prisma.workoutSession.create({ data, select: { id: true } })
 
   redirect(sessionPath(session.id))
 }

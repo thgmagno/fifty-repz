@@ -1,19 +1,21 @@
-import { ChevronRightIcon, PlayIcon } from 'lucide-react'
+import { ChevronRightIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { StartWorkoutButton } from '@/components/workouts/start-workout-button'
 import { TemplatePreviewDialog } from '@/components/workouts/template-preview-dialog'
-import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import { cn, formatLastDoneLabel } from '@/lib/utils'
 import type { ProgramTemplate } from '@/lib/workout-programs'
+import type { InProgressSession } from '@/lib/workout-sessions'
 
 // Linha de um treino do plano oficial, usada na lista de níveis e na de
 // treinos. Tocar no nome abre a prévia; "Iniciar" segue à mão para quem já
 // sabe o que vai fazer.
 export function ProgramTemplateRow({
   template,
+  inProgress,
   suggested = false,
 }: {
   template: ProgramTemplate
+  inProgress: InProgressSession | null
   // treino da vez na rotação do nível: o seguinte ao último concluído
   suggested?: boolean
 }) {
@@ -26,6 +28,7 @@ export function ProgramTemplateRow({
     >
       <TemplatePreviewDialog
         template={template}
+        inProgress={inProgress}
         trigger={
           // sem aria-label: o rótulo acessível vem do próprio conteúdo, que
           // inclui "Próximo" e a última vez que o treino foi feito
@@ -55,17 +58,12 @@ export function ProgramTemplateRow({
           </button>
         }
       />
-      <form action={startWorkoutSession}>
-        <input type="hidden" name="templateId" value={template.id} />
-        <Button
-          type="submit"
-          size="sm"
-          variant={suggested ? 'default' : 'secondary'}
-        >
-          <PlayIcon />
-          Iniciar
-        </Button>
-      </form>
+      <StartWorkoutButton
+        templateId={template.id}
+        inProgress={inProgress}
+        size="sm"
+        variant={suggested ? 'default' : 'secondary'}
+      />
     </div>
   )
 }

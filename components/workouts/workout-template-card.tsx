@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PencilIcon, PlayIcon, Trash2Icon } from 'lucide-react'
+import { PencilIcon, Trash2Icon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
 import {
@@ -11,18 +11,21 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { DeleteTemplateDialog } from '@/components/workouts/delete-template-dialog'
-import { startWorkoutSession } from '@/lib/actions/workout-sessions'
+import { StartWorkoutButton } from '@/components/workouts/start-workout-button'
 import { muscleGroupLabels } from '@/lib/exercise-labels'
 import { privateRoutes } from '@/lib/config'
 import { cn, formatRepTarget } from '@/lib/utils'
 import type { UserPlanTemplate } from '@/lib/workout-plans'
+import type { InProgressSession } from '@/lib/workout-sessions'
 
 // Card de um treino do usuário: usado na página do plano e na lista de
 // treinos, sempre com as mesmas ações.
 export function WorkoutTemplateCard({
   template,
+  inProgress,
 }: {
   template: UserPlanTemplate
+  inProgress: InProgressSession | null
 }) {
   const muscleGroups = [
     ...new Set(
@@ -73,13 +76,12 @@ export function WorkoutTemplateCard({
         </div>
       </CardContent>
       <CardFooter className="flex-col items-stretch gap-2 @sm:flex-row @sm:items-center @sm:justify-end">
-        <form action={startWorkoutSession} className="@sm:mr-auto">
-          <input type="hidden" name="templateId" value={template.id} />
-          <Button type="submit" size="sm" className="w-full @sm:w-auto">
-            <PlayIcon />
-            Iniciar
-          </Button>
-        </form>
+        <StartWorkoutButton
+          templateId={template.id}
+          inProgress={inProgress}
+          size="sm"
+          className="w-full @sm:mr-auto @sm:w-auto"
+        />
         <Link
           href={`${privateRoutes.workouts}/${template.id}/editar`}
           className={cn(

@@ -87,6 +87,7 @@ export default async function PlanosPage() {
               <PlanLevelCard
                 key={level.id}
                 level={level}
+                inProgress={inProgressSession}
                 unlockRequirement={
                   index > 0 ? plan.levels[index - 1].unlockThreshold : null
                 }
