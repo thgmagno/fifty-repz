@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
+import { countLevelCompletions } from '@/lib/workout-programs'
 
 // peso nulo (exercício de peso corporal) conta como 0 no volume, nunca quebra
 // a soma
@@ -153,6 +154,129 @@ export async function getWorkoutSession(id: string) {
   }
 }
 
+// Progresso do nível a que o treino pertence (nulo em treino avulso, criado
+// pelo usuário) e o treino seguinte na rotação.
+async function getLevelProgress(
+  userId: string,
+  template: {
+    id: string
+    programLevel: {
+      id: string
+      name: string
+      level: number
+      programId: string
+      unlockThreshold: number
+      templates: { id: string; name: string }[]
+    } | null
+  } | null,
+) {
+  const programLevel = template?.programLevel
+  if (!template || !programLevel) return null
+
+  const [completions, nextLevel] = await Promise.all([
+    countLevelCompletions(userId, programLevel.id),
+    prisma.workoutProgramLevel.findUnique({
+      where: {
+        programId_level: {
+          programId: programLevel.programId,
+          level: programLevel.level + 1,
+        },
+      },
+      select: { name: true },
+    }),
+  ])
+
+  const currentIndex = programLevel.templates.findIndex(
+    (item) => item.id === template.id,
+  )
+  const nextTemplate =
+    currentIndex >= 0
+      ? programLevel.templates[
+          (currentIndex + 1) % programLevel.templates.length
+        ]
+      : (programLevel.templates[0] ?? null)
+
+  return {
+    name: programLevel.name,
+    completions,
+    unlockThreshold: programLevel.unlockThreshold,
+    // o treino de agora foi o que fechou a conta do nível
+    justUnlockedNext:
+      completions === programLevel.unlockThreshold && nextLevel !== null,
+    nextLevelName: nextLevel?.name ?? null,
+    nextTemplate,
+  }
+}
+
+// Fecho do treino: o que foi feito agora, onde isso deixa a progressão do
+// nível e qual é o próximo treino. Só para o dono, e só de sessão concluída.
+export async function getCompletedSessionSummary(sessionId: string) {
+  const { userId } = await verifySession()
+
+  const session = await prisma.workoutSession.findFirst({
+    where: { id: sessionId, userId, status: 'COMPLETED' },
+    select: {
+      durationSeconds: true,
+      template: {
+        select: {
+          id: true,
+          programLevel: {
+            select: {
+              id: true,
+              name: true,
+              level: true,
+              programId: true,
+              unlockThreshold: true,
+              templates: {
+                orderBy: { planOrder: 'asc' },
+                select: { id: true, name: true },
+              },
+            },
+          },
+        },
+      },
+      exercises: {
+        select: {
+          skipped: true,
+          targetSets: true,
+          sets: { select: { weightKg: true, reps: true } },
+        },
+      },
+    },
+  })
+
+  if (!session) return null
+
+  const totalSets = session.exercises.reduce(
+    (total, exercise) => total + exercise.sets.length,
+    0,
+  )
+
+  const completedExercises = session.exercises.filter(
+    (exercise) =>
+      exercise.skipped || exercise.sets.length >= exercise.targetSets,
+  ).length
+
+  // mesma regra da contagem do nível: sessão em branco não é treino
+  const completedSessions = await prisma.workoutSession.count({
+    where: {
+      userId,
+      status: 'COMPLETED',
+      exercises: { some: { sets: { some: {} } } },
+    },
+  })
+
+  return {
+    durationSeconds: session.durationSeconds ?? 0,
+    totalSets,
+    totalExercises: session.exercises.length,
+    completedExercises,
+    volumeKg: calculateSessionVolume(session.exercises),
+    isFirstWorkout: totalSets > 0 && completedSessions === 1,
+    level: await getLevelProgress(userId, session.template),
+  }
+}
+
 export async function getInProgressWorkoutSession() {
   const { userId } = await verifySession()
 
@@ -189,6 +313,10 @@ export async function listCompletedWorkoutSessions() {
     },
   })
 }
+
+export type CompletedSessionSummary = NonNullable<
+  Awaited<ReturnType<typeof getCompletedSessionSummary>>
+>
 
 export type InProgressSession = NonNullable<
   Awaited<ReturnType<typeof getInProgressWorkoutSession>>
