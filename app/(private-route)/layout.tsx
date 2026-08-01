@@ -2,8 +2,15 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/app-sidebar'
 import { StartWorkoutFab } from '@/components/start-workout-fab'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { hasWorkoutInProgress } from '@/lib/workout-sessions'
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const workoutInProgress = await hasWorkoutInProgress()
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -15,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* pb extra: espaço para o botão flutuante não cobrir o conteúdo */}
         <section className="min-w-0 flex-1 px-2 pb-24">{children}</section>
       </main>
-      <StartWorkoutFab />
+      <StartWorkoutFab workoutInProgress={workoutInProgress} />
     </SidebarProvider>
   )
 }
