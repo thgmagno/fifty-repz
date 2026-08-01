@@ -46,7 +46,7 @@ function finishDescription({
   }
 
   if (pendingExercises > 0) {
-    return `${pendingExercises} de ${totalExercises} exercícios ainda não têm todas as séries. A sessão será salva assim mesmo, e depois não dá para registrar mais nada.`
+    return `${pendingExercises} de ${totalExercises} exercícios ainda não têm todas as séries. Sua sessão será salva agora e não poderá ser alterada.`
   }
 
   return 'Todos os exercícios estão completos. Depois de finalizada, não é possível registrar novas séries.'
