@@ -145,6 +145,28 @@ export function WorkoutSessionRunner({
   const pendingExercises = session.exercises.length - completedExercises
   const allDone = pendingExercises === 0 && session.exercises.length > 0
 
+  // "concluído" junta duas coisas diferentes — o que foi feito e o que foi
+  // marcado como não feito. Com algum marcado, o cabeçalho separa os dois.
+  const skippedExercises = session.exercises.filter(
+    (exercise) => exercise.skipped,
+  ).length
+  const doneExercises = completedExercises - skippedExercises
+
+  const progressLabel =
+    skippedExercises > 0
+      ? `${doneExercises} ${doneExercises === 1 ? 'feito' : 'feitos'} e ${skippedExercises} não ${skippedExercises === 1 ? 'feito' : 'feitos'}, de ${session.exercises.length}`
+      : `${completedExercises}/${session.exercises.length} exercícios`
+
+  function finishHint() {
+    if (!allDone) return 'Dá para finalizar mesmo com exercícios pendentes.'
+    if (skippedExercises === 0) {
+      return 'Todos os exercícios têm as séries registradas.'
+    }
+    return skippedExercises === 1
+      ? '1 exercício ficou como não feito; o resto tem as séries registradas.'
+      : `${skippedExercises} exercícios ficaram como não feitos; o resto tem as séries registradas.`
+  }
+
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -153,9 +175,7 @@ export function WorkoutSessionRunner({
           <span className="text-lg font-semibold tabular-nums text-foreground">
             {formatDuration(elapsed)}
           </span>
-          <span className="text-sm">
-            {completedExercises}/{session.exercises.length} exercícios
-          </span>
+          <span className="text-sm">{progressLabel}</span>
         </div>
         <div className="flex items-center gap-2">
           <DiscardSessionDialog
@@ -227,11 +247,7 @@ export function WorkoutSessionRunner({
             ? 'Treino completo!'
             : `${completedExercises} de ${session.exercises.length} exercícios concluídos`}
         </p>
-        <p className="text-sm text-muted-foreground">
-          {allDone
-            ? 'Todos os exercícios têm as séries registradas.'
-            : 'Dá para finalizar mesmo com exercícios pendentes.'}
-        </p>
+        <p className="text-sm text-muted-foreground">{finishHint()}</p>
         <FinishSessionDialog
           sessionId={session.id}
           loggedSets={loggedSets}

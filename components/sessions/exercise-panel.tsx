@@ -134,7 +134,9 @@ export function ExercisePanel({
           </p>
         </div>
         <div className="flex items-center gap-2">
-          {exercise.skipped && <Badge variant="secondary">Pulado</Badge>}
+          {exercise.skipped && (
+            <Badge variant="secondary">Não feito hoje</Badge>
+          )}
           {/* aparece desde 0/3: antes da primeira série também é preciso
               saber quantas faltam */}
           {!exercise.skipped && (
@@ -153,11 +155,20 @@ export function ExercisePanel({
             <input type="hidden" name="sessionExerciseId" value={exercise.id} />
             <Button type="submit" variant="ghost" size="sm">
               <SkipForwardIcon />
-              {exercise.skipped ? 'Cancelar pular' : 'Pular'}
+              {exercise.skipped ? 'Voltar a fazer' : 'Não fiz hoje'}
             </Button>
           </form>
         </div>
       </div>
+
+      {/* o efeito de marcar não é óbvio pelo botão: o exercício deixa de
+          aparecer como pendente ao finalizar o treino */}
+      {exercise.skipped && (
+        <p className="text-xs text-muted-foreground">
+          Este exercício não fica pendente ao finalizar o treino. As séries
+          registradas nele continuam salvas.
+        </p>
+      )}
 
       {(exercise.sets.length > 0 || pendingSets.length > 0) && (
         <ul className="flex flex-col gap-1">
