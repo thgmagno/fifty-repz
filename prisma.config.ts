@@ -3,19 +3,31 @@
 import 'dotenv/config'
 import { defineConfig } from 'prisma/config'
 
-// As migrações rodam pela conexão direta do banco, nunca pela pooled.
-// O pooler do Neon (PgBouncer em transaction mode) não preserva o advisory
-// lock que o Prisma Migrate usa, então dois deploys simultâneos ficam se
-// esperando até estourar o timeout de conexão (P1002 "database server was
-// reached but timed out"). Em runtime seguimos na pooled (lib/prisma.ts),
+// O P1002 que quebrou o build ("database server was reached but timed out")
+// é timeout ao *abrir* a conexão, e o padrão do Prisma são 5s. O compute do
+// Neon suspende quando o banco fica ocioso, e o cold start — ainda mais com
+// deploys concorrentes — passa disso. Daí a folga de 30s aqui, mais uma
+// segunda tentativa no vercel-build.
+const CONNECT_TIMEOUT_SECONDS = 30
+
+function withConnectTimeout(url: string | undefined) {
+  if (!url || url.includes('connect_timeout=')) return url
+  const separator = url.includes('?') ? '&' : '?'
+  return `${url}${separator}connect_timeout=${CONNECT_TIMEOUT_SECONDS}`
+}
+
+// Migração e seed usam a conexão direta quando ela existe: é o que a Prisma
+// e o Neon recomendam para migração (o pooler é feito para conexões curtas
+// de runtime, não para DDL). Em runtime seguimos na pooled (lib/prisma.ts),
 // que é o certo para serverless.
 // DATABASE_URL_UNPOOLED é a variável que a integração Neon↔Vercel já cria;
 // DIRECT_DATABASE_URL fica como override manual. Sem nenhuma das duas
 // (ex.: Postgres local), cai no DATABASE_URL mesmo.
-const migrationsUrl =
+const migrationsUrl = withConnectTimeout(
   process.env.DIRECT_DATABASE_URL ??
-  process.env.DATABASE_URL_UNPOOLED ??
-  process.env.DATABASE_URL
+    process.env.DATABASE_URL_UNPOOLED ??
+    process.env.DATABASE_URL,
+)
 
 export default defineConfig({
   schema: 'prisma/schema.prisma',
