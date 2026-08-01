@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { Page } from '@/components/page'
 import {
   Card,
@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { ProfileOverview } from '@/components/profile/profile-overview'
 import { FirstWorkoutCard } from '@/components/home/first-workout-card'
 import { HomeQuickActions } from '@/components/home/home-quick-actions'
 import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
@@ -15,9 +14,10 @@ import { MuscleGroupChart } from '@/components/progress/muscle-group-chart'
 import { VolumeTrendChart } from '@/components/progress/volume-trend-chart'
 import { PersonalRecordsList } from '@/components/progress/personal-records-list'
 import { getUser } from '@/lib/dal'
-import { getUserProfile } from '@/lib/profile'
-import { listFollowers, listFollowing } from '@/lib/follow'
-import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
+import {
+  countCompletedWorkoutSessions,
+  getInProgressWorkoutSession,
+} from '@/lib/workout-sessions'
 import { privateRoutes } from '@/lib/config'
 import {
   getMuscleGroupVolume,
@@ -34,29 +34,20 @@ export default async function Dashboard() {
   }
 
   const [
-    profile,
+    completedSessionsCount,
     muscleGroupVolume,
     weeklyTrend,
     personalRecords,
     inProgressSession,
   ] = await Promise.all([
-    getUserProfile(user.username),
+    countCompletedWorkoutSessions(),
     getMuscleGroupVolume(),
     getWeeklyVolumeTrend(),
     getPersonalRecords(),
     getInProgressWorkoutSession(),
   ])
 
-  if (!profile) {
-    notFound()
-  }
-
-  const [followers, following] = await Promise.all([
-    listFollowers(profile.id),
-    listFollowing(profile.id),
-  ])
-
-  const hasCompletedSessions = profile.stats.completedSessionsCount > 0
+  const hasCompletedSessions = completedSessionsCount > 0
 
   return (
     <Page>
@@ -65,12 +56,6 @@ export default async function Dashboard() {
       ) : (
         <HomeQuickActions trainingMode={user.trainingMode} />
       )}
-
-      <ProfileOverview
-        profile={profile}
-        followers={followers}
-        following={following}
-      />
 
       <section className="flex flex-col gap-3">
         <div>

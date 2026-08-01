@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { prisma } from '@/lib/prisma'
 import { verifySession } from '@/lib/dal'
 import { countLevelCompletions } from '@/lib/workout-programs'
@@ -296,6 +297,29 @@ export async function getInProgressWorkoutSession() {
   })
 
   return { ...session, loggedSets }
+}
+
+// Existe treino aberto? Consulta enxuta (só o índice userId+status), em
+// cache de request: o layout pergunta em toda navegação privada.
+export const hasWorkoutInProgress = cache(async () => {
+  const { userId } = await verifySession()
+
+  const session = await prisma.workoutSession.findFirst({
+    where: { userId, status: 'IN_PROGRESS' },
+    select: { id: true },
+  })
+
+  return session !== null
+})
+
+// Quantos treinos o usuário já concluiu — o suficiente para a Home decidir
+// entre os gráficos e o cartão de primeiro treino.
+export async function countCompletedWorkoutSessions() {
+  const { userId } = await verifySession()
+
+  return prisma.workoutSession.count({
+    where: { userId, status: 'COMPLETED' },
+  })
 }
 
 export async function listCompletedWorkoutSessions() {
