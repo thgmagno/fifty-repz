@@ -51,6 +51,39 @@ export async function canAccessSession(sessionId: string) {
   return isSessionVisibleTo(session, userId)
 }
 
+interface PreviousSet {
+  weightKg: number | null
+  reps: number
+}
+
+// Última série registrada em cada exercício, de treinos já concluídos: é com
+// ela que o formulário nasce preenchido, para não obrigar a redigitar o
+// mesmo peso a cada série. Uma consulta por exercício (são poucos por
+// treino), todas em paralelo.
+async function getLastSetByExercise(userId: string, exerciseIds: string[]) {
+  const entries = await Promise.all(
+    exerciseIds.map(async (exerciseId) => {
+      const set = await prisma.sessionSet.findFirst({
+        where: {
+          sessionExercise: {
+            exerciseId,
+            session: { userId, status: 'COMPLETED' },
+          },
+        },
+        orderBy: { completedAt: 'desc' },
+        select: { weightKg: true, reps: true },
+      })
+      return [exerciseId, set] as const
+    }),
+  )
+
+  return new Map(
+    entries.flatMap(([exerciseId, set]) =>
+      set ? [[exerciseId, set] as const] : [],
+    ),
+  )
+}
+
 export async function getWorkoutSession(id: string) {
   const { userId } = await verifySession()
 
@@ -75,6 +108,7 @@ export async function getWorkoutSession(id: string) {
           targetReps: true,
           targetRepsMax: true,
           skipped: true,
+          exerciseId: true,
           exercise: { select: { imageUrls: true } },
           sets: {
             orderBy: { setNumber: 'asc' },
@@ -95,7 +129,28 @@ export async function getWorkoutSession(id: string) {
   const isOwner = session.userId === userId
   if (!isOwner && !(await isSessionVisibleTo(session, userId))) return null
 
-  return { ...session, isOwner }
+  // o peso da última vez só serve para preencher o formulário de quem está
+  // treinando agora — sessão concluída (ou de outra pessoa) não precisa
+  const lastSets =
+    isOwner && session.status === 'IN_PROGRESS'
+      ? await getLastSetByExercise(
+          userId,
+          session.exercises.flatMap((item) =>
+            item.exerciseId ? [item.exerciseId] : [],
+          ),
+        )
+      : new Map<string, PreviousSet>()
+
+  return {
+    ...session,
+    exercises: session.exercises.map((item) => ({
+      ...item,
+      previousSet: item.exerciseId
+        ? (lastSets.get(item.exerciseId) ?? null)
+        : null,
+    })),
+    isOwner,
+  }
 }
 
 export async function getInProgressWorkoutSession() {

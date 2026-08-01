@@ -39,7 +39,6 @@ export function ExercisePanel({
   pendingSets,
   onLogSet,
 }: ExercisePanelProps) {
-  const formRef = React.useRef<HTMLFormElement>(null)
   const [formError, setFormError] = React.useState<string | null>(null)
   const [pendingExtraSet, setPendingExtraSet] = React.useState<{
     weightKg: number | null
@@ -49,10 +48,21 @@ export function ExercisePanel({
   const setsDone = exercise.sets.length + pendingSets.length
   const isComplete = setsDone >= exercise.targetSets
 
+  // valores iniciais do formulário, na ordem em que fazem sentido: a última
+  // série desta sessão, a última vez que este exercício foi feito, e por fim
+  // a meta do treino
+  const lastSet =
+    pendingSets[pendingSets.length - 1] ??
+    exercise.sets[exercise.sets.length - 1] ??
+    exercise.previousSet
+  const defaultWeight = lastSet?.weightKg ?? ''
+  const defaultReps = lastSet?.reps ?? exercise.targetReps
+
+  // sem reset: o peso e as repetições da série que acabou de ser registrada
+  // continuam no formulário, porque quase sempre se repetem na próxima
   function logSet(input: { weightKg: number | null; reps: number }) {
     onLogSet({ sessionExerciseId: exercise.id, ...input })
     onSetLogged()
-    formRef.current?.reset()
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -185,11 +195,7 @@ export function ExercisePanel({
         </ul>
       )}
 
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="flex flex-wrap items-end gap-2"
-      >
+      <form onSubmit={handleSubmit} className="flex flex-wrap items-end gap-2">
         <div className="flex flex-col gap-1">
           <label
             htmlFor={`weight-${exercise.id}`}
@@ -204,6 +210,7 @@ export function ExercisePanel({
             step="0.5"
             min="0"
             placeholder="—"
+            defaultValue={defaultWeight}
             className="h-8 w-20"
           />
         </div>
@@ -220,7 +227,7 @@ export function ExercisePanel({
             type="number"
             min="1"
             max="200"
-            defaultValue={exercise.targetReps}
+            defaultValue={defaultReps}
             className="h-8 w-16"
           />
         </div>
