@@ -5,8 +5,8 @@
   "levels": [
     {
       "level": 1,
-      "name": "Nível 1 — Divisão ABC",
-      "description": "Versão mais simples da divisão ABCD do nível 2: peito/ombro/tríceps, costas/bíceps e pernas. Volume moderado para aprender os movimentos com uma rotina mais variada que o treino de corpo todo.",
+      "name": "Nível 1 — 3 treinos (ABC)",
+      "description": "3 treinos que se revezam: peito, ombro e tríceps; costas e bíceps; pernas. Menos exercícios por treino, para aprender os movimentos.",
       "unlockThreshold": 50,
       "templates": [
         {
@@ -112,8 +112,8 @@
     },
     {
       "level": 2,
-      "name": "Nível 2 — Divisão ABCD",
-      "description": "Divisão em 4 treinos: peito/ombro, costas/panturrilha, pernas e braços/antebraço.",
+      "name": "Nível 2 — 4 treinos (ABCD)",
+      "description": "4 treinos que se revezam: peito e ombros; costas e panturrilha; pernas; braços e antebraço.",
       "unlockThreshold": 50,
       "templates": [
         {
@@ -302,12 +302,12 @@
     },
     {
       "level": 3,
-      "name": "Nível 3 — Upper/Lower",
-      "description": "4 treinos por semana alternando membros superiores e inferiores, com mais volume.",
+      "name": "Nível 3 — Cima e baixo do corpo (Upper/Lower)",
+      "description": "4 treinos que se revezam entre a metade de cima do corpo e a de baixo, duas vezes cada.",
       "unlockThreshold": 50,
       "templates": [
         {
-          "name": "Treino A — Superior 1",
+          "name": "Treino A — Parte de cima 1",
           "exercises": [
             {
               "slug": "barbell-bench-press-medium-grip",
@@ -348,7 +348,7 @@
           ]
         },
         {
-          "name": "Treino B — Inferior 1",
+          "name": "Treino B — Parte de baixo 1",
           "exercises": [
             {
               "slug": "barbell-squat",
@@ -389,7 +389,7 @@
           ]
         },
         {
-          "name": "Treino C — Superior 2",
+          "name": "Treino C — Parte de cima 2",
           "exercises": [
             {
               "slug": "incline-dumbbell-press",
@@ -430,7 +430,7 @@
           ]
         },
         {
-          "name": "Treino D — Inferior 2",
+          "name": "Treino D — Parte de baixo 2",
           "exercises": [
             {
               "slug": "leg-press",
@@ -474,12 +474,12 @@
     },
     {
       "level": 4,
-      "name": "Nível 4 — Push/Pull/Legs",
-      "description": "3 treinos de maior intensidade, separando empurrar, puxar e pernas.",
+      "name": "Nível 4 — Empurrar, puxar e pernas (Push/Pull/Legs)",
+      "description": "3 treinos: um com os movimentos de empurrar, um com os de puxar e um de pernas.",
       "unlockThreshold": 50,
       "templates": [
         {
-          "name": "Treino A — Push",
+          "name": "Treino A — Empurrar",
           "exercises": [
             {
               "slug": "barbell-bench-press-medium-grip",
@@ -520,7 +520,7 @@
           ]
         },
         {
-          "name": "Treino B — Pull",
+          "name": "Treino B — Puxar",
           "exercises": [
             {
               "slug": "barbell-deadlift",
@@ -561,7 +561,7 @@
           ]
         },
         {
-          "name": "Treino C — Legs",
+          "name": "Treino C — Pernas",
           "exercises": [
             {
               "slug": "barbell-squat",
@@ -605,8 +605,8 @@
     },
     {
       "level": 5,
-      "name": "Nível 5 — Elite",
-      "description": "Divisão avançada por grupo muscular, 5 treinos, volume alto para especialização.",
+      "name": "Nível 5 — Um grupo muscular por treino (Elite)",
+      "description": "5 treinos, cada um focado em um grupo: peito, costas, pernas, ombros e braços.",
       "unlockThreshold": 50,
       "templates": [
         {
