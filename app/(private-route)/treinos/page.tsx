@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { LayersIcon, PlayIcon, PlusIcon } from 'lucide-react'
+import { LayersIcon, PlusIcon } from 'lucide-react'
 import { Page } from '@/components/page'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { InProgressSessionBanner } from '@/components/workouts/in-progress-session-banner'
+import { ProgramTemplateRow } from '@/components/workouts/program-template-row'
 import { WorkoutTemplateCard } from '@/components/workouts/workout-template-card'
 import { listUserPlans } from '@/lib/workout-plans'
 import { listProgramsWithProgress } from '@/lib/workout-programs'
 import { getInProgressWorkoutSession } from '@/lib/workout-sessions'
-import { startWorkoutSession } from '@/lib/actions/workout-sessions'
 import { privateRoutes } from '@/lib/config'
 
 export const metadata: Metadata = {
@@ -70,31 +70,7 @@ export default async function TreinosPage() {
               </div>
               <div className="flex flex-col gap-2">
                 {level.templates.map((template) => (
-                  <div
-                    key={template.id}
-                    className="flex items-center justify-between gap-2 rounded-md border p-2.5 text-sm"
-                  >
-                    <div>
-                      <p className="font-medium">{template.name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {template.exercises.length}{' '}
-                        {template.exercises.length === 1
-                          ? 'exercício'
-                          : 'exercícios'}
-                      </p>
-                    </div>
-                    <form action={startWorkoutSession}>
-                      <input
-                        type="hidden"
-                        name="templateId"
-                        value={template.id}
-                      />
-                      <Button type="submit" size="sm">
-                        <PlayIcon />
-                        Iniciar
-                      </Button>
-                    </form>
-                  </div>
+                  <ProgramTemplateRow key={template.id} template={template} />
                 ))}
               </div>
             </section>

@@ -42,7 +42,24 @@ export async function listProgramsWithProgress() {
             select: {
               id: true,
               name: true,
-              exercises: { select: { id: true } },
+              // exercícios completos: dá para ver o que tem dentro do
+              // treino antes de iniciar a sessão
+              exercises: {
+                orderBy: { position: 'asc' },
+                select: {
+                  id: true,
+                  targetSets: true,
+                  targetReps: true,
+                  targetRepsMax: true,
+                  exercise: {
+                    select: {
+                      name: true,
+                      muscleGroup: true,
+                      equipment: true,
+                    },
+                  },
+                },
+              },
             },
           },
         },
@@ -76,3 +93,5 @@ export async function listProgramsWithProgress() {
 export type ProgramWithProgress = Awaited<
   ReturnType<typeof listProgramsWithProgress>
 >[number]
+export type ProgramLevel = ProgramWithProgress['levels'][number]
+export type ProgramTemplate = ProgramLevel['templates'][number]
