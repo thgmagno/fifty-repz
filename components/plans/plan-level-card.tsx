@@ -1,6 +1,5 @@
-import { LockIcon, PlayIcon } from 'lucide-react'
+import { LockIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -8,11 +7,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { startWorkoutSession } from '@/lib/actions/workout-sessions'
-import type { ProgramWithProgress } from '@/lib/workout-programs'
+import { ProgramTemplateRow } from '@/components/workouts/program-template-row'
+import type { ProgramLevel } from '@/lib/workout-programs'
 
 interface PlanLevelCardProps {
-  level: ProgramWithProgress['levels'][number]
+  level: ProgramLevel
   // conclusões necessárias no nível anterior para desbloquear este; null
   // para o primeiro nível, que já vem sempre desbloqueado
   unlockRequirement: number | null
@@ -61,25 +60,7 @@ export function PlanLevelCard({
           </p>
         ) : (
           level.templates.map((template) => (
-            <div
-              key={template.id}
-              className="flex items-center justify-between gap-2 rounded-md border p-2.5 text-sm"
-            >
-              <div>
-                <p className="font-medium">{template.name}</p>
-                <p className="text-xs text-muted-foreground">
-                  {template.exercises.length}{' '}
-                  {template.exercises.length === 1 ? 'exercício' : 'exercícios'}
-                </p>
-              </div>
-              <form action={startWorkoutSession}>
-                <input type="hidden" name="templateId" value={template.id} />
-                <Button type="submit" size="sm">
-                  <PlayIcon />
-                  Iniciar
-                </Button>
-              </form>
-            </div>
+            <ProgramTemplateRow key={template.id} template={template} />
           ))
         )}
       </CardContent>
