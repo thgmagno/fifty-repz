@@ -70,7 +70,11 @@ export default async function TreinosPage() {
               </div>
               <div className="flex flex-col gap-2">
                 {level.templates.map((template) => (
-                  <ProgramTemplateRow key={template.id} template={template} />
+                  <ProgramTemplateRow
+                    key={template.id}
+                    template={template}
+                    suggested={template.id === level.suggestedTemplateId}
+                  />
                 ))}
               </div>
             </section>
