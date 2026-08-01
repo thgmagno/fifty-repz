@@ -81,7 +81,9 @@ export default async function SessaoPage({
                 <h2 className="font-medium">
                   {index + 1}. {exercise.exerciseName}
                 </h2>
-                {exercise.skipped && <Badge variant="secondary">Pulado</Badge>}
+                {exercise.skipped && (
+                  <Badge variant="secondary">Não feito</Badge>
+                )}
               </div>
               {exercise.sets.length > 0 && (
                 <ul className="mt-2 flex flex-col gap-1 text-sm text-muted-foreground">
