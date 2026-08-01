@@ -15,7 +15,7 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
 import { deleteSet, toggleSkipExercise } from '@/lib/actions/workout-sessions'
-import { ExerciseImageGallery } from '@/components/sessions/exercise-image-gallery'
+import { ExerciseHowToDialog } from '@/components/sessions/exercise-how-to-dialog'
 import type { WorkoutSessionExerciseDetail } from '@/lib/workout-sessions'
 import type { PendingSetEntry } from '@/lib/offline-db'
 import { cn, formatRepTargetLong } from '@/lib/utils'
@@ -57,6 +57,10 @@ export function ExercisePanel({
     exercise.previousSet
   const defaultWeight = lastSet?.weightKg ?? ''
   const defaultReps = lastSet?.reps ?? exercise.targetReps
+
+  // sem série anterior nenhuma: é a primeira vez que a pessoa faz este
+  // exercício, e "quanto peso eu coloco?" não tem resposta em lugar nenhum
+  const isFirstTime = !lastSet
 
   // sem reset: o peso e as repetições da série que acabou de ser registrada
   // continuam no formulário, porque quase sempre se repetem na próxima
@@ -138,10 +142,11 @@ export function ExercisePanel({
               {setsDone}/{exercise.targetSets} séries
             </Badge>
           )}
-          {exercise.exercise && exercise.exercise.imageUrls.length > 0 && (
-            <ExerciseImageGallery
+          {exercise.exercise && (
+            <ExerciseHowToDialog
               exerciseName={exercise.exerciseName}
               imageUrls={exercise.exercise.imageUrls}
+              instructions={exercise.exercise.instructions}
             />
           )}
           <form action={toggleSkipExercise}>
@@ -201,7 +206,7 @@ export function ExercisePanel({
             htmlFor={`weight-${exercise.id}`}
             className="text-xs text-muted-foreground"
           >
-            Peso (kg)
+            Peso (kg) · opcional
           </label>
           <Input
             id={`weight-${exercise.id}`}
@@ -235,6 +240,13 @@ export function ExercisePanel({
           Registrar série
         </Button>
       </form>
+      {isFirstTime && (
+        <p className="text-xs text-muted-foreground">
+          Primeira vez neste exercício: comece leve, com um peso que dê para
+          fazer todas as repetições com boa execução. Em exercício de peso
+          corporal, deixe o peso em branco.
+        </p>
+      )}
       {formError && <p className="text-sm text-destructive">{formError}</p>}
 
       <AlertDialog
