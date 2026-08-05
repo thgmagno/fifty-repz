@@ -59,7 +59,7 @@ function playRestEndChime(
     }
     const ctx = audioContextRef.current
     if (ctx.state === 'suspended') {
-      ctx.resume().catch(() => { })
+      ctx.resume().catch(() => {})
     }
 
     // dois beeps curtos e ascendentes
@@ -89,7 +89,9 @@ function playRestEndChime(
 }
 
 export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
-  const [durationInput, setDurationInput] = React.useState(DEFAULT_REST_SECONDS.toString())
+  const [durationInput, setDurationInput] = React.useState(
+    DEFAULT_REST_SECONDS.toString(),
+  )
   const [duration, setDuration] = React.useState(DEFAULT_REST_SECONDS)
   const [secondsLeft, setSecondsLeft] = React.useState(0)
   const [running, setRunning] = React.useState(false)
@@ -154,7 +156,8 @@ export const RestTimer = React.forwardRef<RestTimerHandle>((_props, ref) => {
     <div
       className={cn(
         'flex flex-wrap items-center gap-3 rounded-md border bg-muted/40 p-3',
-        pinned && 'sticky top-2 z-10 bg-background/80 shadow-sm backdrop-blur-sm',
+        pinned &&
+          'sticky top-2 z-10 bg-background/80 shadow-sm backdrop-blur-sm',
       )}
     >
       <TimerIcon className="text-muted-foreground" />

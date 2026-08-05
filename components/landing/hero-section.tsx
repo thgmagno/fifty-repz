@@ -75,7 +75,8 @@ export function HeroSection({ error, showPreviewLogin }: HeroSectionProps) {
 
         {!showPreviewLogin && (
           <p className="text-xs text-white/60">
-            No seu primeiro acesso com o Google, criaremos uma conta automaticamente utilizando seu nome, e-mail e foto de perfil.
+            No seu primeiro acesso com o Google, criaremos uma conta
+            automaticamente utilizando seu nome, e-mail e foto de perfil.
           </p>
         )}
       </div>
