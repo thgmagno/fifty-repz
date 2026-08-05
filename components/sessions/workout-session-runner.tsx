@@ -56,12 +56,16 @@ export function WorkoutSessionRunner({
   const [pendingSets, setPendingSets] = React.useState<PendingSetEntry[]>([])
   const [syncError, setSyncError] = React.useState<string | null>(null)
   const syncingIds = React.useRef(new Set<string>())
+  // séries que o servidor já resolveu (gravadas ou recusadas em definitivo):
+  // um dreno posterior que ainda carregue a entrada não a reenvia
+  const settledIds = React.useRef(new Set<string>())
 
   // A falha ao apagar do IndexedDB não pode segurar o estado da tela: a série
   // já foi resolvida pelo servidor e precisa sair da fila em memória de
   // qualquer jeito. Como finalizar agora espera a fila esvaziar, deixar a
   // entrada presa aqui travaria o treino esperando um dreno que nunca vem.
   const dropEntry = React.useCallback(async (localId: string) => {
+    settledIds.current.add(localId)
     try {
       await removePendingSet(localId)
     } catch {
@@ -74,7 +78,12 @@ export function WorkoutSessionRunner({
 
   const syncEntry = React.useCallback(
     async (entry: PendingSetEntry) => {
-      if (syncingIds.current.has(entry.localId)) return
+      if (
+        syncingIds.current.has(entry.localId) ||
+        settledIds.current.has(entry.localId)
+      ) {
+        return
+      }
       syncingIds.current.add(entry.localId)
 
       try {
@@ -124,13 +133,36 @@ export function WorkoutSessionRunner({
       .catch(() => {})
   }, [])
 
+  // Dreno serializado. O servidor numera a série pela contagem já existente,
+  // então duas séries do mesmo exercício enviadas em paralelo receberiam o
+  // mesmo número — era o que acontecia ao drenar a fila com um forEach. A
+  // corrente de promessas garante uma série por vez, na ordem de criação
+  // (que é a ordem em que `pendingSets` é montado, tanto na hidratação
+  // quanto ao registrar).
+  const drainChain = React.useRef<Promise<void>>(Promise.resolve())
+
+  const drainQueue = React.useCallback(
+    (entries: PendingSetEntry[]) => {
+      if (entries.length === 0) return
+      // encadear em vez de Promise.all: é o "uma por vez" desta função
+      const run = () =>
+        entries.reduce(
+          (chain, entry) => chain.then(() => syncEntry(entry)),
+          Promise.resolve(),
+        )
+      // `then(run, run)` em vez de `finally`: a corrente segue mesmo que o
+      // dreno anterior tenha rejeitado, senão uma falha a interromperia
+      // para sempre
+      drainChain.current = drainChain.current.then(run, run).catch(() => {})
+    },
+    [syncEntry],
+  )
+
   // drena a fila sempre que a conexão volta (ou que sobra algo pendente)
   React.useEffect(() => {
-    if (!isOnline || pendingSets.length === 0) return
-    pendingSets.forEach((entry) => {
-      syncEntry(entry)
-    })
-  }, [isOnline, pendingSets, syncEntry])
+    if (!isOnline) return
+    drainQueue(pendingSets)
+  }, [isOnline, pendingSets, drainQueue])
 
   // Saída manual: uma falha de rede mantém a série na fila, mas o efeito
   // acima só roda de novo quando `isOnline` muda ou quando outra série é
@@ -139,13 +171,8 @@ export function WorkoutSessionRunner({
   // espera a fila esvaziar, o treino ficaria travado até recarregar a página.
   const retrySync = React.useCallback(() => {
     setSyncError(null)
-    listPendingSets()
-      .then((entries) => {
-        setPendingSets(entries)
-        entries.forEach((entry) => syncEntry(entry))
-      })
-      .catch(() => {})
-  }, [syncEntry])
+    drainQueue(pendingSets)
+  }, [drainQueue, pendingSets])
 
   const handleLogSet = React.useCallback(
     (input: {
@@ -158,11 +185,12 @@ export function WorkoutSessionRunner({
         createdAt: Date.now(),
         ...input,
       }
+      // o envio fica por conta do efeito de dreno, que reage à mudança de
+      // `pendingSets`: assim existe um caminho único e serializado de saída
       setPendingSets((current) => [...current, entry])
       queuePendingSet(entry).catch(() => {})
-      syncEntry(entry)
     },
-    [syncEntry],
+    [],
   )
 
   // A fila do IndexedDB é global, não por sessão: pode sobrar nela série de
