@@ -16,17 +16,34 @@ function withConnectTimeout(url: string | undefined) {
   return `${url}${separator}connect_timeout=${CONNECT_TIMEOUT_SECONDS}`
 }
 
+// O Neon publica o mesmo banco em dois hosts: o pooled tem o sufixo
+// "-pooler" no endpoint, o direto não. Migrar pelo pooler trava no
+// P1002 "Timed out trying to acquire a postgres advisory lock", porque o
+// lock do Prisma é de sessão e o pooler não garante que os comandos
+// seguintes caiam na mesma conexão do backend — o lock fica preso numa
+// sessão ociosa até estourar o timeout, e toda tentativa seguinte falha
+// igual. Quando nenhuma variável de conexão direta está configurada, dá
+// para derivar a direta a partir da pooled removendo esse sufixo, em vez
+// de deixar o deploy quebrar. A troca é restrita a host do Neon: em outro
+// provedor, "-pooler" pode ser parte do nome real da máquina.
+function toDirectNeonUrl(url: string | undefined) {
+  if (!url) return url
+  return url.replace(/-pooler(\.[^/?]*\bneon\.tech)/, '$1')
+}
+
 // Migração e seed usam a conexão direta quando ela existe: é o que a Prisma
 // e o Neon recomendam para migração (o pooler é feito para conexões curtas
 // de runtime, não para DDL). Em runtime seguimos na pooled (lib/prisma.ts),
 // que é o certo para serverless.
 // DATABASE_URL_UNPOOLED é a variável que a integração Neon↔Vercel já cria;
-// DIRECT_DATABASE_URL fica como override manual. Sem nenhuma das duas
-// (ex.: Postgres local), cai no DATABASE_URL mesmo.
+// DIRECT_DATABASE_URL fica como override manual. Sem nenhuma das duas, a
+// direta é derivada do DATABASE_URL. O `||` (e não `??`) é proposital:
+// variável definida como string vazia no painel da Vercel precisa cair
+// para a próxima opção, não virar a URL de conexão.
 const migrationsUrl = withConnectTimeout(
-  process.env.DIRECT_DATABASE_URL ??
-    process.env.DATABASE_URL_UNPOOLED ??
-    process.env.DATABASE_URL,
+  process.env.DIRECT_DATABASE_URL ||
+    process.env.DATABASE_URL_UNPOOLED ||
+    toDirectNeonUrl(process.env.DATABASE_URL),
 )
 
 export default defineConfig({
