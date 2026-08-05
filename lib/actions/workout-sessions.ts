@@ -200,29 +200,37 @@ export async function logSet(
       id: sessionExerciseId,
       session: { userId, status: 'IN_PROGRESS' },
     },
-    select: { sessionId: true, sets: { select: { id: true } } },
+    select: { sessionId: true },
   })
 
   if (!sessionExercise) {
     return { errors: { form: ['Sessão inválida ou já finalizada.'] } }
   }
 
-  await prisma.$transaction([
-    prisma.sessionSet.create({
+  await prisma.$transaction(async (tx) => {
+    // O update vem primeiro de propósito. Ele desmarca "pulado" (registrar
+    // série significa que o exercício foi feito), mas o efeito que importa
+    // aqui é outro: o UPDATE trava a linha do exercício até o fim da
+    // transação. Sem essa trava, dois envios concorrentes da mesma série
+    // — a fila offline drenando — leriam a mesma contagem e gravariam o
+    // mesmo setNumber, já que o número é derivado do que existe no banco.
+    await tx.workoutSessionExercise.update({
+      where: { id: sessionExerciseId },
+      data: { skipped: false },
+    })
+
+    const setCount = await tx.sessionSet.count({ where: { sessionExerciseId } })
+
+    await tx.sessionSet.create({
       data: {
         ...(localId ? { id: localId } : {}),
         sessionExerciseId,
-        setNumber: sessionExercise.sets.length + 1,
+        setNumber: setCount + 1,
         weightKg: parsed.data.weightKg,
         reps: parsed.data.reps,
       },
-    }),
-    // registrar série desmarca "pulado", se for o caso
-    prisma.workoutSessionExercise.update({
-      where: { id: sessionExerciseId },
-      data: { skipped: false },
-    }),
-  ])
+    })
+  })
 
   revalidatePath(sessionPath(sessionExercise.sessionId))
   return { success: true, loggedAt: Date.now() }

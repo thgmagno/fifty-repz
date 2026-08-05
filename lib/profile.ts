@@ -73,3 +73,24 @@ export async function getUserProfile(username: string) {
 export type UserProfile = NonNullable<
   Awaited<ReturnType<typeof getUserProfile>>
 >
+
+// O que o usuário perde ao excluir a conta. Serve para a confirmação dizer
+// números concretos em vez de "todos os seus dados" — quem tem 80 treinos
+// registrados merece ver isso antes de confirmar.
+export async function getAccountDeletionSummary() {
+  const { userId } = await verifySession()
+
+  const [completedSessions, workoutTemplates, customExercises, followers] =
+    await Promise.all([
+      prisma.workoutSession.count({ where: { userId, status: 'COMPLETED' } }),
+      prisma.workoutTemplate.count({ where: { ownerId: userId } }),
+      prisma.exercise.count({ where: { ownerId: userId } }),
+      prisma.follow.count({ where: { followingId: userId } }),
+    ])
+
+  return { completedSessions, workoutTemplates, customExercises, followers }
+}
+
+export type AccountDeletionSummary = Awaited<
+  ReturnType<typeof getAccountDeletionSummary>
+>

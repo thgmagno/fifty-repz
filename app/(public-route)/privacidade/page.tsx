@@ -54,9 +54,23 @@ export default function PrivacidadePage() {
 
       <h2>Exclusão de conta e dados</h2>
       <p>
-        Como é um projeto pessoal, ainda não existe um botão de autoatendimento
-        para excluir a conta. Se quiser remover seus dados, entre em contato
-        pelo{' '}
+        Você pode excluir sua conta quando quiser, sem precisar pedir para
+        ninguém: entre em <strong>Editar perfil</strong> e use a opção{' '}
+        <strong>Excluir minha conta</strong>, no fim da página. Pedimos que você
+        digite seu nome de usuário para confirmar, porque a exclusão é imediata
+        e definitiva.
+      </p>
+      <p>
+        A exclusão remove, de uma vez, sua conta e tudo que está ligado a ela:
+        nome, foto, e-mail, identificador do Google, bio, exercícios que você
+        criou, planos e treinos montados, sessões registradas com todas as
+        séries e cargas, quem você segue e quem segue você, além das curtidas e
+        comentários que você deixou — inclusive nos treinos de outras pessoas.
+        Não guardamos cópia nem versão arquivada: não há como recuperar depois.
+      </p>
+      <p>
+        Se preferir, ou se tiver qualquer dúvida sobre seus dados, você também
+        pode falar comigo pelo{' '}
         <a
           href={REPO_URL}
           target="_blank"
